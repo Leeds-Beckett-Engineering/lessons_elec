@@ -1,0 +1,18 @@
+
+%%for bibliography %%
+\phantomsection \
+\addcontentsline{toc}{chapter}{INDEX} \
+
+%% Index %%
+\printindex
+
+%% 01/30/07 must have one char after next for proper acrobat deep contents
+\settocdepth{subsubsection} .
+
+%% The end! %%
+
+\end{document}
+
+\end{book}
+
+

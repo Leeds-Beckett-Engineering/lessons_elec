@@ -1,0 +1,101 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.2
+%  Library name is: motor.lps
+%  Author: dennis <dennis@localhost>
+%
+
+
+% XCircuitLib library objects
+/block {
+begingate
+0 1.00 96 640 96 512 288 512 288 640 4 polygon
+(motor) {CR} (Electric) {/Helvetica cf} 4 16 0 0.75 128 576 label
+0 1.00 -288 448 -288 320 -96 320 -96 448 4 polygon
+0 1.00 640 352 640 224 832 224 832 352 4 polygon
+(AC) {/Helvetica cf} 2 16 0 0.75 -224 384 label
+(DC) {/Helvetica cf} 2 16 0 0.75 704 288 label
+0 1.00 -640 256 -640 128 -448 128 -448 256 4 polygon
+(Asynchronous) {/Helvetica cf} 2 16 0 0.70 -632 192 label
+1 1.00 -224 320 -544 256 2 polygon
+0 1.00 -480 32 -480 -96 -288 -96 -288 32 4 polygon
+0 1.00 -832 32 -832 -96 -640 -96 -640 32 4 polygon
+(Polyphase) {/Helvetica cf} 2 16 0 0.75 -816 -32 label
+(phase) {CR} (Single) {/Helvetica cf} 4 16 0 0.75 -448 -48 label
+0 1.00 -992 -192 -992 -320 -800 -320 -800 -192 4 polygon
+0 1.00 -672 -384 -672 -512 -480 -512 -480 -384 4 polygon
+0 1.00 -992 -384 -992 -512 -800 -512 -800 -384 4 polygon
+(cage) {CR} (Squirrel) {/Helvetica cf} 4 16 0 0.75 -960 -272 label
+(rotor) {CR} (Wound) {/Helvetica cf} 4 16 0 0.75 -960 -464 label
+0 1.00 -992 -576 -992 -704 -800 -704 -800 -576 4 polygon
+(resolvers) {CR} (   &) {CR} (Synchros) {/Helvetica cf} 6 16 0 0.75 -976 -672 
+label
+0 1.00 -672 -576 -672 -704 -480 -704 -480 -576 4 polygon
+0 1.00 -672 -192 -672 -320 -480 -320 -480 -192 4 polygon
+0 1.00 -320 -192 -320 -320 -128 -320 -128 -192 4 polygon
+0 1.00 -320 -384 -320 -512 -128 -512 -128 -384 4 polygon
+0 1.00 -320 -576 -320 -704 -128 -704 -128 -576 4 polygon
+(start) {CR} (Capacitor) {/Helvetica cf} 4 16 0 0.75 -656 -464 label
+(capacitor) {CR} (split) {CR} (Permanent) {/Helvetica cf} 6 16 0 0.75 -656 -288 
+label
+(phase) {CR} (Split) {/Helvetica cf} 4 16 0 0.75 -288 -272 label
+(run) {CR} (Capacitor) {/Helvetica cf} 4 16 0 0.75 -656 -656 label
+(pole) {CR} (Shaded) {/Helvetica cf} 4 16 0 0.75 -288 -464 label
+(reluctance) {CR} (Variable) {hS} {/Helvetica cf} 5 16 0 0.75 -312 -656 label
+(Electric motor family tree) {/Helvetica cf} 2 16 0 1.00 -400 680 label
+0 1.00 -128 0 -128 -128 64 -128 64 0 4 polygon
+0 1.00 128 0 128 -128 320 -128 320 0 4 polygon
+0 1.00 800 0 800 -128 992 -128 992 0 4 polygon
+0 1.00 0 -384 0 -512 192 -512 192 -384 4 polygon
+0 1.00 288 -384 288 -512 480 -512 480 -384 4 polygon
+0 1.00 0 -576 0 -704 192 -704 192 -576 4 polygon
+0 1.00 288 -576 288 -704 480 -704 480 -576 4 polygon
+1 1.00 192 704 192 640 2 polygon
+1 1.00 -576 128 -736 32 2 polygon
+1 1.00 -512 128 -384 32 2 polygon
+1 1.00 -736 -96 -736 -608 -672 -608 3 polygon
+1 1.00 -800 -416 -672 -416 2 polygon
+1 1.00 -800 -224 -672 -224 2 polygon
+(rotor) {CR} (Wound) {/Helvetica cf} 4 16 0 0.75 48 -464 label
+(PM rotor) {/Helvetica cf} 2 16 0 0.75 32 -624 label
+(wave) {CR} (Sine) {/Helvetica cf} 4 16 0 0.75 -80 -80 label
+(Brushless) {/Helvetica cf} 2 16 0 0.75 152 -64 label
+0 1.00 448 0 448 -128 640 -128 640 0 4 polygon
+(Stepper) {/Helvetica cf} 2 16 0 0.75 488 -64 label
+1 1.00 -384 -96 -384 -608 -320 -608 3 polygon
+1 1.00 -320 -416 -384 -416 2 polygon
+1 1.00 -320 -224 -384 -224 2 polygon
+(Reluctance) {/Helvetica cf} 2 16 0 0.75 822 -64 label
+0 1.00 288 -192 288 -320 480 -320 480 -192 4 polygon
+1 1.00 -32 -128 -32 -640 0 -640 3 polygon
+1 1.00 -32 -448 0 -448 2 polygon
+1 1.00 320 128 -32 0 2 polygon
+1 1.00 352 128 224 0 2 polygon
+1 1.00 544 -128 544 -672 480 -672 3 polygon
+1 1.00 544 -448 480 -448 2 polygon
+1 1.00 544 -256 480 -256 2 polygon
+(Reluctance) {/Helvetica cf} 2 16 0 0.75 294 -256 label
+(PM) {/Helvetica cf} 2 16 0 0.75 352 -448 label
+(Hybrid) {/Helvetica cf} 2 16 0 0.75 320 -640 label
+3 1.00 736 224 256 0 2 polygon
+1 1.00 -896 -512 -896 -576 2 polygon
+0 1.00 608 -192 608 -320 800 -320 800 -192 4 polygon
+0 1.00 608 -384 608 -512 800 -512 800 -384 4 polygon
+1 1.00 896 -128 896 -448 800 -448 3 polygon
+1 1.00 896 -256 800 -256 2 polygon
+(reluctance) {CR} (Switched) {/Helvetica cf} 4 16 0 0.75 624 -464 label
+(reluctance) {CR} (Synchronous) {/Helvetica cf} 4 16 0 0.75 624 -272 label
+0 1.00 256 256 256 128 448 128 448 256 4 polygon
+(Synchronous) {/Helvetica cf} 2 16 0 0.75 268 192 label
+1 1.00 -128 320 352 256 2 polygon
+1 1.00 416 128 928 0 2 polygon
+1 1.00 544 0 384 128 2 polygon
+1 1.00 160 512 -192 448 2 polygon
+1 1.00 224 512 736 352 2 polygon
+0 1.00 800 192 800 64 992 64 992 192 4 polygon
+(motors) {CR} (Other DC) {/Helvetica cf} 4 16 0 0.75 824 112 label
+1 1.00 800 224 896 192 2 polygon
+endgate
+} def
+
+
+% EndLib

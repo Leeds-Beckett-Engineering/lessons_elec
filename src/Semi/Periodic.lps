@@ -1,0 +1,819 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.2
+%  Library name is: Periodic
+%  Author: dennis <dennis@localhost>
+%
+
+% Depend perodic_table arrow
+
+% XCircuitLib library objects
+/arrowhead {
+% trivial
+begingate
+8 -28 beginpath
+3 -18 3 -15 0 0 curveto
+-3 -15 -3 -18 -8 -28 curveto
+-2 -26 2 -26 8 -28 curveto
+249 1.00 endpath
+endgate
+} def
+
+/arrow {
+% trivial
+begingate
+1 0.80 0 -40 0 20 2 polygon
+1.00 0 0 40 arrowhead
+endgate
+} def
+
+/perodic_table {
+begingate
+(Potassium) {/Helvetica cf} 2 16 0 1.00 -1984 368 label
+(K) {/Helvetica cf} 2 16 0 1.00 -2000 416 label
+(19) {/Helvetica cf} 2 16 0 1.00 -1840 416 label
+(39.0983) {/Helvetica cf} 2 16 0 1.00 -1984 320 label
+(1) {Ss} (4s) {/Helvetica cf} 4 16 0 1.00 -1984 256 label
+0 1.00 -2016 464 -2016 240 -1792 240 -1792 464 4 polygon
+0 1.00 -1792 464 -1792 240 -1568 240 -1568 464 4 polygon
+0 1.00 -1568 464 -1568 240 -1344 240 -1344 464 4 polygon
+0 1.00 -1344 464 -1344 240 -1120 240 -1120 464 4 polygon
+0 1.00 -1120 464 -1120 240 -896 240 -896 464 4 polygon
+0 1.00 -896 464 -896 240 -672 240 -672 464 4 polygon
+0 1.00 -672 464 -672 240 -448 240 -448 464 4 polygon
+0 1.00 -448 464 -448 240 -224 240 -224 464 4 polygon
+0 1.00 -224 464 -224 240 0 240 0 464 4 polygon
+0 1.00 0 464 0 240 224 240 224 464 4 polygon
+0 1.00 224 464 224 240 448 240 448 464 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 1568 464 1568 240 1792 240 1792 464 4 polygon
+0 1.00 1344 464 1344 240 1568 240 1568 464 4 polygon
+0.000 0.000 1.000 scb
+0 1.00 1120 464 1120 240 1344 240 1344 464 4 polygon
+0 1.00 896 464 896 240 1120 240 1120 464 4 polygon
+sce
+0 1.00 672 464 672 240 896 240 896 464 4 polygon
+0 1.00 448 464 448 240 672 240 672 464 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 1792 464 1792 240 2016 240 2016 464 4 polygon
+sce
+0 1.00 -2016 240 -2016 16 -1792 16 -1792 240 4 polygon
+0 1.00 -1792 240 -1792 16 -1568 16 -1568 240 4 polygon
+0 1.00 -1568 240 -1568 16 -1344 16 -1344 240 4 polygon
+0 1.00 -1344 240 -1344 16 -1120 16 -1120 240 4 polygon
+0 1.00 -1120 240 -1120 16 -896 16 -896 240 4 polygon
+0 1.00 -896 240 -896 16 -672 16 -672 240 4 polygon
+0 1.00 -672 240 -672 16 -448 16 -448 240 4 polygon
+0 1.00 -448 240 -448 16 -224 16 -224 240 4 polygon
+0 1.00 -224 240 -224 16 0 16 0 240 4 polygon
+0 1.00 0 240 0 16 224 16 224 240 4 polygon
+0 1.00 224 240 224 16 448 16 448 240 4 polygon
+0 1.00 448 240 448 16 672 16 672 240 4 polygon
+0 1.00 672 240 672 16 896 16 896 240 4 polygon
+0 1.00 896 240 896 16 1120 16 1120 240 4 polygon
+0.000 0.000 1.000 scb
+0 1.00 1120 240 1120 16 1344 16 1344 240 4 polygon
+0 1.00 1344 240 1344 16 1568 16 1568 240 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 1568 240 1568 16 1792 16 1792 240 4 polygon
+0 1.00 1792 240 1792 16 2016 16 2016 240 4 polygon
+sce
+0 1.00 -2016 16 -2016 -208 -1792 -208 -1792 16 4 polygon
+0 1.00 -1792 16 -1792 -208 -1568 -208 -1568 16 4 polygon
+0 1.00 -1568 16 -1568 -208 -1344 -208 -1344 16 4 polygon
+0 1.00 -1344 16 -1344 -208 -1120 -208 -1120 16 4 polygon
+0 1.00 -1120 16 -1120 -208 -896 -208 -896 16 4 polygon
+0 1.00 -896 16 -896 -208 -672 -208 -672 16 4 polygon
+0 1.00 -672 16 -672 -208 -448 -208 -448 16 4 polygon
+0 1.00 -448 16 -448 -208 -224 -208 -224 16 4 polygon
+0 1.00 -224 16 -224 -208 0 -208 0 16 4 polygon
+0 1.00 0 16 0 -208 224 -208 224 16 4 polygon
+0 1.00 224 16 224 -208 448 -208 448 16 4 polygon
+0 1.00 448 16 448 -208 672 -208 672 16 4 polygon
+0 1.00 672 16 672 -208 896 -208 896 16 4 polygon
+0 1.00 896 16 896 -208 1120 -208 1120 16 4 polygon
+0 1.00 1120 16 1120 -208 1344 -208 1344 16 4 polygon
+0.000 0.000 1.000 scb
+0 1.00 1344 16 1344 -208 1568 -208 1568 16 4 polygon
+0 1.00 1568 16 1568 -208 1792 -208 1792 16 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 1792 16 1792 -208 2016 -208 2016 16 4 polygon
+0 1.00 1792 688 1792 464 2016 464 2016 688 4 polygon
+0 1.00 1568 688 1568 464 1792 464 1792 688 4 polygon
+0 1.00 1344 688 1344 464 1568 464 1568 688 4 polygon
+0 1.00 1120 688 1120 464 1344 464 1344 688 4 polygon
+0.000 0.000 1.000 scb
+0 1.00 896 688 896 464 1120 464 1120 688 4 polygon
+0 1.00 672 688 672 464 896 464 896 688 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 1792 912 1792 688 2016 688 2016 912 4 polygon
+0 1.00 1568 912 1568 688 1792 688 1792 912 4 polygon
+0 1.00 1344 912 1344 688 1568 688 1568 912 4 polygon
+0 1.00 1120 912 1120 688 1344 688 1344 912 4 polygon
+0 1.00 896 912 896 688 1120 688 1120 912 4 polygon
+0.000 0.000 1.000 scb
+0 1.00 672 912 672 688 896 688 896 912 4 polygon
+sce
+0 1.00 -2016 688 -2016 464 -1792 464 -1792 688 4 polygon
+0 1.00 -1792 688 -1792 464 -1568 464 -1568 688 4 polygon
+0 1.00 -2016 912 -2016 688 -1792 688 -1792 912 4 polygon
+0 1.00 -1792 912 -1792 688 -1568 688 -1568 912 4 polygon
+1.000 0.000 0.000 scb
+0 1.00 -2016 1136 -2016 912 -1792 912 -1792 1136 4 polygon
+0 1.00 1792 1136 1792 912 2016 912 2016 1136 4 polygon
+sce
+0 1.00 1792 -560 1792 -784 2016 -784 2016 -560 4 polygon
+0 1.00 1568 -560 1568 -784 1792 -784 1792 -560 4 polygon
+0 1.00 1344 -560 1344 -784 1568 -784 1568 -560 4 polygon
+0 1.00 1120 -560 1120 -784 1344 -784 1344 -560 4 polygon
+0 1.00 896 -560 896 -784 1120 -784 1120 -560 4 polygon
+0 1.00 672 -560 672 -784 896 -784 896 -560 4 polygon
+0 1.00 224 -560 224 -784 448 -784 448 -560 4 polygon
+0 1.00 448 -560 448 -784 672 -784 672 -560 4 polygon
+0 1.00 0 -560 0 -784 224 -784 224 -560 4 polygon
+0 1.00 -224 -560 -224 -784 0 -784 0 -560 4 polygon
+0 1.00 -448 -560 -448 -784 -224 -784 -224 -560 4 polygon
+0 1.00 -672 -560 -672 -784 -448 -784 -448 -560 4 polygon
+0 1.00 -896 -560 -896 -784 -672 -784 -672 -560 4 polygon
+0 1.00 -1120 -560 -1120 -784 -896 -784 -896 -560 4 polygon
+0 1.00 -1344 -560 -1344 -784 -1120 -784 -1120 -560 4 polygon
+0 1.00 1792 -912 1792 -1136 2016 -1136 2016 -912 4 polygon
+0 1.00 1568 -912 1568 -1136 1792 -1136 1792 -912 4 polygon
+0 1.00 1344 -912 1344 -1136 1568 -1136 1568 -912 4 polygon
+0 1.00 1120 -912 1120 -1136 1344 -1136 1344 -912 4 polygon
+0 1.00 896 -912 896 -1136 1120 -1136 1120 -912 4 polygon
+0 1.00 672 -912 672 -1136 896 -1136 896 -912 4 polygon
+0 1.00 224 -912 224 -1136 448 -1136 448 -912 4 polygon
+0 1.00 448 -912 448 -1136 672 -1136 672 -912 4 polygon
+0 1.00 0 -912 0 -1136 224 -1136 224 -912 4 polygon
+0 1.00 -224 -912 -224 -1136 0 -1136 0 -912 4 polygon
+0 1.00 -448 -912 -448 -1136 -224 -1136 -224 -912 4 polygon
+0 1.00 -672 -912 -672 -1136 -448 -1136 -448 -912 4 polygon
+0 1.00 -896 -912 -896 -1136 -672 -1136 -672 -912 4 polygon
+0 1.00 -1120 -912 -1120 -1136 -896 -1136 -896 -912 4 polygon
+0 1.00 -1344 -912 -1344 -1136 -1120 -1136 -1120 -912 4 polygon
+(Calcium) {/Helvetica cf} 2 16 0 1.00 -1744 368 label
+(Ca) {/Helvetica cf} 2 16 0 1.00 -1776 416 label
+(20) {/Helvetica cf} 2 16 0 1.00 -1632 416 label
+(2) {Ss} (4s) {/Helvetica cf} 4 16 0 1.00 -1760 256 label
+(Na) {/Helvetica cf} 2 16 0 1.00 -2000 640 label
+(Sodium) {/Helvetica cf} 2 16 0 1.00 -1968 592 label
+(11) {/Helvetica cf} 2 16 0 1.00 -1840 640 label
+(1) {Ss} (3s) {/Helvetica cf} 4 16 0 1.00 -1984 480 label
+(Magnesium) {/Helvetica cf} 2 16 0 1.00 -1776 592 label
+(Mg) {/Helvetica cf} 2 16 0 1.00 -1776 640 label
+(12) {/Helvetica cf} 2 16 0 1.00 -1616 640 label
+(2) {Ss} (3s) {/Helvetica cf} 4 16 0 1.00 -1760 480 label
+1.000 0.000 0.000 scb
+(H) {/Helvetica cf} 2 16 0 1.00 -2000 1088 label
+(1) {/Helvetica cf} 2 16 0 1.00 -1824 1088 label
+(Hydrogen) {/Helvetica cf} 2 16 0 1.00 -1984 1040 label
+(1) {Ss} (1s) {/Helvetica cf} 4 16 0 1.00 -1984 928 label
+sce
+(Li) {/Helvetica cf} 2 16 0 1.00 -2000 864 label
+(Lithium) {/Helvetica cf} 2 16 0 1.00 -1968 816 label
+(6.941) {/Helvetica cf} 2 16 0 1.00 -1952 768 label
+(3) {/Helvetica cf} 2 16 0 1.00 -1840 864 label
+(1) {Ss} (2s) {/Helvetica cf} 4 16 0 1.00 -1984 704 label
+(Beryllium) {/Helvetica cf} 2 16 0 1.00 -1760 816 label
+(Be) {/Helvetica cf} 2 16 0 1.00 -1776 864 label
+(4) {/Helvetica cf} 2 16 0 1.00 -1616 864 label
+(2) {Ss} (2s) {/Helvetica cf} 4 16 0 1.00 -1760 704 label
+(Sc) {/Helvetica cf} 2 16 0 1.00 -1552 416 label
+(21) {/Helvetica cf} 2 16 0 1.00 -1392 416 label
+(Scandium) {/Helvetica cf} 2 16 0 1.00 -1536 368 label
+(2) {Ss} (4s) {ns} (1) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -1536 256 label
+(Ti) {/Helvetica cf} 2 16 0 1.00 -1328 416 label
+(22) {/Helvetica cf} 2 16 0 1.00 -1184 416 label
+(Titanium) {/Helvetica cf} 2 16 0 1.00 -1312 368 label
+(2) {Ss} (4s) {ns} (2) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -1312 256 label
+(V) {/Helvetica cf} 2 16 0 1.00 -1104 416 label
+(23) {/Helvetica cf} 2 16 0 1.00 -960 416 label
+(Vanadium) {/Helvetica cf} 2 16 0 1.00 -1088 368 label
+(50.9415) {/Helvetica cf} 2 16 0 1.00 -1072 320 label
+(2) {Ss} (4s) {ns} (3) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -1088 256 label
+(Cr) {/Helvetica cf} 2 16 0 1.00 -880 416 label
+(24) {/Helvetica cf} 2 16 0 1.00 -736 416 label
+(Chromium) {/Helvetica cf} 2 16 0 1.00 -864 368 label
+(1) {Ss} (4s) {ns} (5) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -864 256 label
+(Mn) {/Helvetica cf} 2 16 0 1.00 -656 416 label
+(25) {/Helvetica cf} 2 16 0 1.00 -512 416 label
+(Manganese) {/Helvetica cf} 2 16 0 1.00 -656 368 label
+(2) {Ss} (4s) {ns} (5) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -640 256 label
+(Fe) {/Helvetica cf} 2 16 0 1.00 -432 416 label
+(26) {/Helvetica cf} 2 16 0 1.00 -288 416 label
+(Iron) {/Helvetica cf} 2 16 0 1.00 -368 368 label
+(55.847) {/Helvetica cf} 2 16 0 1.00 -400 320 label
+(2) {Ss} (4s) {ns} (6) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -416 256 label
+(Co) {/Helvetica cf} 2 16 0 1.00 -208 416 label
+(27) {/Helvetica cf} 2 16 0 1.00 -64 416 label
+(Cobalt) {/Helvetica cf} 2 16 0 1.00 -176 368 label
+(2) {Ss} (4s) {ns} (7) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 -192 256 label
+(Ni) {/Helvetica cf} 2 16 0 1.00 16 416 label
+(28) {/Helvetica cf} 2 16 0 1.00 160 416 label
+(Nickel) {/Helvetica cf} 2 16 0 1.00 64 368 label
+(2) {Ss} (4s) {ns} (8) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 32 256 label
+(Cu) {/Helvetica cf} 2 16 0 1.00 240 416 label
+(29) {/Helvetica cf} 2 16 0 1.00 384 416 label
+(Copper) {/Helvetica cf} 2 16 0 1.00 272 368 label
+(63.546) {/Helvetica cf} 2 16 0 1.00 272 320 label
+(1) {Ss} (4s) {ns} (10) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 256 256 label
+(Zn) {/Helvetica cf} 2 16 0 1.00 464 416 label
+(30) {/Helvetica cf} 2 16 0 1.00 608 416 label
+(Zinc) {/Helvetica cf} 2 16 0 1.00 512 368 label
+(2) {Ss} (4s) {ns} (10) {Ss} (3d) {/Helvetica cf} 8 16 0 1.00 480 256 label
+(Ga) {/Helvetica cf} 2 16 0 1.00 688 416 label
+(31) {/Helvetica cf} 2 16 0 1.00 832 416 label
+(Gallium) {/Helvetica cf} 2 16 0 1.00 720 368 label
+(1) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 704 256 label
+0.000 0.000 1.000 scb
+(B) {/Helvetica cf} 2 16 0 1.00 688 864 label
+(5) {/Helvetica cf} 2 16 0 1.00 848 864 label
+(Boron) {/Helvetica cf} 2 16 0 1.00 736 816 label
+(10.81) {/Helvetica cf} 2 16 0 1.00 736 768 label
+(1) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 704 704 label
+1.000 0.000 0.000 scb
+(C) {/Helvetica cf} 2 16 0 1.00 912 864 label
+(6) {/Helvetica cf} 2 16 0 1.00 1072 864 label
+(Carbon) {/Helvetica cf} 2 16 0 1.00 944 816 label
+(12.011) {/Helvetica cf} 2 16 0 1.00 944 768 label
+(2) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 928 704 label
+(N) {/Helvetica cf} 2 16 0 1.00 1136 864 label
+(7) {/Helvetica cf} 2 16 0 1.00 1296 864 label
+(Nitrogen) {/Helvetica cf} 2 16 0 1.00 1168 816 label
+(14.0067) {/Helvetica cf} 2 16 0 1.00 1168 768 label
+(3) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 1152 704 label
+(O) {/Helvetica cf} 2 16 0 1.00 1360 864 label
+(8) {/Helvetica cf} 2 16 0 1.00 1520 864 label
+(Oxygen) {/Helvetica cf} 2 16 0 1.00 1392 816 label
+(15.9994) {/Helvetica cf} 2 16 0 1.00 1392 768 label
+(4) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 1376 704 label
+(F) {/Helvetica cf} 2 16 0 1.00 1584 864 label
+(9) {/Helvetica cf} 2 16 0 1.00 1744 864 label
+(Fluorine) {/Helvetica cf} 2 16 0 1.00 1616 816 label
+(18.9984) {/Helvetica cf} 2 16 0 1.00 1616 768 label
+(5) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 1600 704 label
+(He) {/Helvetica cf} 2 16 0 1.00 1808 1088 label
+(2) {/Helvetica cf} 2 16 0 1.00 1968 1088 label
+(Helium) {/Helvetica cf} 2 16 0 1.00 1840 1040 label
+(4.00260) {/Helvetica cf} 2 16 0 1.00 1824 992 label
+(2) {Ss} (1s) {/Helvetica cf} 4 16 0 1.00 1824 928 label
+(Ne) {/Helvetica cf} 2 16 0 1.00 1808 864 label
+(10) {/Helvetica cf} 2 16 0 1.00 1952 864 label
+(Neon) {/Helvetica cf} 2 16 0 1.00 1856 816 label
+(20.179) {/Helvetica cf} 2 16 0 1.00 1840 768 label
+(6) {Ss} (2p) {/Helvetica cf} 4 16 0 1.00 1824 704 label
+(Ar) {/Helvetica cf} 2 16 0 1.00 1808 640 label
+(18) {/Helvetica cf} 2 16 0 1.00 1952 640 label
+(Argon) {/Helvetica cf} 2 16 0 1.00 1856 592 label
+(39.948) {/Helvetica cf} 2 16 0 1.00 1840 544 label
+(6) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 1824 480 label
+(Kr) {/Helvetica cf} 2 16 0 1.00 1808 416 label
+(36) {/Helvetica cf} 2 16 0 1.00 1952 416 label
+(Krypton) {/Helvetica cf} 2 16 0 1.00 1840 368 label
+(83.80) {/Helvetica cf} 2 16 0 1.00 1856 320 label
+(6) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 1824 256 label
+(Xe) {/Helvetica cf} 2 16 0 1.00 1808 192 label
+(54) {/Helvetica cf} 2 16 0 1.00 1952 192 label
+(Xenon) {/Helvetica cf} 2 16 0 1.00 1840 144 label
+(131.30) {/Helvetica cf} 2 16 0 1.00 1840 96 label
+(6) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 1824 32 label
+(Rn) {/Helvetica cf} 2 16 0 1.00 1808 -32 label
+(86) {/Helvetica cf} 2 16 0 1.00 1952 -32 label
+(Radon) {/Helvetica cf} 2 16 0 1.00 1840 -80 label
+(\(222\)) {/Helvetica cf} 2 16 0 1.00 1840 -128 label
+(6) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 1824 -192 label
+sce
+0 1.00 -928 912 -928 688 -704 688 -704 912 4 polygon
+(K) {/Helvetica cf} 2 16 0 1.00 -912 864 label
+(Potassium) {/Helvetica cf} 2 16 0 1.00 -896 816 label
+(19) {/Helvetica cf} 2 16 0 1.00 -752 864 label
+(39.0983) {/Helvetica cf} 2 16 0 1.00 -896 768 label
+(1) {Ss} (4s) {/Helvetica cf} 4 16 0 1.00 -896 704 label
+0.400 0.400 0.400 scb
+(Symbol) {/Helvetica-Oblique cf} 2 16 0 1.00 -1160 872 label
+(Atomic number) {/Helvetica-Oblique cf} 2 16 0 1.00 -616 872 label
+(Name) {/Helvetica-Oblique cf} 2 16 0 1.00 -1104 784 label
+(Atomic mass) {/Helvetica-Oblique cf} 2 16 0 1.00 -648 760 label
+(Electron) {/Helvetica-Oblique cf} 2 16 0 1.00 -1144 672 label
+(configuration) {/Helvetica-Oblique cf} 2 16 0 1.00 -1184 632 label
+1.00 90 -968 880 arrow
+1.00 75 -944 816 arrow
+1.00 60 -936 688 arrow
+1.00 270 -664 880 arrow
+1.00 270 -704 776 arrow
+0.000 0.000 1.000 scb
+(Al) {/Helvetica cf} 2 16 0 1.00 688 640 label
+(13) {/Helvetica cf} 2 16 0 1.00 832 640 label
+(Aluminum) {/Helvetica cf} 2 16 0 1.00 704 592 label
+(26.9815) {/Helvetica cf} 2 16 0 1.00 720 544 label
+(1) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 704 480 label
+(Si) {/Helvetica cf} 2 16 0 1.00 912 640 label
+(14) {/Helvetica cf} 2 16 0 1.00 1056 640 label
+(Silicon) {/Helvetica cf} 2 16 0 1.00 960 592 label
+(28.0855) {/Helvetica cf} 2 16 0 1.00 944 544 label
+(2) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 928 480 label
+1.000 0.000 0.000 scb
+(P) {/Helvetica cf} 2 16 0 1.00 1136 640 label
+(15) {/Helvetica cf} 2 16 0 1.00 1280 640 label
+(Phosphorus) {/Helvetica cf} 2 16 0 1.00 1136 592 label
+(30.9738) {/Helvetica cf} 2 16 0 1.00 1168 544 label
+(3) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 1152 480 label
+(S) {/Helvetica cf} 2 16 0 1.00 1360 640 label
+(16) {/Helvetica cf} 2 16 0 1.00 1504 640 label
+(Sulfur) {/Helvetica cf} 2 16 0 1.00 1392 592 label
+(32.06) {/Helvetica cf} 2 16 0 1.00 1408 544 label
+(4) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 1376 480 label
+(Cl) {/Helvetica cf} 2 16 0 1.00 1584 640 label
+(17) {/Helvetica cf} 2 16 0 1.00 1728 640 label
+(Chlorine) {/Helvetica cf} 2 16 0 1.00 1616 592 label
+(35.453) {/Helvetica cf} 2 16 0 1.00 1616 544 label
+(5) {Ss} (3p) {/Helvetica cf} 4 16 0 1.00 1600 480 label
+sce
+(Periodic Table of the Elements) {/Helvetica-Bold cf} 2 16 0 2.00 -608 1024 
+label
+(Germanium) {/Helvetica cf} 2 16 0 1.00 904 368 label
+(2) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 928 256 label
+(Ge) {/Helvetica cf} 2 16 0 1.00 912 416 label
+(32) {/Helvetica cf} 2 16 0 1.00 1056 416 label
+0.000 0.000 1.000 scb
+(As) {/Helvetica cf} 2 16 0 1.00 1136 416 label
+(Arsenic) {/Helvetica cf} 2 16 0 1.00 1168 368 label
+(33) {/Helvetica cf} 2 16 0 1.00 1280 416 label
+(3) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 1152 256 label
+(Se) {/Helvetica cf} 2 16 0 1.00 1360 416 label
+(Selenium) {/Helvetica cf} 2 16 0 1.00 1376 368 label
+(34) {/Helvetica cf} 2 16 0 1.00 1504 416 label
+(78.96) {/Helvetica cf} 2 16 0 1.00 1408 320 label
+(4) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 1376 256 label
+1.000 0.000 0.000 scb
+(Br) {/Helvetica cf} 2 16 0 1.00 1584 416 label
+(Bromine) {/Helvetica cf} 2 16 0 1.00 1600 368 label
+(35) {/Helvetica cf} 2 16 0 1.00 1728 416 label
+(79.904) {/Helvetica cf} 2 16 0 1.00 1616 320 label
+(5) {Ss} (4p) {/Helvetica cf} 4 16 0 1.00 1600 256 label
+(I) {/Helvetica cf} 2 16 0 1.00 1584 192 label
+(Iodine) {/Helvetica cf} 2 16 0 1.00 1632 144 label
+(53) {/Helvetica cf} 2 16 0 1.00 1728 192 label
+(126.905) {/Helvetica cf} 2 16 0 1.00 1600 96 label
+(5) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 1600 32 label
+sce
+(Rubidium) {/Helvetica cf} 2 16 0 1.00 -1984 144 label
+(37) {/Helvetica cf} 2 16 0 1.00 -1840 192 label
+(85.4678) {/Helvetica cf} 2 16 0 1.00 -1984 96 label
+(1) {Ss} (5s) {/Helvetica cf} 4 16 0 1.00 -1984 32 label
+(Sr) {/Helvetica cf} 2 16 0 1.00 -1776 192 label
+(Strontium) {/Helvetica cf} 2 16 0 1.00 -1776 144 label
+(38) {/Helvetica cf} 2 16 0 1.00 -1632 192 label
+(87.62) {/Helvetica cf} 2 16 0 1.00 -1744 96 label
+(2) {Ss} (5s) {/Helvetica cf} 4 16 0 1.00 -1760 32 label
+(Yttrium) {/Helvetica cf} 2 16 0 1.00 -1520 144 label
+(Y) {/Helvetica cf} 2 16 0 1.00 -1552 192 label
+(39) {/Helvetica cf} 2 16 0 1.00 -1408 192 label
+(2) {Ss} (5s) {ns} (1) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 -1536 32 label
+(Zr) {/Helvetica cf} 2 16 0 1.00 -1328 192 label
+(40) {/Helvetica cf} 2 16 0 1.00 -1184 192 label
+(Zirconium) {/Helvetica cf} 2 16 0 1.00 -1312 144 label
+(91.224) {/Helvetica cf} 2 16 0 1.00 -1296 96 label
+{ns} (2) {Ss} (5s) {ns} (2) {Ss} (4d) {/Helvetica cf} 9 16 0 1.00 -1312 32 
+label
+(Nb) {/Helvetica cf} 2 16 0 1.00 -1104 192 label
+(41) {/Helvetica cf} 2 16 0 1.00 -960 192 label
+(Niobium) {/Helvetica cf} 2 16 0 1.00 -1088 144 label
+(92.90638) {/Helvetica cf} 2 16 0 1.00 -1088 96 label
+{ns} (1) {Ss} (5s) {ns} (4) {Ss} (4d) {/Helvetica cf} 9 16 0 1.00 -1088 32 
+label
+(Mo) {/Helvetica cf} 2 16 0 1.00 -880 192 label
+(42) {/Helvetica cf} 2 16 0 1.00 -736 192 label
+(Molybdenum) {/Helvetica cf} 2 16 0 0.90 -888 144 label
+(95.94) {/Helvetica cf} 2 16 0 1.00 -848 96 label
+(1) {Ss} (5s) {ns} (5) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 -864 32 label
+(Tc) {/Helvetica cf} 2 16 0 1.00 -656 192 label
+(43) {/Helvetica cf} 2 16 0 1.00 -512 192 label
+(Technetium) {/Helvetica cf} 2 16 0 1.00 -664 144 label
+(\(98\)) {/Helvetica cf} 2 16 0 1.00 -608 96 label
+(2) {Ss} (5s) {ns} (5) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 -640 32 label
+(Ru) {/Helvetica cf} 2 16 0 1.00 -432 192 label
+(44) {/Helvetica cf} 2 16 0 1.00 -288 192 label
+(Ruthenium) {/Helvetica cf} 2 16 0 1.00 -432 144 label
+(101.07) {/Helvetica cf} 2 16 0 1.00 -400 96 label
+(1) {Ss} (5s) {ns} (7) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 -416 32 label
+(Rh) {/Helvetica cf} 2 16 0 1.00 -208 192 label
+(45) {/Helvetica cf} 2 16 0 1.00 -64 192 label
+(Rhodium) {/Helvetica cf} 2 16 0 1.00 -192 144 label
+(1) {Ss} (5s) {ns} (8) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 -192 32 label
+(Pd) {/Helvetica cf} 2 16 0 1.00 16 192 label
+(46) {/Helvetica cf} 2 16 0 1.00 160 192 label
+(Palladium) {/Helvetica cf} 2 16 0 1.00 32 144 label
+(106.42) {/Helvetica cf} 2 16 0 1.00 48 96 label
+(0) {Ss} (5s) {ns} (10) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 32 32 label
+(Ag) {/Helvetica cf} 2 16 0 1.00 240 192 label
+(47) {/Helvetica cf} 2 16 0 1.00 384 192 label
+(Silver) {/Helvetica cf} 2 16 0 1.00 288 144 label
+(107.8682) {/Helvetica cf} 2 16 0 1.00 256 96 label
+(1) {Ss} (5s) {ns} (10) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 256 32 label
+(Cd) {/Helvetica cf} 2 16 0 1.00 464 192 label
+(48) {/Helvetica cf} 2 16 0 1.00 608 192 label
+(Cadmium) {/Helvetica cf} 2 16 0 1.00 480 144 label
+(112.411) {/Helvetica cf} 2 16 0 1.00 496 96 label
+(2) {Ss} (5s) {ns} (10) {Ss} (4d) {/Helvetica cf} 8 16 0 1.00 480 32 label
+(In) {/Helvetica cf} 2 16 0 1.00 688 192 label
+(49) {/Helvetica cf} 2 16 0 1.00 832 192 label
+(Indium) {/Helvetica cf} 2 16 0 1.00 736 144 label
+(114.82) {/Helvetica cf} 2 16 0 1.00 736 96 label
+(1) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 704 32 label
+(Sn) {/Helvetica cf} 2 16 0 1.00 912 192 label
+(50) {/Helvetica cf} 2 16 0 1.00 1056 192 label
+(Tin) {/Helvetica cf} 2 16 0 1.00 976 144 label
+(118.710) {/Helvetica cf} 2 16 0 1.00 944 96 label
+(2) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 928 32 label
+0.000 0.000 1.000 scb
+(Sb) {/Helvetica cf} 2 16 0 1.00 1136 192 label
+(51) {/Helvetica cf} 2 16 0 1.00 1280 192 label
+(Antimony) {/Helvetica cf} 2 16 0 1.00 1152 144 label
+(121.75) {/Helvetica cf} 2 16 0 1.00 1184 96 label
+(3) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 1152 32 label
+(Te) {/Helvetica cf} 2 16 0 1.00 1360 192 label
+(52) {/Helvetica cf} 2 16 0 1.00 1504 192 label
+(Tellurium) {/Helvetica cf} 2 16 0 1.00 1376 144 label
+(127.60) {/Helvetica cf} 2 16 0 1.00 1408 96 label
+(4) {Ss} (5p) {/Helvetica cf} 4 16 0 1.00 1376 32 label
+(Po) {/Helvetica cf} 2 16 0 1.00 1360 -32 label
+(84) {/Helvetica cf} 2 16 0 1.00 1504 -32 label
+(Polonium) {/Helvetica cf} 2 16 0 1.00 1376 -80 label
+(\(209\)) {/Helvetica cf} 2 16 0 1.00 1408 -128 label
+(4) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 1376 -192 label
+(At) {/Helvetica cf} 2 16 0 1.00 1584 -32 label
+(Astatine) {/Helvetica cf} 2 16 0 1.00 1600 -80 label
+(85) {/Helvetica cf} 2 16 0 1.00 1728 -32 label
+(\(210\)) {/Helvetica cf} 2 16 0 1.00 1632 -128 label
+(5) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 1600 -192 label
+sce
+(Metals) {/Helvetica-Oblique cf} 2 16 0 1.00 -320 528 label
+0.000 0.000 1.000 scb
+(Metalloids) {/Helvetica-Oblique cf} 2 16 0 1.00 688 976 label
+1.000 0.000 0.000 scb
+(Nonmetals) {/Helvetica-Oblique cf} 2 16 0 1.00 1376 976 label
+sce
+(Rb) {/Helvetica cf} 2 16 0 1.00 -2000 192 label
+(Cs) {/Helvetica cf} 2 16 0 1.00 -2000 -32 label
+(55) {/Helvetica cf} 2 16 0 1.00 -1856 -32 label
+(Cesium) {/Helvetica cf} 2 16 0 1.00 -1968 -80 label
+(132.90543) {/Helvetica cf} 2 16 0 1.00 -2000 -128 label
+{ns} (1) {Ss} (6s) {/Helvetica cf} 5 16 0 1.00 -1984 -192 label
+(Ba) {/Helvetica cf} 2 16 0 1.00 -1776 -32 label
+(56) {/Helvetica cf} 2 16 0 1.00 -1632 -32 label
+(Barium) {/Helvetica cf} 2 16 0 1.00 -1744 -80 label
+(137.327) {/Helvetica cf} 2 16 0 1.00 -1744 -128 label
+{ns} (2) {Ss} (6s) {/Helvetica cf} 5 16 0 1.00 -1760 -192 label
+(57 - 71) {/Helvetica-Oblique cf} 2 16 0 1.00 -1520 -32 label
+(Lanthanide) {/Helvetica-Oblique cf} 2 16 0 1.00 -1552 -80 label
+(series) {/Helvetica-Oblique cf} 2 16 0 1.00 -1512 -120 label
+(Hf) {/Helvetica cf} 2 16 0 1.00 -1328 -32 label
+(72) {/Helvetica cf} 2 16 0 1.00 -1184 -32 label
+(Hafnium) {/Helvetica cf} 2 16 0 1.00 -1312 -80 label
+(178.49) {/Helvetica cf} 2 16 0 1.00 -1296 -128 label
+{ns} (2) {Ss} (6s) {ns} (2) {Ss} (5d) {/Helvetica cf} 9 16 0 1.00 -1312 -192 
+label
+(Ta) {/Helvetica cf} 2 16 0 1.00 -1104 -32 label
+(Tantalum) {/Helvetica cf} 2 16 0 1.00 -1088 -80 label
+(73) {/Helvetica cf} 2 16 0 1.00 -960 -32 label
+(180.9479) {/Helvetica cf} 2 16 0 1.00 -1088 -128 label
+(2) {Ss} (6s) {ns} (3) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 -1088 -192 label
+(W) {/Helvetica cf} 2 16 0 1.00 -880 -32 label
+(74) {/Helvetica cf} 2 16 0 1.00 -736 -32 label
+(Tungsten) {/Helvetica cf} 2 16 0 1.00 -864 -80 label
+(183.85) {/Helvetica cf} 2 16 0 1.00 -848 -128 label
+{ns} (2) {Ss} (6s) {ns} (4) {Ss} (5d) {/Helvetica cf} 9 16 0 1.00 -864 -192 
+label
+(Re) {/Helvetica cf} 2 16 0 1.00 -656 -32 label
+(75) {/Helvetica cf} 2 16 0 1.00 -512 -32 label
+(Rhenium) {/Helvetica cf} 2 16 0 1.00 -640 -80 label
+(186.207) {/Helvetica cf} 2 16 0 1.00 -624 -128 label
+(2) {Ss} (6s) {ns} (5) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 -640 -192 label
+(Os) {/Helvetica cf} 2 16 0 1.00 -432 -32 label
+(76) {/Helvetica cf} 2 16 0 1.00 -288 -32 label
+(Osmium) {/Helvetica cf} 2 16 0 1.00 -416 -80 label
+(190.2) {/Helvetica cf} 2 16 0 1.00 -384 -128 label
+(2) {Ss} (6s) {ns} (6) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 -416 -192 label
+(Ir) {/Helvetica cf} 2 16 0 1.00 -208 -32 label
+(77) {/Helvetica cf} 2 16 0 1.00 -64 -32 label
+(192.22) {/Helvetica cf} 2 16 0 1.00 -176 -128 label
+(Iridium) {/Helvetica cf} 2 16 0 1.00 -176 -80 label
+(2) {Ss} (6s) {ns} (7) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 -192 -192 label
+(Pt) {/Helvetica cf} 2 16 0 1.00 16 -32 label
+(78) {/Helvetica cf} 2 16 0 1.00 160 -32 label
+(Platinum) {/Helvetica cf} 2 16 0 1.00 32 -80 label
+(195.08) {/Helvetica cf} 2 16 0 1.00 48 -128 label
+(1) {Ss} (6s) {ns} (9) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 32 -192 label
+(Au) {/Helvetica cf} 2 16 0 1.00 240 -32 label
+(Gold) {/Helvetica cf} 2 16 0 1.00 288 -80 label
+(79) {/Helvetica cf} 2 16 0 1.00 384 -32 label
+(196.96654) {/Helvetica cf} 2 16 0 1.00 240 -128 label
+(1) {Ss} (6s) {ns} (10) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 256 -192 label
+(Hg) {/Helvetica cf} 2 16 0 1.00 464 -32 label
+(80) {/Helvetica cf} 2 16 0 1.00 608 -32 label
+(Mercury) {/Helvetica cf} 2 16 0 1.00 480 -80 label
+(200.59) {/Helvetica cf} 2 16 0 1.00 496 -128 label
+(2) {Ss} (6s) {ns} (10) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 480 -192 label
+(Tl) {/Helvetica cf} 2 16 0 1.00 688 -32 label
+(81) {/Helvetica cf} 2 16 0 1.00 832 -32 label
+(Thallium) {/Helvetica cf} 2 16 0 1.00 704 -80 label
+(204.3833) {/Helvetica cf} 2 16 0 1.00 704 -128 label
+(1) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 704 -192 label
+(Pb) {/Helvetica cf} 2 16 0 1.00 912 -32 label
+(Lead) {/Helvetica cf} 2 16 0 1.00 960 -80 label
+(82) {/Helvetica cf} 2 16 0 1.00 1056 -32 label
+(207.2) {/Helvetica cf} 2 16 0 1.00 960 -128 label
+(2) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 928 -192 label
+(Bi) {/Helvetica cf} 2 16 0 1.00 1136 -32 label
+(Bismuth) {/Helvetica cf} 2 16 0 1.00 1152 -80 label
+(83) {/Helvetica cf} 2 16 0 1.00 1280 -32 label
+(208.98037) {/Helvetica cf} 2 16 0 1.00 1136 -128 label
+(3) {Ss} (6p) {/Helvetica cf} 4 16 0 1.00 1152 -192 label
+(Lanthanide) {/Helvetica-Oblique cf} 2 16 0 1.00 -1568 -656 label
+(series) {/Helvetica-Oblique cf} 2 16 0 1.00 -1528 -696 label
+0 1.00 -2016 -208 -2016 -432 -1792 -432 -1792 -208 4 polygon
+0 1.00 -1792 -208 -1792 -432 -1568 -432 -1568 -208 4 polygon
+0 1.00 -1568 -208 -1568 -432 -1344 -432 -1344 -208 4 polygon
+0 1.00 -1344 -208 -1344 -432 -1120 -432 -1120 -208 4 polygon
+0 1.00 -1120 -208 -1120 -432 -896 -432 -896 -208 4 polygon
+0 1.00 -896 -208 -896 -432 -672 -432 -672 -208 4 polygon
+0 1.00 -448 -208 -448 -432 -224 -432 -224 -208 4 polygon
+0 1.00 -672 -208 -672 -432 -448 -432 -448 -208 4 polygon
+0 1.00 -224 -208 -224 -432 0 -432 0 -208 4 polygon
+(Fr) {/Helvetica cf} 2 16 0 1.00 -2000 -256 label
+(87) {/Helvetica cf} 2 16 0 1.00 -1856 -256 label
+(Francium) {/Helvetica cf} 2 16 0 1.00 -1984 -304 label
+(\(223\)) {/Helvetica cf} 2 16 0 1.00 -1952 -352 label
+{ns} (1) {Ss} (7s) {/Helvetica cf} 5 16 0 1.00 -1984 -416 label
+(Ra) {/Helvetica cf} 2 16 0 1.00 -1776 -256 label
+(88) {/Helvetica cf} 2 16 0 1.00 -1632 -256 label
+(Radium) {/Helvetica cf} 2 16 0 1.00 -1744 -304 label
+(\(226\)) {/Helvetica cf} 2 16 0 1.00 -1728 -352 label
+{ns} (2) {Ss} (7s) {/Helvetica cf} 5 16 0 1.00 -1760 -416 label
+(89 - 103) {/Helvetica-Oblique cf} 2 16 0 1.00 -1536 -256 label
+(Actinide) {/Helvetica-Oblique cf} 2 16 0 1.00 -1536 -304 label
+(series) {/Helvetica-Oblique cf} 2 16 0 1.00 -1520 -344 label
+(Actinide) {/Helvetica-Oblique cf} 2 16 0 1.00 -1536 -1008 label
+(series) {/Helvetica-Oblique cf} 2 16 0 1.00 -1520 -1048 label
+(104) {/Helvetica cf} 2 16 0 1.00 -1200 -256 label
+(Unq) {/Helvetica cf} 2 16 0 1.00 -1328 -256 label
+(Unnilquadium) {/Helvetica cf} 2 16 0 0.80 -1328 -304 label
+(\(261\)) {/Helvetica cf} 2 16 0 1.00 -1280 -352 label
+(2) {Ss} (7s) {ns} (2) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 -1312 -416 label
+(Unp) {/Helvetica cf} 2 16 0 1.00 -1104 -256 label
+(105) {/Helvetica cf} 2 16 0 1.00 -976 -256 label
+(Unnilpentium) {/Helvetica cf} 2 16 0 0.80 -1104 -304 label
+(\(262\)) {/Helvetica cf} 2 16 0 1.00 -1056 -352 label
+(2) {Ss} (7s) {ns} (3) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 -1088 -416 label
+(Unh) {/Helvetica cf} 2 16 0 1.00 -880 -256 label
+(106) {/Helvetica cf} 2 16 0 1.00 -752 -256 label
+(Unnilhexium) {/Helvetica cf} 2 16 0 0.80 -864 -304 label
+(\(263\)) {/Helvetica cf} 2 16 0 1.00 -832 -352 label
+(2) {Ss} (7s) {ns} (4) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 -864 -416 label
+(Uns) {/Helvetica cf} 2 16 0 1.00 -656 -256 label
+(107) {/Helvetica cf} 2 16 0 1.00 -528 -256 label
+(Unnilseptium) {/Helvetica cf} 2 16 0 0.80 -640 -304 label
+(\(262\)) {/Helvetica cf} 2 16 0 1.00 -608 -352 label
+(108) {/Helvetica cf} 2 16 0 1.00 -304 -256 label
+(109) {/Helvetica cf} 2 16 0 1.00 -80 -256 label
+1.000 0.000 0.000 scb
+(1.00794) {/Helvetica cf} 2 16 0 1.00 -1968 992 label
+sce
+(9.012182) {/Helvetica cf} 2 16 0 1.00 -1760 768 label
+(22.989768) {/Helvetica cf} 2 16 0 1.00 -2000 544 label
+(24.3050) {/Helvetica cf} 2 16 0 1.00 -1760 544 label
+(40.078) {/Helvetica cf} 2 16 0 1.00 -1744 320 label
+(44.955910) {/Helvetica cf} 2 16 0 1.00 -1552 320 label
+(47.88) {/Helvetica cf} 2 16 0 1.00 -1296 320 label
+(51.9961) {/Helvetica cf} 2 16 0 1.00 -848 320 label
+(54.93805) {/Helvetica cf} 2 16 0 1.00 -640 320 label
+(58.93320) {/Helvetica cf} 2 16 0 1.00 -192 320 label
+(58.69) {/Helvetica cf} 2 16 0 1.00 64 320 label
+(65.39) {/Helvetica cf} 2 16 0 1.00 512 320 label
+(69.723) {/Helvetica cf} 2 16 0 1.00 720 320 label
+(72.61) {/Helvetica cf} 2 16 0 1.00 960 320 label
+0.000 0.000 1.000 scb
+(74.92159) {/Helvetica cf} 2 16 0 1.00 1152 320 label
+sce
+(88.90585) {/Helvetica cf} 2 16 0 1.00 -1536 96 label
+(102.90550) {/Helvetica cf} 2 16 0 1.00 -208 96 label
+0.600 0.600 0.600 scb
+(\(averaged according to) {/Helvetica-Oblique cf} 2 16 0 1.00 -672 720 label
+(occurence on earth\)) {/Helvetica-Oblique cf} 2 16 0 1.00 -656 688 label
+sce
+(La) {/Helvetica cf} 2 16 0 1.00 -1328 -608 label
+(57) {/Helvetica cf} 2 16 0 1.00 -1184 -608 label
+(Lanthanum) {/Helvetica cf} 2 16 0 1.00 -1328 -656 label
+(138.9055) {/Helvetica cf} 2 16 0 1.00 -1312 -704 label
+(2) {Ss} (6s) {ns} (1) {Ss} (5d) {/Helvetica cf} 8 16 0 1.00 -1312 -768 label
+(Ce) {/Helvetica cf} 2 16 0 1.00 -1104 -608 label
+(58) {/Helvetica cf} 2 16 0 1.00 -960 -608 label
+(Cerium) {/Helvetica cf} 2 16 0 1.00 -1072 -656 label
+(140.115) {/Helvetica cf} 2 16 0 1.00 -1072 -704 label
+(2) {Ss} (6s) {ns} (1) {Ss} (5d) {ns} (1) {Ss} (4f) {/Helvetica cf} 12 16 0 
+1.00 -1088 -768 label
+(Pr) {/Helvetica cf} 2 16 0 1.00 -880 -608 label
+(59) {/Helvetica cf} 2 16 0 1.00 -736 -608 label
+(Praseodymium) {/Helvetica cf} 2 16 0 0.80 -888 -656 label
+(140.90765) {/Helvetica cf} 2 16 0 1.00 -880 -704 label
+(2) {Ss} (6s) {ns} (3) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 -864 -768 label
+(Nd) {/Helvetica cf} 2 16 0 1.00 -656 -608 label
+(60) {/Helvetica cf} 2 16 0 1.00 -512 -608 label
+(Neodymium) {/Helvetica cf} 2 16 0 1.00 -664 -656 label
+(144.24) {/Helvetica cf} 2 16 0 1.00 -624 -704 label
+(2) {Ss} (6s) {ns} (4) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 -640 -768 label
+(Pm) {/Helvetica cf} 2 16 0 1.00 -432 -608 label
+(61) {/Helvetica cf} 2 16 0 1.00 -288 -608 label
+(Promethium) {/Helvetica cf} 2 16 0 1.00 -448 -656 label
+(\(145\)) {/Helvetica cf} 2 16 0 1.00 -384 -704 label
+(2) {Ss} (6s) {ns} (5) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 -416 -768 label
+(Sm) {/Helvetica cf} 2 16 0 1.00 -208 -608 label
+(62) {/Helvetica cf} 2 16 0 1.00 -64 -608 label
+(Samarium) {/Helvetica cf} 2 16 0 1.00 -208 -656 label
+(150.36) {/Helvetica cf} 2 16 0 1.00 -176 -704 label
+(2) {Ss} (6s) {ns} (6) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 -192 -768 label
+(Eu) {/Helvetica cf} 2 16 0 1.00 16 -608 label
+(63) {/Helvetica cf} 2 16 0 1.00 160 -608 label
+(Europium) {/Helvetica cf} 2 16 0 1.00 32 -656 label
+(151.965) {/Helvetica cf} 2 16 0 1.00 48 -704 label
+(2) {Ss} (6s) {ns} (7) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 32 -768 label
+(Gd) {/Helvetica cf} 2 16 0 1.00 240 -608 label
+(64) {/Helvetica cf} 2 16 0 1.00 384 -608 label
+(Gadolinium) {/Helvetica cf} 2 16 0 1.00 240 -656 label
+(157.25) {/Helvetica cf} 2 16 0 1.00 272 -704 label
+(2) {Ss} (6s) {ns} (1) {Ss} (5d) {ns} (7) {Ss} (4f) {/Helvetica cf} 12 16 0 
+1.00 256 -768 label
+(Tb) {/Helvetica cf} 2 16 0 1.00 464 -608 label
+(65) {/Helvetica cf} 2 16 0 1.00 608 -608 label
+(158.92534) {/Helvetica cf} 2 16 0 1.00 464 -704 label
+(Terbium) {/Helvetica cf} 2 16 0 1.00 480 -656 label
+{ns} (2) {Ss} (6s) {ns} (9) {Ss} (4f) {/Helvetica cf} 9 16 0 1.00 480 -768 
+label
+(Dy) {/Helvetica cf} 2 16 0 1.00 688 -608 label
+(66) {/Helvetica cf} 2 16 0 1.00 832 -608 label
+(Dysprosium) {/Helvetica cf} 2 16 0 1.00 680 -656 label
+(162.50) {/Helvetica cf} 2 16 0 1.00 720 -704 label
+(2) {Ss} (6s) {ns} (10) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 704 -768 label
+(Ho) {/Helvetica cf} 2 16 0 1.00 912 -608 label
+(67) {/Helvetica cf} 2 16 0 1.00 1056 -608 label
+(Holmium) {/Helvetica cf} 2 16 0 1.00 928 -656 label
+(164.93032) {/Helvetica cf} 2 16 0 1.00 912 -704 label
+(2) {Ss} (6s) {ns} (11) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 928 -768 label
+(Er) {/Helvetica cf} 2 16 0 1.00 1136 -608 label
+(68) {/Helvetica cf} 2 16 0 1.00 1280 -608 label
+(Erbium) {/Helvetica cf} 2 16 0 1.00 1168 -656 label
+(167.26) {/Helvetica cf} 2 16 0 1.00 1168 -704 label
+(2) {Ss} (6s) {ns} (12) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 1152 -768 label
+(Tm) {/Helvetica cf} 2 16 0 1.00 1360 -608 label
+(69) {/Helvetica cf} 2 16 0 1.00 1504 -608 label
+(Thulium) {/Helvetica cf} 2 16 0 1.00 1376 -656 label
+(168.93421) {/Helvetica cf} 2 16 0 1.00 1360 -704 label
+(2) {Ss} (6s) {ns} (13) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 1376 -768 label
+(Yb) {/Helvetica cf} 2 16 0 1.00 1584 -608 label
+(70) {/Helvetica cf} 2 16 0 1.00 1728 -608 label
+(Ytterbium) {/Helvetica cf} 2 16 0 1.00 1584 -656 label
+(173.04) {/Helvetica cf} 2 16 0 1.00 1616 -704 label
+(2) {Ss} (6s) {ns} (14) {Ss} (4f) {/Helvetica cf} 8 16 0 1.00 1600 -768 label
+(Lu) {/Helvetica cf} 2 16 0 1.00 1808 -608 label
+(71) {/Helvetica cf} 2 16 0 1.00 1952 -608 label
+(Lutetium) {/Helvetica cf} 2 16 0 1.00 1824 -656 label
+(174.967) {/Helvetica cf} 2 16 0 1.00 1824 -704 label
+(2) {Ss} (6s) {ns} (1) {Ss} (5d) {ns} (14) {Ss} (4f) {/Helvetica cf} 12 16 0 
+1.00 1808 -768 label
+(Ac) {/Helvetica cf} 2 16 0 1.00 -1328 -960 label
+(Actinium) {/Helvetica cf} 2 16 0 1.00 -1312 -1008 label
+(89) {/Helvetica cf} 2 16 0 1.00 -1184 -960 label
+(\(227\)) {/Helvetica cf} 2 16 0 1.00 -1280 -1056 label
+(2) {Ss} (7s) {ns} (1) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 -1312 -1120 label
+(Th) {/Helvetica cf} 2 16 0 1.00 -1104 -960 label
+(90) {/Helvetica cf} 2 16 0 1.00 -960 -960 label
+(Thorium) {/Helvetica cf} 2 16 0 1.00 -1088 -1008 label
+(232.0381) {/Helvetica cf} 2 16 0 1.00 -1088 -1056 label
+(2) {Ss} (7s) {ns} (2) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 -1088 -1120 label
+(Pa) {/Helvetica cf} 2 16 0 1.00 -880 -960 label
+(91) {/Helvetica cf} 2 16 0 1.00 -736 -960 label
+(Protactinium) {/Helvetica cf} 2 16 0 0.90 -880 -1008 label
+(231.03588) {/Helvetica cf} 2 16 0 1.00 -880 -1056 label
+(2) {Ss} (7s) {ns} (1) {Ss} (6d) {ns} (2) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 -864 -1120 label
+(U) {/Helvetica cf} 2 16 0 1.00 -656 -960 label
+(92) {/Helvetica cf} 2 16 0 1.00 -512 -960 label
+(Uranium) {/Helvetica cf} 2 16 0 1.00 -640 -1008 label
+(238.0289) {/Helvetica cf} 2 16 0 1.00 -640 -1056 label
+(2) {Ss} (7s) {ns} (1) {Ss} (6d) {ns} (3) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 -640 -1120 label
+(Np) {/Helvetica cf} 2 16 0 1.00 -432 -960 label
+(93) {/Helvetica cf} 2 16 0 1.00 -288 -960 label
+(Neptunium) {/Helvetica cf} 2 16 0 1.00 -432 -1008 label
+(\(237\)) {/Helvetica cf} 2 16 0 1.00 -384 -1056 label
+{ns} (2) {Ss} (7s) {ns} (1) {Ss} (6d) {ns} (4) {Ss} (5f) {/Helvetica cf} 13 16 
+0 1.00 -416 -1120 label
+(Pu) {/Helvetica cf} 2 16 0 1.00 -208 -960 label
+(94) {/Helvetica cf} 2 16 0 1.00 -64 -960 label
+(Plutonium) {/Helvetica cf} 2 16 0 1.00 -192 -1008 label
+(\(244\)) {/Helvetica cf} 2 16 0 1.00 -160 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (6) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 -192 -1120 label
+(Am) {/Helvetica cf} 2 16 0 1.00 16 -960 label
+(95) {/Helvetica cf} 2 16 0 1.00 160 -960 label
+(Americium) {/Helvetica cf} 2 16 0 1.00 16 -1008 label
+(\(243\)) {/Helvetica cf} 2 16 0 1.00 64 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (7) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 32 -1120 label
+(Cm) {/Helvetica cf} 2 16 0 1.00 240 -960 label
+(96) {/Helvetica cf} 2 16 0 1.00 384 -960 label
+(Curium) {/Helvetica cf} 2 16 0 1.00 272 -1008 label
+(\(247\)) {/Helvetica cf} 2 16 0 1.00 288 -1056 label
+(2) {Ss} (7s) {ns} (1) {Ss} (6d) {ns} (7) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 256 -1120 label
+(Bk) {/Helvetica cf} 2 16 0 1.00 464 -960 label
+(97) {/Helvetica cf} 2 16 0 1.00 608 -960 label
+(Berkelium) {/Helvetica cf} 2 16 0 1.00 464 -1008 label
+(\(247\)) {/Helvetica cf} 2 16 0 1.00 512 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (9) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 480 -1120 label
+(Cf) {/Helvetica cf} 2 16 0 1.00 688 -960 label
+(98) {/Helvetica cf} 2 16 0 1.00 832 -960 label
+(Californium) {/Helvetica cf} 2 16 0 1.00 680 -1008 label
+(\(251\)) {/Helvetica cf} 2 16 0 1.00 736 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (10) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 688 -1120 label
+(Es) {/Helvetica cf} 2 16 0 1.00 912 -960 label
+(99) {/Helvetica cf} 2 16 0 1.00 1056 -960 label
+(Einsteinium) {/Helvetica cf} 2 16 0 1.00 904 -1008 label
+(\(252\)) {/Helvetica cf} 2 16 0 1.00 960 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (11) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 912 -1120 label
+(Fm) {/Helvetica cf} 2 16 0 1.00 1136 -960 label
+(100) {/Helvetica cf} 2 16 0 1.00 1264 -960 label
+(Fermium) {/Helvetica cf} 2 16 0 1.00 1152 -1008 label
+(\(257\)) {/Helvetica cf} 2 16 0 1.00 1184 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (12) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 1136 -1120 label
+(Md) {/Helvetica cf} 2 16 0 1.00 1360 -960 label
+(101) {/Helvetica cf} 2 16 0 1.00 1488 -960 label
+(Mendelevium) {/Helvetica cf} 2 16 0 0.90 1352 -1008 label
+(\(258\)) {/Helvetica cf} 2 16 0 1.00 1408 -1056 label
+(2) {Ss} (7s) {ns} (0) {Ss} (6d) {ns} (13) {Ss} (5f) {/Helvetica cf} 12 16 0 
+1.00 1360 -1120 label
+(No) {/Helvetica cf} 2 16 0 1.00 1584 -960 label
+(102) {/Helvetica cf} 2 16 0 1.00 1712 -960 label
+(Nobelium) {/Helvetica cf} 2 16 0 1.00 1600 -1008 label
+(\(259\)) {/Helvetica cf} 2 16 0 1.00 1632 -1056 label
+{ns} (2) {Ss} (7s) {ns} (0) {Ss} (6d) {/Helvetica cf} 9 16 0 1.00 1600 -1120 
+label
+(Lr) {/Helvetica cf} 2 16 0 1.00 1808 -960 label
+(103) {/Helvetica cf} 2 16 0 1.00 1936 -960 label
+(Lawrencium) {/Helvetica cf} 2 16 0 0.90 1808 -1008 label
+(\(260\)) {/Helvetica cf} 2 16 0 1.00 1856 -1056 label
+(2) {Ss} (7s) {ns} (1) {Ss} (6d) {/Helvetica cf} 8 16 0 1.00 1824 -1120 label
+0.000 0.000 0.000 scb
+(IA) {/Helvetica cf} 2 16 0 1.00 -1840 1152 label
+(1) {/Helvetica cf} 2 16 0 1.00 -1984 1152 label
+(IIA) {hS} {/Helvetica cf} 3 16 0 1.00 -1648 928 label
+(2) {/Helvetica cf} 2 16 0 1.00 -1760 928 label
+(IIIB) {hS} {/Helvetica cf} 3 16 0 1.00 -1424 480 label
+(3) {/Helvetica cf} 2 16 0 1.00 -1536 480 label
+(IVB) {hS} {/Helvetica cf} 3 16 0 1.00 -1200 480 label
+(4) {/Helvetica cf} 2 16 0 1.00 -1312 480 label
+(VB) {hS} {/Helvetica cf} 3 16 0 1.00 -976 480 label
+(5) {/Helvetica cf} 2 16 0 1.00 -1088 480 label
+(VIB) {hS} {/Helvetica cf} 3 16 0 1.00 -752 480 label
+(6) {/Helvetica cf} 2 16 0 1.00 -864 480 label
+( VIIB) {hS} {/Helvetica cf} 3 16 0 1.00 -560 480 label
+(7) {/Helvetica cf} 2 16 0 1.00 -640 480 label
+(VIIIB) {hS} {/Helvetica cf} 3 16 0 1.00 -336 480 label
+(8) {/Helvetica cf} 2 16 0 1.00 -416 480 label
+(9) {/Helvetica cf} 2 16 0 1.00 -192 480 label
+(10) {/Helvetica cf} 2 16 0 1.00 32 480 label
+(IB) {hS} {/Helvetica cf} 3 16 0 1.00 368 480 label
+(11) {/Helvetica cf} 2 16 0 1.00 256 480 label
+(IIB) {hS} {/Helvetica cf} 3 16 0 1.00 592 480 label
+(12) {/Helvetica cf} 2 16 0 1.00 480 480 label
+(IIIA) {hS} {/Helvetica cf} 3 16 0 1.00 816 928 label
+(13) {/Helvetica cf} 2 16 0 1.00 704 928 label
+(IVA) {hS} {/Helvetica cf} 3 16 0 1.00 1040 928 label
+(14) {/Helvetica cf} 2 16 0 1.00 928 928 label
+(VA) {hS} {/Helvetica cf} 3 16 0 1.00 1264 928 label
+(15) {/Helvetica cf} 2 16 0 1.00 1152 928 label
+(VIA) {hS} {/Helvetica cf} 3 16 0 1.00 1488 928 label
+(16) {/Helvetica cf} 2 16 0 1.00 1376 928 label
+(VIIA) {hS} {/Helvetica cf} 3 16 0 1.00 1680 928 label
+(17) {/Helvetica cf} 2 16 0 1.00 1600 928 label
+(VIIIA) {hS} {/Helvetica cf} 3 16 0 1.00 1904 1152 label
+( 18) {/Helvetica cf} 2 16 0 1.00 1792 1152 label
+(VIIIB) {hS} {/Helvetica cf} 3 16 0 1.00 -112 480 label
+(VIIIB) {hS} {/Helvetica cf} 3 16 0 1.00 112 480 label
+(IA) {/Helvetica cf} 2 16 0 1.00 -752 928 label
+(1) {/Helvetica cf} 2 16 0 1.00 -896 928 label
+0.400 0.400 0.400 scb
+(Group, new) {/Helvetica-Oblique cf} 2 16 0 1.00 -1224 936 label
+1.00 90 -968 944 arrow
+(Group, old) {/Helvetica-Oblique cf} 2 16 0 1.00 -616 936 label
+1.00 270 -664 944 arrow
+endgate
+} def
+
+
+% EndLib

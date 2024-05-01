@@ -1,0 +1,17 @@
+%% Index %%
+
+%%Add TOC entry for index
+\phantomsection
+\addcontentsline{toc}{chapter}{INDEX}
+
+\printindex
+
+%% Next two for Acrobat bookmarks-- restore as before hi_appendix.latex mods
+\settocdepth{subsubsection} .
+%%\renewcommand{\thechapter}{chapter}
+
+%% The end! %%
+
+\end{document}
+\end{book}
+

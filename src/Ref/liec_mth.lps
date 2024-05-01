@@ -1,0 +1,78 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 2.0
+%  Library name is: liec_mth
+%  Author:  <Tony Kuphaldt>
+%
+
+% XCircuitLib library objects
+
+/plus_minus {
+% -16 -16 24 44 bbox
+begingate
+(+) {/Helvetica 1.000 cf} 2 16 0 -16 0 label
+(-) {/Helvetica 1.000 cf} 2 16 0 -16 -16 label
+endgate
+} def
+
+/radicand2 {
+% -112 -48 224 96 bbox
+begingate
+1  1.00 -112 16 -80 16 -48 -48 -16 48 112 48 5 polygon
+endgate
+} def
+
+/radicand1 {
+% -48 -32 112 48 bbox
+begingate
+1  1.00 -48 0 -32 0 -16 -32 0 16 64 16 5 polygon
+endgate
+} def
+
+/uparrow {
+% -12 -32 24 52 bbox
+begingate
+1.00 0 0 16 arrowhead
+1  1.00 0 0 0 -32 2 polygon
+endgate
+} def
+
+/down_arrow {
+% -12 -28 24 52 bbox
+begingate
+1.00 -181 0 -24 arrowhead
+1  1.00 0 0 0 24 2 polygon
+endgate
+} def
+
+/approx {
+% -8 -2 16 12 bbox
+begingate
+1  1.00 0 16 0 0 8 8 -8 8 spline
+1  1.00 0 8 0 -8 8 0 -8 0 spline
+endgate
+} def
+
+/left_parenthesis {
+% -5 -53 16 106 bbox
+begingate
+1  1.00 -11 21 -11 -21 11 -53 11 53 spline
+endgate
+} def
+
+/right_parenthesis {
+% -11 -53 16 106 bbox
+begingate
+1.00 -1 0 0 left_parenthesis
+endgate
+} def
+
+/d_dx {
+% -24 -32 56 68 bbox
+begingate
+(d) {/Times-Roman 1.000 cf} 2 16 0 -8 8 label
+1  1.00 -24 0 32 0 2 polygon
+(dx) {/Times-Roman 1.000 cf} 2 16 0 -16 -32 label
+endgate
+} def
+
+% EndLib

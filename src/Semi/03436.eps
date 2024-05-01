@@ -1,0 +1,825 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: 03436.eps
+%%Creator: XCircuit v3.4 rev21
+%%CreationDate: Thu Mar  8 00:10:03 2007
+%%Pages: 1
+%%BoundingBox: 68 68 418 178
+%%DocumentNeededResources: font Helvetica 
+%%EndComments
+%%BeginProlog
+%
+%  PostScript prolog for output from xcircuit
+%  Version: 3.3
+%
+%  Electrical circuit (and otherwise general) drawing program
+%
+%  Written by Tim Edwards 8/5/93--7/13/05  (tim.edwards@multigig.com)
+%  The Johns Hopkins University (1993-2004)
+%  MultiGiG, Inc. (2004-present)
+%
+%%BeginResource: procset XCIRCproc 3.3 0
+%
+% supporting definitions --- these are the primary xcircuit types.
+
+/XCIRCsave save def
+/topmat matrix currentmatrix def
+
+/fontslant { /slant exch def [1 0 slant 1 0 0] 
+    exch findfont exch makefont dup length dict /ndict exch def
+    { 1 index /FID ne { ndict 3 1 roll put } { pop pop } ifelse } forall
+    ndict definefont pop} def
+/ul { dup type /stringtype eq showflag 1 eq and { gsave 
+   currentpoint topmat setmatrix 0 0 moveto 2 index stringwidth pop (_)
+   false charpath flattenpath pathbbox grestore exch pop 1 index
+   sub setlinewidth exch pop currentpoint 3 -1 roll add moveto 0
+   rlineto stroke moveto } if } def
+/ol { dup type /stringtype eq showflag 1 eq and { gsave gsave
+   currentpoint topmat setmatrix 2 index stringwidth pop 3 index
+   true charpath flattenpath pathbbox grestore exch pop
+   exch pop topmat setmatrix (_) true charpath pathbbox grestore
+   exch pop 1 index sub setlinewidth exch pop currentpoint
+   exch 4 1 roll exch sub add moveto pop 0 rlineto stroke
+   moveto } if } def
+/stW { gsave currentpoint newpath moveto true charpath flattenpath
+	pathbbox pop exch pop sub grestore } def
+/Ts {mark Tabs aload pop counttomark 1 add array astore /Tabs exch def Tabs
+	0 currentpoint pop put} def
+/Tbn {mark Tabs aload pop counttomark dup 2 add 1 roll cleartomark 1 sub} def
+/Tb { 0 1 Tbn {Tabs exch get dup currentpoint pop lt
+	{currentpoint exch pop moveto exit} {pop} ifelse } for } def
+/Tf { Tbn -1 0 {Tabs exch get dup currentpoint pop gt
+	{currentpoint exch pop moveto exit} {pop} ifelse } for } def
+/qS { (aa) stW (a a) stW sub 4 div 0 Kn } def
+/hS { qS qS } def
+/pspc 0 def
+/cf0 { scalefont setfont } bind def
+/Kn { dup kY add /kY exch def rmoveto } bind def
+/ss { /fscale fscale 0.67 mul def currentfont 0.67 cf0 0 fscale0 fscale mul
+	0.33 mul neg Kn} def
+/Ss { /fscale fscale 0.67 mul def currentfont 0.67 cf0 0 fscale0 fscale mul
+	0.67 mul Kn } def
+/ns { 0 kY neg Kn /kY 0 def /fscale 1.0 def xfont0 1.0 cf0 } def
+/CR { ns 0 /Bline Bline fscale0 neg add def Bline moveto } def
+/cf { dup type /realtype ne {1.0} if exch findfont exch kY 0 eq
+	{ 40 mul dup /fscale0 exch def cf0 /xfont0 currentfont def}
+	{fscale0 mul fscale mul cf0} ifelse } def
+/ctmk { counttomark dup 2 add -1 roll pop } bind def
+/label { gsave translate 0 0 moveto dup scale neg /rotval exch def
+	/just exch def just 384 and 0 gt {/mshow {pop} def} {/mshow {show}
+	def} ifelse just 16 and 0 gt {gsave rotval rotate 0 1 dtransform
+	gsave pagemat setmatrix idtransform exch grestore 1 0 dtransform
+	gsave pagemat setmatrix idtransform exch grestore dup abs 1e-9 lt
+	{pop mul 0 gt} {3 1 roll pop pop 0 lt} ifelse grestore {-1 /rotval
+	rotval neg def /just just dup 3 and 1 ne {3 xor} if def} {1} ifelse
+	exch -1e-9 lt {-1 /rotval rotval neg def /just just dup 12 and
+	4 ne {12 xor} if def} {1} ifelse scale } if /showflag 0 def
+	/fspc pspc def /Bline 0 def /Tabs 0 array def /fscale 1.0 def
+	/kY 0 def gsave dup 1 add copy 0 exch 1 0 dtransform exch atan rotate
+	{exch dup type /stringtype eq {true charpath flattenpath} {dup type
+	/arraytype eq {exec} {12 string cvs true charpath flattenpath} ifelse}
+	ifelse} repeat pop pathbbox grestore 3 -1 roll pop 3 1 roll just
+	1 and 0 gt {just 2 and 0 gt {exch pop neg fspc sub} {exch sub 0.5
+	mul neg} ifelse} {pop neg fspc add} ifelse exch Bline exch just 4
+	and 0 gt {just 8 and 0 gt {exch pop neg fspc sub} {add 0.5 mul neg}
+	ifelse} {pop neg fspc add} ifelse rotval rotate Kn currentpoint
+	translate /showflag 1 def /Bline 0 def /Tabs 0 array def /fscale
+	1.0 def /kY 0 def {dup type /stringtype eq {mshow} {dup type
+	/arraytype eq {exec} {12 string cvs mshow} ifelse} ifelse} repeat
+	grestore } def
+/pinlabel { 4 index 32 and 0 ne hlevel 0 eq or { /pspc 10 def label
+	/pspc 0 def } { pop pop pop pop pop {pop} repeat } ifelse } def
+/pinglobal { pinlabel } def
+/infolabel { pinlabel } def
+/graphic { gsave 4 index cvx exec /DataSource get resetfile translate
+	0 0 moveto neg rotate dup scale cvx exec image grestore } def
+
+/scb { setrgbcolor } bind def  /sce { defColor aload pop scb } bind def
+/cRedef {/defColor currentcolor 3 array astore def} def
+/begingate {dup type /dicttype ne {1 dict} if begin	% default params
+	dup type /dicttype ne {1 dict} if begin		% instanced params
+	/hlevel hlevel 1 add def /defColor currentcolor sce 3 array
+	astore def gsave sce translate 0 0 moveto neg rotate dup abs scale
+	} bind def
+/endgate { /hlevel hlevel 1 sub def grestore defColor aload pop cRedef
+	scb end end} bind def
+
+/hlevel 0 def
+/tmpa [1 0 0 1 0 0] def
+/gar {8 8 true tmpa {<c0 c0 00 00 0c 0c 00 00>} imagemask} bind
+{8 8 true tmpa {<30 70 60 02 03 07 06 20>} imagemask} bind
+{8 8 true tmpa {<0c 1e 1e 0c c0 e1 e1 c0>} imagemask} bind
+{8 8 true tmpa {<0f 0f 0f 0f f0 f0 f0 f0>} imagemask} bind
+{8 8 true tmpa {<3f f3 e1 e1 f3 3f 1e 1e>} imagemask} bind
+{8 8 true tmpa {<df cf 8f 9f fd fc f8 f9>} imagemask} bind
+{8 8 true tmpa {<ff 3f 3f ff ff f3 f3 ff>} imagemask} bind 7 array astore def
+/ppaint { gsave clip tmpa dup setmatrix pathbbox neg exch neg 4 2 roll
+  neg 4 -1 roll 2 copy gt {exch} if 8 div ceiling 8 mul 4 2 roll neg 2 copy
+  gt {exch} if 8 div ceiling 8 mul 3 -1 roll -8 5 -1 roll
+  { 3 index exch 5 exch put dup -8 3 index { 3 index
+  exch 4 exch put 3 index exec } for } for pop pop pop pop grestore } bind def
+/setstyles {
+  currentlinewidth mul setlinewidth /style exch def
+  style 1 and 0 gt not {closepath} if
+  style 1024 and 0 gt {2 setlinecap} if
+  style 2 and 0 gt {currentlinewidth 4 mul dup 2 array astore 0 setdash} if
+  style 4 and 0 gt {0.5 currentlinewidth 4 mul 2 array astore 0 setdash} if
+  gsave style 16 and 0 gt { style 224 and -5 bitshift style 256 and 0 gt {
+  7 exch sub 8 div dup 1 exch sub currentrgbcolor 3 array astore
+  {3 copy mul add 4 1 roll pop} forall pop pop setrgbcolor eofill}
+  {dup 7 lt {gar exch get ppaint} {pop eofill} ifelse} ifelse}
+  {style 256 and 0 gt {1 setgray eofill} if} ifelse grestore style 8 and 0 gt 
+  style 512 eq or {newpath} {stroke} ifelse grestore} def     
+
+/polygon { gsave /num exch def moveto num 1 sub {lineto} repeat setstyles } def
+/xcarc   { gsave newpath arc setstyles } def
+/elb { matrix currentmatrix 7 -1 roll 7 -1 roll translate 5 1 roll 4 -1 roll
+	3 index div 1 scale } def
+/ele { 0 4 1 roll 0 4 1 roll } bind def
+/ellipse { gsave elb newpath ele arc setmatrix setstyles } def
+/pellip  { elb ele arc setmatrix } def
+/nellip  { elb ele arcn setmatrix } def
+/spline  { gsave moveto curveto setstyles } def
+/polyc   { {lineto} repeat } bind def
+/beginpath { gsave moveto } bind def
+/endpath { setstyles } bind def
+/bop	 { 1 setlinecap 0 setlinejoin 6 setmiterlimit 0 0 0 scb cRedef } def
+/psinsertion {/PSobj save def /showpage {} def /setpagedevice {pop} def bop
+	rotate translate dup scale} def
+/end_insert {PSobj restore} def
+/setpagemat {/pagemat matrix currentmatrix def} def
+/inchscale  {setpagemat 0.375 mul dup scale} def
+/cmscale    {setpagemat 0.35433071 mul dup scale} def
+
+%%EndResource
+%%EndProlog
+
+% XCircuit output starts here.
+
+%%BeginSetup
+
+
+%%EndSetup
+
+%%Page: 1 1
+%%PageOrientation: Portrait
+/pgsave save def bop
+% 32.00 1.00 gridspace
+0.8261 inchscale
+2.6000 setlinewidth 774 427 translate
+
+1 1.00 -82 18 -68 10 -68 -8 -82 -16 -96 -8 -96 10 -82 18 7 polygon
+1 1.00 -96 -54 -82 -60 -82 -72 -96 -78 -110 -72 -110 -60 -96 -54 7 polygon
+1 1.00 -68 -54 -54 -60 -54 -72 -68 -78 -82 -72 -82 -60 -68 -54 7 polygon
+1 1.00 -40 -54 -26 -60 -26 -72 -40 -78 -54 -72 -54 -60 -40 -54 7 polygon
+1 1.00 -54 18 -40 10 -40 -8 -54 -16 -68 -8 -68 10 -54 18 7 polygon
+1 1.00 -96 -86 -82 -90 -82 -98 -96 -102 -110 -98 -110 -90 -96 -86 7 polygon
+1 1.00 -124 -108 -110 -110 -110 -116 -124 -118 -138 -116 -138 -110 -124 -108 
+7 polygon
+1 1.00 -96 -108 -82 -110 -82 -116 -96 -118 -110 -116 -110 -110 -96 -108 
+7 polygon
+1 1.00 -68 -108 -54 -110 -54 -116 -68 -118 -82 -116 -82 -110 -68 -108 7 polygon
+1 1.00 -40 -108 -26 -110 -26 -116 -40 -118 -54 -116 -54 -110 -40 -108 7 polygon
+1 1.00 16 -108 30 -110 30 -116 16 -118 2 -116 2 -110 16 -108 7 polygon
+1 1.00 44 -108 58 -110 58 -116 44 -118 30 -116 30 -110 44 -108 7 polygon
+1 1.00 72 -108 86 -110 86 -116 72 -118 58 -116 58 -110 72 -108 7 polygon
+1 1.00 -12 -108 2 -110 2 -116 -12 -118 -26 -116 -26 -110 -12 -108 7 polygon
+1 1.00 -68 -86 -54 -90 -54 -98 -68 -102 -82 -98 -82 -90 -68 -86 7 polygon
+1 1.00 -12 -86 2 -90 2 -98 -12 -102 -26 -98 -26 -90 -12 -86 7 polygon
+1 1.00 -40 -86 -26 -90 -26 -98 -40 -102 -54 -98 -54 -90 -40 -86 7 polygon
+1 1.00 44 -86 58 -90 58 -98 44 -102 30 -98 30 -90 44 -86 7 polygon
+1 1.00 16 -86 30 -90 30 -98 16 -102 2 -98 2 -90 16 -86 7 polygon
+1 1.00 72 -86 86 -90 86 -98 72 -102 58 -98 58 -90 72 -86 7 polygon
+1 1.00 100 -86 114 -90 114 -98 100 -102 86 -98 86 -90 100 -86 7 polygon
+1 1.00 -68 -102 -68 -108 2 polygon
+1 1.00 -40 -102 -40 -108 2 polygon
+1 1.00 -12 -102 -12 -108 2 polygon
+1 1.00 16 -102 16 -108 2 polygon
+1 1.00 44 -102 44 -108 2 polygon
+1 1.00 72 -102 72 -108 2 polygon
+1 1.00 -12 -54 2 -60 2 -72 -12 -78 -26 -72 -26 -60 -12 -54 7 polygon
+1 1.00 16 -54 30 -60 30 -72 16 -78 2 -72 2 -60 16 -54 7 polygon
+1 1.00 44 -54 58 -60 58 -72 44 -78 30 -72 30 -60 44 -54 7 polygon
+1 1.00 72 -54 86 -60 86 -72 72 -78 58 -72 58 -60 72 -54 7 polygon
+1 1.00 100 -54 114 -60 114 -72 100 -78 86 -72 86 -60 100 -54 7 polygon
+1 1.00 128 -54 142 -60 142 -72 128 -78 114 -72 114 -60 128 -54 7 polygon
+1 1.00 -124 -102 -124 -108 2 polygon
+1 1.00 -124 -102 -110 -98 2 polygon
+1 1.00 -96 -78 -96 -86 2 polygon
+1 1.00 -68 -78 -68 -86 2 polygon
+1 1.00 -40 -78 -40 -86 2 polygon
+1 1.00 -12 -78 -12 -86 2 polygon
+1 1.00 16 -78 16 -86 2 polygon
+1 1.00 44 -78 44 -86 2 polygon
+1 1.00 72 -78 72 -86 2 polygon
+1 1.00 100 -78 100 -86 2 polygon
+1 1.00 128 -78 128 -86 2 polygon
+1 1.00 128 -86 142 -90 142 -98 128 -102 114 -98 114 -90 128 -86 7 polygon
+1 1.00 100 -102 100 -108 2 polygon
+1 1.00 100 -108 114 -110 114 -116 100 -118 86 -116 86 -110 100 -108 7 polygon
+1 1.00 128 -102 128 -108 2 polygon
+1 1.00 128 -108 142 -110 142 -116 128 -118 114 -116 114 -110 128 -108 7 polygon
+1 1.00 156 -102 156 -108 2 polygon
+1 1.00 156 -108 170 -110 170 -116 156 -118 142 -116 142 -110 156 -108 7 polygon
+1 1.00 156 -54 170 -60 170 -72 156 -78 142 -72 142 -60 156 -54 7 polygon
+1 1.00 156 -78 156 -86 2 polygon
+1 1.00 156 -86 170 -90 170 -98 156 -102 142 -98 142 -90 156 -86 7 polygon
+1 1.00 -68 -54 -68 -38 2 polygon
+1 1.00 -68 -8 -54 -16 -54 -32 -68 -38 -82 -32 -82 -16 -68 -8 7 polygon
+1 1.00 -40 -8 -26 -16 -26 -32 -40 -38 -54 -32 -54 -16 -40 -8 7 polygon
+1 1.00 -40 -54 -40 -38 2 polygon
+1 1.00 -12 -8 2 -16 2 -32 -12 -38 -26 -32 -26 -16 -12 -8 7 polygon
+1 1.00 -12 -54 -12 -38 2 polygon
+1 1.00 16 -8 30 -16 30 -32 16 -38 2 -32 2 -16 16 -8 7 polygon
+1 1.00 16 -54 16 -38 2 polygon
+1 1.00 44 -8 58 -16 58 -32 44 -38 30 -32 30 -16 44 -8 7 polygon
+1 1.00 44 -54 44 -38 2 polygon
+1 1.00 72 -8 86 -16 86 -32 72 -38 58 -32 58 -16 72 -8 7 polygon
+1 1.00 72 -54 72 -38 2 polygon
+1 1.00 100 -8 114 -16 114 -32 100 -38 86 -32 86 -16 100 -8 7 polygon
+1 1.00 100 -54 100 -38 2 polygon
+1 1.00 128 -8 142 -16 142 -32 128 -38 114 -32 114 -16 128 -8 7 polygon
+1 1.00 128 -54 128 -38 2 polygon
+1 1.00 156 -8 170 -16 170 -32 156 -38 142 -32 142 -16 156 -8 7 polygon
+1 1.00 156 -54 156 -38 2 polygon
+1 1.00 -96 -54 -96 -38 2 polygon
+1 1.00 -96 -38 -82 -32 2 polygon
+1 1.00 -124 -78 -124 -86 2 polygon
+1 1.00 -124 -78 -110 -72 2 polygon
+1 1.00 -124 -86 -110 -90 2 polygon
+1 1.00 -124 -118 -124 -122 2 polygon
+1 1.00 -124 -122 -112 -124 -124 -126 -136 -124 -124 -122 5 polygon
+1 1.00 -96 -118 -96 -122 2 polygon
+1 1.00 -96 -122 -84 -124 -96 -126 -108 -124 -96 -122 5 polygon
+1 1.00 -152 -118 -152 -122 2 polygon
+1 1.00 -152 -122 -140 -124 -152 -126 -164 -124 -152 -122 5 polygon
+1 1.00 -152 -118 -138 -116 2 polygon
+1 1.00 -40 -118 -40 -122 2 polygon
+1 1.00 -40 -122 -28 -124 -40 -126 -52 -124 -40 -122 5 polygon
+1 1.00 -12 -118 -12 -122 2 polygon
+1 1.00 -12 -122 0 -124 -12 -126 -24 -124 -12 -122 5 polygon
+1 1.00 -68 -118 -68 -122 2 polygon
+1 1.00 -68 -122 -56 -124 -68 -126 -80 -124 -68 -122 5 polygon
+1 1.00 44 -118 44 -122 2 polygon
+1 1.00 44 -122 56 -124 44 -126 32 -124 44 -122 5 polygon
+1 1.00 72 -118 72 -122 2 polygon
+1 1.00 72 -122 84 -124 72 -126 60 -124 72 -122 5 polygon
+1 1.00 16 -118 16 -122 2 polygon
+1 1.00 16 -122 28 -124 16 -126 4 -124 16 -122 5 polygon
+1 1.00 128 -118 128 -122 2 polygon
+1 1.00 128 -122 140 -124 128 -126 116 -124 128 -122 5 polygon
+1 1.00 156 -118 156 -122 2 polygon
+1 1.00 156 -122 168 -124 156 -126 144 -124 156 -122 5 polygon
+1 1.00 100 -118 100 -122 2 polygon
+1 1.00 100 -122 112 -124 100 -126 88 -124 100 -122 5 polygon
+1 1.00 2 18 16 10 16 -8 2 -16 -12 -8 -12 10 2 18 7 polygon
+1 1.00 -26 18 -12 10 -12 -8 -26 -16 -40 -8 -40 10 -26 18 7 polygon
+1 1.00 58 18 72 10 72 -8 58 -16 44 -8 44 10 58 18 7 polygon
+1 1.00 30 18 44 10 44 -8 30 -16 16 -8 16 10 30 18 7 polygon
+1 1.00 114 18 128 10 128 -8 114 -16 100 -8 100 10 114 18 7 polygon
+1 1.00 86 18 100 10 100 -8 86 -16 72 -8 72 10 86 18 7 polygon
+1 1.00 142 18 156 10 156 -8 142 -16 128 -8 128 10 142 18 7 polygon
+1 1.00 -96 56 -82 62 -82 74 -96 80 -110 74 -110 62 -96 56 7 polygon
+1 1.00 -68 56 -54 62 -54 74 -68 80 -82 74 -82 62 -68 56 7 polygon
+1 1.00 -40 56 -26 62 -26 74 -40 80 -54 74 -54 62 -40 56 7 polygon
+1 1.00 -96 88 -82 92 -82 100 -96 104 -110 100 -110 92 -96 88 7 polygon
+1 1.00 -124 110 -110 112 -110 118 -124 120 -138 118 -138 112 -124 110 7 polygon
+1 1.00 -96 110 -82 112 -82 118 -96 120 -110 118 -110 112 -96 110 7 polygon
+1 1.00 -68 110 -54 112 -54 118 -68 120 -82 118 -82 112 -68 110 7 polygon
+1 1.00 -40 110 -26 112 -26 118 -40 120 -54 118 -54 112 -40 110 7 polygon
+1 1.00 16 110 30 112 30 118 16 120 2 118 2 112 16 110 7 polygon
+1 1.00 44 110 58 112 58 118 44 120 30 118 30 112 44 110 7 polygon
+1 1.00 72 110 86 112 86 118 72 120 58 118 58 112 72 110 7 polygon
+1 1.00 -12 110 2 112 2 118 -12 120 -26 118 -26 112 -12 110 7 polygon
+1 1.00 -68 88 -54 92 -54 100 -68 104 -82 100 -82 92 -68 88 7 polygon
+1 1.00 -12 88 2 92 2 100 -12 104 -26 100 -26 92 -12 88 7 polygon
+1 1.00 -40 88 -26 92 -26 100 -40 104 -54 100 -54 92 -40 88 7 polygon
+1 1.00 44 88 58 92 58 100 44 104 30 100 30 92 44 88 7 polygon
+1 1.00 16 88 30 92 30 100 16 104 2 100 2 92 16 88 7 polygon
+1 1.00 72 88 86 92 86 100 72 104 58 100 58 92 72 88 7 polygon
+1 1.00 100 88 114 92 114 100 100 104 86 100 86 92 100 88 7 polygon
+1 1.00 -68 104 -68 110 2 polygon
+1 1.00 -40 104 -40 110 2 polygon
+1 1.00 -12 104 -12 110 2 polygon
+1 1.00 16 104 16 110 2 polygon
+1 1.00 44 104 44 110 2 polygon
+1 1.00 72 104 72 110 2 polygon
+1 1.00 -12 56 2 62 2 74 -12 80 -26 74 -26 62 -12 56 7 polygon
+1 1.00 16 56 30 62 30 74 16 80 2 74 2 62 16 56 7 polygon
+1 1.00 44 56 58 62 58 74 44 80 30 74 30 62 44 56 7 polygon
+1 1.00 72 56 86 62 86 74 72 80 58 74 58 62 72 56 7 polygon
+1 1.00 100 56 114 62 114 74 100 80 86 74 86 62 100 56 7 polygon
+1 1.00 128 56 142 62 142 74 128 80 114 74 114 62 128 56 7 polygon
+1 1.00 -124 104 -124 110 2 polygon
+1 1.00 -124 104 -110 100 2 polygon
+1 1.00 -96 80 -96 88 2 polygon
+1 1.00 -68 80 -68 88 2 polygon
+1 1.00 -40 80 -40 88 2 polygon
+1 1.00 -12 80 -12 88 2 polygon
+1 1.00 16 80 16 88 2 polygon
+1 1.00 44 80 44 88 2 polygon
+1 1.00 72 80 72 88 2 polygon
+1 1.00 100 80 100 88 2 polygon
+1 1.00 128 80 128 88 2 polygon
+1 1.00 128 88 142 92 142 100 128 104 114 100 114 92 128 88 7 polygon
+1 1.00 100 104 100 110 2 polygon
+1 1.00 100 110 114 112 114 118 100 120 86 118 86 112 100 110 7 polygon
+1 1.00 128 104 128 110 2 polygon
+1 1.00 128 110 142 112 142 118 128 120 114 118 114 112 128 110 7 polygon
+1 1.00 156 104 156 110 2 polygon
+1 1.00 156 110 170 112 170 118 156 120 142 118 142 112 156 110 7 polygon
+1 1.00 156 56 170 62 170 74 156 80 142 74 142 62 156 56 7 polygon
+1 1.00 156 80 156 88 2 polygon
+1 1.00 156 88 170 92 170 100 156 104 142 100 142 92 156 88 7 polygon
+1 1.00 -68 56 -68 40 2 polygon
+1 1.00 -68 10 -54 18 -54 34 -68 40 -82 34 -82 18 -68 10 7 polygon
+1 1.00 -40 10 -26 18 -26 34 -40 40 -54 34 -54 18 -40 10 7 polygon
+1 1.00 -40 56 -40 40 2 polygon
+1 1.00 -12 10 2 18 2 34 -12 40 -26 34 -26 18 -12 10 7 polygon
+1 1.00 -12 56 -12 40 2 polygon
+1 1.00 16 10 30 18 30 34 16 40 2 34 2 18 16 10 7 polygon
+1 1.00 16 56 16 40 2 polygon
+1 1.00 44 10 58 18 58 34 44 40 30 34 30 18 44 10 7 polygon
+1 1.00 44 56 44 40 2 polygon
+1 1.00 72 10 86 18 86 34 72 40 58 34 58 18 72 10 7 polygon
+1 1.00 72 56 72 40 2 polygon
+1 1.00 100 10 114 18 114 34 100 40 86 34 86 18 100 10 7 polygon
+1 1.00 100 56 100 40 2 polygon
+1 1.00 128 10 142 18 142 34 128 40 114 34 114 18 128 10 7 polygon
+1 1.00 128 56 128 40 2 polygon
+1 1.00 156 10 170 18 170 34 156 40 142 34 142 18 156 10 7 polygon
+1 1.00 156 56 156 40 2 polygon
+1 1.00 -96 56 -96 40 2 polygon
+1 1.00 -96 40 -82 34 2 polygon
+1 1.00 -124 80 -110 74 2 polygon
+1 1.00 -124 88 -110 92 2 polygon
+1 1.00 -124 120 -124 124 2 polygon
+1 1.00 -124 124 -112 126 -124 128 -136 126 -124 124 5 polygon
+1 1.00 -96 120 -96 124 2 polygon
+1 1.00 -96 124 -84 126 -96 128 -108 126 -96 124 5 polygon
+1 1.00 -152 120 -138 118 2 polygon
+1 1.00 -40 120 -40 124 2 polygon
+1 1.00 -40 124 -28 126 -40 128 -52 126 -40 124 5 polygon
+1 1.00 -12 120 -12 124 2 polygon
+1 1.00 -12 124 0 126 -12 128 -24 126 -12 124 5 polygon
+1 1.00 -68 120 -68 124 2 polygon
+1 1.00 -68 124 -56 126 -68 128 -80 126 -68 124 5 polygon
+1 1.00 44 120 44 124 2 polygon
+1 1.00 44 124 56 126 44 128 32 126 44 124 5 polygon
+1 1.00 72 120 72 124 2 polygon
+1 1.00 72 124 84 126 72 128 60 126 72 124 5 polygon
+1 1.00 16 120 16 124 2 polygon
+1 1.00 16 124 28 126 16 128 4 126 16 124 5 polygon
+1 1.00 128 120 128 124 2 polygon
+1 1.00 128 124 140 126 128 128 116 126 128 124 5 polygon
+1 1.00 156 120 156 124 2 polygon
+1 1.00 156 124 168 126 156 128 144 126 156 124 5 polygon
+1 1.00 100 120 100 124 2 polygon
+1 1.00 100 124 112 126 100 128 88 126 100 124 5 polygon
+1 1.00 -152 120 -152 124 2 polygon
+1 1.00 -152 124 -140 126 -152 128 -164 126 -152 124 5 polygon
+1 1.00 184 -108 198 -110 198 -116 184 -118 170 -116 170 -110 184 -108 7 polygon
+1 1.00 184 -86 198 -90 198 -98 184 -102 170 -98 170 -90 184 -86 7 polygon
+1 1.00 212 -86 226 -90 226 -98 212 -102 198 -98 198 -90 212 -86 7 polygon
+1 1.00 184 -102 184 -108 2 polygon
+1 1.00 184 -54 198 -60 198 -72 184 -78 170 -72 170 -60 184 -54 7 polygon
+1 1.00 212 -54 226 -60 226 -72 212 -78 198 -72 198 -60 212 -54 7 polygon
+1 1.00 240 -54 254 -60 254 -72 240 -78 226 -72 226 -60 240 -54 7 polygon
+1 1.00 184 -78 184 -86 2 polygon
+1 1.00 212 -78 212 -86 2 polygon
+1 1.00 240 -78 240 -86 2 polygon
+1 1.00 240 -86 254 -90 254 -98 240 -102 226 -98 226 -90 240 -86 7 polygon
+1 1.00 212 -102 212 -108 2 polygon
+1 1.00 212 -108 226 -110 226 -116 212 -118 198 -116 198 -110 212 -108 7 polygon
+1 1.00 240 -102 240 -108 2 polygon
+1 1.00 240 -108 254 -110 254 -116 240 -118 226 -116 226 -110 240 -108 7 polygon
+1 1.00 268 -102 268 -108 2 polygon
+1 1.00 268 -108 282 -110 282 -116 268 -118 254 -116 254 -110 268 -108 7 polygon
+1 1.00 268 -54 282 -60 282 -72 268 -78 254 -72 254 -60 268 -54 7 polygon
+1 1.00 268 -78 268 -86 2 polygon
+1 1.00 268 -86 282 -90 282 -98 268 -102 254 -98 254 -90 268 -86 7 polygon
+1 1.00 184 -8 198 -16 198 -32 184 -38 170 -32 170 -16 184 -8 7 polygon
+1 1.00 184 -54 184 -38 2 polygon
+1 1.00 212 -8 226 -16 226 -32 212 -38 198 -32 198 -16 212 -8 7 polygon
+1 1.00 212 -54 212 -38 2 polygon
+1 1.00 240 -8 254 -16 254 -32 240 -38 226 -32 226 -16 240 -8 7 polygon
+1 1.00 240 -54 240 -38 2 polygon
+1 1.00 268 -8 282 -16 282 -32 268 -38 254 -32 254 -16 268 -8 7 polygon
+1 1.00 268 -54 268 -38 2 polygon
+1 1.00 184 -118 184 -122 2 polygon
+1 1.00 184 -122 196 -124 184 -126 172 -124 184 -122 5 polygon
+1 1.00 240 -118 240 -122 2 polygon
+1 1.00 240 -122 252 -124 240 -126 228 -124 240 -122 5 polygon
+1 1.00 268 -118 268 -122 2 polygon
+1 1.00 268 -122 280 -124 268 -126 256 -124 268 -122 5 polygon
+1 1.00 212 -118 212 -122 2 polygon
+1 1.00 212 -122 224 -124 212 -126 200 -124 212 -122 5 polygon
+1 1.00 170 18 184 10 184 -8 170 -16 156 -8 156 10 170 18 7 polygon
+1 1.00 226 18 240 10 240 -8 226 -16 212 -8 212 10 226 18 7 polygon
+1 1.00 198 18 212 10 212 -8 198 -16 184 -8 184 10 198 18 7 polygon
+1 1.00 254 18 268 10 268 -8 254 -16 240 -8 240 10 254 18 7 polygon
+1 1.00 184 110 198 112 198 118 184 120 170 118 170 112 184 110 7 polygon
+1 1.00 184 88 198 92 198 100 184 104 170 100 170 92 184 88 7 polygon
+1 1.00 212 88 226 92 226 100 212 104 198 100 198 92 212 88 7 polygon
+1 1.00 184 104 184 110 2 polygon
+1 1.00 184 56 198 62 198 74 184 80 170 74 170 62 184 56 7 polygon
+1 1.00 212 56 226 62 226 74 212 80 198 74 198 62 212 56 7 polygon
+1 1.00 240 56 254 62 254 74 240 80 226 74 226 62 240 56 7 polygon
+1 1.00 184 80 184 88 2 polygon
+1 1.00 212 80 212 88 2 polygon
+1 1.00 240 80 240 88 2 polygon
+1 1.00 240 88 254 92 254 100 240 104 226 100 226 92 240 88 7 polygon
+1 1.00 212 104 212 110 2 polygon
+1 1.00 212 110 226 112 226 118 212 120 198 118 198 112 212 110 7 polygon
+1 1.00 240 104 240 110 2 polygon
+1 1.00 240 110 254 112 254 118 240 120 226 118 226 112 240 110 7 polygon
+1 1.00 268 104 268 110 2 polygon
+1 1.00 268 110 282 112 282 118 268 120 254 118 254 112 268 110 7 polygon
+1 1.00 268 56 282 62 282 74 268 80 254 74 254 62 268 56 7 polygon
+1 1.00 268 80 268 88 2 polygon
+1 1.00 268 88 282 92 282 100 268 104 254 100 254 92 268 88 7 polygon
+1 1.00 184 10 198 18 198 34 184 40 170 34 170 18 184 10 7 polygon
+1 1.00 184 56 184 40 2 polygon
+1 1.00 212 10 226 18 226 34 212 40 198 34 198 18 212 10 7 polygon
+1 1.00 212 56 212 40 2 polygon
+1 1.00 240 10 254 18 254 34 240 40 226 34 226 18 240 10 7 polygon
+1 1.00 240 56 240 40 2 polygon
+1 1.00 268 10 282 18 282 34 268 40 254 34 254 18 268 10 7 polygon
+1 1.00 268 56 268 40 2 polygon
+1 1.00 184 120 184 124 2 polygon
+1 1.00 184 124 196 126 184 128 172 126 184 124 5 polygon
+1 1.00 240 120 240 124 2 polygon
+1 1.00 240 124 252 126 240 128 228 126 240 124 5 polygon
+1 1.00 268 120 268 124 2 polygon
+1 1.00 268 124 280 126 268 128 256 126 268 124 5 polygon
+1 1.00 212 120 212 124 2 polygon
+1 1.00 212 124 224 126 212 128 200 126 212 124 5 polygon
+1 1.00 296 -108 310 -110 310 -116 296 -118 282 -116 282 -110 296 -108 7 polygon
+1 1.00 296 -86 310 -90 310 -98 296 -102 282 -98 282 -90 296 -86 7 polygon
+1 1.00 324 -86 338 -90 338 -98 324 -102 310 -98 310 -90 324 -86 7 polygon
+1 1.00 296 -102 296 -108 2 polygon
+1 1.00 296 -54 310 -60 310 -72 296 -78 282 -72 282 -60 296 -54 7 polygon
+1 1.00 324 -54 338 -60 338 -72 324 -78 310 -72 310 -60 324 -54 7 polygon
+1 1.00 352 -54 366 -60 366 -72 352 -78 338 -72 338 -60 352 -54 7 polygon
+1 1.00 296 -78 296 -86 2 polygon
+1 1.00 324 -78 324 -86 2 polygon
+1 1.00 352 -78 352 -86 2 polygon
+1 1.00 352 -86 366 -90 366 -98 352 -102 338 -98 338 -90 352 -86 7 polygon
+1 1.00 324 -102 324 -108 2 polygon
+1 1.00 324 -108 338 -110 338 -116 324 -118 310 -116 310 -110 324 -108 7 polygon
+1 1.00 352 -102 352 -108 2 polygon
+1 1.00 352 -108 366 -110 366 -116 352 -118 338 -116 338 -110 352 -108 7 polygon
+1 1.00 380 -102 380 -108 2 polygon
+1 1.00 380 -108 394 -110 394 -116 380 -118 366 -116 366 -110 380 -108 7 polygon
+1 1.00 380 -54 394 -60 394 -72 380 -78 366 -72 366 -60 380 -54 7 polygon
+1 1.00 380 -78 380 -86 2 polygon
+1 1.00 380 -86 394 -90 394 -98 380 -102 366 -98 366 -90 380 -86 7 polygon
+1 1.00 296 -8 310 -16 310 -32 296 -38 282 -32 282 -16 296 -8 7 polygon
+1 1.00 296 -54 296 -38 2 polygon
+1 1.00 324 -8 338 -16 338 -32 324 -38 310 -32 310 -16 324 -8 7 polygon
+1 1.00 324 -54 324 -38 2 polygon
+1 1.00 352 -8 366 -16 366 -32 352 -38 338 -32 338 -16 352 -8 7 polygon
+1 1.00 352 -54 352 -38 2 polygon
+1 1.00 380 -8 394 -16 394 -32 380 -38 366 -32 366 -16 380 -8 7 polygon
+1 1.00 380 -54 380 -38 2 polygon
+1 1.00 296 -118 296 -122 2 polygon
+1 1.00 296 -122 308 -124 296 -126 284 -124 296 -122 5 polygon
+1 1.00 352 -118 352 -122 2 polygon
+1 1.00 352 -122 364 -124 352 -126 340 -124 352 -122 5 polygon
+1 1.00 380 -118 380 -122 2 polygon
+1 1.00 380 -122 392 -124 380 -126 368 -124 380 -122 5 polygon
+1 1.00 324 -118 324 -122 2 polygon
+1 1.00 324 -122 336 -124 324 -126 312 -124 324 -122 5 polygon
+1 1.00 282 18 296 10 296 -8 282 -16 268 -8 268 10 282 18 7 polygon
+1 1.00 338 18 352 10 352 -8 338 -16 324 -8 324 10 338 18 7 polygon
+1 1.00 310 18 324 10 324 -8 310 -16 296 -8 296 10 310 18 7 polygon
+1 1.00 366 18 380 10 380 -8 366 -16 352 -8 352 10 366 18 7 polygon
+1 1.00 296 110 310 112 310 118 296 120 282 118 282 112 296 110 7 polygon
+1 1.00 296 88 310 92 310 100 296 104 282 100 282 92 296 88 7 polygon
+1 1.00 324 88 338 92 338 100 324 104 310 100 310 92 324 88 7 polygon
+1 1.00 296 104 296 110 2 polygon
+1 1.00 296 56 310 62 310 74 296 80 282 74 282 62 296 56 7 polygon
+1 1.00 324 56 338 62 338 74 324 80 310 74 310 62 324 56 7 polygon
+1 1.00 352 56 366 62 366 74 352 80 338 74 338 62 352 56 7 polygon
+1 1.00 296 80 296 88 2 polygon
+1 1.00 324 80 324 88 2 polygon
+1 1.00 352 80 352 88 2 polygon
+1 1.00 352 88 366 92 366 100 352 104 338 100 338 92 352 88 7 polygon
+1 1.00 324 104 324 110 2 polygon
+1 1.00 324 110 338 112 338 118 324 120 310 118 310 112 324 110 7 polygon
+1 1.00 352 104 352 110 2 polygon
+1 1.00 352 110 366 112 366 118 352 120 338 118 338 112 352 110 7 polygon
+1 1.00 380 104 380 110 2 polygon
+1 1.00 380 110 394 112 394 118 380 120 366 118 366 112 380 110 7 polygon
+1 1.00 380 56 394 62 394 74 380 80 366 74 366 62 380 56 7 polygon
+1 1.00 380 80 380 88 2 polygon
+1 1.00 380 88 394 92 394 100 380 104 366 100 366 92 380 88 7 polygon
+1 1.00 296 10 310 18 310 34 296 40 282 34 282 18 296 10 7 polygon
+1 1.00 296 56 296 40 2 polygon
+1 1.00 324 10 338 18 338 34 324 40 310 34 310 18 324 10 7 polygon
+1 1.00 324 56 324 40 2 polygon
+1 1.00 352 10 366 18 366 34 352 40 338 34 338 18 352 10 7 polygon
+1 1.00 352 56 352 40 2 polygon
+1 1.00 380 10 394 18 394 34 380 40 366 34 366 18 380 10 7 polygon
+1 1.00 380 56 380 40 2 polygon
+1 1.00 296 120 296 124 2 polygon
+1 1.00 296 124 308 126 296 128 284 126 296 124 5 polygon
+1 1.00 352 120 352 124 2 polygon
+1 1.00 352 124 364 126 352 128 340 126 352 124 5 polygon
+1 1.00 380 120 380 124 2 polygon
+1 1.00 380 124 392 126 380 128 368 126 380 124 5 polygon
+1 1.00 324 120 324 124 2 polygon
+1 1.00 324 124 336 126 324 128 312 126 324 124 5 polygon
+1 1.00 408 -54 422 -60 422 -72 408 -78 394 -72 394 -60 408 -54 7 polygon
+1 1.00 408 -86 422 -90 422 -98 408 -102 394 -98 394 -90 408 -86 7 polygon
+1 1.00 408 -108 422 -110 422 -116 408 -118 394 -116 394 -110 408 -108 7 polygon
+1 1.00 436 -102 436 -108 2 polygon
+1 1.00 436 -108 450 -110 450 -116 436 -118 422 -116 422 -110 436 -108 7 polygon
+1 1.00 436 -54 450 -60 450 -72 436 -78 422 -72 422 -60 436 -54 7 polygon
+1 1.00 436 -78 436 -86 2 polygon
+1 1.00 436 -86 450 -90 450 -98 436 -102 422 -98 422 -90 436 -86 7 polygon
+1 1.00 408 -8 422 -16 422 -32 408 -38 394 -32 394 -16 408 -8 7 polygon
+1 1.00 436 -8 450 -16 450 -32 436 -38 422 -32 422 -16 436 -8 7 polygon
+1 1.00 436 -54 436 -38 2 polygon
+1 1.00 408 -122 420 -124 408 -126 396 -124 408 -122 5 polygon
+1 1.00 436 -118 436 -122 2 polygon
+1 1.00 436 -122 448 -124 436 -126 424 -124 436 -122 5 polygon
+1 1.00 422 18 436 10 436 -8 422 -16 408 -8 408 10 422 18 7 polygon
+1 1.00 408 56 422 62 422 74 408 80 394 74 394 62 408 56 7 polygon
+1 1.00 408 88 422 92 422 100 408 104 394 100 394 92 408 88 7 polygon
+1 1.00 408 110 422 112 422 118 408 120 394 118 394 112 408 110 7 polygon
+1 1.00 436 104 436 110 2 polygon
+1 1.00 436 110 450 112 450 118 436 120 422 118 422 112 436 110 7 polygon
+1 1.00 436 56 450 62 450 74 436 80 422 74 422 62 436 56 7 polygon
+1 1.00 436 80 436 88 2 polygon
+1 1.00 436 88 450 92 450 100 436 104 422 100 422 92 436 88 7 polygon
+1 1.00 408 10 422 18 422 34 408 40 394 34 394 18 408 10 7 polygon
+1 1.00 436 10 450 18 450 34 436 40 422 34 422 18 436 10 7 polygon
+1 1.00 436 56 436 40 2 polygon
+1 1.00 408 124 420 126 408 128 396 126 408 124 5 polygon
+1 1.00 436 120 436 124 2 polygon
+1 1.00 436 124 448 126 436 128 424 126 436 124 5 polygon
+1 1.00 464 -108 478 -110 478 -116 464 -118 450 -116 450 -110 464 -108 7 polygon
+1 1.00 464 -86 478 -90 478 -98 464 -102 450 -98 450 -90 464 -86 7 polygon
+1 1.00 492 -86 506 -90 506 -98 492 -102 478 -98 478 -90 492 -86 7 polygon
+1 1.00 464 -102 464 -108 2 polygon
+1 1.00 464 -54 478 -60 478 -72 464 -78 450 -72 450 -60 464 -54 7 polygon
+1 1.00 492 -54 506 -60 506 -72 492 -78 478 -72 478 -60 492 -54 7 polygon
+1 1.00 520 -54 534 -60 534 -72 520 -78 506 -72 506 -60 520 -54 7 polygon
+1 1.00 464 -78 464 -86 2 polygon
+1 1.00 492 -78 492 -86 2 polygon
+1 1.00 520 -78 520 -86 2 polygon
+1 1.00 520 -86 534 -90 534 -98 520 -102 506 -98 506 -90 520 -86 7 polygon
+1 1.00 492 -102 492 -108 2 polygon
+1 1.00 492 -108 506 -110 506 -116 492 -118 478 -116 478 -110 492 -108 7 polygon
+1 1.00 520 -102 520 -108 2 polygon
+1 1.00 548 -78 548 -86 2 polygon
+1 1.00 464 -8 478 -16 478 -32 464 -38 450 -32 450 -16 464 -8 7 polygon
+1 1.00 464 -54 464 -38 2 polygon
+1 1.00 492 -8 506 -16 506 -32 492 -38 478 -32 478 -16 492 -8 7 polygon
+1 1.00 492 -54 492 -38 2 polygon
+1 1.00 520 -8 534 -16 534 -32 520 -38 506 -32 506 -16 520 -8 7 polygon
+1 1.00 520 -54 520 -38 2 polygon
+1 1.00 548 -8 562 -16 562 -32 548 -38 534 -32 534 -16 548 -8 7 polygon
+1 1.00 548 -54 548 -38 2 polygon
+1 1.00 464 -118 464 -122 2 polygon
+1 1.00 464 -122 476 -124 464 -126 452 -124 464 -122 5 polygon
+1 1.00 492 -118 492 -122 2 polygon
+1 1.00 450 18 464 10 464 -8 450 -16 436 -8 436 10 450 18 7 polygon
+1 1.00 506 18 520 10 520 -8 506 -16 492 -8 492 10 506 18 7 polygon
+1 1.00 478 18 492 10 492 -8 478 -16 464 -8 464 10 478 18 7 polygon
+1 1.00 534 18 548 10 548 -8 534 -16 520 -8 520 10 534 18 7 polygon
+1 1.00 464 110 478 112 478 118 464 120 450 118 450 112 464 110 7 polygon
+1 1.00 464 88 478 92 478 100 464 104 450 100 450 92 464 88 7 polygon
+1 1.00 492 88 506 92 506 100 492 104 478 100 478 92 492 88 7 polygon
+1 1.00 464 104 464 110 2 polygon
+1 1.00 464 56 478 62 478 74 464 80 450 74 450 62 464 56 7 polygon
+1 1.00 492 56 506 62 506 74 492 80 478 74 478 62 492 56 7 polygon
+1 1.00 520 56 534 62 534 74 520 80 506 74 506 62 520 56 7 polygon
+1 1.00 464 80 464 88 2 polygon
+1 1.00 492 80 492 88 2 polygon
+1 1.00 520 80 520 88 2 polygon
+1 1.00 520 88 534 92 534 100 520 104 506 100 506 92 520 88 7 polygon
+1 1.00 492 104 492 110 2 polygon
+1 1.00 492 110 506 112 506 118 492 120 478 118 478 112 492 110 7 polygon
+1 1.00 520 104 520 110 2 polygon
+1 1.00 548 80 548 88 2 polygon
+1 1.00 464 10 478 18 478 34 464 40 450 34 450 18 464 10 7 polygon
+1 1.00 464 56 464 40 2 polygon
+1 1.00 492 10 506 18 506 34 492 40 478 34 478 18 492 10 7 polygon
+1 1.00 492 56 492 40 2 polygon
+1 1.00 520 10 534 18 534 34 520 40 506 34 506 18 520 10 7 polygon
+1 1.00 520 56 520 40 2 polygon
+1 1.00 548 10 562 18 562 34 548 40 534 34 534 18 548 10 7 polygon
+1 1.00 548 56 548 40 2 polygon
+1 1.00 464 120 464 124 2 polygon
+1 1.00 464 124 476 126 464 128 452 126 464 124 5 polygon
+1 1.00 492 120 492 124 2 polygon
+1 1.00 408 -78 408 -86 2 polygon
+1 1.00 408 -54 408 -38 2 polygon
+1 1.00 408 80 408 88 2 polygon
+1 1.00 408 56 408 40 2 polygon
+1 1.00 408 104 408 110 2 polygon
+1 1.00 408 -108 408 -102 2 polygon
+1 1.00 534 -90 548 -86 2 polygon
+1 1.00 534 -62 548 -54 2 polygon
+1 1.00 534 -72 548 -78 2 polygon
+1 1.00 506 112 520 110 2 polygon
+1 1.00 534 92 548 88 2 polygon
+1 1.00 534 74 548 80 2 polygon
+1 1.00 534 62 548 56 2 polygon
+1 1.00 506 -110 520 -108 2 polygon
+0.808 0.796 0.808 scb
+1 1.00 -180 110 -166 112 -166 118 -180 120 -194 118 -194 112 -180 110 7 polygon
+sce
+1 1.00 -180 124 -168 126 -180 128 -192 126 -180 124 5 polygon
+0.808 0.796 0.808 scb
+1 1.00 -180 120 -180 124 2 polygon
+sce
+1 1.00 -96 104 -96 110 2 polygon
+0.808 0.796 0.808 scb
+1 1.00 -208 88 -194 92 -194 100 -208 104 -222 100 -222 92 -208 88 7 polygon
+1 1.00 -208 104 -208 110 2 polygon
+1 1.00 -180 104 -180 110 2 polygon
+1 1.00 -180 88 -166 92 -166 100 -180 104 -194 100 -194 92 -180 88 7 polygon
+1 1.00 -152 104 -152 110 2 polygon
+1 1.00 -152 88 -138 92 -138 100 -152 104 -166 100 -166 92 -152 88 7 polygon
+1 1.00 -180 80 -180 88 2 polygon
+1 1.00 -180 56 -166 62 -166 74 -180 80 -194 74 -194 62 -180 56 7 polygon
+1 1.00 -152 80 -152 88 2 polygon
+1 1.00 -152 56 -138 62 -138 74 -152 80 -166 74 -166 62 -152 56 7 polygon
+sce
+1 1.00 -124 80 -124 88 2 polygon
+0.808 0.796 0.808 scb
+1 1.00 -208 80 -208 88 2 polygon
+1 1.00 -208 56 -194 62 -194 74 -208 80 -222 74 -222 62 -208 56 7 polygon
+1 1.00 -138 92 -126 92 2 polygon
+1 1.00 -138 74 -130 76 2 polygon
+1 1.00 -152 56 -152 40 2 polygon
+1 1.00 -152 10 -138 18 -138 34 -152 40 -166 34 -166 18 -152 10 7 polygon
+1 1.00 -124 56 -124 40 2 polygon
+1 1.00 -124 10 -110 18 -110 34 -124 40 -138 34 -138 18 -124 10 7 polygon
+1 1.00 -208 56 -208 40 2 polygon
+1 1.00 -208 10 -194 18 -194 34 -208 40 -222 34 -222 18 -208 10 7 polygon
+1 1.00 -180 56 -180 40 2 polygon
+1 1.00 -180 10 -166 18 -166 34 -180 40 -194 34 -194 18 -180 10 7 polygon
+1 1.00 -236 56 -236 40 2 polygon
+1 1.00 -236 10 -222 18 -222 34 -236 40 -250 34 -250 18 -236 10 7 polygon
+1 1.00 -196 112 -208 110 2 polygon
+1 1.00 -236 56 -222 62 2 polygon
+1 1.00 -180 -110 -166 -112 -166 -118 -180 -120 -194 -118 -194 -112 -180 -110 
+7 polygon
+1 1.00 -196 -112 -208 -110 2 polygon
+1 1.00 -208 -104 -208 -110 2 polygon
+1 1.00 -208 -88 -194 -92 -194 -100 -208 -104 -222 -100 -222 -92 -208 -88 
+7 polygon
+1 1.00 -180 -88 -166 -92 -166 -100 -180 -104 -194 -100 -194 -92 -180 -88 
+7 polygon
+1 1.00 -180 -104 -180 -110 2 polygon
+1 1.00 -152 -88 -138 -92 -138 -100 -152 -104 -166 -100 -166 -92 -152 -88 
+7 polygon
+1 1.00 -152 -104 -152 -110 2 polygon
+1 1.00 -180 -80 -180 -88 2 polygon
+1 1.00 -180 -56 -166 -62 -166 -74 -180 -80 -194 -74 -194 -62 -180 -56 7 polygon
+1 1.00 -152 -80 -152 -88 2 polygon
+1 1.00 -152 -56 -138 -62 -138 -74 -152 -80 -166 -74 -166 -62 -152 -56 7 polygon
+1 1.00 -208 -80 -208 -88 2 polygon
+1 1.00 -208 -56 -194 -62 -194 -74 -208 -80 -222 -74 -222 -62 -208 -56 7 polygon
+1 1.00 -138 -74 -130 -76 2 polygon
+1 1.00 -152 -56 -152 -40 2 polygon
+1 1.00 -152 -8 -138 -18 -138 -34 -152 -40 -166 -34 -166 -18 -152 -8 7 polygon
+1 1.00 -124 -8 -110 -16 -110 -34 -124 -40 -138 -34 -138 -18 -124 -8 7 polygon
+1 1.00 -208 -56 -208 -40 2 polygon
+1 1.00 -208 -8 -194 -18 -194 -34 -208 -40 -222 -34 -222 -18 -208 -8 7 polygon
+1 1.00 -180 -56 -180 -40 2 polygon
+1 1.00 -180 -8 -166 -18 -166 -34 -180 -40 -194 -34 -194 -18 -180 -8 7 polygon
+1 1.00 -124 -56 -124 -40 2 polygon
+1 1.00 -236 -8 -222 -18 -222 -34 -236 -40 -250 -34 -250 -18 -236 -10 7 polygon
+1 1.00 -236 -56 -236 -40 2 polygon
+1 1.00 -236 -56 -222 -62 2 polygon
+1 1.00 -138 18 -124 10 -124 -8 -138 -18 -152 -8 -152 10 -138 18 7 polygon
+1 1.00 -166 18 -152 10 -152 -8 -166 -18 -180 -8 -180 10 -166 18 7 polygon
+1 1.00 -194 18 -180 10 -180 -8 -194 -18 -208 -8 -208 10 -194 18 7 polygon
+1 1.00 -222 18 -208 10 -208 -8 -222 -18 -236 -8 -236 10 -222 18 7 polygon
+1 1.00 -138 -62 -124 -56 2 polygon
+1 1.00 -130 -76 -130 -84 -138 -92 3 polygon
+1 1.00 -152 -110 -166 -112 2 polygon
+1 1.00 -138 64 -124 56 2 polygon
+1 1.00 -166 112 -152 110 2 polygon
+1 1.00 -124 -56 -116 -60 2 polygon
+1 1.00 -130 -76 -122 -72 2 polygon
+1 1.00 -166 -118 -158 -120 2 polygon
+1 1.00 -152 -110 -148 -110 2 polygon
+1 1.00 -124 56 -116 62 2 polygon
+1 1.00 -138 100 -128 104 2 polygon
+1 1.00 -152 110 -142 114 2 polygon
+1 1.00 -166 118 -158 120 2 polygon
+sce
+1 1.00 -180 -118 -180 -122 2 polygon
+1 1.00 -180 -122 -168 -124 -180 -126 -192 -124 -180 -122 5 polygon
+0.808 0.796 0.808 scb
+1 1.00 -110 34 -100 40 2 polygon
+1 1.00 -110 -16 -100 -14 2 polygon
+1 1.00 -110 -34 -102 -38 2 polygon
+1 1.00 -110 18 -100 14 2 polygon
+sce
+1 1.00 -528 -124 -514 -132 -514 -150 -528 -158 -542 -150 -542 -132 -528 -124 
+7 polygon
+1 1.00 -472 -124 -458 -132 -458 -150 -472 -158 -486 -150 -486 -132 -472 -124 
+7 polygon
+1 1.00 -514 -132 -500 -124 -486 -132 3 polygon
+1 1.00 -486 -150 -500 -158 -514 -150 3 polygon
+1 1.00 -472 -72 -458 -80 -458 -98 -472 -106 -486 -98 -486 -80 -472 -72 
+7 polygon
+1 1.00 -472 -106 -472 -124 2 polygon
+1 1.00 -528 -72 -514 -80 -514 -98 -528 -106 -542 -98 -542 -80 -528 -72 
+7 polygon
+1 1.00 -528 -106 -528 -124 2 polygon
+1 1.00 -514 -80 -500 -72 -486 -80 3 polygon
+1 1.00 -514 -98 -500 -106 -486 -98 3 polygon
+1 1.00 -500 -106 -500 -124 2 polygon
+1 1.00 -472 -20 -458 -28 -458 -46 -472 -54 -486 -46 -486 -28 -472 -20 7 polygon
+1 1.00 -472 -54 -472 -72 2 polygon
+1 1.00 -528 -20 -514 -28 -514 -46 -528 -54 -542 -46 -542 -28 -528 -20 7 polygon
+1 1.00 -528 -54 -528 -72 2 polygon
+1 1.00 -514 -28 -500 -20 -486 -28 3 polygon
+1 1.00 -514 -46 -500 -54 -486 -46 3 polygon
+1 1.00 -500 -54 -500 -72 2 polygon
+1 1.00 -472 32 -458 24 -458 6 -472 -2 -486 6 -486 24 -472 32 7 polygon
+1 1.00 -472 -2 -472 -20 2 polygon
+1 1.00 -528 32 -514 24 -514 6 -528 -2 -542 6 -542 24 -528 32 7 polygon
+1 1.00 -528 -2 -528 -20 2 polygon
+1 1.00 -514 24 -500 32 -486 24 3 polygon
+1 1.00 -514 6 -500 -2 -486 6 3 polygon
+1 1.00 -500 -2 -500 -20 2 polygon
+1 1.00 -472 84 -458 76 -458 58 -472 50 -486 58 -486 76 -472 84 7 polygon
+1 1.00 -472 50 -472 32 2 polygon
+1 1.00 -528 84 -514 76 -514 58 -528 50 -542 58 -542 76 -528 84 7 polygon
+1 1.00 -528 50 -528 32 2 polygon
+1 1.00 -514 76 -500 84 -486 76 3 polygon
+1 1.00 -514 58 -500 50 -486 58 3 polygon
+1 1.00 -500 50 -500 32 2 polygon
+1 1.00 -472 136 -458 128 -458 110 -472 102 -486 110 -486 128 -472 136 7 polygon
+1 1.00 -472 102 -472 84 2 polygon
+1 1.00 -528 136 -514 128 -514 110 -528 102 -542 110 -542 128 -528 136 7 polygon
+1 1.00 -528 102 -528 84 2 polygon
+1 1.00 -514 128 -500 136 -486 128 3 polygon
+1 1.00 -514 110 -500 102 -486 110 3 polygon
+1 1.00 -500 102 -500 84 2 polygon
+1 1.00 -458 110 -444 102 -444 84 -458 76 4 polygon
+1 1.00 -458 58 -444 50 -444 32 -458 24 4 polygon
+1 1.00 -458 6 -444 -2 -444 -20 -458 -28 4 polygon
+1 1.00 -458 -46 -444 -54 -444 -72 -458 -80 4 polygon
+1 1.00 -458 -98 -444 -106 -444 -124 -458 -132 4 polygon
+1 1.00 -442 136 -428 128 -428 110 -442 102 4 polygon
+1 1.00 -442 84 -428 76 -428 58 -442 50 4 polygon
+1 1.00 -442 32 -428 24 -428 6 -442 -2 4 polygon
+1 1.00 -442 -20 -428 -28 -428 -46 -442 -54 4 polygon
+1 1.00 -442 -72 -428 -80 -428 -98 -442 -106 4 polygon
+1 1.00 -428 110 -414 102 -414 84 -428 76 4 polygon
+1 1.00 -428 58 -414 50 -414 32 -428 24 4 polygon
+1 1.00 -428 6 -414 -2 -414 -20 -428 -28 4 polygon
+1 1.00 -428 -46 -414 -54 -414 -72 -428 -80 4 polygon
+1 1.00 -428 -98 -414 -106 -414 -124 -428 -132 4 polygon
+1 1.00 -412 136 -398 128 -398 110 -412 102 4 polygon
+1 1.00 -412 84 -398 76 -398 58 -412 50 4 polygon
+1 1.00 -412 32 -398 24 -398 6 -412 -2 4 polygon
+1 1.00 -412 -20 -398 -28 -398 -46 -412 -54 4 polygon
+1 1.00 -412 -72 -398 -80 -398 -98 -412 -106 4 polygon
+1 1.00 -396 110 -382 102 -382 84 -396 76 4 polygon
+1 1.00 -396 58 -382 50 -382 32 -396 24 4 polygon
+1 1.00 -396 6 -382 -2 -382 -20 -396 -28 4 polygon
+1 1.00 -396 -46 -382 -54 -382 -72 -396 -80 4 polygon
+1 1.00 -396 -98 -382 -106 -382 -124 -396 -132 4 polygon
+1 1.00 -382 136 -368 128 -368 110 -382 102 4 polygon
+1 1.00 -380 84 -366 76 -366 58 -380 50 4 polygon
+1 1.00 -380 32 -366 24 -366 6 -380 -2 4 polygon
+1 1.00 -380 -20 -366 -28 -366 -46 -380 -54 4 polygon
+1 1.00 -380 -72 -366 -80 -366 -98 -380 -106 4 polygon
+1 1.00 -366 110 -352 102 -352 84 -366 76 4 polygon
+1 1.00 -366 58 -352 50 -352 32 -366 24 4 polygon
+1 1.00 -366 6 -352 -2 -352 -20 -366 -28 4 polygon
+1 1.00 -366 -46 -352 -54 -352 -72 -366 -80 4 polygon
+1 1.00 -366 -98 -352 -106 -352 -124 -366 -132 4 polygon
+1 1.00 -352 136 -338 128 -338 110 -352 102 4 polygon
+1 1.00 -352 84 -338 76 -338 58 -352 50 4 polygon
+1 1.00 -352 32 -338 24 -338 6 -352 -2 4 polygon
+1 1.00 -352 -20 -338 -28 -338 -46 -352 -54 4 polygon
+1 1.00 -352 -72 -338 -80 -338 -98 -352 -106 4 polygon
+1 1.00 -442 -124 -428 -132 -428 -150 -442 -158 4 polygon
+1 1.00 -412 -124 -398 -132 -398 -150 -412 -158 4 polygon
+1 1.00 -382 -124 -368 -132 -368 -150 -382 -158 4 polygon
+1 1.00 -458 -150 -444 -158 2 polygon
+1 1.00 -428 -150 -414 -158 2 polygon
+1 1.00 -396 -150 -382 -158 2 polygon
+1 1.00 -442 136 -456 128 2 polygon
+1 1.00 -412 136 -426 128 2 polygon
+1 1.00 -384 136 -398 128 2 polygon
+1 1.00 -354 136 -368 128 2 polygon
+(\(a\)               \(b\)) {/Helvetica cf} 2 16 0 1.00 -358 -190 label
+1 1.00 477 126 492 124 2 polygon
+1 1.00 477 -124 492 -122 2 polygon
+pgsave restore showpage
+
+%%Trailer
+XCIRCsave restore
+%%EOF

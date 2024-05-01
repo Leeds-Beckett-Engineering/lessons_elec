@@ -1,0 +1,1300 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 2.0
+%  Library name is: liec_dig
+%  Author:  <Tony Kuphaldt>
+%
+
+% XCircuitLib library objects
+
+/dot {
+% -10 -10 20 20 bbox
+begingate
+248  1.00 0 0 6 0.00 360.00 xcarc
+endgate
+} def
+
+/ladder_start {
+% -512 -80 1029 172 bbox
+begingate
+(1) {ss} (L) {/Times-Roman 1.000 cf} 4 16 0 -512 64 label
+1  1.00 -496 -80 -496 48 2 polygon
+(2) {ss} (L) {/Times-Roman 1.000 cf} 4 16 0 480 64 label
+1  1.00 496 48 496 -80 2 polygon
+endgate
+} def
+
+/ladder_start2 {
+% -272 -80 549 172 bbox
+begingate
+(1) {ss} (L) {/Times-Roman 1.000 cf} 4 16 0 -272 64 label
+1  1.00 -256 48 -256 -80 2 polygon
+1  1.00 256 48 256 -80 2 polygon
+(2) {ss} (L) {/Times-Roman 1.000 cf} 4 16 0 240 64 label
+endgate
+} def
+
+/no_contact {
+% -64 -32 128 64 bbox
+begingate
+1  1.00 -64 0 -16 0 2 polygon
+1  1.00 -16 32 -16 -32 2 polygon
+1  1.00 16 0 64 0 2 polygon
+1  1.00 16 32 16 -32 2 polygon
+endgate
+} def
+
+/nc_contact {
+% -64 -32 128 64 bbox
+begingate
+1.00 0 0 0 no_contact
+1  1.00 32 32 -32 -32 2 polygon
+endgate
+} def
+
+/no_electronic {
+% -64 -64 128 128 bbox
+begingate
+1.00 0 0 0 no_contact
+0.603 0.603 0.603 scb
+1  1.00 0 64 -64 0 0 -64 64 0 0 64 5 polygon
+sce
+endgate
+} def
+
+/nc_electronic {
+% -64 -64 128 128 bbox
+begingate
+0.603 0.603 0.603 scb
+1  1.00 0 64 -64 0 0 -64 64 0 0 64 5 polygon
+sce
+1.00 0 0 0 nc_contact
+endgate
+} def
+
+/relay_coil {
+% -64 -32 128 64 bbox
+begingate
+1  1.00 0 0 32 0.00 360.00 xcarc
+1  1.00 -64 0 -32 0 2 polygon
+1  1.00 32 0 64 0 2 polygon
+endgate
+} def
+
+/coil_electronic {
+% -64 -64 128 128 bbox
+begingate
+1.00 0 0 0 relay_coil
+0.603 0.603 0.603 scb
+1  1.00 -64 0 0 -64 64 0 0 64 -64 0 5 polygon
+sce
+endgate
+} def
+
+/indicator {
+% -64 -28 128 56 bbox
+begingate
+1  1.00 0 0 22 0.00 360.00 xcarc
+1  1.00 -20 20 -28 28 2 polygon
+1  1.00 20 20 28 28 2 polygon
+1  1.00 24 0 64 0 2 polygon
+1  1.00 22 0 24 0 2 polygon
+1  1.00 20 -20 28 -28 2 polygon
+1  1.00 -20 -20 -28 -28 2 polygon
+1  1.00 -64 0 -24 0 2 polygon
+1  1.00 -24 0 -22 0 2 polygon
+endgate
+} def
+
+/heater_element {
+% -64 -32 128 64 bbox
+begingate
+1  1.00 -64 0 -48 0 -48 32 -32 32 -32 -32 -16 -32 -16 32 0 32 0 -32 16 -32 16 
+32 32 32 32 -32 48 -32 48 0 64 0 16 polygon
+endgate
+} def
+
+/3phase_motor {
+% -88 -64 176 128 bbox
+begingate
+(motor) {/Helvetica 1.000 cf} 2 16 0 -32 -8 label
+1  1.00 24 0 64 0.00 360.00 xcarc
+1  1.00 -24 48 -40 64 -88 64 3 polygon
+1  1.00 -24 48 -22 46 2 polygon
+1  1.00 -40 0 -88 0 2 polygon
+1  1.00 -24 -48 -40 -64 -88 -64 3 polygon
+1  1.00 -24 -48 -22 -46 2 polygon
+endgate
+} def
+
+/no_pushbutton {
+% -64 -26 128 58 bbox
+begingate
+1  1.00 -32 0 32 0 2 polygon
+1  1.00 0 32 0 0 2 polygon
+1  1.00 -64 -16 -16 -16 2 polygon
+1.00 0 -16 -16 dot
+1  1.00 16 -16 64 -16 2 polygon
+1.00 0 16 -16 dot
+endgate
+} def
+
+/nc_pushbutton {
+% -64 -26 128 50 bbox
+begingate
+1  1.00 16 -16 64 -16 2 polygon
+1.00 0 16 -16 dot
+1  1.00 -32 -24 32 -24 2 polygon
+1  1.00 0 -24 0 24 2 polygon
+1  1.00 -64 -16 -16 -16 2 polygon
+1.00 0 -16 -16 dot
+endgate
+} def
+
+/selector_1 {
+% -64 -42 128 74 bbox
+begingate
+1  1.00 -16 32 0 16 0 0 3 polygon
+1.00 0 -16 0 dot
+1  1.00 -64 0 -16 0 2 polygon
+1  1.00 -32 -8 32 -8 2 polygon
+1  1.00 0 0 0 -8 2 polygon
+1.00 0 16 0 dot
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+1  1.00 16 0 64 0 2 polygon
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+endgate
+} def
+
+/joystick_right {
+% -64 -42 128 74 bbox
+begingate
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+1  1.00 -32 -16 32 -16 2 polygon
+1  1.00 0 -16 0 0 2 polygon
+1  1.00 0 16 16 0.00 360.00 xcarc
+1.00 0 16 16 dot
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+endgate
+} def
+
+/joystick_up {
+% -64 -42 128 84 bbox
+begingate
+1  1.00 0 -16 0 0 2 polygon
+1  1.00 0 16 16 0.00 360.00 xcarc
+1.00 0 0 32 dot
+1  1.00 -32 -16 32 -16 2 polygon
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+endgate
+} def
+
+/joystick_left {
+% -64 -42 128 74 bbox
+begingate
+1  1.00 0 16 16 0.00 360.00 xcarc
+1.00 0 -16 16 dot
+1  1.00 0 -16 0 0 2 polygon
+1  1.00 -32 -16 32 -16 2 polygon
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+endgate
+} def
+
+/joystick_down {
+% -64 -42 128 74 bbox
+begingate
+1  1.00 0 -16 0 0 2 polygon
+1  1.00 0 16 16 0.00 360.00 xcarc
+1.00 0 0 0 dot
+1  1.00 -32 -16 32 -16 2 polygon
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+endgate
+} def
+
+/solenoid_coil {
+% -64 -32 128 64 bbox
+begingate
+1  1.00 -32 0 -16 32 16 -32 32 0 4 polygon
+1  1.00 32 0 64 0 2 polygon
+1  1.00 -64 0 -32 0 2 polygon
+endgate
+} def
+
+/toggle {
+% -64 -26 128 42 bbox
+begingate
+1  1.00 -16 -16 16 16 2 polygon
+1  1.00 -64 -16 -16 -16 2 polygon
+1.00 0 -16 -16 dot
+1.00 0 16 -16 dot
+1  1.00 16 -16 64 -16 2 polygon
+endgate
+} def
+
+/toggle_nc {
+% -64 -10 128 20 bbox
+begingate
+1  1.00 -16 0 24 8 2 polygon
+1.00 0 -16 0 dot
+1  1.00 -64 0 -16 0 2 polygon
+1.00 0 16 0 dot
+1  1.00 16 0 64 0 2 polygon
+endgate
+} def
+
+/dpst_toggle {
+% -64 -42 128 90 bbox
+begingate
+1.00 0 0 32 toggle
+1  1.00 0 32 0 16 2 polygon
+1  1.00 0 0 0 -16 2 polygon
+1.00 0 0 -16 toggle
+endgate
+} def
+
+/spdt_toggle {
+% -64 -32 128 64 bbox
+begingate
+1.00 0 16 16 dot
+1  1.00 16 16 16 32 64 32 3 polygon
+1.00 0 16 -16 dot
+1  1.00 16 -16 16 -32 64 -32 3 polygon
+1  1.00 -16 0 32 -16 2 polygon
+1  1.00 -64 0 -16 0 2 polygon
+1.00 0 -16 0 dot
+endgate
+} def
+
+/dpdt_toggle {
+% -64 -64 128 144 bbox
+begingate
+1.00 0 0 48 spdt_toggle
+1  1.00 0 32 0 40 2 polygon
+1  1.00 0 0 0 16 2 polygon
+1.00 0 0 -32 spdt_toggle
+1  1.00 0 -32 0 -16 2 polygon
+endgate
+} def
+
+/4pdt_toggle {
+% -64 -144 128 304 bbox
+begingate
+1.00 0 0 80 dpdt_toggle
+1  1.00 0 32 0 16 2 polygon
+1.00 0 0 -80 dpdt_toggle
+1  1.00 0 0 0 -16 2 polygon
+1  1.00 0 -32 0 -40 2 polygon
+endgate
+} def
+
+/no_pressure {
+% -64 -32 128 58 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+1  1.00 0 8 0 -14 2 polygon
+1  1.00 -16 -8 16 -8 16 -32 -16 -32 spline
+1  1.00 -16 -32 16 -32 2 polygon
+endgate
+} def
+
+/nc_pressure {
+% -64 -32 128 60 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 28 2 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+1  1.00 0 -14 0 20 2 polygon
+1  1.00 -16 -8 16 -8 16 -32 -16 -32 spline
+1  1.00 -16 -32 16 -32 2 polygon
+endgate
+} def
+
+/no_limit {
+% -64 -20 128 46 bbox
+begingate
+1  1.00 -64 16 -32 16 2 polygon
+1.00 0 -32 16 dot
+1  1.00 -32 16 32 -16 2 polygon
+1  1.00 -32 16 20 -20 28 -16 3 polygon
+1.00 0 32 16 dot
+1  1.00 32 16 64 16 2 polygon
+endgate
+} def
+
+/nc_limit {
+% -64 -10 128 20 bbox
+begingate
+1  1.00 -32 0 32 8 2 polygon
+1  1.00 -32 0 24 0 28 8 3 polygon
+1  1.00 -64 0 -32 0 2 polygon
+1.00 0 -32 0 dot
+1  1.00 32 0 64 0 2 polygon
+1.00 0 32 0 dot
+endgate
+} def
+
+/nc_limit_electronic {
+% -64 -64 128 128 bbox
+begingate
+0.603 0.603 0.603 scb
+1  1.00 -64 0 0 64 64 0 0 -64 -64 0 5 polygon
+sce
+1.00 0 0 0 nc_limit
+endgate
+} def
+
+/no_limit_electronic {
+% -64 -64 128 128 bbox
+begingate
+1.00 0 0 -16 no_limit
+0.603 0.603 0.603 scb
+1  1.00 -64 0 0 64 64 0 0 -64 -64 0 5 polygon
+sce
+endgate
+} def
+
+/no_temp {
+% -64 -40 128 66 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1  1.00 0 8 0 -8 8 -8 8 -16 -8 -16 -8 -24 8 -24 8 -32 -8 -32 -8 -40 0 -40 
+11 polygon
+1  1.00 16 16 64 16 2 polygon
+1.00 0 16 16 dot
+endgate
+} def
+
+/nc_temp {
+% -64 -32 128 60 bbox
+begingate
+1  1.00 -16 16 32 28 2 polygon
+1  1.00 0 20 0 0 8 0 8 -8 -8 -8 -8 -16 8 -16 8 -24 -8 -24 -8 -32 0 -32 
+11 polygon
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 16 16 64 16 2 polygon
+1.00 0 16 16 dot
+endgate
+} def
+
+/no_level {
+% -64 -40 128 66 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1  1.00 0 8 0 -8 2 polygon
+1  1.00 0 -24 16 0.00 360.00 xcarc
+1  1.00 16 16 64 16 2 polygon
+1.00 0 16 16 dot
+endgate
+} def
+
+/nc_level {
+% -64 -40 128 68 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 28 2 polygon
+1  1.00 16 16 64 16 2 polygon
+1.00 0 16 16 dot
+1  1.00 0 20 0 -8 2 polygon
+1  1.00 0 -24 16 0.00 360.00 xcarc
+endgate
+} def
+
+/no_flow {
+% -64 -24 128 50 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1  1.00 0 8 0 -24 16 -24 0 -8 4 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+endgate
+} def
+
+/nc_flow {
+% -64 -24 128 44 bbox
+begingate
+1.00 0 16 8 dot
+1  1.00 16 8 64 8 2 polygon
+1  1.00 -16 8 32 20 2 polygon
+1  1.00 0 12 0 -24 16 -24 0 -8 4 polygon
+1.00 0 -16 8 dot
+1  1.00 -64 8 -16 8 2 polygon
+endgate
+} def
+
+/arrowhead {
+% -12 -32 24 36 bbox
+begingate
+8 -28 beginpath
+3 -18 3 -15 0 0 curveto
+-3 -15 -3 -18 -8 -28 curveto
+-2 -26 2 -26 8 -28 curveto
+249  1.00 endpath
+endgate
+} def
+
+/speed_1 {
+% -64 -68 128 120 bbox
+begingate
+1  1.00 0 -8 0 -16 2 polygon
+1  1.00 0 -24 0 -32 2 polygon
+1  1.00 -16 -16 16 -32 2 polygon
+1  1.00 0 8 0 0 2 polygon
+1  1.00 0 24 0 16 2 polygon
+1.00 0 0 48 arrowhead
+1  1.00 16 -16 64 -16 2 polygon
+1.00 0 16 -16 dot
+1.00 255 44 -56 arrowhead
+1  1.00 -4 -40 4 -40 20 -48 -20 -48 spline
+1  1.00 0 -42 0 -40 2 polygon
+1.00 105 -44 -56 arrowhead
+1  1.00 -64 -16 -16 -16 2 polygon
+1.00 0 -16 -16 dot
+endgate
+} def
+
+/speed_2 {
+% -64 -74 128 158 bbox
+begingate
+(F) {Ss} {/Times-Roman 1.000 cf} 3 16 0 -8 56 label
+1.00 0 0 64 arrowhead
+1  1.00 0 40 0 32 2 polygon
+1  1.00 0 24 0 16 2 polygon
+1  1.00 0 8 0 0 2 polygon
+1  1.00 -16 0 16 -16 2 polygon
+1  1.00 0 -8 0 -16 2 polygon
+1  1.00 -2 -28 2 -28 22 -36 -22 -36 spline
+1  1.00 0 -24 0 -32 2 polygon
+1  1.00 0 -40 0 -48 2 polygon
+1  1.00 0 -56 0 -60 2 polygon
+1  1.00 -16 -64 24 -56 2 polygon
+1  1.00 16 -64 64 -64 2 polygon
+1.00 0 16 -64 dot
+1  1.00 -64 -64 -16 -64 2 polygon
+1.00 0 -16 -64 dot
+1.00 105 -46 -44 arrowhead
+1.00 255 46 -44 arrowhead
+1  1.00 16 0 64 0 2 polygon
+1.00 0 16 0 dot
+1  1.00 -64 0 -16 0 2 polygon
+1.00 0 -16 0 dot
+endgate
+} def
+
+/speed_3 {
+% -64 -128 128 244 bbox
+begingate
+(F) {Ss} {/Times-Roman 1.000 cf} 3 16 0 -8 88 label
+1.00 0 0 96 arrowhead
+1  1.00 0 72 0 64 2 polygon
+1  1.00 0 56 0 48 2 polygon
+1  1.00 0 40 0 32 2 polygon
+1  1.00 -16 32 16 16 2 polygon
+1  1.00 0 24 0 16 2 polygon
+1  1.00 0 8 0 0 2 polygon
+1  1.00 -2 4 2 4 22 -4 -22 -4 spline
+1  1.00 0 -8 0 -16 2 polygon
+1  1.00 -16 -32 16 -16 2 polygon
+1  1.00 0 -24 0 -32 2 polygon
+1  1.00 0 -40 0 -48 2 polygon
+1.00 -181 0 -80 arrowhead
+1.00 0 -16 -32 dot
+1  1.00 -64 -32 -16 -32 2 polygon
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+1.00 255 46 -12 arrowhead
+1.00 105 -46 -12 arrowhead
+1  1.00 -64 32 -16 32 2 polygon
+1.00 0 -16 32 dot
+1  1.00 16 32 64 32 2 polygon
+1.00 0 16 32 dot
+(R) {Ss} {/Times-Roman 1.000 cf} 3 16 0 -8 -128 label
+endgate
+} def
+
+/speed_4 {
+% -64 -128 128 244 bbox
+begingate
+1.00 0 0 96 arrowhead
+(F) {Ss} {/Times-Roman 1.000 cf} 3 16 0 -8 88 label
+1  1.00 0 56 0 48 2 polygon
+1  1.00 0 40 0 32 2 polygon
+1  1.00 0 72 0 64 2 polygon
+1  1.00 0 24 0 16 2 polygon
+1  1.00 -16 32 24 24 2 polygon
+1  1.00 -64 32 -16 32 2 polygon
+1.00 0 -16 32 dot
+1  1.00 16 32 64 32 2 polygon
+1.00 0 16 32 dot
+1  1.00 -2 4 2 4 22 -4 -22 -4 spline
+1  1.00 0 8 0 0 2 polygon
+1  1.00 0 -8 0 -16 2 polygon
+1  1.00 0 -24 0 -32 2 polygon
+1  1.00 -16 -32 24 -24 2 polygon
+1.00 105 -46 -12 arrowhead
+1.00 255 46 -12 arrowhead
+1  1.00 16 -32 64 -32 2 polygon
+1.00 0 16 -32 dot
+1  1.00 0 -40 0 -48 2 polygon
+1.00 -181 0 -80 arrowhead
+1  1.00 -64 -32 -16 -32 2 polygon
+1.00 0 -16 -32 dot
+(R) {Ss} {/Times-Roman 1.000 cf} 3 16 0 -8 -128 label
+endgate
+} def
+
+/ncto {
+% -64 -16 128 44 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 28 2 polygon
+1  1.00 0 -8 0 20 2 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+1  1.00 -8 -16 0 -8 8 -16 3 polygon
+endgate
+} def
+
+/nctc {
+% -64 -24 128 36 bbox
+begingate
+1  1.00 -64 0 -16 0 2 polygon
+1.00 0 -16 0 dot
+1  1.00 -16 0 32 12 2 polygon
+1  1.00 0 -24 0 4 2 polygon
+1  1.00 -8 -16 0 -24 8 -16 3 polygon
+1.00 0 16 0 dot
+1  1.00 16 0 64 0 2 polygon
+endgate
+} def
+
+/notc {
+% -64 -24 128 50 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1  1.00 0 8 0 -16 2 polygon
+1  1.00 -8 -24 0 -16 8 -24 3 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+endgate
+} def
+
+/noto {
+% -64 -16 128 42 bbox
+begingate
+1  1.00 -64 16 -16 16 2 polygon
+1.00 0 -16 16 dot
+1  1.00 -16 16 32 -8 2 polygon
+1  1.00 0 8 0 -16 2 polygon
+1.00 0 16 16 dot
+1  1.00 16 16 64 16 2 polygon
+1  1.00 -8 -8 0 -16 8 -8 3 polygon
+endgate
+} def
+
+/connector_pair {
+% -32 -8 64 16 bbox
+begingate
+1  1.00 -32 0 -8 0 2 polygon
+1  1.00 -16 8 -8 0 -16 -8 3 polygon
+1  1.00 -8 8 0 0 -8 -8 3 polygon
+1  1.00 0 0 32 0 2 polygon
+endgate
+} def
+
+/thermal_overload {
+% -64 -17 128 34 bbox
+begingate
+1  1.00 -32 -24 0 -24 0 0 -32 0 spline
+1  1.00 0 8 -4 20 -24 16 0 0 spline
+1  1.00 32 24 0 24 0 0 32 0 spline
+1  1.00 0 -8 4 -20 24 -16 0 0 spline
+1  1.00 -32 0 -64 0 2 polygon
+1  1.00 32 0 64 0 2 polygon
+endgate
+} def
+
+/invert2 {
+% -64 -40 128 80 bbox
+begingate
+1  1.00 -32 40 -32 -40 2 polygon
+1  1.00 -40 0 8 0.00 360.00 xcarc
+1  1.00 -48 0 -64 0 2 polygon
+1  1.00 -32 40 40 0 -32 -40 3 polygon
+1  1.00 40 0 64 0 2 polygon
+endgate
+} def
+
+/and_gate {
+% -64 -48 112 96 bbox
+begingate
+1  1.00 0 -48 -64 -48 -64 48 0 48 4 polygon
+1  1.00 0 0 48 -90.00 90.00 xcarc
+1.000 0.000 0.000 scb
+(Out) {/Helvetica 1.000 cf} 2 4 0 48 0 pinlabel
+(In.1) {/Helvetica 1.000 cf} 2 7 0 -64 32 pinlabel
+(In.2) {/Helvetica 1.000 cf} 2 7 0 -64 -32 pinlabel
+sce
+endgate
+} def
+
+/neg_and {
+% -64 -48 144 96 bbox
+begingate
+1.00 0 32 0 and_gate
+1  1.00 -40 -32 8 0.00 360.00 xcarc
+1  1.00 -48 -32 -64 -32 2 polygon
+1  1.00 -40 32 8 0.00 360.00 xcarc
+1  1.00 -48 32 -64 32 2 polygon
+endgate
+} def
+
+/or_gate {
+% -49 -48 113 128 bbox
+begingate
+1  1.00 -19 -48 96 30.00 90.00 xcarc
+1  1.00 -19 48 96 270.00 330.00 xcarc
+1  1.00 -112 0 80 -37.00 37.00 xcarc
+1  1.00 -48 48 -19 48 2 polygon
+1  1.00 -48 -48 -19 -48 2 polygon
+1.000 0.000 0.000 scb
+(Out) {/Helvetica 1.000 cf} 2 4 0 64 0 pinlabel
+(In.1) {/Helvetica 1.000 cf} 2 7 0 -40 32 pinlabel
+(In.2) {/Helvetica 1.000 cf} 2 7 0 -40 -32 pinlabel
+sce
+endgate
+} def
+
+/neg_or {
+% -64 -64 144 128 bbox
+begingate
+1  1.00 -32 16 8 0.00 360.00 xcarc
+1  1.00 -64 16 -40 16 2 polygon
+1.00 0 16 -16 or_gate
+1  1.00 -32 -48 8 0.00 360.00 xcarc
+1  1.00 -64 -48 -40 -48 2 polygon
+endgate
+} def
+
+/xor_gate {
+% -65 -48 145 128 bbox
+begingate
+1  1.00 -19 -48 96 30.00 90.00 xcarc
+1  1.00 -19 48 96 270.00 330.00 xcarc
+1  1.00 -128 0 80 -37.00 37.00 xcarc
+1  1.00 -112 0 80 -37.00 37.00 xcarc
+1  1.00 -48 48 -19 48 2 polygon
+1  1.00 -48 -48 -19 -48 2 polygon
+1.000 0.000 0.000 scb
+(Out) {/Helvetica 1.000 cf} 2 4 0 64 0 pinlabel
+(In.1) {/Helvetica 1.000 cf} 2 7 0 -56 32 pinlabel
+(In.2) {/Helvetica 1.000 cf} 2 7 0 -56 -32 pinlabel
+sce
+endgate
+} def
+
+/neg_xor {
+% -80 -64 176 128 bbox
+begingate
+1.00 0 16 -16 xor_gate
+1  1.00 -48 16 8 0.00 360.00 xcarc
+1  1.00 -80 16 -56 16 2 polygon
+1  1.00 -48 -48 8 0.00 360.00 xcarc
+1  1.00 -80 -48 -56 -48 2 polygon
+endgate
+} def
+
+/open-collector {
+% -8 -16 16 32 bbox
+begingate
+1  1.00 -8 0 0 16 8 0 0 -16 -8 0 5 polygon
+1  1.00 -8 -16 8 -16 2 polygon
+endgate
+} def
+
+/schmitt {
+% -16 -8 24 16 bbox
+begingate
+1  1.00 -16 8 0 -8 -16 -8 0 8 spline
+1  1.00 -8 8 8 -8 -8 -8 8 8 spline
+1  1.00 0 8 8 8 2 polygon
+1  1.00 -8 -8 -16 -8 2 polygon
+endgate
+} def
+
+/truth_2 {
+% -144 -144 280 280 bbox
+begingate
+(A) {/Times-Roman 1.000 cf} 2 16 0 -128 96 label
+0  1.00 -144 80 -144 136 136 136 136 80 4 polygon
+1  1.00 -88 136 -88 -144 2 polygon
+(B) {/Times-Roman 1.000 cf} 2 16 0 -72 96 label
+(Output) {/Times-Roman 1.000 cf} 2 16 0 -8 96 label
+0  1.00 -144 80 -144 -144 136 -144 136 80 4 polygon
+1  1.00 -144 24 136 24 2 polygon
+1  1.00 -32 136 -32 -144 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -72 40 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -128 40 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -128 -16 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -68 -16 label
+1  1.00 -144 -32 136 -32 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -72 -72 label
+1  1.00 -144 -88 136 -88 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -124 -72 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -124 -128 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -68 -128 label
+endgate
+} def
+
+/truth_3 {
+% -160 -256 336 504 bbox
+begingate
+(B) {/Times-Roman 1.000 cf} 2 16 0 -88 208 label
+0  1.00 -160 248 -160 -256 176 -256 176 248 4 polygon
+(A) {/Times-Roman 1.000 cf} 2 16 0 -144 208 label
+1  1.00 -48 248 -48 -32 2 polygon
+(C) {/Times-Roman 1.000 cf} 2 16 0 -32 208 label
+(Output) {/Times-Roman 1.000 cf} 2 16 0 32 208 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -32 152 label
+1  1.00 -160 192 176 192 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -88 152 label
+1  1.00 -104 248 -104 -32 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -144 152 label
+1  1.00 8 248 8 -32 2 polygon
+1  1.00 -160 136 176 136 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -28 96 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -88 96 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -144 96 label
+1  1.00 -160 80 176 80 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -144 40 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -84 40 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -32 40 label
+1  1.00 -160 24 176 24 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -28 -16 label
+1  1.00 -104 24 -104 -256 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -144 -16 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -84 -16 label
+1  1.00 -160 -32 176 -32 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -88 -72 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -140 -72 label
+1  1.00 -160 -88 176 -88 2 polygon
+(0) {/Times-Roman 1.000 cf} 2 16 0 -32 -72 label
+1  1.00 -48 24 -48 -256 2 polygon
+1  1.00 8 24 8 -256 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -28 -128 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -88 -128 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -140 -128 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -140 -184 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -84 -184 label
+(0) {/Times-Roman 1.000 cf} 2 16 0 -32 -184 label
+1  1.00 -160 -200 176 -200 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -84 -240 label
+(1) {/Times-Roman 1.000 cf} 2 16 0 -140 -240 label
+1  1.00 -160 -144 176 -144 2 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -28 -240 label
+endgate
+} def
+
+/truth_4 {
+% -224 -136 448 280 bbox
+begingate
+1.00 0 -80 8 truth_2
+(Output) {/Times-Roman 1.000 cf} 2 16 0 80 104 label
+0  1.00 56 144 56 -136 224 -136 224 144 4 polygon
+1  1.00 56 88 224 88 2 polygon
+1  1.00 56 32 224 32 2 polygon
+1  1.00 56 -24 224 -24 2 polygon
+1  1.00 56 -80 224 -80 2 polygon
+endgate
+} def
+
+/dip_14 {
+% -448 -256 896 512 bbox
+begingate
+1  2.00 -400 32 -400 -32 -448 -32 -448 32 spline
+0  2.00 -448 192 -448 -192 448 -192 448 192 4 polygon
+0  1.00 -416 256 -416 192 -352 192 -352 256 4 polygon
+(14) {/Times-Roman 1.000 cf} 2 16 0 -404 208 label
+0  1.00 -288 256 -288 192 -224 192 -224 256 4 polygon
+(13) {/Times-Roman 1.000 cf} 2 16 0 -276 208 label
+0  1.00 -160 256 -160 192 -96 192 -96 256 4 polygon
+(12) {/Times-Roman 1.000 cf} 2 16 0 -148 208 label
+(11) {/Times-Roman 1.000 cf} 2 16 0 -16 208 label
+0  1.00 -32 256 -32 192 32 192 32 256 4 polygon
+0  1.00 96 256 96 192 160 192 160 256 4 polygon
+(10) {/Times-Roman 1.000 cf} 2 16 0 104 208 label
+0  1.00 224 256 224 192 288 192 288 256 4 polygon
+(9) {/Times-Roman 1.000 cf} 2 16 0 248 208 label
+0  1.00 352 256 352 192 416 192 416 256 4 polygon
+(8) {/Times-Roman 1.000 cf} 2 16 0 368 208 label
+0  1.00 352 -192 352 -256 416 -256 416 -192 4 polygon
+(7) {/Times-Roman 1.000 cf} 2 16 0 368 -240 label
+0  1.00 224 -192 224 -256 288 -256 288 -192 4 polygon
+(6) {/Times-Roman 1.000 cf} 2 16 0 240 -240 label
+(5) {/Times-Roman 1.000 cf} 2 16 0 112 -240 label
+0  1.00 96 -192 96 -256 160 -256 160 -192 4 polygon
+(4) {/Times-Roman 1.000 cf} 2 16 0 -16 -240 label
+0  1.00 -32 -192 -32 -256 32 -256 32 -192 4 polygon
+0  1.00 -160 -192 -160 -256 -96 -256 -96 -192 4 polygon
+(3) {/Times-Roman 1.000 cf} 2 16 0 -144 -240 label
+0  1.00 -288 -192 -288 -256 -224 -256 -224 -192 4 polygon
+(2) {/Times-Roman 1.000 cf} 2 16 0 -272 -240 label
+0  1.00 -416 -192 -416 -256 -352 -256 -352 -192 4 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -392 -240 label
+endgate
+} def
+
+/dip_8 {
+% -256 -256 512 512 bbox
+begingate
+0  1.00 -224 192 -224 256 -160 256 -160 192 4 polygon
+(8) {/Times-Roman 1.000 cf} 2 16 0 -208 208 label
+0  1.00 -96 192 -96 256 -32 256 -32 192 4 polygon
+(7) {/Times-Roman 1.000 cf} 2 16 0 -80 208 label
+(6) {/Times-Roman 1.000 cf} 2 16 0 48 208 label
+0  1.00 32 192 32 256 96 256 96 192 4 polygon
+0  1.00 160 192 160 256 224 256 224 192 4 polygon
+0  2.00 -256 192 -256 -192 256 -192 256 192 4 polygon
+1  2.00 -208 32 -208 -32 -256 -32 -256 32 spline
+0  1.00 -224 -256 -224 -192 -160 -192 -160 -256 4 polygon
+(1) {/Times-Roman 1.000 cf} 2 16 0 -200 -240 label
+0  1.00 -96 -256 -96 -192 -32 -192 -32 -256 4 polygon
+(2) {/Times-Roman 1.000 cf} 2 16 0 -80 -240 label
+0  1.00 32 -256 32 -192 96 -192 96 -256 4 polygon
+(3) {/Times-Roman 1.000 cf} 2 16 0 48 -240 label
+0  1.00 160 -256 160 -192 224 -192 224 -256 4 polygon
+(4) {/Times-Roman 1.000 cf} 2 16 0 176 -240 label
+(5) {/Times-Roman 1.000 cf} 2 16 0 176 208 label
+endgate
+} def
+
+/555_timer {
+% -208 -240 400 496 bbox
+begingate
+(555) {/Helvetica-Bold 1.000 cf} 2 16 0 -48 120 label
+(Disch) {/Helvetica 1.000 cf} 2 16 0 -168 64 label
+(Thresh) {/Helvetica 1.000 cf} 2 16 0 -168 -16 label
+(Trig) {/Helvetica 1.000 cf} 2 16 0 -168 -96 label
+(Gnd) {/Helvetica 1.000 cf} 2 16 0 -56 -192 label
+(cc) {ss} (V) {/Helvetica 1.000 cf} 4 16 0 -128 184 label
+(RST) {/Helvetica 1.000 cf} 2 16 0 48 176 label
+1  1.00 48 208 128 208 2 polygon
+(Out) {/Helvetica 1.000 cf} 2 16 0 80 64 label
+(Ctrl) {/Helvetica 1.000 cf} 2 16 0 80 -64 label
+0  1.00 -176 224 -176 -208 160 -208 160 224 4 polygon
+1  1.00 -96 224 -96 256 2 polygon
+1  1.00 80 224 80 256 2 polygon
+1  1.00 -176 80 -208 80 2 polygon
+1  1.00 -176 0 -208 0 2 polygon
+1  1.00 -176 -80 -208 -80 2 polygon
+1  1.00 192 -48 160 -48 2 polygon
+1  1.00 192 80 160 80 2 polygon
+1  1.00 -16 -208 -16 -240 2 polygon
+endgate
+} def
+
+/4017_counter {
+% -272 -144 544 272 bbox
+begingate
+1  1.00 -144 -144 -144 -112 2 polygon
+1  1.00 -112 -144 -112 -112 2 polygon
+1  1.00 -80 -144 -80 -112 2 polygon
+1  1.00 -48 -144 -48 -112 2 polygon
+1  1.00 -16 -144 -16 -112 2 polygon
+1  1.00 16 -144 16 -112 2 polygon
+1  1.00 48 -144 48 -112 2 polygon
+1  1.00 80 -144 80 -112 2 polygon
+1  1.00 112 -144 112 -112 2 polygon
+1  1.00 144 -144 144 -112 2 polygon
+(0) {/Helvetica 1.000 cf} 2 28 0 -160 -80 label
+(1) {/Helvetica 1.000 cf} 2 28 0 -128 -80 label
+(2) {/Helvetica 1.000 cf} 2 28 0 -96 -80 label
+(3) {/Helvetica 1.000 cf} 2 28 0 -64 -80 label
+(4) {/Helvetica 1.000 cf} 2 28 0 -32 -80 label
+(5) {/Helvetica 1.000 cf} 2 28 0 0 -80 label
+(6) {/Helvetica 1.000 cf} 2 28 0 32 -80 label
+(7) {/Helvetica 1.000 cf} 2 28 0 64 -80 label
+(8) {/Helvetica 1.000 cf} 2 28 0 96 -80 label
+(9) {/Helvetica 1.000 cf} 2 28 0 128 -80 label
+0  1.00 -240 -112 -240 96 240 96 240 -112 4 polygon
+(DD) {ss} (V) {/Helvetica 1.000 cf} 4 16 0 -232 -16 label
+(4017) {/Helvetica-Bold 1.000 cf} 2 16 0 -64 -16 label
+(Clk) {/Helvetica 1.000 cf} 2 16 0 -208 56 label
+(Gnd) {/Helvetica 1.000 cf} 2 16 0 152 -16 label
+(ClkEn) {/Helvetica 1.000 cf} 2 16 0 -112 56 label
+(Rst) {/Helvetica 1.000 cf} 2 16 0 24 56 label
+1  1.00 -176 96 -176 128 2 polygon
+1  1.00 -64 96 -64 128 2 polygon
+1  1.00 64 96 64 128 2 polygon
+(Carry) {/Helvetica 1.000 cf} 2 16 0 120 56 label
+1  1.00 176 96 176 128 2 polygon
+1  1.00 -240 0 -272 0 2 polygon
+1  1.00 240 0 272 0 2 polygon
+endgate
+} def
+
+/sr_latch {
+% -144 -144 288 288 bbox
+begingate
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+1  1.00 -144 96 -80 96 2 polygon
+(S) {/Helvetica 1.000 cf} 2 16 0 -112 112 label
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+1  1.00 80 96 144 96 2 polygon
+1  1.00 96 -48 128 -48 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+1  1.00 88 -96 8 0.00 360.00 xcarc
+1  1.00 96 -96 144 -96 2 polygon
+1  1.00 -144 -96 -80 -96 2 polygon
+(R) {/Helvetica 1.000 cf} 2 16 0 -112 -80 label
+endgate
+} def
+
+/sr_enabled_latch {
+% -144 -144 288 288 bbox
+begingate
+1.00 0 0 0 sr_latch
+(E) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+1  1.00 -80 0 -144 0 2 polygon
+endgate
+} def
+
+/sr_flipflop {
+% -144 -144 288 288 bbox
+begingate
+1.00 0 0 0 sr_latch
+1  1.00 -80 16 -48 0 -80 -16 3 polygon
+(C) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+1  1.00 -80 0 -144 0 2 polygon
+endgate
+} def
+
+/d_latch {
+% -144 -144 288 288 bbox
+begingate
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+1  1.00 88 -96 8 0.00 360.00 xcarc
+1  1.00 96 -96 144 -96 2 polygon
+1  1.00 96 -48 128 -48 2 polygon
+1  1.00 80 96 144 96 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+1  1.00 -80 96 -144 96 2 polygon
+(D) {/Helvetica 1.000 cf} 2 16 0 -112 104 label
+(E) {/Helvetica 1.000 cf} 2 16 0 -112 8 label
+1  1.00 -144 0 -80 0 2 polygon
+endgate
+} def
+
+/d_flipflop {
+% -144 -144 288 288 bbox
+begingate
+(D) {/Helvetica 1.000 cf} 2 16 0 -112 112 label
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+1  1.00 -80 96 -144 96 2 polygon
+(C) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+1  1.00 -80 16 -48 0 -80 -16 3 polygon
+1  1.00 -80 0 -144 0 2 polygon
+1  1.00 96 -96 144 -96 2 polygon
+1  1.00 88 -96 8 0.00 360.00 xcarc
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+1  1.00 96 -48 128 -48 2 polygon
+1  1.00 80 96 144 96 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+endgate
+} def
+
+/d_flipflop2 {
+% -144 -144 288 288 bbox
+begingate
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+1  1.00 -80 96 -144 96 2 polygon
+(D) {/Helvetica 1.000 cf} 2 16 0 -112 112 label
+(C) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+1  1.00 -80 16 -48 0 -80 -16 3 polygon
+1  1.00 -88 0 8 0.00 360.00 xcarc
+1  1.00 -144 0 -96 0 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+1  1.00 80 96 144 96 2 polygon
+1  1.00 88 -96 8 0.00 360.00 xcarc
+1  1.00 96 -96 144 -96 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+1  1.00 96 -48 128 -48 2 polygon
+endgate
+} def
+
+/jk_flipflop {
+% -144 -144 288 288 bbox
+begingate
+1  1.00 -80 96 -144 96 2 polygon
+(J) {/Helvetica 1.000 cf} 2 16 0 -112 112 label
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+1  1.00 144 96 80 96 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+1  1.00 96 -48 128 -48 2 polygon
+1  1.00 96 -96 144 -96 2 polygon
+1  1.00 88 -96 8 0.00 360.00 xcarc
+1  1.00 -80 0 -144 0 2 polygon
+1  1.00 -80 16 -48 0 -80 -16 3 polygon
+(C) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+(K) {/Helvetica 1.000 cf} 2 16 0 -112 -80 label
+1  1.00 -80 -96 -144 -96 2 polygon
+endgate
+} def
+
+/jk_flipflop2 {
+% -144 -144 288 288 bbox
+begingate
+0  1.00 -80 144 -80 -144 80 -144 80 144 4 polygon
+1  1.00 -80 96 -144 96 2 polygon
+(J) {/Helvetica 1.000 cf} 2 16 0 -112 112 label
+1  1.00 -80 16 -48 0 -80 -16 3 polygon
+1  1.00 -144 0 -96 0 2 polygon
+1  1.00 -88 0 8 0.00 360.00 xcarc
+(C) {/Helvetica 1.000 cf} 2 16 0 -112 16 label
+(K) {/Helvetica 1.000 cf} 2 16 0 -112 -80 label
+1  1.00 -80 -96 -144 -96 2 polygon
+1  1.00 96 -96 144 -96 2 polygon
+1  1.00 88 -96 8 0.00 360.00 xcarc
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 -80 label
+1  1.00 96 -48 128 -48 2 polygon
+(Q) {/Helvetica 1.000 cf} 2 16 0 96 112 label
+1  1.00 144 96 80 96 2 polygon
+endgate
+} def
+
+/basic_stamp_d {
+% -288 -256 576 496 bbox
+begingate
+1.00 0 256 96 dot
+1.00 0 256 64 dot
+1.00 0 256 32 dot
+1.00 0 256 0 dot
+1.00 0 256 -32 dot
+1.00 0 256 -64 dot
+1.00 0 256 -96 dot
+1.00 0 256 -128 dot
+1.00 0 256 -192 dot
+1.00 0 256 160 dot
+(0) {/Helvetica 1.000 cf} 2 16 0 208 -144 label
+(1) {/Helvetica 1.000 cf} 2 16 0 224 -112 label
+(2) {/Helvetica 1.000 cf} 2 16 0 208 -80 label
+(3) {/Helvetica 1.000 cf} 2 16 0 224 -48 label
+(4) {/Helvetica 1.000 cf} 2 16 0 208 -16 label
+(5) {/Helvetica 1.000 cf} 2 16 0 224 16 label
+(6) {/Helvetica 1.000 cf} 2 16 0 208 48 label
+(7) {/Helvetica 1.000 cf} 2 16 0 224 80 label
+(Gnd) {/Helvetica 1.000 cf} 2 16 0 168 -200 label
+1.00 0 256 192 dot
+(+5V) {/Helvetica 1.000 cf} 2 16 0 160 144 label
+(in) {ss} (V) {/Helvetica 1.000 cf} 4 16 0 176 192 label
+(PIC) {/Helvetica 1.000 cf} 2 16 270 80 0 label
+0  1.00 48 112 48 -176 144 -176 144 112 4 polygon
+0  1.00 32 104 32 88 48 88 48 104 4 polygon
+0  1.00 32 72 32 56 48 56 48 72 4 polygon
+0  1.00 32 40 32 24 48 24 48 40 4 polygon
+0  1.00 32 8 32 -8 48 -8 48 8 4 polygon
+0  1.00 32 -24 32 -40 48 -40 48 -24 4 polygon
+0  1.00 32 -56 32 -72 48 -72 48 -56 4 polygon
+0  1.00 32 -88 32 -104 48 -104 48 -88 4 polygon
+0  1.00 32 -120 32 -136 48 -136 48 -120 4 polygon
+0  1.00 32 -152 32 -168 48 -168 48 -152 4 polygon
+0  1.00 144 -152 144 -168 160 -168 160 -152 4 polygon
+0  1.00 144 -120 144 -136 160 -136 160 -120 4 polygon
+0  1.00 144 -88 144 -104 160 -104 160 -88 4 polygon
+0  1.00 144 -56 144 -72 160 -72 160 -56 4 polygon
+0  1.00 144 -24 144 -40 160 -40 160 -24 4 polygon
+0  1.00 144 8 144 -8 160 -8 160 8 4 polygon
+0  1.00 144 40 144 24 160 24 160 40 4 polygon
+0  1.00 144 72 144 56 160 56 160 72 4 polygon
+0  1.00 144 104 144 88 160 88 160 104 4 polygon
+0  1.00 -144 88 -144 72 -128 72 -128 88 4 polygon
+0  1.00 -144 56 -144 40 -128 40 -128 56 4 polygon
+0  1.00 -144 24 -144 8 -128 8 -128 24 4 polygon
+0  1.00 -144 -8 -144 -24 -128 -24 -128 -8 4 polygon
+0  1.00 -32 -8 -32 -24 -16 -24 -16 -8 4 polygon
+0  1.00 -32 24 -32 8 -16 8 -16 24 4 polygon
+0  1.00 -32 56 -32 40 -16 40 -16 56 4 polygon
+0  1.00 -32 88 -32 72 -16 72 -16 88 4 polygon
+0  1.00 -128 112 -128 -48 -32 -48 -32 112 4 polygon
+(EEPROM) {/Helvetica 0.600 cf} 2 16 270 -88 80 label
+1.00 0 -48 -80 dot
+1.00 0 -80 -80 dot
+1.00 0 -112 -80 dot
+0  1.00 -128 -64 -128 -96 -32 -96 -32 -64 4 polygon
+(>>) {/Helvetica 0.500 cf} 2 16 0 -160 -84 label
+1  1.00 -192 80 -256 80 -256 16 -192 16 4 polygon
+1  1.00 -256 64 -288 64 -288 32 -256 32 4 polygon
+1  1.00 -192 -80 -256 -80 -256 -144 -192 -144 4 polygon
+1  1.00 -288 -80 -288 -144 -272 -144 -272 -128 -256 -128 -256 -96 -272 -96 -272 
+-80 -288 -80 9 polygon
+0.400 0.400 0.400 scb
+0  2.00 -264 240 -264 -256 288 -256 288 240 4 polygon
+sce
+(TM) {Ss} (BASIC Stamp) {/Helvetica 1.000 cf} 4 16 0 -224 176 label
+1  1.00 -224 -224 -224 -192 2 polygon
+1  1.00 -192 -192 -192 -208 -224 -208 -224 -192 spline
+1  1.00 -208 -224 -184 -192 -184 -224 3 polygon
+1  1.00 -196 -208 -184 -208 2 polygon
+1  1.00 -176 -224 -176 -192 2 polygon
+1  1.00 -144 -192 -144 -208 -176 -208 -176 -192 spline
+1  1.00 -152 -208 -152 -216 -152 -224 -164 -208 spline
+1  1.00 -160 -224 -136 -192 -136 -224 3 polygon
+1  1.00 -148 -208 -136 -208 2 polygon
+1  1.00 -128 -192 -128 -224 -104 -224 3 polygon
+1  1.00 -112 -200 -112 -232 -88 -232 3 polygon
+1  1.00 -96 -224 -72 -192 -72 -224 3 polygon
+1  1.00 -84 -208 -72 -208 2 polygon
+1  1.00 -64 -192 -40 -224 2 polygon
+1  1.00 -40 -192 -64 -224 2 polygon
+1  1.00 -28 -196 -20 -196 2 polygon
+1  1.00 -28 -200 -20 -200 -28 -208 -20 -208 4 polygon
+1  1.00 -20 -220 -20 -212 -28 -212 -28 -220 4 polygon
+endgate
+} def
+
+/555_timer {
+% -208 -240 400 496 bbox
+begingate
+(555) {/Helvetica-Bold 1.000 cf} 2 16 0 -48 120 label
+(Disch) {/Helvetica 1.000 cf} 2 16 0 -168 64 label
+(Thresh) {/Helvetica 1.000 cf} 2 16 0 -168 -16 label
+(Trig) {/Helvetica 1.000 cf} 2 16 0 -168 -96 label
+(Gnd) {/Helvetica 1.000 cf} 2 16 0 -56 -192 label
+(cc) {ss} (V) {/Helvetica 1.000 cf} 4 16 0 -128 184 label
+(RST) {/Helvetica 1.000 cf} 2 16 0 48 176 label
+1  1.00 48 208 128 208 2 polygon
+(Out) {/Helvetica 1.000 cf} 2 16 0 80 64 label
+(Ctrl) {/Helvetica 1.000 cf} 2 16 0 80 -64 label
+0  1.00 -176 224 -176 -208 160 -208 160 224 4 polygon
+1  1.00 -96 224 -96 256 2 polygon
+1  1.00 80 224 80 256 2 polygon
+1  1.00 -176 80 -208 80 2 polygon
+1  1.00 -176 0 -208 0 2 polygon
+1  1.00 -176 -80 -208 -80 2 polygon
+1  1.00 192 -48 160 -48 2 polygon
+1  1.00 192 80 160 80 2 polygon
+1  1.00 -16 -208 -16 -240 2 polygon
+endgate
+} def
+
+/PLC1 {
+% -304 -240 608 480 bbox
+begingate
+0.800 0.800 0.800 scb
+240  1.00 -304 240 -304 -240 304 -240 304 240 4 polygon
+sce
+(PLC) {/Helvetica-Bold 1.000 cf} 2 16 0 -32 0 label
+1  1.00 -272 192 16 0.00 360.00 xcarc
+1  1.00 -264 204 -284 184 2 polygon
+1  1.00 -260 200 -280 180 2 polygon
+1  1.00 -272 128 16 0.00 360.00 xcarc
+1  1.00 -264 140 -284 120 2 polygon
+1  1.00 -260 136 -280 116 2 polygon
+1  1.00 -272 64 16 0.00 360.00 xcarc
+1  1.00 -264 76 -284 56 2 polygon
+1  1.00 -260 72 -280 52 2 polygon
+1  1.00 -272 0 16 0.00 360.00 xcarc
+1  1.00 -264 12 -284 -8 2 polygon
+1  1.00 -260 8 -280 -12 2 polygon
+1  1.00 -272 -64 16 0.00 360.00 xcarc
+1  1.00 -264 -52 -284 -72 2 polygon
+1  1.00 -260 -56 -280 -76 2 polygon
+1  1.00 -272 -128 16 0.00 360.00 xcarc
+1  1.00 -264 -116 -284 -136 2 polygon
+1  1.00 -260 -120 -280 -140 2 polygon
+1  1.00 -272 -192 16 0.00 360.00 xcarc
+1  1.00 -264 -180 -284 -200 2 polygon
+1  1.00 -260 -184 -280 -204 2 polygon
+(X1) {/Courier 1.000 cf} 2 16 0 -224 176 label
+(X2) {/Courier 1.000 cf} 2 16 0 -224 112 label
+(X3) {/Courier 1.000 cf} 2 16 0 -224 48 label
+(X4) {/Courier 1.000 cf} 2 16 0 -224 -16 label
+(X5) {/Courier 1.000 cf} 2 16 0 -224 -80 label
+(X6) {/Courier 1.000 cf} 2 16 0 -224 -144 label
+1  1.00 -112 208 16 0.00 360.00 xcarc
+1  1.00 -104 220 -124 200 2 polygon
+1  1.00 -100 216 -120 196 2 polygon
+1  1.00 112 208 16 0.00 360.00 xcarc
+1  1.00 120 220 100 200 2 polygon
+1  1.00 124 216 104 196 2 polygon
+(L1) {/Helvetica 1.000 cf} 2 16 0 -128 160 label
+(L2) {/Helvetica 1.000 cf} 2 16 0 88 160 label
+1  1.00 272 192 16 0.00 360.00 xcarc
+1  1.00 280 204 260 184 2 polygon
+1  1.00 284 200 264 180 2 polygon
+1  1.00 272 128 16 0.00 360.00 xcarc
+1  1.00 280 140 260 120 2 polygon
+1  1.00 284 136 264 116 2 polygon
+1  1.00 272 64 16 0.00 360.00 xcarc
+1  1.00 280 76 260 56 2 polygon
+1  1.00 284 72 264 52 2 polygon
+1  1.00 272 0 16 0.00 360.00 xcarc
+1  1.00 280 12 260 -8 2 polygon
+1  1.00 284 8 264 -12 2 polygon
+1  1.00 272 -64 16 0.00 360.00 xcarc
+1  1.00 280 -52 260 -72 2 polygon
+1  1.00 284 -56 264 -76 2 polygon
+1  1.00 272 -128 16 0.00 360.00 xcarc
+1  1.00 280 -116 260 -136 2 polygon
+1  1.00 284 -120 264 -140 2 polygon
+1  1.00 272 -192 16 0.00 360.00 xcarc
+1  1.00 280 -180 260 -200 2 polygon
+1  1.00 284 -184 264 -204 2 polygon
+(Y1) {/Courier 1.000 cf} 2 16 0 176 176 label
+(Y2) {/Courier 1.000 cf} 2 16 0 176 112 label
+(Y3) {/Courier 1.000 cf} 2 16 0 176 48 label
+(Y4) {/Courier 1.000 cf} 2 16 0 176 -16 label
+(Y5) {/Courier 1.000 cf} 2 16 0 176 -80 label
+(Y6) {/Courier 1.000 cf} 2 16 0 176 -144 label
+(Programming) {/Helvetica 0.500 cf} 2 16 0 -48 -180 label
+(port) {/Helvetica 0.500 cf} 2 16 0 -8 -228 label
+240  1.00 -32 -192 -32 -208 48 -208 48 -192 4 polygon
+1  1.00 -240 192 8 0.00 360.00 xcarc
+1  1.00 -240 128 8 0.00 360.00 xcarc
+1  1.00 -240 64 8 0.00 360.00 xcarc
+1  1.00 -240 0 8 0.00 360.00 xcarc
+1  1.00 -240 -64 8 0.00 360.00 xcarc
+1  1.00 -240 -128 8 0.00 360.00 xcarc
+1  1.00 240 192 8 0.00 360.00 xcarc
+1  1.00 240 128 8 0.00 360.00 xcarc
+1  1.00 240 64 8 0.00 360.00 xcarc
+1  1.00 240 0 8 0.00 360.00 xcarc
+1  1.00 240 -64 8 0.00 360.00 xcarc
+1  1.00 240 -128 8 0.00 360.00 xcarc
+0  2.00 -304 240 -304 -240 304 -240 304 240 4 polygon
+(Common) {/Courier 1.000 cf} 2 16 0 -248 -208 label
+(Source) {/Courier 1.000 cf} 2 16 0 104 -208 label
+endgate
+} def
+
+% EndLib

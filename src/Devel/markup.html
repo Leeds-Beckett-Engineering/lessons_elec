@@ -1,0 +1,432 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html> 
+
+<head>
+
+<title>Lessons In Electric Circuits -- Document markup format</title>
+<meta name="description" content="Design Science License">
+<meta name="keywords" content="book, ebook, textbook, tutorial, copyleft, copylefted, free, educational, free book, free ebook, free textbook, free download, copyleft book, copylefted book">
+
+</head>
+
+<body>
+
+<body bgColor=white>
+
+<a href="index.html"><img src=contents.jpg alt="Contents"></a>
+
+<hr>
+<h1>DOCUMENT MARKUP FORMAT</h1>
+
+<hr>
+
+<h2>Submissions from contributors</h2>
+
+
+<p>
+When submitting content for inclusion into the "official" distribution at <u>www.ibiblio.org</u>, the preferred formats are plain text or hand-coded HTML.  <i>Please, please do not send me HTML files created by web page software such as FrontPage or Netscape Composer!</i>  Also, do not send me content in any word processor format (i.e. Word, Wordperfect).  If you use a word processing program to write, please export your work in plain text (.txt) format.  The reason for this is because I must perform some rudimentary conversions of your text into the markup language used for this book project, and this is easier to do if the text you send me is in a more primitive form.
+</p>
+
+<p>
+If you wish to make LARGE contributions to the project (multiple chapters, or translations of the English text into other languages), I would recommend that you learn to write your documents(s) using the SubML markup language, so that I do not have to re-type large portions of your work.  You may learn more about the SubML markup language in the last section of this page.  <a href="#subml">[Click Here!]</a>
+</p>
+
+<p>
+If you are not familiar with what a markup language is, refer to the second-to-the-last section of this page before reading anything else.  <a href="#whatisamarkup">[Click Here!]</a>
+</p>
+
+
+
+
+
+<hr>
+
+<h2>History of markup languages used in "Lessons In Electric Circuits" book project</h2>
+
+<p>
+There is a history of markup languages and formats used in the creation and presentation of this book series that readers may find interesting (or at least amusing!).  Here, I will describe how the project began, where it has gone, where it is now, and hopefully where it is going with regard to markup.
+</p>
+
+<p>
+At first, the entire book was written in plain-ASCII text format.  That's right: plain vanilla text, with not a single graphic image to be found, except for "ASCII art" illustrations and graphs.  Believe it or not, there's a surprising amount of illustration that may be done using nothing but monospaced font and the characters found on a keyboard.  Take for instance this "ASCII art" circuit schematic:
+</p>
+
+<pre>
+                                      R3
+          +-----------------+-------/\/\/\--------+
+          |                 |        1.5k         |
+         ---                /                     /
+ Battery  -              R2 \ 2.2k             R4 \ 10k
+         ---                /                     /
+          -                 \                     \
+          |        R1       |                     |
+	  +------/\/\/\-----+---------------------+
+	           1k
+</pre>
+
+<p>
+The rationale behind ASCII formatting was universal readability, and small file size.  Anyone, using practically any computer in the world, can view and edit plain ASCII text files!  Also, I was hosting the book on my own personal web page, with very limited hard drive space, and file size was an important issue.  However, the limitations of "ASCII art" soon became apparent, and I was forced to go with something better or else be severely limited in what I could present in the books.
+</p>
+
+<p>
+Later, in 1999, I tried converting the plain text files into Microsoft Word format, so that at least the paragraphs would not have to be rendered in Courier (ugly!) font.  The illustrations were still rendered in ASCII-art, but the book text appeared in Times New Roman font, which was much easier to read.
+</p>
+
+<p>
+It was then that I learned the limitations of word processors with regard to large documents.  I was hoping to use the capabilities of Microsoft Word to provide page numbers for the book, but was disappointed at the results.  I seemed to have very little freedom in how the page numbers appeared on the paper, and I noticed how much variance there was between the text as it appeared on the computer screen, and the text as it appeared on paper after printing (margins, paragraph breaks, etc.).  Additionally, I could find no way to get Word to generate an index, or a table of contents, both of which I knew would be important for a book to have.  Worse yet, formatting with Word limited the electronic readership of the book to those who had Microsoft Word on their computers.  Word is an expensive program, and the "Wordpad" mini-processor that comes with Microsoft Windows doesn't always read Word files properly.  All in all, the experience with Microsoft Word was negative in general, and I did not foresee better results using any other brand of word processor.
+</p>
+
+<p>
+Then, in the May of 2000, I read about Yorktown High School's <u>Open Book Project</u> in an issue of Linux Journal magazine.  Managed by Jeffrey Elkner, the Open Book Project is a site intended to host "open" textbooks for free, educational use.  I immediately contacted Jeff and requested permission for my book to be hosted on their server instead of my own webpage.  He agreed, and began to offer advice on how to improve the book's appearance.  One of his students at Yorktown HS, Jason Starck, became involved with the task of translating the plain-ASCII text into HTML format for better appearance.  At this point, there were still no real graphic images (still "ASCII art" diagrams), but the book's appearance and ease of navigation were vastly improved.
+</p>
+
+<p>
+Over the 2000 summer break (July-September), I worked feverishly on the task of creating real graphic images for the book using Xcircuit, an X-Windows based drafting program intended for drawing electronic schematic diagrams.  By Fall quarter of 2000, the book had a whole new appearance.
+</p>
+
+<p>
+In October of 2000, the Open Book Project moved to the servers of www.ibiblio.org, away from Yorktown High School's servers.  Accessibility and visibility increased dramatically with this relocation, and with those improvements it became more important to make the book's appearance as professional as possible.  One major problem with HTML formatting was its poor translation to printed paper copy.  My students needed a paper version of the book, and printed HTML lacked all the necessary elements for paper navigation: page numbers, table of contents, and an index.  From past experience I knew that going to a word processor format such as Microsoft Word was not going to help me here.  What I needed to do was use a markup language designed to produce printed copy, as opposed to HTML (HyperText Markup Language) which is intended only for electronic presentation.
+</p>
+
+<p>
+The Open Book Project was already collaboratively developing a computer programming textbook by Professor Allen Downey called "How to Think Like a Computer Scientist," using a language called LaTeX as the official source markup standard.  LaTeX makes wonderful printed copy, but is not directly viewable over the internet and thus requires translation to HTML for online viewing.  In discussing some legal issues with Richard Stallman over email, I was directed toward a markup language called Texinfo that was supposed to address both needs: one source language that translated easily to TeX for printed copy and HTML for online viewing (as well as to a special hyperlinked <i>info</i> format intended as a "man" page substitute for UNIX systems).
+</p>
+
+<p>
+Being that Texinfo was the official markup language for Stallman's Free Software Foundation documentation, I thought it fitting that it be used to create an open-source textbook, and I committed the book series to that style of markup.
+</p>
+
+<p>
+In email conversation with Jeff Elkner, a new markup language called DocBook was brought up.  Like HTML, DocBook is an instance of SGML, with a feature set specifically designed for rendering technical literature.  It promised to be the Holy Grail of markup for textbooks, generating professional-quality print and web-viewable output from a single source markup format, with just about every feature imaginable.  Unfortunately, neither Jeff nor I knew how to use DocBook yet, so he remained committed to LaTeX as the official markup language of Downey's "How to Think . . ." book while I remained with Texinfo for the "Lessons . . ." book series.  Another "open book" author, David Sweet, encouraged me to consider DocBook as the markup language of choice for my text, but after reading Norman Walsh and Leonard Muellner's "DocBook, The Definitive Guide", I was put off by the language's complexity.
+</p>
+
+<p>
+As the year 2000 rolled over into 2001, I realized that Texinfo was not as great a solution to the markup language problem as I originally thought.  It suffered from two major disadvantages: an inability to render superscripts and subscripts, as well as Greek characters.  In electronics and mathematical work, these three features are almost essential to proper text formatting.  Up to this point I had tolerated Texinfo's limitations in this area because it did such a fine job of creating both printed output and HTML output from a single set of source files.  I considered doing what Jeff Elkner was doing with Allen Downey's programming book (switching to LaTeX as the source markup language), but decided against it because they were having to write their own conversion software to translate into HTML the way they wanted it.
+</p>
+
+<p>
+By the summer break of 2001, I knew I had to abandon Texinfo for something else.  Having learned more about DocBook in the mean time, I became convinced it was the ultimate markup language for what I was doing, but despite significant effort I could not get the parsing software to work as it should on my home computer.  Now I'm no Linus Torvalds, but I'm not exactly a slouch when it comes to computers, either.  Even if I did manage to get DocBook fully operational on my home computer, I reasoned, chances were that many others would not be able to get it to work on their computers, thus effectively barring some people from being able to use the book to its full potential.  Also, if I were to switch to DocBook markup, I would have to make sure that all the proper parsing software was set up on ibiblio's server, so that I could continue my policy of uploading just the source files over the internet and have the ibiblio computer "compile" them into HTML and PostScript.  The alternative -- to compile all the source files on my home machine and upload the finished files to ibiblio's server -- would magnify the size of my uploads by several times.
+</p>
+
+<p>
+At this point, I had familiarized myself with several markup languages in my search for the "perfect" solution: HTML, TeX, LaTeX, Texinfo, groff, Qwertz, and DocBook.  There were many similarities in structure between these markup languages, although syntax varied greatly between them.  It became apparent that the structures were similar enough to allow for search-and-replace translation from one format to another, so long as only the basic features of the individual languages were used.  This is analogous to discovering several different spoken languages where only the words differed, but the grammar was approximately the same.  Given this fortuitous situation, it becomes technically possible to translate from one markup language to another using simple search-and-replace routines, just as it would be possible to translate flawlessly between the hypothetical spoken languages using nothing but a multilingual dictionary.
+</p>
+
+<p>
+So I thought to myself, "why not make my own markup language loosely based on DocBook, structured in such a way that translation to any of the other markup languages requires only search-and-replace substitutions?"  In effect, I would identify whatever structures were common to DocBook, LaTeX, and HTML, and design SGML/XML-style tags to represent them.  The result would be a markup language limited to those features common to the intersection of the different languages' structures, but very easily translated to any of those common markup languages for final output.  If I designed this language as close as I could to the structure of DocBook, it would be just as easy to convert the files to DocBook at some later date with the same search-and-replace approach.  In honor of its intended purpose, I decided to call my language <i>SubML</i>, meaning <b>Sub</b>stitutionary <b>M</b>arkup <b>L</b>anguage.
+</p>
+
+<p>
+It was then that I discovered a remarkable little program called <i>sed</i>, which stands for <b>s</b>tream <b>ed</b>itor.  Its singular purpose is to execute bulk search-and-replace operations on any ASCII file, according to scripts written using UNIX regular expressions.  I developed the SubML language and all the necessary <i>sed</i> scripts to translate a SubML file into TeX, LaTeX, and HTML over the 2001 summer break, as I was taking a course on comparative religion at a local community college.  SubML became the official markup language for my class papers that quarter, and I used the experience to "debug" the language before applying it to the "Lessons . . ." book series.
+</p>
+
+<p>
+Since then, SubML has remained the official markup language of the "Lessons In Electric Circuits" book series.  Being that the <i>sed</i> executable file and associated conversion scripts are quite small, and <i>sed</i> is available in versions for many different computer operating systems, the SubML language is very portable.  It supports all the normal chapter/section/subsection structuring you would expect from a textbook markup language, plus full Greek alphabet support and sub/superscripting.  It does <i>not</i>, however, support either tables or mathematical equations, so I use graphic illustrations generated with Xcircuit for these features.
+</p>
+
+<p>
+I eventually plan to move to DocBook, but I'm waiting for a couple of things to take place.  First, DocBook must become easier to set up and use on a home computer.  Every once in a while I'll try to parse a simple "Hello, world" DocBook file, but I still can't get the @*#^$%! thing to work.  Secondly, I'd like to see the DocBook standard (especially the XML version of it) reach a point of greater stability.  At present, there are so many changes planned in the vocabulary of DocBook (new tags, plus tags destined for obsolescence) that I fear writers will be forced to constantly update their source files to keep up with the latest version of DocBook.
+</p>
+
+
+
+
+
+<hr>
+
+<a name="whatisamarkup"></a>
+
+<h2>So, what exactly is a markup language?</h2>
+
+<p>
+Let's start at the beginning: The ASCII (American Standard Code for Information Interchange) standard is a set of binary codes, 7 bits for each text character, that describe every letter in the English alphabet, both lower-case and capital, plus numbers, punctuation marks, and other miscellaneous symbols.  Every text character that you see displayed on a computer screen is, at some level in the computer system, represented by a 7-bit binary number according to the ASCII standard.  The capital letter "A", for example, is the binary number 1000001.  The number "6" as a single character in the ASCII standard is represented by the binary number 0110110.  The "equals" sign (=) is the binary number 0111101.  The exclamation point (!) is the binary number 0100001.
+</p>
+
+<p>
+Just as Morse Code provides a digital means of transmitting text, the ASCII code standard provides a much fuller means of digitally transmitting, storing, and displaying text data.  A file comprised of strings of these 7-bit codes (+ 1 bit to "pad" each character up to eight full bits, or one byte per character) will appear as text characters when viewed by any word processor, text editor, or text viewer software, because all these different computer programs have been designed to recognize the ASCII code set.  Imagine a world where everyone understood the same language.  This is how computers are with regard to ASCII.
+</p>
+
+<p>
+However, ASCII is as limited as it is universal.  If ASCII were all we had to encode text documents in digital form, the documents you would see on computers would be very dull.  All characters would appear in the same, boring font, without any form of emphasis such as <i>italics</i>, <b>boldface</b>, or <u>underlining</u>.  There could be no <sup>superscripting</sup> or <sub>subscripting</sub>, and there could certainly be no Greek characters such as "pi" (&#960;) or "beta" (&#946;).
+</p>
+
+<p>
+When you use a word processing program such as Microsoft Word to format a text document, the file generated by that program is a mix of ASCII codes in addition to a lot of binary codes that do <i>not</i> correspond to the ASCII standard, the latter used to delineate all the special formatting functions such as italics, boldface, underlining, page margins, font type, font sizes, etc.  If you were to try to view a word processor file using a text editor, or some other computer program that only understands ASCII codes, all the non-ASCII codes will appear as "gibberish."  In fact, the majority of the document is comprised of these special codes due to all the detail that is necessary to describe how the text is to appear on the page.  
+</p>
+
+<p>
+Different word processor manufacturers invented their own "standards" for these formatting codes, and the result is that a document composed using one word processor may not be viewable using a different word processor.  In later years, word processor programs became more adept at translating between formats (Microsoft Word versus WordPerfect versus AmiPro . . .), but the translations were often far from perfect, much like translations between different human languages.  Because all the word processor file formats would appear as gibberish when viewed with a text editor (or with another word processor that couldn't understand all the formatting codes), the person trying to read or modify the document would be left helpless without the proper software.  They could not, for instance, "manually" re-write the codes in the document file so that their word processor could understand it.  This is one major limitation of word-processor document formatting.
+</p>
+
+<p>
+Far more significant than this, however, is the fact that word processor file formats tend to be very concrete rather than abstract; specific rather than general.  In computer programming terms, they would be classified as very "low-level" languages.  This makes them difficult to translate to other formats, even by a computer.  Imagine the comparison between translating a "high-level" verbal command ("Go to the store and purchase a loaf of bread!") from English to Japanese, versus translating a very detailed ("low-level") document from English to Japanese describing every detail involved with the task of buying bread ("Go to the store, open the front door, walk down the bread aisle, choose a loaf, walk to the cash register, . . ."), especially if this document is replete with idiomatic expressions and colloquial terms.  Obviously, the more abstract ("high-level") command would be far easier to accurately translate than the concrete ("low-level") set of instructions.  Computer programmers are very familiar with this problem.  It is far easier to translate a computer program between high-level languages (example: from Fortran to Pascal) than between low-level languages (example: from Intel 80386 assembly language to Motorola 68020 assembly language).
+</p>
+
+<p>
+The computer programming solution to this problem is to write software in a high-level language, where all the "codes" resemble a human language such as English, then have another piece of software called a <i>compiler</i> or an <i>interpreter</i> automatically translate these high-level codes down to the very verbose, specific, low-level codes that the computer will need to run the program.  The high-level code that the human programmer types is exclusively composed of ASCII characters: the same characters you see on a standard keyboard.  As a result, the written code for a computer program looks every bit as dull as a plain-ASCII text document, but this simplicity of formatting means that any programmer, anywhere in the world, using any kind of computer, will be able to read the code and modify it if they can obtain a copy of it, and do so with far greater ease than if the code were low-level microprocessor codes (assembly language).
+</p>
+
+<p>
+Another benefit of high-level computer programming is <i>portability</i>.  Ideally, a high-level program need only be written once, then it may be compiled (translated) to as many different low-level microprocessor languages (Intel x86, Motorola 68xxx, SPARC, whatever), for as many different operating systems (Microsoft Windows, Unix, BeOS, whatever), as needed.  The concept of "write once, run many" is the Holy Grail of computer programming, and is attainable only by writing software in high-level, as opposed to low-level, languages.
+</p>
+
+<p>
+<b>In summary, a markup language is a standardized set of high-level instructions, written using ASCII character sequences within a plain-text document, describing how the text is supposed to appear in final form</b>.  Here is a simple example, showing plain (un-marked) text first, then HTML markup code for formatting the text to use different font styles, then the final output: 
+</p>
+
+
+
+<br>
+<br>
+
+
+<p>
+<h4>Plain text, with no markup:</h4>
+</p>
+
+<pre>
+This is a some text that I wish to format.  
+I would like to use italics, boldface, 
+and underlined fonts in this short paragraph,
+as well as typeset a math statement: 3^2 = 9.
+</pre>
+
+
+<br>
+<br>
+
+
+
+<p>
+<h4>HTML "source code" markup for the above paragraph, viewed as plain text:</h4>
+</p>
+
+<pre>
+&#60;p&#62;
+This is a some text that I wish to format.  
+I would like to use &#60;i&#62;italics&#60;/i&#62;, &#60;b&#62;boldface&#60;/b&#62;, 
+and &#60;u&#62;underlined&#60;/u&#62; fonts in this short paragraph,
+as well as typeset a math statement: 3&#60;sup&#62;2&#60;/sup&#62; = 9.
+&#60;/p&#62;
+</pre>
+
+
+<br>
+<br>
+
+
+
+<p>
+<h4>Source code, as interpreted and presented by your web browser:</h4>
+</p>
+
+<p>
+This is a some text that I wish to format.  
+I would like to use <i>italics</i>, <b>boldface</b>, 
+and <u>underlined</u> fonts in this short paragraph,
+as well as typeset a math statement: 3<sup>2</sup> = 9.
+</p>
+
+
+<br>
+<br>
+
+
+
+
+<p>
+When viewed as plain text, the HTML source code for this brief paragraph appears as sets of matching "tags" using "less-than" (&#60;) and "greater-than" (&#62;) characters, plus letters, to represent font style commands.  A text editor would present this document showing all the HTML tags, as seen in the middle rendition of the paragraph.  You web browser, however, interprets those special character sequences as <i>commands</i> to obey, and renders the enclosed text accordingly.
+</p>
+
+<p>
+HTML is not the only markup language in existence.  Another markup language, intended for creating professional paper copy (print), is called TeX.  Here is how TeX would be used to format the same sample paragraph:
+</p>
+
+
+
+<br>
+<br>
+
+
+<p>
+<h4>TeX "source code" markup for the above paragraph, viewed as plain text:</h4>
+</p>
+
+<pre>
+This is a some text that I wish to format.  
+I would like to use {\it italics}, {\bf boldface}, 
+and \underbar{underlined} fonts in this short paragraph,
+as well as typeset a math statement: $3^2 = 9$.
+</pre>
+
+
+<br>
+<br>
+
+
+
+<p>
+To translate this TeX source code into something printable, you would have to process the source file using a computer program called TeX (freely available, by the way) which would output another file cast in a "DeVice Independent" (.dvi) format, then use a program called "dvips" (also free) to convert the .dvi file into Adobe PostScript (.ps) format for printing to a PostScript printer, or with a PostScript interpreter program such as GhostScript (also free).  Believe me, this whole process is actually easier than it sounds, and the quality of the final print is superb!
+</p>
+
+<p>
+The markup language I use for the "Lessons In Electric Circuits" book series is called SubML (SUBstitutionary Markup Language), an invention of my own.  SubML would be used to mark up the sample paragraph like this:
+</p>
+
+
+
+<br>
+<br>
+
+
+<p>
+<h4>SubML "source code" markup for the above paragraph, viewed as plain text:</h4>
+</p>
+
+<pre>
+&#60;para&#62;
+This is a some text that I wish to format.  
+I would like to use &#60;italic&#62;italics&#60;/italic&#62;, &#60;bold&#62;boldface&#60;/bold&#62;, 
+and &#60;underline&#62;underlined&#60;/underline&#62; fonts in this short paragraph,
+as well as typeset a math statement: 3&#60;superscript&#62;2&#60;/superscript&#62; = 9.
+&#60;/para&#62;
+</pre>
+
+
+<br>
+<br>
+
+
+
+<p>
+Documents written in a markup language generally include as little mechanical detail (margins, font sizes, font types) as possible, and when they do it is in the form of ASCII character codes that may be seen by anyone using any kind of text editor or word processor program, so that nothing is ever "hidden" from view.  Like high-level computer languages, document markup languages also require that there be special software available to "compile" or "translate" the markup codes into some final format suitable for presentation, such as PostScript or PDF.  Ideally, documents written using a markup language are completely portable: that is, any single document may be automatically converted to any number of electronic formats for presentation, without any further intervention from the author, because the document uses general terms rather than computer- or printer-specific terms to specify structure and appearance.
+</p>
+
+<p>
+Writing documents using a markup language requires more technical knowledge on the part of the author, though.  Instead of just clicking on a little icon in a word-processor environment to select italicized text, for instance, the author must know what code(s) to insert into that portion of the document to command the use of an italicized font.  Then, the author must "compile" their source document using software designed to translate the markup codes into a presentation format.  Computer programmers find this development cycle (write, compile, review, debug) a natural process.  Others may not.
+</p>
+
+<p>
+Another very important advantage of composing a document in a markup language instead of using a word processor, from the perspective of "open source" projects, is that nothing is hidden from anyone wishing to modify or duplicate the document's structure.  For instance, I have seen many fantastic-looking documents composed using Microsoft Word, and wondered to myself, "How did they <i>do</i> that?"  Also, I have been given Word documents in electronic form that I wished to modify, but could not without destroying the original markup because I was not as proficient with Word's features as the person who made it.  When you read a document composed using a word processor, you can see the results, but you cannot see what functions and methods were used by the original author to obtain those results.  
+</p>
+
+<p>
+I remember an older word processor program named "WordStar" equipped with a "reveal codes" feature that could show you some of the special formatting codes within a document used to make it look the way it did.  This was a step in the right direction, but still not as powerful a concept as a true markup language, where all formatting codes are available for viewing, copying, and/or modification via a simple text editor.  
+</p>
+
+<p>
+The "openness" of a markup language makes it possible for a person to learn how to write their own documents in that language just by viewing what others have written: an impossibility with any word processor document.  For example, most of my knowledge of HTML has come from viewing the markup codes of web pages written by other people, rather than by reading tutorials on the subject.  Markup languages naturally foster learning and sharing, values held in high esteem in the "open source" culture.
+</p>
+
+<p>
+Because markup languages differ little from formal computer languages, spelling and context of the markup codes is critical.  This makes it possible to write a document that has "bugs" in it: one that does not appear the way the author intended it to, due to some type of syntactical or error with the markup tags.  Because the author does not see the results of the code as they type it (the code must be compiled before the results may be viewed), errors are not immediately evident.  This can be frustrating.
+</p>
+
+<p>
+Markup languages, however, prove their worth when any large document projects are involved.  Documents written in a word processor format become more and more difficult to manage (revising, expanding, publishing) as the size of the document increases.  Documents written in a markup language, however, become easier to manage as they increase in size.  In other words, a word processor is probably the easiest way to write and publish a business letter, but using a markup language is probably the easiest way to write and publish a book.
+</p>
+
+
+
+
+<hr>
+
+<a name="subml"></a>
+
+<h2>The SubML Markup language</h2>
+
+<p>
+Rather than present a tutorial on SubML here, I will provide links for you to download all the necessary <i>sed</i> scripts, plus a tutorial on SubML written in that language.  To use any of these files, you will have to have <i>sed</i> installed and working on your computer system.  A Microsoft Windows-compatible executable version of <i>sed</i> may be downloaded <a href="../sed.exe">here.</a>  All Linux and other UNIX systems should come equipped with <i>sed</i> as a standard utility.  If installing <i>sed</i> on a Microsoft system, make sure you have the "sed.exe" executable file installed in a directory on your hard drive where your operating system knows to find it (<tt>C:\Windows</tt> is a good place).
+</p>
+
+<p>
+<a href="tutorial.sml">Tutorial on using SubML -- uses all features of the language (<tt>tutorial.sml</tt>)</a>
+</p>
+
+<p>
+<a href="sml2html.sed">SubML-to-HTML conversion script (<tt>sml2html.sed</tt>)</a>
+</p>
+
+<p>
+<a href="sml2latx.sed">SubML-to-LaTeX conversion script (<tt>sml2latx.sed</tt>)</a>
+</p>
+
+<p>
+<a href="sml2txt.sed">SubML-to-text conversion script (<tt>sml2txt.sed</tt>)</a>
+</p>
+
+<p>
+<a href="cmar0301.tar">TAR archive file containing all of the above, and more (<tt>cmar0301.tar</tt>)</a>
+</p>
+
+
+<p>
+When you have the tutorial file, <i>sed</i>, and the <tt>sml2html.sed</tt> conversion script downloaded on your home computer, try converting the tutorial file into HTML with this command (typed in the "command line" environment, with a final "Enter" keystroke at the end of each command you type):
+</p>
+
+<pre>
+sed -f sml2html.sed tutorial.sml &gt tutorial.html
+</pre>
+
+<p>
+You should be able to view the resulting <tt>tutorial.html</tt> file using Internet Explorer, Netscape Navigator, or any other web browser software.  It should look like <a href="tutorial.html">this</a>.
+</p>
+
+<p>
+To generate LaTeX code from SubML source code, use <i>sed</i> like this:
+</p>
+
+<pre>
+sed -f sml2latx.sed tutorial.sml &gt tutorial.latex
+</pre>
+
+<p>
+To generate LaTeX output, of course, you will need to have a LaTeX/TeX compiler installed on your computer, along with all the associated LaTeX/TeX macro and font files.  Packaged installations are freely available over the internet from a variety of sources.  Once this is all installed on your computer, you may translate the <tt>tutorial.sml</tt> file into .dvi format by first converting it into LaTeX format as shown above, then running this command:
+</p>
+
+<pre>
+latex tutorial.latex
+</pre>
+
+<p>
+The resulting file, <a href="tutorial.dvi"><tt>tutorial.dvi</tt></a>, may be viewed with any DVI file viewer (such as <i>xdvi</i> on UNIX systems), or converted into PostScript format using the free utility <i>dvips</i> like this:
+</p>
+
+<pre>
+dvips -o tutorial.ps tutorial.dvi
+</pre>
+
+<p>
+If Adobe PDF is more to your liking, you may convert the .dvi file to PostScript using a special option of <i>dvips</i> like this:
+</p>
+
+<pre>
+dvips -Ppdf -o tutorial.ps tutorial.dvi
+</pre>
+
+<p>
+. . . then, convert the resulting PostScript file into PDF using another free utility, <i>ps2pdf</i>:
+</p>
+
+<pre>
+ps2pdf tutorial.ps tutorial.pdf
+</pre>
+
+<p>
+If successful, you should end up with a file named <a href="tutorial.pdf"><tt>tutorial.pdf</tt></a>, viewable with Adobe's Acrobat viewer, or any free PDF viewer software such as <i>Ghostview</i> or <i>xpdf</i>.
+</p>
+
+<p>
+For the "Lessons . . ." book series, I used a set of Makefiles to manage all these command-line utilities, and automate the packaging of the output files into a final product that people can download and use.  Anyone is free, of course, to download the source files for the book series and peruse the Makefiles for themselves to see how this works.
+</p>
+
+
+
+<hr>
+
+<a href="index.html"><img src=contents.jpg alt="Contents"></a>
+
+</body>
+</html>
+

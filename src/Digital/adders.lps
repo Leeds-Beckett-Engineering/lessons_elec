@@ -1,0 +1,33 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.2
+%  Library name is: adders.lps
+%  Author: dennis <dennis@localhost>
+%
+
+
+% XCircuitLib library objects
+/HalfAdder {
+begingate
+1 1.00 48 32 80 32 2 polygon
+1 1.00 48 -32 80 -32 2 polygon
+0 1.00 -48 48 -48 -48 48 -48 48 48 4 polygon
+(HA) {/Helvetica cf} 2 16 0 1.00 -32 -16 label
+1 1.00 -48 -32 -80 -32 2 polygon
+1 1.00 -48 32 -80 32 2 polygon
+endgate
+} def
+
+/Full_Adder {
+begingate
+(FA) {/Helvetica cf} 2 16 0 1.00 -32 -32 label
+0 1.00 -48 32 -48 -64 48 -64 48 32 4 polygon
+1 1.00 0 32 0 64 2 polygon
+1 1.00 -48 16 -80 16 2 polygon
+1 1.00 -48 -48 -80 -48 2 polygon
+1 1.00 48 -48 80 -48 2 polygon
+1 1.00 48 16 80 16 2 polygon
+endgate
+} def
+
+
+% EndLib

@@ -1,0 +1,496 @@
+\input hi.tex 
+%  This document works well as a test file for any sort of sml2... conversion
+%  Last revision 01/18/2003 by Tony R. Kuphaldt
+%  Copyright (C) 2001-2003 Tony R. Kuphaldt
+%  This markup language and all associated comversion scripts are free; you can
+%  redistribute them and/or modify them under the terms of the GNU General Public 
+%  License as published by the Free Software Foundation; either version 2 of the 
+%  License, or (at your option) any later version.
+%  This code is distributed in the hope that it will be useful,
+%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%  GNU General Public License for more details.
+%  You should have received a copy of the GNU General Public License
+%  along with this program; if not, write to the Free Software
+%  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+%  USA
+\hrule \bigskip 
+\centerline{\bf The SubML markup language} \bigskip 
+ 
+
+Copyright \copyright{} 2001-2003, Tony R. Kuphaldt
+ 
+
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Introduction} \bigskip 
+ 
+SubML stands for {\bf Sub}stitutionary {\bf M}arkup {\bf L}anguage.  Similar in structure to an SGML-based language, SubML is intended for simple text formatting with very few frills, but providing the capability of standard font emphasis modes, itemized lists, and image inclusion.  
+
+% See how the paragraphs above and below are marked with INLINE tags whereas all other paragraphs in this tutorial aren't?  This is to exhibit a feature of SubML conversion into TeX or ASCII text: that these tags are guaranteed to ensure blank lines between paragraphs no matter where they're placed in the SubML source.
+ 
+SubML is designed so that it may be translated into practically any markup language with nothing more than some search-and-replace commands (hence the term {\it substitutionary}), executed in the {\tt sed} stream editor.  Rather than rely on complex translational algorithms (i.e. a Perl or Python script), the philosophy here is to design ease of conversion into the structure of the original markup so that any fool can write a {\tt sed} script to convert to any new markup.  So far, the following conversions are provided in a set of {\tt sed} scripts supplied with this tutorial: 
+
+\medskip 
+\item{$\bullet$}SubML to \TeX{}
+\item{$\bullet$}SubML to LA\TeX{}
+\item{$\bullet$}SubML to HTML
+\item{$\bullet$}SubML to plain text (ASCII)
+\medskip 
+ 
+
+More conversion routines are planned.  As far as I can see, none of them should present any unordinary difficulties in conversion.  I simply haven't got around to writing and testing all the scripts yet.  These include:
+ 
+
+\medskip 
+\item{$\bullet$}SubML to nroff/troff/groff
+\item{$\bullet$}SubML to Texinfo
+\item{$\bullet$}SubML to DocBook (SGML and/or XML)
+\item{$\bullet$}SubML to Lout
+\item{$\bullet$}SubML to Qwertz
+\medskip 
+ 
+
+Also, it should be fairly easy to write an XML DTD for SubML, making it directly readable by XML-compatible browsers and other software.
+ 
+
+ 
+
+Platform compatibility is limited only to the availability of a {\tt sed} binary to perform the conversion.  And since {\tt sed} is such a widely used and robust utility (free, too, thanks to the Free Software Foundation!), this should not be a problem.  I've successfully ``compiled'' SubML documents on both Linux and Microsoft Windows 95 with equal ease.
+ 
+
+ 
+
+Characters usually interpreted as {\it escape characters} in other markup languages like $\backslash$, \&, \$, \%, $|$, \~{}, \^{}, and \_{} are handled without special tagging as well (100\% of the time, too -- this makes SubML worth \$1,000,000 \& that's not all!).  The only characters SubML requires you to specially code (not type verbatim in your source document) are the $<$ and $>$ symbols, simply because SubML itself uses them as escape characters to mark the beginning and end of tags. 
+ 
+
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Levels of sections under each chapter} \bigskip 
+ 
+
+This is text contained in the first true {\it section} of this tutorial.
+ 
+
+
+\bigskip \noindent \underbar{\sl This is the first subsection (titlebar)} \medskip 
+ 
+
+This is text contained in the first {\it subsection} of this tutorial.
+ 
+
+
+
+\bigskip \noindent \underbar{\sl This is the second subsection (titlebar)} \medskip 
+ 
+
+This is text contained in the second {\it subsection} of this tutorial.
+ 
+
+
+\medskip \underbar{\sl This is the first subsubsection (titlebar)} \medskip 
+ 
+
+This is text contained in the first {\it subsubsection} of this tutorial, which is within the second {\it subsection}.
+ 
+
+
+
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Gallery of inline text formatting tricks} \bigskip 
+ 
+
+In this section, we will explore the various inline (embedded within a sentence) formatting commands provided by SubML.  
+ 
+
+ 
+
+Note that this may not be the fanciest array of formatting commands, but it should suffice for most common formatting requirements.
+ 
+
+ 
+
+If the standard SubML philosophy is followed, additional formatting capabilities may be included at a later date.  The only real restriction is that whatever formatting capability is added must be translatable to the desired output type (\TeX{}, HTML, DocBook, etc.) using nothing more than {\it simple} search-and-replace algorithms.
+ 
+
+
+\bigskip \noindent \underbar{\sl Sub- and super-scripting} \medskip 
+ 
+
+This is a test of the sub$_{scripting}$ and super$^{scripting}$ capabilities of SubML.  This is useful to create simple mathematical (-2$^{-3}$ = -0.125) and chemical (H$_{2}$O, $_{92}$U$^{235}$) expressions.
+ 
+
+
+
+\bigskip \noindent \underbar{\sl Emphasis fonts} \medskip 
+ 
+
+{\it Italicized}, {\bf boldface}, and \underbar{underlined} type are also available in SubML.
+ 
+
+ 
+
+\bigskip \noindent \underbar{\sl Special dashes} \medskip 
+ 
+
+The regular dash, such as that used for hyphenation, looks-like-this.  A dash specifically used for subtraction is typeset using a special SubML tag, so that 5$-$3 (math dash) looks distinct from 5-3 (ordinary dash).  Some people don't care too much about this, so use this tag at your discretion.
+ 
+
+ 
+
+Sometimes it is useful to show a pair of dashes -- not the ``em-dash'' used in setting off a section of text like this -- but a real {\it pair} of dashes.  In this case, another special SubML tag has been created to do this $-$$-$ and you just read over it!  I use it to denote series-connected electronic components in symbolic form.  For example, a pair of resistors (R$_{1}$ and R$_{2}$) are connected in parallel with each other, but together they're in series with R$_{3}$.  Symbolically, I represent such a configuration like this: (R$_{1}$//R$_{2}$)$-$$-$R$_{3}$.
+ 
+
+ 
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Block formatting} \bigskip 
+ 
+
+An important feature I've found in document processing is the ability to typeset a literal segment of text.  That is, a section of print in a monospaced font with all normal paragraph formatting features of the target markup language turned off.  
+ 
+
+ 
+
+One common usage of this feature is for the typesetting of computer programming code.  An example follows:
+ 
+
+\bigskip 
+ 
+
+{\bf File listing:} {\tt hello.c}
+ 
+
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+.
+.  \#include $<$stdio.h$>$                                           
+.                                                               
+.  int main(void)                                               
+.  $\{$                                                            
+.    printf("$\backslash$nHello, world!$\backslash$n");                                   
+.    return (0);                                                
+.  $\}$                                                            
+.
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\endgroup 
+\bigskip 
+ 
+
+The dots are inserted manually within the SubML document to ``set off'' the literal block of text from the rest of the document.  Also, the leading dots (at very left of each line) help overcome a problem I'm having with \TeX{} formatting where leading spaces get discarded and everything ends up smashed against the left margin.
+ 
+
+ 
+
+Without the dots, it looks like this:
+ 
+
+\bigskip 
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+\#include $<$stdio.h$>$                                         
+                                                               
+int main(void)                                               
+$\{$                                                            
+  printf("$\backslash$nHello, world!$\backslash$n");                                   
+  return (0);                                                
+$\}$                                                            
+\endgroup 
+\bigskip 
+ 
+
+Another kind of block formatting is the inclusion of offset quotations.  Note the following example:
+ 
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"Vague and insignificant forms of speech, and abuse of language, have so long passed for mysteries of science; and hard or misapplied words with little or no meaning have, by prescription, such a right to be mistaken for deep learning or height of speculation, that it will not be easy to persuade either those who speak or those who hear them, that they are but the covers of ignorance and hindrance of true knowledge." - John Locke 
+\par} \vskip 10pt
+ 
+
+Italics may also be added to ``set off'' a quotation from the rest of the text, especially in HTML.  Combining the {\tt italic} and {\tt bold} tag sets inside of the {\tt quotation} tag set accomplishes this goal nicely:
+ 
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+{\it "Vague and insignificant forms of speech, and abuse of language, have so long passed for mysteries of science; and hard or misapplied words with little or no meaning have, by prescription, such a right to be mistaken for deep learning or height of speculation, that it will not be easy to persuade either those who speak or those who hear them, that they are but the covers of ignorance and hindrance of true knowledge."} - {\bf John Locke} 
+\par} \vskip 10pt
+ 
+
+While perhaps not a true block-formatting feature, itemized lists can be created using SubML.  Take the following example:
+ 
+
+\medskip 
+\item{$\bullet$} This is the first item 
+\item{$\bullet$} This is the second item 
+\item{$\bullet$} This is the third item 
+\item{$\bullet$} Isn't this fun? 
+\medskip 
+ 
+
+In the spirit of simplicity, I haven't created the option of enumerated lists, indented lists, or anything fancy like that within the language of SubML.
+ 
+
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Including graphic images in a document} \bigskip 
+ 
+
+Graphic image inclusion is perhaps the best feature of SubML.  Note the following example:
+ 
+
+\smallskip \epsfbox{test.eps}
+ 
+
+You must be sure to specify an HTML-compatible image in the markup code.  This means an image file specified with a filename ending in {\tt .png}, {\tt .jpg}, {\tt .bmp}, or {\tt .gif} (three-character extensions only: {\tt .jpg}, not {\tt .jpeg}!).  For \TeX{} or LA\TeX{} output, there must be an Encapsulated Postscript image file {\tt .eps} in the same directory, but not specified in the markup code.
+ 
+
+ 
+
+For example, the markup code necessary to place the "happy face" image shown above is as follows:
+ 
+
+\bigskip 
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+$<$image$>$test.png$<$/image$>$
+\endgroup 
+\bigskip 
+ 
+
+Two versions of the image exist: {\tt test.png} for inclusion into the HTML output, and {\tt test.eps} for inclusion into the \TeX{} or LA\TeX{} output, but only the HTML-compatible file need be specified in the SubML source code.
+ 
+
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf Special characters} \bigskip 
+ 
+
+In addition to special logos like \TeX{}, SubML provides for certain often-used characters of the Greek alphabet.
+ 
+
+ 
+
+The ratio of a circle's circumference to its diameter is symbolized by the Greek letter ``pi,'' which SubML represents like this: $\pi$.  The area of a circle is given as A=$\pi$r$^{2}$.  Not many people realize that the standard symbol $\pi$ is actually the {\it lower-case} version of the Greek letter.  The capital version looks like this: $\Pi$, and it does not represent the same thing in mathematics.
+ 
+
+ 
+
+But there are other useful Greek characters for us to use in SubML as well.  When SubML is converted to plain ASCII text, some of the Greek characters like $\mu$ and $\rho$ will be represented by the closest-resembling Roman (English alphabet) character available.  If there is no Roman character close enough, the Greek character's name will be spelled in parentheses.  \TeX{}, on the other hand, is very Greek-literate and requires no ``fudging'' to obtain perfect representation.  HTML output from SubML conversion renders these characters using Unicode.  In order for a web browser to properly display them, it must be set up with Unicode character support.  For your viewing pleasure, we have:
+ 
+
+\medskip 
+\item{$\bullet$}Alpha (lower-case): $\alpha$
+\item{$\bullet$}Beta (lower case): $\beta$
+\item{$\bullet$}Gamma (lower case): $\gamma$ . . . . . . Gamma (capital): $\Gamma$
+\item{$\bullet$}Delta (lower case): $\delta$ . . . . . . Delta (capital): $\Delta$
+\item{$\bullet$}Epsilon (lower case): $\epsilon$
+\item{$\bullet$}Varepsilon (lower case): $\varepsilon$
+\item{$\bullet$}Zeta (lower case): $\zeta$
+\item{$\bullet$}Eta (lower case): $\eta$
+\item{$\bullet$}Theta (lower case): $\theta$ . . . . . . Theta (capital): $\Theta$
+\item{$\bullet$}Vartheta (lower case): $\vartheta$
+\item{$\bullet$}Iota (lower case): $\iota$
+\item{$\bullet$}Kappa (lower case): $\kappa$
+\item{$\bullet$}Lambda (lower case): $\lambda$ . . . . . . Lambda (capital): $\Lambda$
+\item{$\bullet$}Mu (lower case): $\mu$
+\item{$\bullet$}Nu (lower case): $\nu$
+\item{$\bullet$}Xi (lower case): $\xi$ . . . . . . Xi (capital): $\Xi$
+\item{$\bullet$}Pi (lower case): $\pi$ . . . . . . Pi (capital): $\Pi$
+\item{$\bullet$}Rho (lower case): $\rho$
+\item{$\bullet$}Varrho (lower case): $\varrho$
+\item{$\bullet$}Sigma (lower case): $\sigma$ . . . . . . Sigma (capital): $\Sigma$
+\item{$\bullet$}Varsigma (lower case): $\varsigma$
+\item{$\bullet$}Tau (lower case): $\tau$
+\item{$\bullet$}Upsilon (lower case): $\upsilon$ . . . . . . Upsilon (capital) $\Upsilon$
+\item{$\bullet$}Phi (lower case): $\phi$ . . . . . . Phi (capital): $\Phi$
+\item{$\bullet$}Varphi (lower case): $\varphi$
+\item{$\bullet$}Chi (lower case): $\chi$
+\item{$\bullet$}Psi (lower case): $\psi$ . . . . . . Psi (capital): $\Psi$
+\item{$\bullet$}Omega (lower case): $\omega$ . . . . . . Omega (capital): $\Omega$
+\medskip 
+ 
+
+Another special symbol available in SubML is the \angle{} symbol ($<$angle$>$), used in mathematical statements to designate an angle.  This is useful for expressing complex numbers in polar form.  Take for example this impedance: 500 $\Omega$ \angle{} -34.61$^{o}$.  By the way, the way I typeset the "degree" symbol is with a superscript letter "o".
+ 
+
+ 
+
+Other mathematical symbols included in SubML's vocabulary are the integration symbol ($\int{}$), partial derivative symbol ($\partial{}$), and the infinity symbol ($\infty{}$).  Here are some examples of these symbols in use:
+ 
+
+\bigskip 
+ 
+
+V = $\int{}$Q dt + C
+ 
+
+\bigskip 
+ 
+
+$\partial{}$x/$\partial{}$t
+ 
+
+\bigskip 
+ 
+
+$\infty{}$ is bigger than BIG!
+ 
+
+\bigskip 
+ 
+
+Note that you cannot show upper and lower integration limits for a definite integral using the "$\int{}$" markup tag.  It is useful for crude in-line formatting of an integral equation only.  If you want to show lower and upper integration limits in a SubML document, you must use a graphic image -- sorry!
+ 
+
+ 
+
+For special characters used in other languages (Spanish, French, German, etc.), the following are available in the SubML vocabulary:
+ 
+
+\medskip 
+\item{$\bullet$}"a" with grave (back prime): \`a . . . . . . \`A
+\item{$\bullet$}"a" with acute (forward prime): \'a . . . . . . \'A
+\item{$\bullet$}"a" with circumflex (caret): \^a . . . . . . \^A
+\item{$\bullet$}"a" with umlaut/dieresis/tremat: \"a . . . . . . \"A
+\item{$\bullet$}"a" with tilde: \~a . . . . . . \~A
+\item{$\bullet$}"a" with "ring" above: \aa . . . . . . \AA
+\item{$\bullet$}"c" with cedilla: \c c . . . . . . \c C
+\item{$\bullet$}"e" with grave (back prime): \`e . . . . . . \`E
+\item{$\bullet$}"e" with acute (forward prime): \'e . . . . . . \'E
+\item{$\bullet$}"e" with circumflex (caret): \^e . . . . . . \^E
+\item{$\bullet$}"e" with umlaut/dieresis/tremat: \"e . . . . . . \"E
+\item{$\bullet$}"i" with grave (back prime): \`\i{} . . . . . . \`I
+\item{$\bullet$}"i" with acute (forward prime): \'\i{} . . . . . . \'I
+\item{$\bullet$}"i" with circumflex (caret): \^\i{} . . . . . . \^I
+\item{$\bullet$}"i" with umlaut/dieresis/tremat: \"\i{} . . . . . . \"I
+\item{$\bullet$}"n" with tilde: \~n . . . . . . \~N
+\item{$\bullet$}"o" with grave (back prime): \`o . . . . . . \`O
+\item{$\bullet$}"o" with acute (forward prime): \'o . . . . . . \'O
+\item{$\bullet$}"o" with circumflex (caret): \^o . . . . . . \^O
+\item{$\bullet$}"o" with umlaut/dieresis/tremat: \"o . . . . . . \"O
+\item{$\bullet$}"o" with tilde: \~o . . . . . . \~O
+\item{$\bullet$}"u" with grave (back prime): \`u . . . . . . \`U
+\item{$\bullet$}"u" with acute (forward prime): \'u . . . . . . \'U
+\item{$\bullet$}"u" with circumflex (caret): \^u . . . . . . \^U
+\item{$\bullet$}"u" with umlaut/dieresis/tremat: \"u . . . . . . \"U
+\item{$\bullet$}Inverted question mark ?`
+\item{$\bullet$}Inverted exclamation mark !`
+\medskip 
+ 
+
+So, now you may impress all your Espa\~nol-speaking amigos with the following phrases in your documents:
+ 
+
+\bigskip 
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"?`D\'onde est\'a el cuarto de ba\~no?"
+\par} \vskip 10pt
+\bigskip 
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"!`M\'as cerveza, por favor!"
+\par} \vskip 10pt
+\bigskip 
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"?`Puede indicarme d\'onde est\'a en el mapa?"
+\par} \vskip 10pt
+\bigskip 
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"Por favor, d\'\i{}gale tu amigo que voy a llegar cinco minutos tarde."
+\par} \vskip 10pt
+\bigskip 
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"Aqu\'\i{} tiene mi casa."
+\par} \vskip 10pt
+\bigskip 
+ 
+
+And when your friend asks you this . . .
+ 
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"?`Qu\'e procesador de textos usted utiliza?"
+\par} \vskip 10pt
+ 
+
+. . . you may respond with pride:
+ 
+
+\vskip 10pt {\narrower \noindent \baselineskip5pt
+"No utilizo un procesador de textos.!`En lugar, utilizo un lenguaje de marcas!"
+\par} \vskip 10pt
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf What SubML won't do} \bigskip 
+ 
+
+SubML is designed to be a {\it simple} markup language, and as such it lacks certain advanced features found in other, more capable languages like \TeX{} or DocBook.  One of these missing features is tables.  However, I have found that it often works well to create a table using a graphics editor and then insert it into the document as an image.  One advantage to doing tables this way is consistency in appearance between different outputs (\TeX{}, HTML, etc.). 
+ 
+
+ 
+
+Another thing SubML makes no provision for is easy, verbatim display of its own markup code.  In order to show verbatim SubML code, you must mark all $<$ and $>$ symbols with the appropriate $<$lt$>$ and $<$gt$>$ tags.  The following paragraph shows the markup required for this paragraph.  For a really wild experience, view the source code of this file to see how I mark up {\it that} paragraph:
+ 
+
+\bigskip 
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+$<$para$>$
+Another thing SubML makes no provision for is easy, verbatim display
+of its own markup code.  In order to show verbatim SubML code, you 
+must mark all $<$lt$>$ and $<$gt$>$ symbols with the appropriate
+$<$lt$>$lt$<$gt$>$ and $<$lt$>$gt$<$gt$>$ tags.  The 
+following paragraph shows the markup required for this paragraph.  
+For a really wild experience, view the source code of this file to 
+see how I mark up $<$italic$>$that$<$/italic$>$ paragraph:
+$<$/para$>$
+\endgroup 
+\bigskip 
+ 
+
+I could carry the recursion one step further, but that would be cruel and unusual punishment for both of us.
+ 
+
+
+\vfil \eject 
+\bigskip \hrule \bigskip 
+\noindent \underbar{\bf How to do the conversion} \bigskip 
+ 
+
+First, you need to have {\tt sed} installed and operational on your computer.  Next, be sure that all conversion scripts ({\tt sml2tex.sed}, {\tt sml2html.sed}, etc.) have been installed in the same directory as the SubML document that you wish to convert.  If you wish to convert your SubML document to \TeX{}, groff, or some other markup language requiring further processing, you must of course have the necessary software installed on your computer to process the markup format(s) of choice.  
+ 
+
+ 
+
+For instance, if you converted your SubML document into a \TeX{} document using the {\tt sml2tex.sed} script provided with this tutorial, but didn't have Donald Knuth's \TeX{} processing system installed on your computer, all the {\tt sed} script will do is produce a \TeX{} source file: a new document marked up with \TeX{} commands and tags in place of SubML tags.  In other words, these scripts simply convert SubML source code into source code for other markup languages.  With the exceptions of HTML and plain ASCII text, none of the output formats generated by these {\tt sed} scripts will be ready-to-use.
+ 
+
+ 
+
+If you wish to convert your source document (entitled {\tt foo.sml}) to HTML, here is what you would have to type at the command prompt:
+ 
+
+\bigskip 
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+sed -f sml2html.sed foo.sml $>$ foo.htm
+\endgroup 
+\bigskip 
+ 
+
+The {\tt -f} option tells {\tt sed} to look to file sml2html.sed for instructions rather than take direct search-and-replace commands from the command prompt when processing the input file {\tt foo.sml}.  The output file is named {\tt foo.htm}.
+ 
+
+ 
+
+The redirection command ( $>$ ) is necessary, otherwise {\tt sed} will simply send the converted text to standard output (the computer's command-line screen) and all of it will flash before your very eyes instead of being saved in a file.  Of course, you can name the target file anything you wish, so long as the extension is appropriate to the type of converted document that it is (i.e. {\tt .htm} or {\tt .html} for HTML output, so that a browser will recognize the filename).
+ 
+
+ 
+
+The use of standard input and standard output in a {\tt sed} script allows for great flexibility in the use of SubML.  For instance, I have a book I'm writing ({\it Lessons In Electric Circuits}), in which I'm using Makefiles to direct compilation from SubML to LA\TeX{} and HTML.  By using stdin/stdout redirection within the Makefile commands, I'm able to prepend and append files containing special LA\TeX{} and HTML code to the basic text (written in SubML format) to achieve markup capabilities beyond the basic scope of SubML.  For instance, I may want to generate a coverpage for my book using a series of special LA\TeX{} commands.  SubML doesn't specify detailed layout tags, and so I write the necessary LA\TeX{} code in a file that gets prepended to the {\tt sed}-converted output of the main text body.  Same for the generation of an index: a special file containing the necessary LA\TeX{} commands gets appended to the very end, after {\tt sed} has converted the main body of the text.  Same for navigation buttons at the beginning and end of each HTML file generated from SubML.
+ 
+
+
+
+\bye 

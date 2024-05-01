@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"> 
+
+<html> 
+
+<head>
+
+<title>Lessons In Electric Circuits -- Graphic image conventions</title>
+<meta name="description" content="Design Science License">
+<meta name="keywords" content="book, ebook, textbook, tutorial, copyleft, copylefted, free, educational, free book, free ebook, free textbook, free download, copyleft book, copylefted book">
+
+</head>
+
+<body>
+
+<body bgColor=white>
+
+<a href="index.html"><img src=contents.jpg alt="Contents"></a>
+
+<hr>
+<h1>GRAPHIC IMAGE CONVENTIONS</h1>
+
+<hr>
+
+<ol>
+
+<li>In keeping all source files available for copy to the user, all images created by Xcircuit (*.eps) will be maintained in the distribution, and all photographs (*.jpg) will as well.</li>
+
+<p></p>
+
+<li>Keep all Xcircuit library files (*.lps) in the distribution, for the benefit of all Xcircuit users.</li>
+
+<p></p>
+
+<li>When using Xcircuit to draw equations, here are some general style rules:</li>
+
+	<ul>
+
+		<li>The final .eps image should not exceed 480 pixels in width.  At 100 dpi print resolution, this makes for a 4.8 inch wide picture.  After conversion to PNG format, the image should not exceed 600 pixels in width.  Included here are two files, <a href="sample.eps">sample.eps</a> and <a href="sample.png">sample.png</a> as examples of the maximum width I'd like all illustrations to have.</li>
+		
+	<li>Use <u>Helvetica</u> font for descriptions, worded quantities (i.e. "seventeen"), notes, etc.</li>
+
+	<li>Use <u>Times New Roman</u> font for numbers, component labels (i.e. R<sub>load</sub>, C<sub>filter</sub>, L<sub>choke</sub>, Q<sub>1</sub>), and equations.</li>
+
+	<li>Use <u>Symbol</u> (Greek) font for special characters.  Some <i>really</i> special characters (like the "R" reluctance symbol and the "angle" symbol for polar notation can be found in the font map of the Symbol set.  Access this map in Xcircuit by pressing the "backslash" key when in the text mode.</li>
+
+	<li>Try to type all single-line equation expressions as a single, uninterrupted string of text.  If an equation is written as multiple strings of text pieced together, sometimes conversion from .eps to another graphic format will reveal this "splicing."</li>
+
+	<li>Use <u>Courier</u> font only for Boolean variables, where the monospacing works well for referencing the locations of complementation bars.</li>
+
+	</ul>
+
+<p></p>
+
+<li>When processing images taken with a digital camera, follow these steps:</li>
+
+	<ul>
+
+	<li>Take image in highest-quality JPEG format available.</li>
+
+	<li>Using Gimp, convert camera image into TIFF format for lossless manipulation.</li>
+
+	<li>When done manipulating photo, use Gimp to scale image to 640x480, then "Save As" an EPS image with Width and Height image size parameters both set to "100".</li>
+
+	<li>Re-scale the image to 480x360, then "Save As" a JPEG image.  Use quality setting of "0.75".</li>
+
+	</ul>
+
+<p></p>
+
+<li>When using Nutmeg to process SPICE output for true graphic images, follow these steps:</li>
+
+	<ul>
+
+	<li>Run spice with the -r option, to produce a "rawfile" for Nutmeg to process.  (<tt>spice -r old.raw &lt input.cir</tt>)</li>
+
+	<li>If using SPICE2g6, you must use the <i>sconvert</i> utility to convert the old rawfile format into the new format, like this:</li>
+
+	<p>
+	<tt>sconvert o old.raw b new.raw</tt>
+	</p>
+
+	<li>Run Nutmeg (<tt>nutmeg new.raw</tt>).  You will have to manually enter the data points to be plotted.  When plotting AC values, be sure to use the "m" modifier so that the polar magnitude gets plotted.  For example, to plot the voltage at node 3, type: vm(3) rather than v(3), or else Nutmeg (and SPICE3F5!) will only plot the "real," rectangular value.</li>
+
+	<li>If using an X-windows based graphic environment (i.e. UNIX/Linux), you may capture the screen image using the <i>import</i> utility: </li>
+
+	<p>
+	<tt>import junk.png</tt>
+	</p>
+
+	<li>Use Gimp to cut away the "Quit" and "Hardcopy" buttons, then save as the same format (PNG), under the desired name.  Save also as an EPS file with a width of 100 mm.</li>
+
+	</ul>
+
+<p></p>
+
+<li>File names: Each graphic file has a numerical, five-digit name, and it exists in two of three different file formats.  Encapsulated PostScript (.eps) is for generating PostScript and PDF output using LaTeX, while PNG (.png) or JPEG (.jpg) is for generating HTML output.  The choice between using PNG or JPEG depends on the type of image.  PNG is preferred for images created by Xcircuit and computer screenshots, while JPEG is preferred for photographic images.</li>
+
+<pre>
+xxxxx.eps
+xxxxx.jpg
+
+00xxx = Volume I (DC) -- Schematic diagrams (.eps source)
+10xxx = Volume I (DC) -- Tables and Equations (.eps source)
+20xxx = Volume I (DC) -- Computer screenshots (.png source)
+40xxx = Volume I (DC) -- Artwork (.jpg source)
+50xxx = Volume I (DC) -- Photographs (.jpg source)
+
+02xxx = Volume II (AC) -- Schematic diagrams (.eps source)
+12xxx = Volume II (AC) -- Tables and Equations (.eps source)
+22xxx = Volume II (AC) -- Computer screenshots (.png source)
+42xxx = Volume II (AC) -- Artwork (.jpg source)
+52xxx = Volume II (AC) -- Photographs (.jpg source)
+
+03xxx = Volume III (Semi) -- Schematic diagrams (.eps source)
+13xxx = Volume III (Semi) -- Tables and Equations (.eps source)
+23xxx = Volume III (Semi) -- Computer screenshots (.png source)
+43xxx = Volume III (Semi) -- Artwork (.jpg source)
+53xxx = Volume III (Semi) -- Photographs (.jpg source)
+
+04xxx = Volume IV (Digital) -- Schematic diagrams (.eps source)
+14xxx = Volume IV (Digital) -- Tables and Equations (.eps source)
+24xxx = Volume IV (Digital) -- Computer screenshots (.png source)
+44xxx = Volume IV (Digital) -- Artwork (.jpg source)
+54xxx = Volume IV (Digital) -- Photographs (.jpg source)
+
+01xxx = Volume V (Reference) -- Schematic diagrams (.eps source)
+11xxx = Volume V (Reference) -- Tables and Equations (.eps source)
+21xxx = Volume V (Reference) -- Computer screenshots (.png source)
+41xxx = Volume V (Reference) -- Artwork (.jpg source)
+51xxx = Volume V (Reference) -- Photographs (.jpg source)
+
+05xxx = Volume VI (Experiments) -- Schematic diagrams (.eps source)
+15xxx = Volume VI (Experiments) -- Tables and Equations (.eps source)
+25xxx = Volume VI (Experiments) -- Computer screenshots (.png source)
+45xxx = Volume VI (Experiments) -- Artwork (.jpg source)
+55xxx = Volume VI (Experiments) -- Photographs (.jpg source)
+</pre>
+     
+<p>
+To answer the question, "why do the Volume I (DC) files begin with 00 and Volume V (Reference) files begin with 01?", when I first began writing this book, I only intended to have two volumes, and "Reference" was the second volume.  By the time I realized that all I had to write on circuits wasn't going to fit well within a single volume, I had already created hundreds of files for the "Reference" volume, beginning with the prefix "01".  So, I made the second volume (AC) files begin with "02" and so on.
+</p>
+
+<p>
+When submitting graphic image files for inclusion into the book(s), name the files according to your own convention (i.e. "<tt>image01.eps</tt>," "<tt>image02.eps</tt>," etc.).  Do not try to follow my numbering scheme, as you would have to know what the last file number is in order that your filename isn't the same as another graphic file already in use.  Just send them to me with your own filenames and I'll re-name them to fit in with all the other files.
+</p>
+
+</ol>
+
+<hr>
+
+<a href="index.html"><img src=contents.jpg alt="Contents"></a>
+
+</body>
+</html>
+

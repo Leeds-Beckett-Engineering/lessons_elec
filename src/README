@@ -1,0 +1,252 @@
+FOR USERS
+
+Applicability
+
+We assume that you have a Linux/Unix computer system or the equivalent
+software running under windows, and that you want to work from the source
+files. If you want to modify the text, you need the source files. An 
+individual user of .html or .pdf does not need to have the source files,
+nor use a Linux/UNIX. Though the  .html, .ps and .pdf certainly can be
+generated from the sources.  
+
+If you do not have such facilities, or requirements, you may want to
+download liechtml.tar.gz instead for html (htm) for all volumes. If you only
+need postscript (.ps) or .pdf you may download the individual volumes from
+the corresponding volume web pages. Continue if you want to work with the
+sources.
+
+MS Windows users note that the popular WinZip utility is said to be able
+to process the .tar and .tar.gz of which we speak below. Use that instead
+of the Linux/UNIX based instructions in this document to unzip the
+single liechtml.tar.gz, and the individual *.ps.gz for each volume. We
+doubt that it is practical to modify the sources on other than a Linux or
+Unix sustem.
+
+
+This document describes: 
+    1)Prerequisites
+    1)How to generate source files for all volumes from liectiny.tar or 
+      liecsrc.tar
+    2)How to make html (make html)
+    3)How to make everything else  (make all)
+	ps    - postscript
+        pdf   - adobe portable document format
+        LaTex - for publishing a printed book
+	ascii - plain text 
+
+Prerequisites
+    1) sed - linux text stream editor or Wondows equivalent
+    2) LaTeX - texlive-full is a 5Gib package meeting the requirements
+       A much smaller assembly of texlive packages needs to be determined
+       by the author as an update.
+
+
+Organization
+
+The top level archive file will un-tar (unpack) into a root directory and
+subdirectories for each of the volumes: DC, AC, Semi, Digital, Ref, Exper.
+Each of these will initially contain a tar.gz file corresponding to each
+volume. The top level directory contains a Makefile target which unzips and
+untars the tar.gz's in all five individual volume subdirectories. However,
+you must untar the top level .tar file manually. Suppose that you have
+downloaded liectiny.tar. Untar it as follows in a direcctory of your
+choosing (lessons used here):
+
+
+	mkdir lessons
+	mv liectiny.tar lessons/
+	cd lessons
+	tar xvf liectiny.tar
+	make untarliectinytar
+
+
+The "tar xvf" command above will give you Makefile, index.htm, various
+supporting files and the directories: DC, AC, Semi, Digital, Ref, Exper,
+containing one each of the corresponding tar.gz files. The subdirectory
+Devel with all files, requiring no further work, will also be present. While
+you could sucessively cd to the individual subdirectories, unzip and untar
+the tar.gz's, the top level Makefile will do this as described below for
+liectiny or liecsrc. Check that you have one tar.gz file in each of the
+above five subdirectories, and that Makefile is present in your top
+level directory
+
+Then execute "make untarliectinytar" as above to fill the five
+subdirectories with the source files corresponding to the individual
+tar.gz's. Verify that DC, AC, Semi, Digital, Ref, and Exper are full of
+files.
+
+If you are using liectiny.tar, the mogrify command from the ImageMagic
+package  must be available on your system to regenerate the .png images 
+from .eps images and .eps from .jpg and some .png images. Else, you 
+need to use the much larger liecsrc.tar instead of liectiny.tar.
+
+
+
+If you have downloaded the larger liecsrc.tar file, untar as follows in a
+suitable directory:
+
+	mkdir lessons
+	mv liecsrc.tar lessons/
+	cd lessons
+	tar xvf liecsrc.tar
+        make untarliecsrctar
+
+Check for the top level Makefile, and that subdirectories: DC, AC, Semi, Digital,
+Ref, and Exper have one tar.gz each. Then make "untarliecsrctar" should
+fill these subdirectories with numerous files.
+
+You can now build your target files of choice: "html" or "all" for most
+users. If you started with liecsrc.tar, you shoud have everything you need.
+If you started with liectiny.tar you will need the mogrify command from the
+ImageMagick package. 
+
+
+Makefile targets
+
+
+A makefile is included for building the various formats of this document.
+Choose a target for use with the make command to generae the file most
+appriopriate to you application.
+
+html :
+
+The 'html' option puts together all the pieces necessary to create HTML
+output for each volume of the book. However, you need to make the .eps and
+.png images first, if starting with liectiny.  It is the default option. The end user
+wanting a local copy of the volumes in html use this.  To produce the html
+for a local copy from liecsrc, execute the following commands from the top
+level directory (lessons in example above):
+
+	make html
+
+If using liectiny as a starting point, make the images first:
+
+	make eps
+	make png
+	make html
+
+
+all :
+
+The 'all' option generates HTML and compressed .ps, and .pdf output for all
+volumes, and also updates all archive files.  The intent of this option is
+for web content providers to be able to simply type 'make all' after
+uploading the latest source code and have it produce ALL the files necessary
+for users to download. If starting from liecsrc, use this command from the
+top level directory:
+
+	make all
+
+If starting with liectiny, use the tinyinstall target below instead of all.
+
+
+
+tinyinstall :
+
+The 'tinyinstall' option installs all necessary files from the untarred
+'liectiny.tar' archive file. See untarliectiny above for unzipping and
+untarring the 'liectiny.tar' archive files in the volume directories prior
+to this. Note that the mogrify command from the ImageMagick package must be
+available on your system to regenerate the .png images from .eps images and
+.eps from .jpg and some .png images. Else, you need to use the liecsrc.tar
+instead of liectiny.tar.
+
+	make tinyinstall
+
+If you want to  make a web site which allows the user to download the
+liectiny.tar, liecsrc.tar and liechtml.tar as from the top level "Lessons in
+Electricity" page, then continue to the next section and make the three
+tartets liectiny, liecsrc, and liechtml so that those .tar's will be
+generated. Or, if you wish to modify any file, continue to "FOR
+
+
+CONTRIBUTORS"
+
+
+FOR CONTRIBUTORS
+
+Don't read this unless you are going to modify or edit the source files
+after they have been installed. The liectiny, liecsrc, and liechtml targets
+create new liectiny.tar and liecsrc.tar archives rspectively.
+
+
+liectiny : 
+
+The 'liectiny' option archives the bare minimum set of files 
+necessary to reconstruct the entire book.  Image files, while 
+duplicated in the directories as both .eps and .jpg formats for 
+HTML and TeX/LaTeX/DVI output, respectively, are archived here 
+only in their raw source (native) formats: that is, .eps for all
+schematics, .eps for tables and equations, .jpg for artwork, and
+.jpg for photographs. This .tar file is about 9 Mbyte.
+Use this command to create a new liectiny.tar:
+	
+	make liectiny
+
+
+liecsrc : 
+
+The 'liecsrc' option archives all source files necessary to reconstruct the
+entire book.  This is about 80 Mbytes Use this command to create a new
+liecsrc.tar:
+	
+	make liecsrc
+
+
+liechtml : 
+
+The 'liechtml' option pieces together only those files necessary for all
+volumes of the book to be viewable in HTML format.  No source code is
+included (only HTML code) and only JPEG and PNG image formats.  Designed for
+the non-contributing reader who just wants a browsable copy on their own
+machine.
+
+
+png : 
+
+The 'png' option creates PNG versions of all illustrations, graphs, and
+equations from their respective EPS source files. You migh use this if
+you modify the source .eps images to generate the corresponding .png's
+required by html.  Before running "make html" on
+liecdtiny, run a "make png" Requires 20 minutes on a 500 Mhz P5.
+
+eps : 
+
+The 'eps' option creates Encapsulated PostScript (EPS) versions 
+of all photographic images and artwork images from their
+respective JPG source files.  If you add or modify .jpg photo's or .png
+screen cpature shots, you migh use this. Before running "make html" on
+liecdtiny, run a "make png" Requires a few minutes on a 500 Mhz P5.
+
+More notes:
+
+Each of the six individual volume subdirectories contains a Makefile,
+which can generate the above for a single volume.  Examine the Makefiles
+to determine the names of the targets, or look at the top level 
+Makefile for clues. Note that tartets in these individual volume 
+subdirectory Makefiles are used by the top level Makefile. 
+
+Any of Tony Kuphaldt's development notes and tutorial are available in the
+Devel subdirectory. This shows how to wite or modify source .sml.
+
+The "untarliecsrc" make target will unzip and untar the tar.gz residing in
+each of the individual subdirectories after executing tar xvf liecsrc.tar,
+which procuces these subdirectories and files. The subdirectories include
+AC, DC, Semi, Digital, REf, Exper
+
+The "untarliectiny" make target will unzip and untar the tar.gz residing in
+each of the individual subdirectories after executing tar xvf liectiny.tar,
+which procuces these subdirectories and files. The subdirectories include
+
+Missing files
+
+The following executable files, which can be downloaded from links on the
+top level index.htm page are not included in the tarball as they are third
+party, not developed by the authors. If you want the download links on your 
+copy to work, you need these.
+
+sed.exe
+spice
+spice.exe
+dpmi32vm.ovl
+32rtm.exe

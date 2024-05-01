@@ -1,0 +1,265 @@
+
+This file contains frequently-used SubML tags with instructions
+on how to load them into buffers for the Vim text editor.  Enterprising
+hackers should be able to figure out how to do the same for other text
+editors.  As if *anyone* wouldn't want to use Vim.   ;-)
+
+Also, a Vim syntax file (sml.vim) is provided in this distribution for
+ease of SubML authoring.
+
+Place the cursor at the beginning of the each <tag> set, then 
+type whatever Vim buffer "yank" command appears in the line 
+above that.
+
+
+##########################################################################
+# Places the paragraph tag set into the ``a'' buffer.
+#
+# "a4yy
+
+<para>
+
+</para>
+
+##########################################################################
+
+
+##########################################################################
+# Places the bigspace tag into the ``h'' buffer.
+#
+# "h2yy
+
+<bigspace>
+
+##########################################################################
+
+
+##########################################################################
+# Places the pagebreak tag into the ``g'' buffer.
+#
+# "g2yy
+
+<pagebreak>
+
+##########################################################################
+
+
+##########################################################################
+# Places the quotation tag set into the ``z'' buffer.
+#
+# "z4yy
+
+<quotation>
+
+</quotation>
+
+##########################################################################
+
+
+##########################################################################
+# Places the comment tag set into the ``c'' buffer.
+#
+# "c2yy
+
+<comment></comment>
+
+##########################################################################
+
+
+##########################################################################
+# Places the image tag set into the ``p'' buffer.
+#
+# "p2yy
+
+<image>.png</image>
+
+##########################################################################
+
+
+##########################################################################
+# Places a set of tags for an entire (unwritten) chapter into the ``q''
+# buffer.
+#
+# "q9yy
+
+<chapter>
+<chaptertitle> </chaptertitle>
+
+<para>
+
+</para>
+
+</chapter>
+
+##########################################################################
+
+
+##########################################################################
+# Places a set of tags for an entire (unwritten) section into the ``w''
+# buffer.
+#
+# "w9yy
+
+<section>
+<sectiontitle> </sectiontitle>
+
+<para>
+
+</para>
+
+</section>
+
+##########################################################################
+
+
+##########################################################################
+# Places a set of tags for an entire (unwritten) subsection into the ``e''
+# buffer.
+#
+# "e9yy
+
+<subsection>
+<subsectiontitle> </subsectiontitle>
+
+<para>
+
+</para>
+
+</subsection>
+
+##########################################################################
+
+
+##########################################################################
+# Places a set of tags for an entire (unwritten) subsubsection into the 
+# ``r'' buffer.
+#
+# "r9yy
+
+<subsubsection>
+<subsubsectiontitle> </subsubsectiontitle>
+
+<para>
+
+</para>
+
+</subsubsection>
+
+##########################################################################
+
+
+##########################################################################
+# Places a set of tags for an item list into the ``m'' buffer.
+#
+# "m6yy
+
+<itemize>
+<item></item>
+<item></item>
+<item></item>
+</itemize>
+
+##########################################################################
+
+
+##########################################################################
+# Places the italic tag set into the ``i'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "iy
+
+<italic></italic>
+
+##########################################################################
+
+
+##########################################################################
+# Places the bold tag set into the ``b'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "by
+
+<bold></bold>
+
+##########################################################################
+
+
+##########################################################################
+# Places the monospace tag set into the ``t'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "ty
+
+<typewriter></typewriter>
+
+##########################################################################
+
+
+##########################################################################
+# Places the subscript tag set into the ``s'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "sy
+
+<subscript></subscript>
+
+##########################################################################
+
+
+##########################################################################
+# Places the superscript tag set into the ``d'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "dy
+
+<superscript></superscript>
+
+##########################################################################
+
+
+##########################################################################
+# Places the underline tag set into the ``u'' buffer.
+#
+# Highlight the line with the ``v'' (visible) function, but only to the
+# last > so the linefeed isn't captured, then type:
+#
+# "uy
+
+<underline></underline>
+
+##########################################################################
+
+
+##########################################################################
+# Places the literal tag set into the ``l'' buffer.
+#
+# "l4yy
+
+<literal>
+
+</literal>
+
+##########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
