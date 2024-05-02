@@ -1,0 +1,189 @@
+ 
+\begin{cbunit} 
+
+\chapter{CALCULUS REFERENCE} 
+\minitoc 
+\bigskip 
+
+
+\section{ Rules for limits}
+\index{Limits, calculus}
+ 
+\includegraphics{11040.eps} 
+
+
+\section{ Derivative of a constant}
+\index{Derivative of a constant}
+ 
+\includegraphics{11041.eps} 
+ 
+
+("c" being a constant)
+ 
+
+
+
+\section{ Common derivatives}
+\index{Derivative of power and log functions}
+ 
+\includegraphics{11042.eps} 
+
+
+\section{ Derivatives of power functions of \textit{e}}
+\index{Derivative of \textit{e} functions}
+ 
+\includegraphics{11043.eps} 
+ 
+
+ 
+
+\bigskip 
+ 
+\includegraphics{11044.eps} 
+
+
+\section{ Trigonometric derivatives}
+\index{Trigonometric derivatives }
+ 
+\includegraphics{11045.eps} 
+
+
+\section{ Rules for derivatives}
+\index{Derivative rules}
+
+\subsection{ Constant rule}
+ 
+\includegraphics{11046.eps} 
+
+ 
+
+\subsection{ Rule of sums}
+ 
+\includegraphics{11047.eps} 
+
+
+\subsection{ Rule of differences}
+ 
+\includegraphics{11048.eps} 
+
+                                                        
+
+\subsection{ Product rule}
+ 
+\includegraphics{11049.eps} 
+
+ 
+
+\subsection{ Quotient rule}
+ 
+\includegraphics{11050.eps} 
+
+
+\subsection{ Power rule}
+ 
+\includegraphics{11051.eps} 
+
+
+\subsection{ Functions of other functions}
+ 
+\includegraphics{11052.eps} 
+
+
+                                                       
+
+\section{ The antiderivative (Indefinite integral)}
+\index{Antiderivatives}
+\index{Integral, indefinite}
+ 
+\includegraphics{11053.eps} 
+ 
+
+Notice something important here: taking the derivative of f(x) may precisely give you g(x), but taking the antiderivative of g(x) does not necessarily give you f(x) in its original form.  Example:
+ 
+
+ 
+\includegraphics{11054.eps} 
+ 
+
+Note that the constant c is unknown!  The original function f(x) could have been 3x$^{2}$ + 5, 3x$^{2}$ + 10, 3x$^{2}$ + \textit{anything}, and the derivative of f(x) would have still been 6x.  Determining the antiderivative of a function, then, is a bit less certain than determining the derivative of a function.
+ 
+
+
+
+\section{ Common antiderivatives}
+ 
+\includegraphics{11055.eps} 
+ 
+
+ 
+
+\bigskip 
+ 
+\includegraphics{11062.eps} 
+
+
+\section{ Antiderivatives of power functions of \textit{e}}
+\index{Antiderivative of \textit{e} functions}
+ 
+\includegraphics{11059.eps} 
+ 
+
+Note: this is a very unique and useful property of e.  As in the case of derivatives, the antiderivative of such a function is that same function.  In the case of the antiderivative, a constant term "c" is added to the end as well.
+ 
+
+
+
+\section{ Rules for antiderivatives}
+\index{Rules for antiderivatives}
+
+\subsection{ Constant rule}
+ 
+\includegraphics{11056.eps} 
+
+                         
+
+\subsection{ Rule of sums}
+ 
+\includegraphics{11057.eps} 
+
+                        
+
+\subsection{ Rule of differences}
+ 
+\includegraphics{11058.eps} 
+
+
+
+\section{ Definite integrals and the fundamental theorem of calculus}
+\index{Integral, definite}
+ 
+\includegraphics{11060.eps} 
+ 
+
+ 
+
+\bigskip 
+ 
+\includegraphics{11061.eps} 
+
+
+\section{ Differential equations}
+\index{Differential Equations}
+ 
+
+As opposed to normal equations where the solution is a number, a differential equation is one where the solution is actually a function, and which at least one derivative of that unknown function is part of the equation.
+ 
+
+\index{General solution}
+\index{Particular solution}
+\index{Independent variable}
+ 
+
+As with finding antiderivatives of a function, we are often left with a solution that encompasses more than one possibility (consider the many possible values of the constant "c" typically found in antiderivatives).  The set of functions which answer any differential equation is called the "general solution" for that differential equation.  Any one function out of that set is referred to as a "particular solution" for that differential equation.  The variable of reference for differentiation and integration within the differential equation is known as the "independent variable." 
+ 
+
+
+ 
+\end{cbunit} 
+
+\vfil \eject 

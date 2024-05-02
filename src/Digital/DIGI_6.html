@@ -34,15 +34,15 @@
  
 
 <ul>
-<li><a href="#xtocid6478780"><u>"Ladder" diagrams</u></a></li>
-<li><a href="#xtocid6478781"><u>Digital logic functions</u></a></li>
-<li><a href="#xtocid6478782"><u>Permissive and interlock circuits</u></a></li>
-<li><a href="#xtocid6478783"><u>Motor control circuits</u></a></li>
-<li><a href="#xtocid6478784"><u>Fail-safe design</u></a></li>
-<li><a href="#xtocid6478785"><u>Programmable logic controllers</u></a></li>
-<li><a href="#xtocid6478786"><u>Contributors</u></a></li></ul>
+<li><a href="#xtocid8057040"><u>"Ladder" diagrams</u></a></li>
+<li><a href="#xtocid8057041"><u>Digital logic functions</u></a></li>
+<li><a href="#xtocid8057042"><u>Permissive and interlock circuits</u></a></li>
+<li><a href="#xtocid8057043"><u>Motor control circuits</u></a></li>
+<li><a href="#xtocid8057044"><u>Fail-safe design</u></a></li>
+<li><a href="#xtocid8057045"><u>Programmable logic controllers</u></a></li>
+<li><a href="#xtocid8057046"><u>Contributors</u></a></li></ul>
 
-<h2><u><a name="xtocid6478780">"Ladder" diagrams</a></u></h2>
+<h2><u><a name="xtocid8057040">"Ladder" diagrams</a></u></h2>
 
 <p>
 Ladder diagrams are specialized schematics commonly used to document industrial control logic systems.  They are called "ladder" diagrams because they resemble a ladder, with two vertical rails (supply power) and as many "rungs" (horizontal lines) as there are control circuits to represent.  If we wanted to draw a simple ladder diagram showing a lamp that is controlled by a hand switch, it would look like this:
@@ -121,7 +121,7 @@ This time the accidental grounding of wire #1 will force power to the lamp while
 
 
 
-<h2><u><a name="xtocid6478781">Digital logic functions</a></u></h2>
+<h2><u><a name="xtocid8057041">Digital logic functions</a></u></h2>
 
 <p>
 We can construct simply logic functions for our hypothetical lamp circuit, using multiple contacts, and document these circuits quite easily and understandably with additional rungs to our original "ladder."  If we use standard binary notation for the status of the switches and lamp (0 for unactuated or de-energized; 1 for actuated or energized), a truth table can be made to show how the logic works:
@@ -241,7 +241,7 @@ From the switches to the coil of CR<sub>1</sub>, the logical function is that of
 
 
 
-<h2><u><a name="xtocid6478782">Permissive and interlock circuits</a></u></h2>
+<h2><u><a name="xtocid8057042">Permissive and interlock circuits</a></u></h2>
 
 <a name="Permissive switch"></a>
 <a name="Switch, permissive"></a>
@@ -312,7 +312,7 @@ It should be noted that this is not the only way to interlock contactors to prev
 
 
 
-<h2><u><a name="xtocid6478783">Motor control circuits</a></u></h2>
+<h2><u><a name="xtocid8057043">Motor control circuits</a></u></h2>
 
 <p>
 The interlock contacts installed in the previous section's motor control circuit work fine, but the motor will run only as long as each pushbutton switch is held down.  If we wanted to keep the motor running even after the operator takes his or her hand off the control switch(es), we could change the circuit in a couple of different ways: we could replace the pushbutton switches with toggle switches, or we could add some more relay logic to "latch" the control circuit with a single, momentary actuation of either switch.  Let's see how the second approach is implemented, since it is commonly used in industry:
@@ -372,7 +372,7 @@ The careful observer will notice that the time-interlocking functions of TD<sub>
 
 
 
-<h2><u><a name="xtocid6478784">Fail-safe design</a></u></h2>
+<h2><u><a name="xtocid8057044">Fail-safe design</a></u></h2>
 
 <p>
 Logic circuits, whether comprised of electromechanical relays or solid-state gates, can be built in many different ways to perform the same functions.  There is usually no one "correct" way to design a complex logic circuit, but there are usually ways that are better than others.
@@ -459,7 +459,7 @@ An entire book could be written on the principles and practices of good fail-saf
 
 
 
-<h2><u><a name="xtocid6478785">Programmable logic controllers</a></u></h2>
+<h2><u><a name="xtocid8057045">Programmable logic controllers</a></u></h2>
 
 <p>
 Before the advent of solid-state logic circuits, logical control systems were designed and built exclusively around electromechanical relays.  Relays are far from obsolete in modern design, but have been replaced in many of their former roles as logic-level control devices, relegated most often to those applications demanding high current and/or high voltage switching.
@@ -657,7 +657,7 @@ One advantage of PLCs that simply <i>cannot</i> be duplicated by electromechanic
 
 
 
-<h2><u><a name="xtocid6478786">Contributors</a></u></h2>
+<h2><u><a name="xtocid8057046">Contributors</a></u></h2>
 
 <p>
 Contributors to this chapter are listed in chronological order of their contributions, from most recent to first.  See Appendix 2 (Contributor List) for dates and contact information.

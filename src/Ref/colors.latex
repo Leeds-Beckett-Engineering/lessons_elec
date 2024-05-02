@@ -1,0 +1,401 @@
+ 
+\begin{cbunit} 
+
+\chapter{COLOR CODES} 
+\minitoc 
+\bigskip 
+
+
+
+\section{ Resistor Color Codes }
+ 
+
+Components and wires are coded with colors to identify their value and function.
+ 
+
+\index{Resistor color codes}
+ 
+\includegraphics{11066.eps}
+ 
+
+The colors brown, red, green, blue, and violet are used as tolerance codes on 5-band resistors only.  All 5-band resistors use a colored tolerance band.  The blank (20\%) "band" is only used with the "4-band" code (3 colored bands + a blank "band").
+ 
+
+\bigskip 
+ 
+\includegraphics{11067.eps}
+
+\subsection{ Example \#1}
+ 
+\includegraphics{11012.eps}
+ 
+
+A resistor colored \textit{Yellow-Violet-Orange-Gold} would be 47 k$\Omega$ with a tolerance of +/- 5\%.
+ 
+
+
+
+\subsection{ Example \#2}
+ 
+\includegraphics{11013.eps}
+ 
+
+A resistor colored \textit{Green-Red-Gold-Silver} would be 5.2 $\Omega$ with a tolerance of +/- 10\%.
+ 
+
+
+
+\subsection{ Example \#3}
+ 
+\includegraphics{11014.eps}
+ 
+
+A resistor colored \textit{White-Violet-Black} would be 97 $\Omega$ with a tolerance of +/- 20\%.  When you see only three color bands on a resistor, you know that it is actually a 4-band code with a blank (20\%) tolerance band.
+ 
+
+
+
+\subsection{ Example \#4}
+ 
+\includegraphics{11015.eps}
+ 
+
+A resistor colored \textit{Orange-Orange-Black-Brown-Violet} would be 3.3 k$\Omega$ with a tolerance of +/- 0.1\%. 
+ 
+
+
+
+\subsection{ Example \#5}
+ 
+\includegraphics{11016.eps}
+ 
+
+A resistor colored \textit{Brown-Green-Grey-Silver-Red} would be 1.58 $\Omega$ with a tolerance of +/- 2\%.
+ 
+
+
+
+\subsection{ Example \#6}
+ 
+\includegraphics{11017.eps}
+ 
+
+A resistor colored \textit{Blue-Brown-Green-Silver-Blue} would be 6.15 $\Omega$ with a tolerance of +/- 0.25\%.
+ 
+
+
+
+
+\section{ Wiring Color Codes }
+ 
+
+Wiring for AC and DC power distribution branch circuits are color coded for identification of individual  wires. In some jurisdictions all wire colors are specified in legal documents. In other jurisdictions, only a few conductor colors are so codified. In that case, local custom dictates the ``optional'' wire colors.
+ 
+
+ 
+
+\textbf{IEC, AC:} Most of Europe abides by IEC (International Electrotechnical Commission) wiring color codes for AC  branch circuits. These are listed in  Table~\ref{wire.tbl}. The older color codes in the table reflect the previous style which did not account for proper phase rotation. The protective ground wire (listed as green-yellow) is green with yellow stripe.
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl IEC (most of Europe) AC power circuit wiring color codes. } 
+\label{wire.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color, IEC}&\textbf{Color, old IEC }
+\\
+\hline
+
+Protective earth&PE&green-yellow&green-yellow
+\\
+
+Neutral&N&blue&blue
+\\
+
+Line, single phase&L&brown&brown or black
+\\
+
+Line, 3-phase&L1&brown&brown or black
+\\
+
+Line, 3-phase&L2&black&brown or black
+\\
+
+Line, 3-phase&L3&grey&brown or black
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+\bigskip 
+ 
+
+\textbf{UK, AC:} The United Kingdom now follows the IEC AC wiring color codes.  Table~\ref{wire2.tbl} lists these along with the obsolete domestic color codes. For adding new colored wiring to existing old colored wiring see Cook. \cite{PCk}
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl UK AC power circuit wiring color codes. } 
+\label{wire2.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color, IEC}&\textbf{Old UK color}
+\\
+\hline
+
+Protective earth&PE&green-yellow&green-yellow
+\\
+
+Neutral&N&blue&black
+\\
+
+Line, single phase&L&brown&red
+\\
+
+Line, 3-phase&L1&brown&red
+\\
+
+Line, 3-phase&L2&black&yellow
+\\
+
+Line, 3-phase&L3&grey&blue
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+\bigskip 
+ 
+
+\textbf{US, AC:}The US National Electrical Code only mandates white (or grey) for the neutral power conductor and bare copper, green, or green with yellow stripe for the protective ground. In principle any other colors except these may be used for the power conductors. The colors adopted as local practice are shown in Table~\ref{wire3.tbl}. Black, red, and  blue are used for 208 VAC three-phase; brown, orange and yellow are used for 480 VAC. Conductors larger than \#6 AWG are only available in black and are color taped at the ends.
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl US AC power circuit wiring color codes. } 
+\label{wire3.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color, common}&\textbf{Color, alternative}
+\\
+\hline
+
+Protective ground&PG&bare, green, or green-yellow &green
+\\
+
+Neutral&N&white& grey
+\\
+
+Line, single phase&L&black or red (2nd hot)&~
+\\
+
+Line, 3-phase&L1&black&brown
+\\
+
+Line, 3-phase&L2&red&orange
+\\
+
+Line, 3-phase&L3&blue&yellow
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+ 
+
+\textbf{Canada:} Canadian wiring is governed by the CEC (Canadian Electric Code).  See Table~\ref{wire6.tbl}. The protective ground is green or green with yellow stripe. The neutral is white, the hot (live or active) single phase wires are black , and red in the case of a second active. Three-phase lines are red, black, and blue.
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl Canada AC power circuit wiring color codes. } 
+\label{wire6.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color, common}
+\\
+\hline
+
+Protective ground&PG&green or green-yellow
+\\
+
+Neutral&N&white
+\\
+
+Line, single phase&L&black or red (2nd hot)
+\\
+
+Line, 3-phase&L1&red
+\\
+
+Line, 3-phase&L2&black
+\\
+
+Line, 3-phase&L3&blue
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+ 
+
+\textbf{IEC, DC:} DC power installations, for example, solar power and computer data centers, use color coding which follows the AC standards. The IEC color standard for DC power cables is listed in Table~\ref{wire4.tbl}, adapted from Table 2, Cook. \cite{PCk}
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl IEC  DC power circuit wiring color codes. } 
+\label{wire4.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color}
+\\
+\hline
+
+Protective earth&PE&green-yellow
+\\
+
+\textbf{~2-wire unearthed DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive&L+&brown
+\\
+
+Negative&L-&grey
+\\
+\hline
+
+\textbf{~2-wire earthed DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive (of a negative earthed) circuit&L+&brown
+\\
+
+Negative (of a negative earthed) circuit&M&blue
+\\
+
+Positive (of a positive earthed) circuit&M&blue
+\\
+
+Negative (of a positive earthed) circuit&L-&grey
+\\
+\hline
+
+\textbf{~3-wire earthed DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive&L+&brown
+\\
+
+Mid-wire&M&blue
+\\
+
+Negative&L-&grey
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+ 
+
+\textbf{US DC power:} The US National Electrical Code (for both AC and DC) mandates that the grounded neutral conductor of a power system be white or grey. The protective ground must be bare, green or green-yellow striped. Hot (active) wires may be any other colors except these. However, common practice (per local electrical inspectors) is for the first hot (live or active) wire to be black and the second hot to be red. The recommendations in Table~\ref{wire5.tbl} are by Wiles. \cite{JWi} He makes no recommendation for ungrounded power system colors. Usage of the ungrounded system is discouraged for safety. However, red (+) and black (-) follows the coloring of the grounded systems in the table.
+ 
+
+ 
+\begin{table}[hbtp!] 
+\caption{\sl US  recommended DC power circuit wiring color codes. } 
+\label{wire5.tbl} 
+
+\centering 
+ \begin{tabular}{|l|l|l|}
+\hline
+
+\textbf{Function}&\textbf{label}&\textbf{Color}
+\\
+\hline
+
+Protective ground&PG&bare, green, or green-yellow
+\\
+
+\textbf{~2-wire ungrounded DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive&L+&no recommendation (red)
+\\
+
+Negative&L-&no recommendation (black)
+\\
+\hline
+
+\textbf{~2-wire grounded DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive (of a negative grounded) circuit&L+&red
+\\
+
+Negative (of a negative grounded) circuit&N&white
+\\
+
+Positive (of a positive grounded) circuit&N&white
+\\
+
+Negative (of a positive grounded) circuit&L-&black
+\\
+\hline
+
+\textbf{~3-wire grounded DC Power System}&\textbf{~}&\textbf{~}
+\\
+\hline
+
+Positive&L+&red
+\\
+
+Mid-wire (center tap)&N&white
+\\
+
+Negative&L-&black
+\\
+\hline
+ 
+\end{tabular} 
+
+\end{table}
+
+ 
+\bibliography{biblio} 
+\begin{thebibliography}{99} 
+
+\bibitem{PCk}Paul Cook, ``Harmonised colours and alphanumeric marking'', IEE Wiring Matters, Spring 2004 at \href{http://www.iee.org/Publish/WireRegs/IEE_Harmonized_colours.pdf}{\tt{http://www.iee.org/Publish/WireRegs/IEE\_{}Harmonized\_{}colours.pdf}} 
+\bibitem{JWi}John Wiles, ``Photovoltaic Power Systems and the National Electrical Code: Suggested Practices'', Southwest Technology Development Institute, New Mexico State University, March 2001 at \href{http://www.re.sandia.gov/en/ti/tu/Copy\%20of\%20NEC2000.pdf}{\tt{http://www.re.sandia.gov/en/ti/tu/Copy\%20of\%20NEC2000.pdf}} 
+\end{thebibliography} 
+
+ 
+\end{cbunit} 
+
+\vfil \eject 

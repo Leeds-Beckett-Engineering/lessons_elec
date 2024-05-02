@@ -36,18 +36,18 @@ i
  
 
 <ul>
-<li><a href="#xtocid6483040"><u>Introduction</u></a></li>
-<li><a href="#xtocid6483041"><u>The R/2<sup>n</sup>R DAC</u></a></li>
-<li><a href="#xtocid6483042"><u>The R/2R DAC</u></a></li>
-<li><a href="#xtocid6483043"><u>Flash ADC</u></a></li>
-<li><a href="#xtocid6483044"><u>Digital ramp ADC</u></a></li>
-<li><a href="#xtocid6483045"><u>Successive approximation ADC</u></a></li>
-<li><a href="#xtocid6483046"><u>Tracking ADC</u></a></li>
-<li><a href="#xtocid6483047"><u>Slope (integrating) ADC</u></a></li>
-<li><a href="#xtocid6483048"><u>Delta-Sigma (&#916;&#931;) ADC</u></a></li>
-<li><a href="#xtocid6483049"><u>Practical considerations of ADC circuits</u></a></li></ul>
+<li><a href="#xtocid8057670"><u>Introduction</u></a></li>
+<li><a href="#xtocid8057671"><u>The R/2<sup>n</sup>R DAC</u></a></li>
+<li><a href="#xtocid8057672"><u>The R/2R DAC</u></a></li>
+<li><a href="#xtocid8057673"><u>Flash ADC</u></a></li>
+<li><a href="#xtocid8057674"><u>Digital ramp ADC</u></a></li>
+<li><a href="#xtocid8057675"><u>Successive approximation ADC</u></a></li>
+<li><a href="#xtocid8057676"><u>Tracking ADC</u></a></li>
+<li><a href="#xtocid8057677"><u>Slope (integrating) ADC</u></a></li>
+<li><a href="#xtocid8057678"><u>Delta-Sigma (&#916;&#931;) ADC</u></a></li>
+<li><a href="#xtocid8057679"><u>Practical considerations of ADC circuits</u></a></li></ul>
 
-<h2><u><a name="xtocid6483040">Introduction</a></u></h2>
+<h2><u><a name="xtocid8057670">Introduction</a></u></h2>
 
 <p>
 Connecting digital circuitry to sensor devices is simple if the sensor devices are inherently digital themselves.  Switches, relays, and encoders are easily interfaced with gate circuits due to the on/off nature of their signals.  However, when analog devices are involved, interfacing becomes much more complex.  What is needed is a way to electronically translate analog signals into digital (binary) quantities, and vice versa.  An <i>analog-to-digital converter</i>, or ADC, performs the former task while a <i>digital-to-analog converter</i>, or DAC, performs the latter.
@@ -81,7 +81,7 @@ It is much easier to convert a digital signal into an analog signal than it is t
 
  
 
-<h2><u><a name="xtocid6483041">The R/2</a><sup>n</sup>R DAC</u></h2>
+<h2><u><a name="xtocid8057671">The R/2</a><sup>n</sup>R DAC</u></h2>
 
 <p>
 This DAC circuit, otherwise known as the <i>binary-weighted-input</i> DAC, is a variation on the inverting summer op-amp circuit.  If you recall, the classic inverting summer circuit is an operational amplifier using negative feedback for controlled gain, with several voltage inputs and one voltage output.  The output voltage is the inverted (opposite polarity) sum of all input voltages:
@@ -205,7 +205,7 @@ It should be noted that all logic gates must output exactly the same voltages wh
  
 
 
-<h2><u><a name="xtocid6483042">The R/2R DAC</a></u></h2>
+<h2><u><a name="xtocid8057672">The R/2R DAC</a></u></h2>
 
 <p>
 An alternative to the binary-weighted-input DAC is the so-called R/2R DAC, which uses fewer unique resistor values.  A disadvantage of the former DAC design was its requirement of several different precise input resistor values: one unique value per binary input bit.  Manufacture may be simplified if there are fewer different resistor values to purchase, stock, and sort prior to assembly.
@@ -269,7 +269,7 @@ As was the case with the binary-weighted DAC design, we can modify the value of 
  
 
 
-<h2><u><a name="xtocid6483043">Flash ADC</a></u></h2>
+<h2><u><a name="xtocid8057673">Flash ADC</a></u></h2>
 
 <a name="Flash ADC"></a>
 <a name="ADC, flash"></a>
@@ -318,7 +318,7 @@ An additional advantage of the flash converter, often overlooked, is the ability
  
 
 
-<h2><u><a name="xtocid6483044">Digital ramp ADC</a></u></h2>
+<h2><u><a name="xtocid8057674">Digital ramp ADC</a></u></h2>
 
 <a name="Digital ramp ADC"></a>
 <a name="ADC, digital ramp"></a>
@@ -360,7 +360,7 @@ For many ADC applications, this variation in update frequency (sample time) woul
  
 
 
-<h2><u><a name="xtocid6483045">Successive approximation ADC</a></u></h2>
+<h2><u><a name="xtocid8057675">Successive approximation ADC</a></u></h2>
 
 <a name="Successive approximation ADC"></a>
 <a name="ADC, successive approximation"></a>
@@ -393,7 +393,7 @@ Note how the updates for this ADC occur at regular intervals, unlike the digital
 
 
 
-<h2><u><a name="xtocid6483046">Tracking ADC</a></u></h2>
+<h2><u><a name="xtocid8057676">Tracking ADC</a></u></h2>
 
 <a name="Tracking ADC"></a>
 <a name="ADC, tracking"></a>
@@ -434,7 +434,7 @@ This tendency can be overcome, though, through the creative use of a shift regis
 
  
 
-<h2><u><a name="xtocid6483047">Slope (integrating) ADC</a></u></h2>
+<h2><u><a name="xtocid8057677">Slope (integrating) ADC</a></u></h2>
 
 <a name="Slope (integrating) ADC"></a>
 <a name="ADC, slope"></a>
@@ -487,7 +487,7 @@ Another important advantage of this method is that the input signal becomes aver
 
 
 
-<h2><u><a name="xtocid6483048">Delta-Sigma (&#916;&#931;) ADC</a></u></h2>
+<h2><u><a name="xtocid8057678">Delta-Sigma (&#916;&#931;) ADC</a></u></h2>
 
 <a name="&#916;&#931; ADC"></a>
 <a name="Delta-sigma ADC"></a>
@@ -553,7 +553,7 @@ Variations on this theme exist, employing multiple integrator stages and/or comp
  
 
 
-<h2><u><a name="xtocid6483049">Practical considerations of ADC circuits</a></u></h2>
+<h2><u><a name="xtocid8057679">Practical considerations of ADC circuits</a></u></h2>
 
 <a name="Resolution, ADC"></a>
 

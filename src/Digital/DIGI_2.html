@@ -34,14 +34,14 @@
  
 
 <ul>
-<li><a href="#xtocid6478420"><u>Numbers versus numeration</u></a></li>
-<li><a href="#xtocid6478421"><u>Binary addition</u></a></li>
-<li><a href="#xtocid6478422"><u>Negative binary numbers</u></a></li>
-<li><a href="#xtocid6478423"><u>Subtraction</u></a></li>
-<li><a href="#xtocid6478424"><u>Overflow</u></a></li>
-<li><a href="#xtocid6478425"><u>Bit groupings</u></a></li></ul>
+<li><a href="#xtocid8056680"><u>Numbers versus numeration</u></a></li>
+<li><a href="#xtocid8056681"><u>Binary addition</u></a></li>
+<li><a href="#xtocid8056682"><u>Negative binary numbers</u></a></li>
+<li><a href="#xtocid8056683"><u>Subtraction</u></a></li>
+<li><a href="#xtocid8056684"><u>Overflow</u></a></li>
+<li><a href="#xtocid8056685"><u>Bit groupings</u></a></li></ul>
 
-<h2><u><a name="xtocid6478420">Numbers versus numeration</a></u></h2>
+<h2><u><a name="xtocid8056680">Numbers versus numeration</a></u></h2>
 
 <a name="Number"></a>
 <a name="Numeration system"></a>
@@ -66,7 +66,7 @@ That being said, performing a simple arithmetic operation such as addition (long
 
 
 
-<h2><u><a name="xtocid6478421">Binary addition</a></u></h2>
+<h2><u><a name="xtocid8056681">Binary addition</a></u></h2>
 
 <p>
 Adding binary numbers is a very simple task, and very similar to the longhand addition of decimal numbers.  As with decimal numbers, you start by adding the bits (digits) one column, or place weight, at a time, from right to left.  Unlike decimal addition, there is little to memorize in the way of rules for the addition of binary bits:
@@ -115,7 +115,7 @@ As we'll see later, there are ways that electronic circuits can be built to perf
 
 
 
-<h2><u><a name="xtocid6478422">Negative binary numbers</a></u></h2>
+<h2><u><a name="xtocid8056682">Negative binary numbers</a></u></h2>
 
 <p>
 With addition being easily accomplished, we can perform the operation of subtraction with the same technique simply by making one of the numbers negative.  For example, the subtraction problem of 7 - 5 is essentially the same as the addition problem 7 + (-5).  Since we already know how to represent positive numbers in binary, all we need to know now is how to represent their negative counterparts and we'll be able to subtract.
@@ -245,7 +245,7 @@ It is critically important to remember that the place of the negative-weight bit
 
 
 
-<h2><u><a name="xtocid6478423">Subtraction</a></u></h2>
+<h2><u><a name="xtocid8056683">Subtraction</a></u></h2>
 
 <p>
 We can subtract one binary number from another by using the standard techniques adapted for decimal numbers (subtraction of each bit pair, right to left, "borrowing" as needed from bits to the left).  However, if we can leverage the already familiar (and easier) technique of binary addition to subtract, that would be better.  As we just learned, we can represent negative binary numbers by using the "two's complement" method and a negative place-weight bit.  Here, we'll use those negative binary numbers to subtract through addition.  Here's a sample problem:
@@ -363,7 +363,7 @@ Indeed -7<sub>10</sub> is the proper sum of -25<sub>10</sub>  and 18<sub>10</sub
 
 
 
-<h2><u><a name="xtocid6478424">Overflow</a></u></h2>
+<h2><u><a name="xtocid8056684">Overflow</a></u></h2>
 
 <a name="Overflow"></a>
 
@@ -465,7 +465,7 @@ Fortunately, this technique of overflow detection is easily implemented in elect
 
 
 
-<h2><u><a name="xtocid6478425">Bit groupings</a></u></h2>
+<h2><u><a name="xtocid8056685">Bit groupings</a></u></h2>
 
 <p>
 The singular reason for learning and using the binary numeration system in electronics is to understand how to design, build, and troubleshoot circuits that represent and process numerical quantities in digital form.  Since the bivalent (two-valued) system of binary bit numeration lends itself so easily to representation by "on" and "off" transistor states (saturation and cutoff, respectively), it makes sense to design and build circuits leveraging this principle to perform binary calculations.

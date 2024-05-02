@@ -1,0 +1,41 @@
+ 
+\begin{cbunit} 
+
+\chapter{ACTIVE FILTERS} 
+\minitoc 
+\bigskip 
+
+ 
+
+\textbf{*** PENDING ***}
+ 
+
+
+\section{ Two pole active filters }
+ 
+
+Figure~\ref{03515.eps}
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03515.eps} 
+\caption{\sl  (a) 10Khz Low-pass filter. (b) 100Hz cutoff high-pass filter } 
+\label{03515.eps} 
+\end{figure}
+
+ 
+
+Test
+ 
+
+ 
+\includegraphics{13105.eps}
+
+ 
+\end{cbunit} 
+
+% <https://911electronic.com/analog-digital-filters/ good clasification 
+% <https://www.analog.com/designtools/en/filterwizard
+\vfil \eject 

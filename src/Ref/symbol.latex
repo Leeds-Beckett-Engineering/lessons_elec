@@ -1,0 +1,148 @@
+ 
+\begin{cbunit} 
+
+\chapter{CIRCUIT SCHEMATIC SYMBOLS} 
+\minitoc 
+\bigskip 
+
+
+\section{ Wires and connections}
+ 
+\medskip \centerline{\includegraphics{01047.eps}} 
+ 
+
+Older electrical schematics showed connecting wires crossing, while non-connecting wires "jumped" over each other with little half-circle marks.  Newer electrical schematics show connecting wires joining with a dot, while non-connecting wires cross with no dot.  However, some people still use the older convention of connecting wires crossing with no dot, which may create confusion. 
+ 
+
+ 
+
+For this reason, I opt to use a hybrid convention, with connecting wires unambiguously connected by a dot, and non-connecting wires unambiguously "jumping" over one another with a half-circle mark.  While this may be frowned upon by some, it leaves no room for interpretational error: in each case, the intent is clear and unmistakable:
+ 
+
+ 
+\medskip \centerline{\includegraphics{01048.eps}} 
+
+
+\section{ Power sources}
+ 
+\medskip \centerline{\includegraphics{01045.eps}} 
+\bigskip 
+
+
+\section{ Resistors}
+ 
+\medskip \centerline{\includegraphics{01046.eps}} 
+\bigskip 
+
+
+\section{ Capacitors}
+ 
+\medskip \centerline{\includegraphics{01049.eps}} 
+\bigskip 
+
+
+\section{ Inductors}
+ 
+\medskip \centerline{\includegraphics{01050.eps}} 
+\bigskip 
+
+
+\section{ Mutual inductors}
+ 
+\medskip \centerline{\includegraphics{01051.eps}} 
+\bigskip 
+
+
+\section{ Switches, hand actuated}
+ 
+\medskip \centerline{\includegraphics{01052.eps}} 
+\bigskip 
+
+
+\section{ Switches, process actuated}
+ 
+\medskip \centerline{\includegraphics{01053.eps}} 
+ 
+
+It is very important to keep in mind that the "normal" contact status of a process-actuated switch refers to its status when the process is absent and/or inactive, \textit{not} "normal" in the sense of process conditions as expected during routine operation.  For instance, a \textit{normally-closed} low-flow detection switch installed on a coolant pipe will be maintained in the actuated state (open) when there is regular coolant flow through the pipe.  If the coolant flow stops, the flow switch will go to its "normal" (unactuated) status of closed.
+ 
+
+ 
+
+A \textit{limit} switch is one actuated by contact with a moving machine part.  An \textit{electronic limit} switch senses mechanical motion, but does so using light, magnetic fields, or other non-contact means.
+ 
+
+
+
+\section{ Switches, electrically actuated (relays)}
+ 
+\medskip \centerline{\includegraphics{01054.eps}} 
+ 
+
+ 
+
+
+
+\section{ Connectors}
+ 
+\medskip \centerline{\includegraphics{01055.eps}} 
+\bigskip 
+
+
+\section{ Diodes}
+ 
+\medskip \centerline{\includegraphics{01056.eps}} 
+\bigskip 
+
+
+\section{ Transistors, bipolar}
+ 
+\medskip \centerline{\includegraphics{01057.eps}} 
+\bigskip 
+
+
+\section{ Transistors, junction field-effect (JFET)}
+ 
+\medskip \centerline{\includegraphics{01058.eps}} 
+\bigskip 
+
+
+\section{ Transistors, insulated-gate field-effect (IGFET or MOSFET)}
+ 
+\medskip \centerline{\includegraphics{01059.eps}} 
+\bigskip 
+
+
+\section{ Transistors, hybrid}
+ 
+\medskip \centerline{\includegraphics{01060.eps}} 
+\bigskip 
+
+
+\section{ Thyristors}
+ 
+\medskip \centerline{\includegraphics{01061.eps}} 
+\bigskip 
+
+
+\section{ Integrated circuits}
+ 
+\medskip \centerline{\includegraphics{01063.eps}} 
+ 
+
+ 
+
+ 
+\medskip \centerline{\includegraphics{01066.eps}} 
+\bigskip 
+
+
+\section{ Electron tubes}
+ 
+\medskip \centerline{\includegraphics{01062.eps}} 
+\bigskip 
+
+ 
+\end{cbunit} 
+
+\vfil \eject 

@@ -1,0 +1,977 @@
+ 
+\begin{cbunit} 
+
+\chapter{AMPLIFIERS AND ACTIVE DEVICES} 
+\minitoc 
+\bigskip 
+
+
+\section{ From electric to electronic}
+ 
+
+This third volume of the book series \textit{Lessons In Electric Circuits} makes a departure from the former two in that the transition between \textit{electric} circuits and \textit{electronic} circuits is formally crossed.  Electric circuits are connections of conductive wires and other devices whereby the uniform flow of electrons occurs.  Electronic circuits add a new dimension to electric circuits in that some means of \textit{control} is exerted over the flow of electrons by another electrical signal, either a voltage or a current.
+ 
+
+ 
+ 
+
+In and of itself, the control of electron flow is nothing new to the student of electric circuits.  Switches control the flow of electrons, as do potentiometers, especially when connected as variable resistors (rheostats).  Neither the switch nor the potentiometer should be new to your experience by this point in your study.  The threshold marking the transition from electric to electronic, then, is defined by \textit{how} the flow of electrons is controlled rather than whether or not any form of control exists in a circuit.  Switches and rheostats control the flow of electrons according to the positioning of a mechanical device, which is actuated by some physical force external to the circuit.  In electronics, however, we are dealing with special devices able to control the flow of electrons according to another flow of electrons, or by the application of a static voltage.  In other words, in an electronic circuit, \textit{electricity is able to control electricity}.
+ 
+
+ 
+ 
+
+The historic precursor to the modern electronics era was invented by Thomas Edison in 1880 while developing the electric incandescent lamp. Edison found that a small current passed from the heated lamp filament to a metal plate mounted inside the vacuum envelop.  (Figure~\ref{03375.eps} (a))  Today this is known as the ``Edison effect''. Note that the battery is only necessary to heat the filament. Electrons would still flow if a non-electrical heat source was used.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03375.eps} 
+\caption{\sl (a) Edison effect, (b) Fleming valve or vacuum diode, (c) DeForest audion triode vacuum tube amplifier. } 
+\label{03375.eps} 
+\end{figure}
+
+ 
+
+By 1904 Marconi Wireless Company adviser John Flemming found that an externally applied current (plate battery) only passed in one direction from filament to plate (Figure~\ref{03375.eps} (b)), but not the reverse direction (not shown).
+% Split for multiple references cannot have two without cr at end
+This invention was the vacuum diode, used to convert alternating currents to DC. The addition of a third  electrode by Lee DeForest (Figure~\ref{03375.eps} (c))  allowed a small signal to control  the larger electron flow from filament to plate. 
+ 
+
+ 
+
+Historically, the era of electronics began with the invention of the \textit{Audion tube}, a device controlling the flow of an electron stream through a vacuum by the application of a small voltage between two metal structures within the tube.  A more detailed summary of so-called \textit{electron tube} or \textit{vacuum tube} technology is available in the last chapter of this volume for those who are interested.
+ 
+
+ 
+\index{Solid-state}
+ 
+
+Electronics technology experienced a revolution in 1948 with the invention of the \textit{transistor}.  This tiny device achieved approximately the same effect as the Audion tube, but in a vastly smaller amount of space and with less material.  Transistors control the flow of electrons through solid \textit{semiconductor} substances rather than through a vacuum, and so transistor technology is often referred to as \textit{solid-state} electronics.
+ 
+
+
+
+\section{ Active versus passive devices}
+\index{Active device}
+\index{Passive device}
+\index{Saturable reactor}
+ 
+
+An \textit{active} device is any type of circuit component with the ability to electrically control electron flow (electricity controlling electricity).  In order for a circuit to be properly called \textit{electronic}, it must contain at least one active device.  Components incapable of controlling current by means of another electrical signal are called \textit{passive} devices.  Resistors, capacitors, inductors, transformers, and even diodes are all considered passive devices.  Active devices include, but are not limited to, vacuum tubes, transistors, silicon-controlled rectifiers (SCRs), and TRIACs.  A case might be made for the saturable reactor to be defined as an active device, since it is able to control an AC current with a DC current, but I've never heard it referred to as such.  The operation of each of these active devices will be explored in later chapters of this volume.
+ 
+
+ 
+ 
+
+All active devices control the flow of electrons through them.  Some active devices allow a voltage to control this current while other active devices allow another current to do the job.  Devices utilizing a static voltage as the controlling signal are, not surprisingly, called \textit{voltage-controlled} devices.  Devices working on the principle of one current controlling another current are known as \textit{current-controlled} devices.  For the record, vacuum tubes are voltage-controlled devices while transistors are made as either voltage-controlled or current controlled types.  The first type of transistor successfully demonstrated was a current-controlled device.
+ 
+
+
+
+\section{ Amplifiers}
+ 
+
+The practical benefit of active devices is their \textit{amplifying} ability.  Whether the device in question be voltage-controlled or current-controlled, the amount of power required of the controlling signal is typically far less than the amount of power available in the controlled current.  In other words, an active device doesn't just allow electricity to control electricity; it allows a \textit{small} amount of electricity to control a \textit{large} amount of electricity.  
+ 
+
+\index{Amplification, definition}
+ 
+
+Because of this disparity between \textit{controlling} and \textit{controlled} powers, active devices may be employed to govern a large amount of power (controlled) by the application of a small amount of power (controlling).  This behavior is known as \textit{amplification}.
+ 
+
+ 
+
+It is a fundamental rule of physics that energy can neither be created nor destroyed.  Stated formally, this rule is known as the Law of Conservation of Energy, and no exceptions to it have been discovered to date.  If this Law is true -- and an overwhelming mass of experimental data suggests that it is -- then it is impossible to build a device capable of taking a small amount of energy and magically transforming it into a large amount of energy.  All machines, electric and electronic circuits included, have an upper efficiency limit of 100 percent.  At best, power out equals power in as in Figure~\ref{03165.eps}.
+ 
+
+ 
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03165.eps} 
+\caption{\sl The power output of a machine can approach, but never exceed,  the power input for 100\% efficiency as an upper limit. } 
+\label{03165.eps} 
+\end{figure}
+
+ 
+
+Usually, machines fail even to meet this limit, losing some of their input energy in the form of heat which is radiated into surrounding space and therefore not part of the output energy stream.  (Figure~\ref{03166.eps})
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03166.eps} 
+\caption{\sl A realistic machine most often loses some of its input energy as heat in transforming it into the output energy stream. } 
+\label{03166.eps} 
+\end{figure}
+
+\index{Perpetual motion machine}
+ 
+
+Many people have attempted, without success, to design and build machines that output more power than they take in.  Not only would such a \textit{perpetual motion} machine prove that the Law of Conservation of Energy was not a Law after all, but it would usher in a technological revolution such as the world has never seen, for it could power itself in a circular loop and generate excess power for ``free''. (Figure~\ref{03167.eps})
+ 
+
+ 
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03167.eps} 
+\caption{\sl Hypothetical ``perpetual motion machine'' powers itself? } 
+\label{03167.eps} 
+\end{figure}
+
+\index{Over-unity machine}
+ 
+
+Despite much effort and many unscrupulous claims of ``free energy'' or \textit{over-unity} machines, not one has ever passed the simple test of powering itself with its own energy output and generating energy to spare.
+ 
+
+ 
+ 
+
+There does exist, however, a class of machines known as \textit{amplifiers}, which are able to take in small-power signals and output signals of much greater power.  The key to understanding how amplifiers can exist without violating the Law of Conservation of Energy lies in the behavior of active devices.
+ 
+
+ 
+ 
+
+ 
+Because active devices have the ability to \textit{control} a large amount of electrical power with a small amount of electrical power, they may be arranged in circuit so as to duplicate the form of the input signal power from a larger amount of power supplied by an external power source.  The result is a device that appears to magically magnify the power of a small electrical signal (usually an AC voltage waveform) into an identically-shaped waveform of larger magnitude.  The Law of Conservation of Energy is not violated because the additional power is supplied by an external source, usually a DC battery or equivalent.  The amplifier neither creates nor destroys energy, but merely reshapes it into the waveform desired as shown in  Figure~\ref{03168.eps}.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03168.eps} 
+\caption{\sl While an amplifier can scale a small input signal to large output, its energy source is an external power supply. } 
+\label{03168.eps} 
+\end{figure}
+
+ 
+
+In other words, the current-controlling behavior of active devices is employed to \textit{shape} DC power from the external power source into the same waveform as the input signal, producing an output signal of like shape but different (greater) power magnitude.  The transistor or other active device within an amplifier merely forms a larger \textit{copy} of the input signal waveform out of the ``raw'' DC power provided by a battery or other power source.
+ 
+
+ 
+ 
+
+Amplifiers, like all machines, are limited in efficiency to a maximum of 100 percent.  Usually, electronic amplifiers are far less efficient than that, dissipating considerable amounts of energy in the form of waste heat.  Because the efficiency of an amplifier is always 100 percent or less, one can never be made to function as a ``perpetual motion'' device.
+ 
+
+ 
+ 
+
+The requirement of an external source of power is common to all types of amplifiers, electrical and non-electrical.  A common example of a non-electrical amplification system would be power steering in an automobile, amplifying the power of the driver's arms in turning the steering wheel to move the front wheels of the car.  The source of power necessary for the amplification comes from the engine.  The active device controlling the driver's ``input signal'' is a hydraulic valve shuttling fluid power from a pump attached to the engine to a hydraulic piston assisting wheel motion.  If the engine stops running, the amplification system fails to amplify the driver's arm power and the car becomes very difficult to turn.
+ 
+
+
+
+\section{ Amplifier gain}
+\index{Gain}
+ 
+
+Because amplifiers have the ability to increase the magnitude of an input signal, it is useful to be able to rate an amplifier's amplifying ability in terms of an output/input ratio.  The technical term for an amplifier's output/input magnitude ratio is \textit{gain}.  As a ratio of equal units (power out / power in, voltage out / voltage in, or current out / current in), gain is naturally a unitless measurement.  Mathematically, gain is symbolized by the capital letter ``A''.
+ 
+
+ 
+ 
+
+For example, if an amplifier takes in an AC voltage signal measuring 2 volts RMS and outputs an AC voltage of 30 volts RMS, it has an AC voltage gain of 30 divided by 2, or 15:
+ 
+
+ 
+ 
+\includegraphics{13025.eps} 
+ 
+ 
+
+Correspondingly, if we know the gain of an amplifier and the magnitude of the input signal, we can calculate the magnitude of the output.  For example, if an amplifier with an AC current gain of 3.5 is given an AC input signal of 28 mA RMS, the output will be 3.5 times 28 mA, or 98 mA:
+ 
+
+ 
+ 
+\includegraphics{13026.eps} 
+\index{Gain, AC versus DC}
+ 
+
+In the last two examples I specifically identified the gains and signal magnitudes in terms of ``AC.''  This was intentional, and illustrates an important concept: electronic amplifiers often respond differently to AC and DC input signals, and may amplify them to different extents.  Another way of saying this is that amplifiers often amplify \textit{changes} or \textit{variations} in input signal magnitude (AC) at a different ratio than \textit{steady} input signal magnitudes (DC).  The specific reasons for this are too complex to explain at this time, but the fact of the matter is worth mentioning.  If gain calculations are to be carried out, it must first be understood what type of signals and gains are being dealt with, AC or DC.
+ 
+
+ 
+ 
+
+Electrical amplifier gains may be expressed in terms of voltage, current, and/or power, in both AC and DC.  A summary of gain definitions is as follows.  The triangle-shaped ``delta'' symbol ($\Delta$) represents \textit{change} in mathematics, so ``$\Delta$V$_{output}$ / $\Delta$V$_{input}$'' means ``change in output voltage divided by change in input voltage,'' or more simply, ``AC output voltage divided by AC input voltage'':
+ 
+
+ 
+ 
+\includegraphics{13027.eps} 
+ 
+
+If multiple amplifiers are staged, their respective gains form an overall gain equal to the product (multiplication) of the individual gains.  (Figure~\ref{03169.eps}) 
+If a 1 V signal were applied to the input  of the gain of 3 amplifier in Figure~\ref{03169.eps} a 3 V signal out of the first amplifier would be further amplified by a gain of 5 at the second stage yielding 15 V at the final output. 
+ 
+
+ 
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03169.eps} 
+\caption{\sl The gain of a chain of cascaded amplifiers is the product of the individual gains. } 
+\label{03169.eps} 
+\end{figure}
+
+
+
+\section{ Decibels}
+\index{Bel}
+\index{Unit, bel}
+ 
+
+In its simplest form, an amplifier's \textit{gain} is a ratio of output over input.  Like all ratios, this form of gain is unitless.  However, there is an actual unit intended to represent gain, and it is called the \textit{bel}.
+ 
+
+ 
+ 
+
+As a unit, the bel was actually devised as a convenient way to represent power \textit{loss} in telephone system wiring rather than \textit{gain} in amplifiers.  The unit's name is derived from Alexander Graham Bell, the famous Scottish inventor whose work was instrumental in developing telephone systems.  Originally, the bel represented the amount of signal power loss due to resistance over a standard length of electrical cable.  Now, it is defined in terms of the common (base 10) logarithm of a power ratio (output power divided by input power):
+ 
+
+ 
+ 
+\includegraphics{13028.eps} 
+ 
+
+Because the bel is a logarithmic unit, it is nonlinear.  To give you an idea of how this works, consider the following table of figures, comparing power losses and gains in bels versus simple ratios:
+ 
+
+ 
+ 
+\includegraphics{13029.eps} 
+ 
+\index{Decibel}
+\index{dB}
+ 
+
+It was later decided that the bel was too large of a unit to be used directly, and so it became customary to apply the metric prefix \textit{deci} (meaning 1/10) to it, making it \textit{deci}bels, or dB.  Now, the expression ``dB'' is so common that many people do not realize it is a combination of ``deci-'' and ``-bel,'' or that there even is such a unit as the ``bel.''  To put this into perspective, here is another table contrasting power gain/loss ratios against decibels:
+ 
+
+ 
+ 
+\includegraphics{13030.eps} 
+\index{Richter scale}
+ 
+
+As a logarithmic unit, this mode of power gain expression covers a wide range of ratios with a minimal span in figures.  It is reasonable to ask, ``why did anyone feel the need to invent a \textit{logarithmic} unit for electrical signal power loss in a telephone system?''  The answer is related to the dynamics of human hearing, the perceptive intensity of which is logarithmic in nature.  
+ 
+
+ 
+
+Human hearing is highly nonlinear: in order to double the perceived intensity of a sound, the actual sound power must be multiplied by a factor of ten.  Relating telephone signal power loss in terms of the logarithmic ``bel'' scale makes perfect sense in this context: a power loss of 1 bel translates to a perceived sound loss of 50 percent, or 1/2.  A power gain of 1 bel translates to a doubling in the perceived intensity of the sound.  
+ 
+
+ 
+
+An almost perfect analogy to the bel scale is the Richter scale used to describe earthquake intensity: a 6.0 Richter earthquake is 10 times more powerful than a 5.0 Richter earthquake; a 7.0 Richter earthquake 100 times more powerful than a 5.0 Richter earthquake; a 4.0 Richter earthquake is 1/10 as powerful as a 5.0 Richter earthquake, and so on.  The measurement scale for chemical pH is likewise logarithmic, a difference of 1 on the scale is equivalent to a tenfold difference in hydrogen ion concentration of a chemical solution.  An advantage of using a logarithmic measurement scale is the tremendous range of expression afforded by a relatively small span of numerical values, and it is this advantage which secures the use of Richter numbers for earthquakes and pH for hydrogen ion activity.
+ 
+
+ 
+ 
+
+Another reason for the adoption of the bel as a unit for gain is for simple expression of system gains and losses.  Consider the last system example (Figure~\ref{03169.eps}) where two amplifiers were connected tandem to amplify a signal.  The respective gain for each amplifier was expressed as a ratio, and the overall gain for the system was the product (multiplication) of those two ratios:
+ 
+
+ 
+\bigskip 
+\begingroup \vskip\parskip \everypar={\nobreak} \obeyspaces \frenchspacing \tt \obeylines \parskip=0pt \parindent=0pt 
+~          Overall gain = (3)(5) = 15
+\endgroup 
+\bigskip 
+ 
+
+If these figures represented \textit{power} gains, we could directly apply the unit of bels to the task of representing the gain of each amplifier, and of the system altogether.  (Figure~\ref{03170.eps})
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03170.eps} 
+\caption{\sl Power gain in bels is additive: 0.477 B + 0.699 B = 1.176 B. } 
+\label{03170.eps} 
+\end{figure}
+
+ 
+ 
+
+Close inspection of these gain figures in the unit of ``bel'' yields a discovery: they're additive.  Ratio gain figures are multiplicative for staged amplifiers, but gains expressed in bels \textit{add} rather than \textit{multiply} to equal the overall system gain.  The first amplifier with its power gain of 0.477 B adds to the second amplifier's power gain of 0.699 B to make a system with an overall power gain of 1.176 B.
+ 
+
+ 
+ 
+
+Recalculating for decibels rather than bels, we notice the same phenomenon. (Figure~\ref{03171.eps})
+ 
+
+ 
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03171.eps} 
+\caption{\sl Gain of amplifier stages in decibels is additive: 4.77 dB + 6.99 dB = 11.76 dB. } 
+\label{03171.eps} 
+\end{figure}
+
+\index{Logarithm}
+\index{Antilogarithm}
+\index{Slide rule}
+ 
+ 
+
+To those already familiar with the arithmetic properties of logarithms, this is no surprise.  It is an elementary rule of algebra that the antilogarithm of the sum of two numbers' logarithm values equals the product of the two original numbers.  In other words, if we take two numbers and determine the logarithm of each, then add those two logarithm figures together, then determine the ``antilogarithm'' of that sum (elevate the base number of the logarithm -- in this case, 10 -- to the power of that sum), the result will be the same as if we had simply multiplied the two original numbers together.  This algebraic rule forms the heart of a device called a \textit{slide rule}, an analog computer which could, among other things, determine the products and quotients of numbers by addition (adding together physical lengths marked on sliding wood, metal, or plastic scales).  Given a table of logarithm figures, the same mathematical trick could be used to perform otherwise complex multiplications and divisions by only having to do additions and subtractions, respectively.  With the advent of high-speed, handheld, digital calculator devices, this elegant calculation technique virtually disappeared from popular use.  However, it is still important to understand when working with measurement scales that are logarithmic in nature, such as the bel (decibel) and Richter scales.
+ 
+
+ 
+ 
+
+When converting a power gain from units of bels or decibels to a unitless ratio, the mathematical inverse function of common logarithms is used: powers of 10, or the \textit{antilog}.
+ 
+
+ 
+ 
+\includegraphics{13042.eps} 
+ 
+
+Converting decibels into unitless ratios for power gain is much the same, only a division factor of 10 is included in the exponent term:
+ 
+
+ 
+\includegraphics{13043.eps} 
+ 
+\textbf{
+Example:
+}
+Power into an amplifier is 1 Watt, the power out is 10 Watts. Find the power gain in dB.
+\begin{quotation}
+A$_{P(dB)}$ = 10 log$_{10}$(P$_{O}$ /  P$_{I}$) = 10 log$_{10}$ (10 /1) = 10 log$_{10}$ (10) = 10 (1) = 10 dB
+\end{quotation}
+\textbf{
+Example:
+}
+Find the power gain  ratio A$_{P(ratio)}$ =  (P$_{O}$ /  P$_{I}$) for a 20 dB Power gain.
+\begin{quotation}
+A$_{P(dB)}$ = 20 = 10 log$_{10}$  A$_{P(ratio)}$
+\end{quotation}
+\begin{quotation}
+20/10 = log$_{10}$ A$_{P(ratio)}$
+\end{quotation} 
+\begin{quotation}
+10$^{20/10}$ = $10^{log_{10} (A_{P(ratio)})}$
+\end{quotation}
+\begin{quotation}
+100 = A$_{P(ratio)}$ = (P$_{O}$ / P$_{I}$)
+\end{quotation}
+\index{Joule's Law}
+ 
+
+Because the bel is fundamentally a unit of \textit{power} gain or loss in a system, voltage or current gains and losses don't convert to bels or dB in quite the same way.  When using bels or decibels to express a gain other than power, be it voltage or current, we must perform the calculation in terms of how much power gain there would be for that amount of voltage or current gain.  For a constant load impedance, a voltage or current gain of 2 equates to a power gain of 4 (2$^{2}$); a voltage or current gain of 3 equates to a power gain of 9 (3$^{2}$).  If we multiply either voltage or current by a given factor, then the power gain incurred by that multiplication will be the square of that factor.  This relates back to the forms of Joule's Law where power was calculated from either voltage or current, and resistance:
+ 
+
+ 
+ 
+\includegraphics{13031.eps} 
+ 
+
+Thus, when translating a voltage or current gain \textit{ratio} into a respective gain in terms of the bel unit, we must include this exponent in the equation(s):
+ 
+
+ 
+\includegraphics{13032.eps} 
+ 
+
+The same exponent requirement holds true when expressing voltage or current gains in terms of decibels:
+ 
+
+ 
+ 
+\includegraphics{13033.eps} 
+ 
+
+However, thanks to another interesting property of logarithms, we can simplify these equations to eliminate the exponent by including the ``2'' as a \textit{multiplying factor} for the logarithm function.  In other words, instead of taking the logarithm of the \textit{square} of the voltage or current gain, we just multiply the voltage or current gain's logarithm figure by 2 and the final result in bels or decibels will be the same:
+ 
+
+ 
+ 
+\includegraphics{13034.eps} 
+ 
+
+The process of converting voltage or current gains from bels or decibels into unitless ratios is much the same as it is for power gains:
+ 
+
+ 
+ 
+\includegraphics{13044.eps} 
+ 
+
+Here are the equations used for converting voltage or current gains in decibels into unitless ratios:
+ 
+
+ 
+ 
+\includegraphics{13045.eps} 
+\index{Neper}
+\index{Unit, neper}
+ 
+
+While the bel is a unit naturally scaled for power, another logarithmic unit has been invented to directly express voltage or current gains/losses, and it is based on the \textit{natural} logarithm rather than the \textit{common} logarithm as bels and decibels are.  Called the \textit{neper}, its unit symbol is ``N$_{p}$; though, lower-case ``n'' may be encountered.
+ 
+
+ 
+ 
+\includegraphics{13035.eps} 
+\index{Decineper}
+\index{Unit, decineper}
+\index{dn}
+ 
+
+For better or for worse, neither the neper nor its attenuated cousin, the \textit{decineper}, is popularly used as a unit in American engineering applications.
+ 
+
+ 
+
+\textbf{
+Example:
+}
+The voltage into a 600 $\Omega$ audio line  amplifier is 10 mV, the voltage across a 600 $\Omega$ load  is 1 V. Find the power gain in dB.
+ 
+
+\begin{quotation}
+A$_{(dB)}$ = 20 log$_{10}$(V$_{O}$ /  V$_{I}$) = 20 log$_{10}$ (1 /0.01) = 20 log$_{10}$ (100) = 20 (2) = 40 dB
+\end{quotation}
+ 
+
+\textbf{
+Example:
+}
+Find the voltage gain  ratio A$_{V(ratio)}$ =  (V$_{O}$ /  V$_{I}$) for a 20 dB gain amplifier having a 50 $\Omega$ input and out impedance.
+ 
+
+\begin{quotation}
+A$_{V(dB)}$ = 20 log$_{10}$  A$_{V(ratio)}$
+\end{quotation}
+\begin{quotation}
+ 20 = 20 log$_{10}$  A$_{V(ratio)}$
+\end{quotation}
+\begin{quotation}
+20/20 = log$_{10}$ A$_{P(ratio)}$
+\end{quotation} 
+\begin{quotation}
+10$^{20/20}$ = $10^{log_{10} (A_{V(ratio)})}$
+\end{quotation}
+\begin{quotation}
+10 = A$_{V(ratio)}$ = (V$_{O}$ / V$_{I}$)
+\end{quotation}
+\begin{itemize}
+\item \textbf{REVIEW:}
+\item Gains and losses may be expressed in terms of a unitless ratio, or in the unit of bels (B) or decibels (dB).  A decibel is literally a \textit{deci}-bel: one-tenth of a bel.
+\item The bel is fundamentally a unit for expressing \textit{power} gain or loss.  To convert a power ratio to either bels or decibels, use one of these equations:
+\item  
+\includegraphics{13036.eps}
+\item When using the unit of the bel or decibel to express a \textit{voltage} or \textit{current} ratio, it must be cast in terms of an equivalent \textit{power} ratio.  Practically, this means the use of different equations, with a multiplication factor of 2 for the logarithm value corresponding to an exponent of 2 for the voltage or current gain ratio:
+\item  
+\includegraphics{13037.eps}
+\item To convert a decibel gain into a unitless ratio gain, use one of these equations:
+\item  
+\includegraphics{13046.eps}
+\item A gain (amplification) is expressed as a positive bel or decibel figure.  A loss (attenuation) is expressed as a negative bel or decibel figure.  Unity gain (no gain or loss; ratio = 1) is expressed as zero bels or zero decibels.
+\item When calculating overall gain for an amplifier system composed of multiple amplifier stages, individual gain ratios are \textit{multiplied} to find the overall gain ratio.  Bel or decibel figures for each amplifier stage, on the other hand, are \textit{added} together to determine overall gain.
+\end{itemize}
+
+
+\section{ Absolute dB scales}
+\index{dB, sound measurements}
+\index{Sound intensity measurement}
+ 
+
+It is also possible to use the decibel as a unit of absolute power, in addition to using it as an expression of power gain or loss.  A common example of this is the use of decibels as a measurement of sound pressure intensity.  In cases like these, the measurement is made in reference to some standardized power level defined as 0 dB.  For measurements of sound pressure, 0 dB is loosely defined as the lower threshold of human hearing, objectively quantified as 1 picowatt of sound power per square meter of area.
+ 
+
+ 
+ 
+
+A sound measuring 40 dB on the decibel sound scale would be 10$^{4}$ times greater than the threshold of hearing.  A 100 dB sound would be 10$^{10}$ (ten billion) times greater than the threshold of hearing.
+ 
+
+\index{A-weighted dB scale}
+\index{dBA}
+ 
+
+Because the human ear is not equally sensitive to all frequencies of sound, variations of the decibel sound-power scale have been developed to represent physiologically equivalent sound intensities at different frequencies.  Some sound intensity instruments were equipped with filter networks to give disproportionate indications across the frequency scale, the intent of which to better represent the effects of sound on the human body.  Three filtered scales became commonly known as the ``A,'' ``B,'' and ``C'' weighted scales.  Decibel sound intensity indications measured through these respective filtering networks were given in units of dBA, dBB, and dBC.  Today, the ``A-weighted scale'' is most commonly used for expressing the equivalent physiological impact on the human body, and is especially useful for rating dangerously loud noise sources.
+ 
+
+ 
+\index{dB, absolute power measurements}
+\index{dBm}
+ 
+
+Another standard-referenced system of power measurement in the unit of decibels has been established for use in telecommunications systems.  This is called the \textit{dBm} scale. (Figure~\ref{13057.eps})  The reference point, 0 dBm, is defined as 1 milliwatt of electrical power dissipated by a 600 $\Omega$ load.  According to this scale, 10 dBm is equal to 10 times the reference power, or 10 milliwatts; 20 dBm is equal to 100 times the reference power, or 100 milliwatts.  Some AC voltmeters come equipped with a dBm range or scale (sometimes labeled ``DB'') intended for use in measuring AC signal power across a 600 $\Omega$ load.  0 dBm on this scale is, of course, elevated above zero because it represents something greater than 0 (actually, it represents 0.7746 volts across a 600 $\Omega$ load, voltage being equal to the square root of power times resistance; the square root of 0.001 multiplied by 600).  When viewed on the face of an analog meter movement, this dBm scale appears compressed on the left side and expanded on the right in a manner not unlike a resistance scale, owing to its logarithmic nature.
+ 
+
+ 
+ 
+
+Radio frequency power measurements for low level signals encountered in radio receivers use dBm measurements referenced to a  50 $\Omega$ load.  Signal generators for the evaluation of radio receivers may output an adjustable dBm rated signal. The signal level is selected by a device called an attenuator, described in the next section.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{13057.eps} 
+\caption{\sl Absolute power levels in dBm (decibels referenced to 1 milliwatt). } 
+\label{13057.eps} 
+\end{figure}
+
+\index{VU scale}
+\index{Volume units}
+ 
+
+An adaptation of the dBm scale for audio signal strength is used in studio recording and broadcast engineering for standardizing volume levels, and is called the \textit{VU} scale.  VU meters are frequently seen on electronic recording instruments to indicate whether or not the recorded signal exceeds the maximum signal level limit of the device, where significant distortion will occur.  This ``volume indicator'' scale is calibrated in according to the dBm scale, but does not directly indicate dBm for any signal other than steady sine-wave tones.  The proper unit of measurement for a VU meter is \textit{volume units}.
+ 
+
+\index{dB, absolute power measurements}
+\index{dBW}
+\index{dBk}
+ 
+
+When relatively large signals are dealt with, and an absolute dB scale would be useful for representing signal level, specialized decibel scales are sometimes used with reference points greater than the 1 mW used in dBm.  Such is the case for the \textit{dBW} scale, with a reference point of 0 dBW established at 1 Watt.  Another absolute measure of power called the \textit{dBk} scale references 0 dBk at 1 kW, or 1000 Watts.
+ 
+
+\begin{itemize}
+\item \textbf{REVIEW:}
+\item The unit of the bel or decibel may also be used to represent an absolute measurement of power rather than just a relative gain or loss.  For sound power measurements, 0 dB is defined as a standardized reference point of power equal to 1 picowatt per square meter.  Another dB scale suited for sound intensity measurements is normalized to the same physiological effects as a 1000 Hz tone, and is called the \textit{dBA} scale.  In this system, 0 dBA is defined as any frequency sound having the same physiological equivalence as a 1 picowatt-per-square-meter tone at 1000 Hz.
+\item An electrical dB scale with an absolute reference point has been made for use in telecommunications systems.  Called the \textit{dBm} scale, its reference point of 0 dBm is defined as 1 milliwatt of AC signal power dissipated by a 600 $\Omega$ load.
+\item A \textit{VU} meter reads audio signal level according to the dBm for sine-wave signals.  Because its response to signals other than steady sine waves is not the same as true dBm, its unit of measurement is \textit{volume units}.
+\item dB scales with greater absolute reference points than the dBm scale have been invented for high-power signals.  The \textit{dBW} scale has its reference point of 0 dBW defined as 1 Watt of power.  The \textit{dBk} scale sets 1 kW (1000 Watts) as the zero-point reference.
+\end{itemize}
+
+
+\section{ Attenuators}
+\index{Attenuator}
+ 
+
+Attenuators are passive devices. It is convenient to discuss them along with decibels. Attenuators weaken or \textit{attenuate} the high level output of a signal generator, for example, to provide a lower level signal for something like the antenna input of a sensitive radio receiver.  (Figure~\ref{03376.eps}) The attenuator could be built into the signal generator, or be a stand-alone device. It could provide a fixed or adjustable amount of attenuation. An attenuator section can also provide isolation between a source and a troublesome load.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03376.eps} 
+\caption{\sl Constant impedance attenuator is matched to source impedance Z$_{I}$ and load impedance Z$_{O}$. For radio frequency equipment Z is 50 $\Omega$. } 
+\label{03376.eps} 
+\end{figure}
+
+ 
+
+In the case of a stand-alone attenuator, it must be placed in series between the signal source and the load by breaking  open the signal path as shown in Figure~\ref{03376.eps}. In addition, it must match both the source impedance \textbf{Z$_{I}$} and the load impedance \textbf{Z$_{O}$}, while providing a specified amount of attenuation. In this section we will only consider the special, and most common, case where the source and load impedances are equal. Not considered in this section, unequal source and load impedances may be matched by an attenuator section. However, the formulation is more complex.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03377.eps} 
+\caption{\sl T section and $\Pi$ section attenuators are common forms. } 
+\label{03377.eps} 
+\end{figure}
+
+\index{T-network }
+\index{PI-network }
+ 
+
+Common configurations are the \textbf{T} and \textbf{$\Pi$} networks shown in Figure~\ref{03377.eps}
+% Split for multiple ref'f in one paragraph.
+Multiple attenuator sections may be cascaded when even weaker signals are needed as in Figure~\ref{03385.eps}.
+ 
+
+
+\subsection{ Decibels}
+\index{Decibels, attenuator}
+ 
+
+Voltage ratios, as used in the design of attenuators are often expressed in terms of decibels. The voltage ratio (K below) must be derived from the attenuation in decibels. Power ratios expressed as decibels are additive. For example, a 10 dB attenuator followed by a 6 dB attenuator provides 16dB of attenuation overall.
+ 
+
+\begin{quotation}
+10 dB + 6 db = 16 dB
+\end{quotation}
+ 
+
+Changing sound levels are perceptible roughly proportional to the logarithm of the power ratio (P$_{I}$ / P$_{O}$).
+ 
+
+\begin{quotation}
+sound level = log$_{10}$(P$_{I}$ / P$_{O}$)
+\end{quotation}
+ 
+
+A change  of 1 dB in sound level is barely perceptible to a listener, while 2 db is readily perceptible. An attenuation of 3 dB corresponds to cutting power in half, while a gain of 3 db corresponds to a doubling of the power level. A gain of -3 dB is the same as an attenuation of +3 dB, corresponding to half the original power level.
+ 
+
+The power change in decibels in terms of power ratio is:
+\begin{quotation}
+dB = 10 log$_{10}$(P$_{I}$ / P$_{O}$)
+\end{quotation}
+Assuming that the load R$_{I}$ at P$_{I}$ is the same as the load resistor R$_{O}$ at P$_{O}$ (R$_{I}$ = R$_{O}$), the decibels may be derived from the voltage ratio  (V$_{I}$ /  V$_{O}$) or current ratio (I$_{I}$ / I$_{O}$):
+\begin{quotation}
+P$_{O}$ = V $_{O}$  I$_{O}$ = V$_{O}$$^{2}$ / R = I$_{O}$$^{2}$ R
+\end{quotation}
+\begin{quotation}
+P$_{I}$ = V$_{ I}$ I$_{I}$ = V$_{I}$$^{2}$ / R  = I$_{I}$$^{2}$ R
+\end{quotation}
+\begin{quotation}
+dB = 10 log$_{10}$(P$_{I}$ /  P$_{O}$) = 10 log$_{10}$(V$_{I}$$^{2}$ / V$_{O}$$^{2}$) = 20 log$_{10}$(V$_{I}$/V$_{O}$)
+\end{quotation}
+\begin{quotation}dB = 10 log$_{10}$(P$_{I}$ /  P$_{O}$) = 10 log$_{10}$(I$_{I}$$^{2}$ / I$_{O}$$^{2}$) = 20 log$_{10}$(I$_{I}$/I$_{O}$)
+\end{quotation}
+ 
+
+The two most often used forms of the decibel equation are:
+ 
+
+\begin{quotation}
+dB = 10 log$_{10}$(P$_{I}$ /  P$_{O}$) ~  ~  ~or  ~  ~ ~~~~dB = 20 log$_{10}$(V$_{I}$ /  V$_{O}$)
+\end{quotation}
+ 
+
+We will use the latter form, since we need the voltage ratio. Once again, the voltage ratio form of equation is only applicable where the two corresponding resistors are equal. That is, the source and load resistance need to be equal.
+ 
+
+ 
+
+\textbf{
+Example:
+}
+Power into an attenuator is 10 Watts, the power out is 1 Watt. Find the attenuation in dB.
+ 
+
+\begin{quotation}
+dB = 10 log$_{10}$(P$_{I}$ /  P$_{O}$) = 10 log$_{10}$ (10 /1) = 10 log$_{10}$ (10) = 10 (1) = 10 dB
+\end{quotation}
+ 
+
+\textbf{
+Example:
+}
+ Find the voltage attenuation ratio (K=  (V$_{I}$ /  V$_{O}$)) for a 10 dB attenuator.
+ 
+
+\begin{quotation}
+dB = 10= 20 log$_{10}$(V$_{I}$ /  V$_{O}$)
+\end{quotation}
+\begin{quotation}
+10/20 = log$_{10}$(V$_{I}$ /  V$_{O}$)
+\end{quotation}
+\begin{quotation}10$^{10/20}$ = $10^{log_{10}(V_{I} / V_{O})}$\end{quotation}
+\begin{quotation}
+3.16 = (V$_{I}$ / V$_{O}$) = A$_{P(ratio)}$
+\end{quotation}
+ 
+
+\textbf{
+Example:
+}
+Power into an attenuator is 100 milliwatts, the power out is 1 milliwatt. Find the attenuation in dB.
+ 
+
+\begin{quotation}
+dB = 10 log$_{10}$(P$_{I}$ / P$_{O}$) = 10 log$_{10}$ (100 /1) = 10 log$_{10}$ (100) = 10 (2) = 20 dB
+\end{quotation}
+ 
+
+\textbf{
+Example:
+}
+ Find the voltage attenuation ratio (K=  (V$_{I}$ / V$_{O}$)) for a 20 dB attenuator.
+ 
+
+\begin{quotation}
+dB = 20= 20 log$_{10}$(V$_{I}$ / V$_{O}$ )
+\end{quotation}
+\begin{quotation}10$^{20/20}$ = $10^{ log_{10}(V_{I} / V_{O} )}$\end{quotation}
+\begin{quotation}
+10 = (V$_{I}$ / V$_{O}$ ) = K
+\end{quotation}
+
+
+\subsection{ T-section attenuator}
+\index{Attenuator, T}
+ 
+
+The T and $\Pi$ attenuators must be connected to a \textbf{Z} source and  \textbf{Z} load impedance. The  \textbf{Z}-(arrows) pointing away from the attenuator in the figure below indicate this. The \textbf{Z}-(arrows) pointing toward the attenuator indicates that the impedance seen looking into the attenuator with a load Z on the opposite end is  Z,  Z=50 $\Omega$ for our case. This impedance is a constant (50 $\Omega$) with respect to attenuation-- impedance does not change when attenuation is changed.
+ 
+
+ 
+
+The  table in  Figure~\ref{03378.eps} lists resistor values for the \textbf{T} and \textbf{$\Pi$} attenuators to match a 50 $\Omega$ source/ load, as is the usual requirement in radio frequency work.
+ 
+
+ 
+
+Telephone utility and other audio work often requires matching to 600 $\Omega$. Multiply all \textbf{R} values by the ratio (600/50) to correct for 600 $\Omega$  matching. Multiplying by 75/50 would convert table values to match a 75 $\Omega$ source and load.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03378.eps} 
+\caption{\sl Formulas for T-section attenuator resistors, given K, the voltage attenuation ratio, and Z$_{I}$ = Z$_{O}$ = 50 $\Omega$. } 
+\label{03378.eps} 
+\end{figure}
+
+ 
+
+The amount of attenuation is customarily specified in dB (decibels). Though, we need the voltage (or current) ratio \textbf{K} to find the resistor values from equations. See the \textbf{dB/20} term in the power of \textbf{10} term for computing the voltage ratio \textbf{K} from dB, above.
+ 
+
+ 
+
+The \textbf{T} (and below \textbf{$\Pi$}) configurations are most commonly used as they provide bidirectional matching. That is, the attenuator input and output may be swapped end for end and still match the source and load impedances while supplying the same attenuation.
+ 
+
+ 
+
+Disconnecting the source and  looking in to the right at \textbf{V$_{I}$}, we need to see a series parallel combination of \textbf{R$_{1}$}, \textbf{R$_{2}$},  \textbf{R$_{1}$}, and \textbf{Z}  looking like an equivalent resistance of \textbf{Z$_{IN}$}, the same as the source/load impedance Z: (a load of Z is connected to the output.)
+ 
+
+\begin{quotation}
+Z$_{IN}$ = R$_{1}$ + (R$_{2}$ $|$$|$(R$_{1}$ + Z))
+\end{quotation}
+ 
+
+For example, substitute the 10 dB values from the 50 $\Omega$ attenuator table for \textbf{R$_{1}$}  and \textbf{R$_{2}$} as shown in Figure~\ref{03379.eps}.
+ 
+
+\begin{quotation}
+Z$_{IN}$ = 25.97 + (35.14 $|$$|$(25.97 + 50))
+\end{quotation}
+\begin{quotation}
+Z$_{IN}$ = 25.97 + (35.14 $|$$|$ 75.97 )
+\end{quotation}
+\begin{quotation}
+Z$_{IN}$ = 25.97 +  24.03  = 50
+\end{quotation}
+ 
+
+This shows us that we see 50 $\Omega$ looking right into the example attenuator (Figure~\ref{03379.eps}) with a 50 $\Omega$ load.
+ 
+
+ 
+
+Replacing the source generator, disconnecting load \textbf{Z} at \textbf{V$_{O}$}, and  looking in to the left, should give us the same equation as above for the impedance at \textbf{V$_{O}$}, due to symmetry.  Moreover, the three resistors must be  values  which supply the required attenuation from input to output. This is accomplished by the equations for \textbf{R$_{1}$} and  \textbf{R$_{2}$} above as applied to the \textbf{T}-attenuator below.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03379.eps} 
+\caption{\sl 10 dB T-section attenuator for insertion between a 50 $\Omega$ source and load. } 
+\label{03379.eps} 
+\end{figure}
+
+ 
+
+ 
+
+\bigskip 
+
+
+\subsection{ PI-section attenuator}
+\index{Attenuator, PI}
+ 
+
+The table in Figure~\ref{03380.eps} lists resistor values for the \textbf{$\Pi$} attenuator matching a 50 $\Omega$ source/ load at some common attenuation levels. The resistors corresponding to other attenuation levels may be calculated from the equations.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03380.eps} 
+\caption{\sl Formulas for $\Pi$-section attenuator resistors, given K, the voltage attenuation ratio, and Z$_{I}$ = Z$_{O}$ = 50 $\Omega$. } 
+\label{03380.eps} 
+\end{figure}
+
+ 
+
+The above apply to the $\pi$-attenuator below.
+ 
+
+ 
+
+What resistor values would be required for both the \textbf{$\Pi$} attenuators for 10 dB of attenuation matching a  50  $\Omega$ source and load?
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03381.eps} 
+\caption{\sl 10 dB $\Pi$-section attenuator example for matching a 50 $\Omega$ source and load. } 
+\label{03381.eps} 
+\end{figure}
+
+ 
+
+The \textbf{10 dB} corresponds to a voltage attenuation ratio of \textbf{K=3.16} in the next to last line of the above table. Transfer the resistor values in that line to the resistors on the schematic diagram  in Figure~\ref{03381.eps}.
+ 
+
+
+
+\subsection{ L-section attenuator}
+\index{Attenuator, L}
+ 
+
+The table in Figure~\ref{03382.eps} lists resistor values for the \textbf{L} attenuators to match a 50 $\Omega$ source/ load.
+% Split for multiple references cannot have two without cr at end
+The table in Figure~\ref{03383.eps} lists resistor values for an alternate form. Note that the resistor values are not the same.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03382.eps} 
+\caption{\sl L-section attenuator table for 50 $\Omega$ source and load impedance. } 
+\label{03382.eps} 
+\end{figure}
+
+ 
+
+The  above apply to the \textbf{L} attenuator below.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03383.eps} 
+\caption{\sl Alternate form L-section attenuator table for 50 $\Omega$ source and load impedance. } 
+\label{03383.eps} 
+\end{figure}
+
+
+
+\subsection{ Bridged T attenuator}
+\index{Attenuator, bridged T}
+ 
+
+The table in Figure~\ref{03384.eps} lists resistor values for the bridged \textbf{T} attenuators to match a 50 $\Omega$ source and load. The bridged-T attenuator is not often used. Why not?
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03384.eps} 
+\caption{\sl Formulas and abbreviated table for bridged-T attenuator section, Z = 50 $\Omega$. } 
+\label{03384.eps} 
+\end{figure}
+
+
+
+\subsection{ Cascaded sections }
+ 
+
+Attenuator sections can be cascaded as in Figure~\ref{03385.eps} for more attenuation than may be available from a single section. For example two 10 db attenuators may be cascaded to provide 20 dB of attenuation, the dB values being additive. The voltage attenuation ratio \textbf{K} or \textbf{V$_{I}$/V$_{O}$} for a 10 dB attenuator section is 3.16. The voltage attenuation ratio for the two cascaded sections is the product of the two \textbf{K}s or 3.16x3.16=10 for the two cascaded sections.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03385.eps} 
+\caption{\sl Cascaded attenuator sections: dB attenuation is additive. } 
+\label{03385.eps} 
+\end{figure}
+
+ 
+
+Variable attenuation can be provided in discrete steps by a switched attenuator. The example  Figure~\ref{03386.eps}, shown in the 0 dB position, is capable of 0 through 7 dB of attenuation by additive switching of none, one or more sections.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03386.eps} 
+\caption{\sl Switched attenuator: attenuation is variable in discrete steps. } 
+\label{03386.eps} 
+\end{figure}
+
+ 
+
+The typical multi section attenuator has more sections than the above figure shows.  The addition of  a 3 or 8 dB section above enables the unit to cover to 10 dB and beyond. Lower signal levels are achieved  by the addition of 10 dB and 20 dB sections, or a  binary multiple 16 dB section.
+ 
+
+
+
+\subsection{ RF attenuators}
+\index{Attenuator, coaxial}
+\index{Attenuator, rf}
+ 
+
+For radio frequency (RF) work ($<$1000 Mhz), the individual sections must be mounted in shielded compartments to thwart capacitive coupling if lower signal levels are to be achieved at the highest frequencies. The individual sections of the switched attenuators in the previous section are mounted in shielded sections.  Additional measures may be taken to extend the frequency range to beyond 1000 Mhz. This involves construction from special shaped lead-less resistive elements.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03387.eps} 
+\caption{\sl Coaxial T-attenuator for radio frequency work. } 
+\label{03387.eps} 
+\end{figure}
+
+ 
+
+A coaxial T-section attenuator consisting of resistive rods and a resistive disk is shown in  Figure~\ref{03387.eps}.  This construction is usable to a few gigahertz.
+% Split for multiple references cannot have two without cr at end
+The coaxial $\Pi$ version would have one resistive rod between two resistive disks in the coaxial line as in  Figure~\ref{03388.eps}.
+ 
+
+\index{Attenuator, coaxial}
+\index{Attenuator, rf}
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{03388.eps} 
+\caption{\sl Coaxial $\Pi$-attenuator for radio frequency work. } 
+\label{03388.eps} 
+\end{figure}
+
+ 
+
+RF connectors, not shown, are attached to the ends of the above T and $\Pi$ attenuators. The connectors allow individual attenuators to be cascaded, in addition to connecting between a  source and load. For example, a 10 dB attenuator may be placed between a troublesome signal source and an expensive spectrum analyzer input. Even though we may not need the attenuation, the expensive test equipment is protected from the source by attenuating any overvoltage. 
+ 
+
+
+\textbf{Summary: Attenuators}
+\begin{itemize}
+\item An \textit{attenuator} reduces an input signal to a lower level. 
+\item The amount of attenuation is specified in \textit{decibels} (dB). Decibel values are additive for cascaded attenuator sections.
+\item dB from power ratio:~~~~~~dB = 10 log$_{10}$(P$_{I}$ /  P$_{O}$)
+\item dB from voltage ratio:~~~~dB = 20 log$_{10}$(V$_{I}$ /  V$_{O}$)
+\item \textit{T} and \textit{$\Pi$} section attenuators are the most common circuit configurations.
+\end{itemize}
+
+
+\section*{ Contributors}
+ 
+
+Contributors to this chapter are listed in chronological order of their contributions, from most recent to first.  See Appendix 2 (Contributor List) for dates and contact information.
+ 
+
+ 
+
+\textbf{Colin Barnard} (November 2003): Correction regarding Alexander Graham Bell's country of origin (Scotland, not the United States).
+ 
+
+
+ 
+\end{cbunit} 
+
+\vfil \eject 

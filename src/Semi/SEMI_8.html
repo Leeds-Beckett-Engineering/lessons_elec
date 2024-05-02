@@ -34,32 +34,32 @@
  
 
 <ul>
-<li><a href="#xtocid6036010"><u>Introduction</u></a></li>
-<li><a href="#xtocid6036011"><u>Single-ended and differential amplifiers</u></a></li>
-<li><a href="#xtocid6036012"><u>The "operational" amplifier</u></a></li>
-<li><a href="#xtocid6036013"><u>Negative feedback</u></a></li>
-<li><a href="#xtocid6036014"><u>Divided feedback</u></a></li>
-<li><a href="#xtocid6036015"><u>An analogy for divided feedback</u></a></li>
-<li><a href="#xtocid6036016"><u>Voltage-to-current signal conversion</u></a></li>
-<li><a href="#xtocid6036017"><u>Averager and summer circuits</u></a></li>
-<li><a href="#xtocid6036018"><u>Building a differential amplifier</u></a></li>
-<li><a href="#xtocid6036019"><u>The instrumentation amplifier</u></a></li>
-<li><a href="#xtocid60360110"><u>Differentiator and integrator circuits</u></a></li>
-<li><a href="#xtocid60360111"><u>Positive feedback</u></a></li>
-<li><a href="#xtocid60360112"><u>Practical considerations</u></a></li>
+<li><a href="#xtocid8052850"><u>Introduction</u></a></li>
+<li><a href="#xtocid8052851"><u>Single-ended and differential amplifiers</u></a></li>
+<li><a href="#xtocid8052852"><u>The "operational" amplifier</u></a></li>
+<li><a href="#xtocid8052853"><u>Negative feedback</u></a></li>
+<li><a href="#xtocid8052854"><u>Divided feedback</u></a></li>
+<li><a href="#xtocid8052855"><u>An analogy for divided feedback</u></a></li>
+<li><a href="#xtocid8052856"><u>Voltage-to-current signal conversion</u></a></li>
+<li><a href="#xtocid8052857"><u>Averager and summer circuits</u></a></li>
+<li><a href="#xtocid8052858"><u>Building a differential amplifier</u></a></li>
+<li><a href="#xtocid8052859"><u>The instrumentation amplifier</u></a></li>
+<li><a href="#xtocid80528510"><u>Differentiator and integrator circuits</u></a></li>
+<li><a href="#xtocid80528511"><u>Positive feedback</u></a></li>
+<li><a href="#xtocid80528512"><u>Practical considerations</u></a></li>
 <ul>
-<li><a href="#xtocid60360113"><u>Common-mode gain</u></a></li>
-<li><a href="#xtocid60360114"><u>Offset voltage</u></a></li>
-<li><a href="#xtocid60360115"><u>Bias current</u></a></li>
-<li><a href="#xtocid60360116"><u>Drift</u></a></li>
-<li><a href="#xtocid60360117"><u>Frequency response</u></a></li>
-<li><a href="#xtocid60360118"><u>Input to output phase shift</u></a></li>
+<li><a href="#xtocid80528513"><u>Common-mode gain</u></a></li>
+<li><a href="#xtocid80528514"><u>Offset voltage</u></a></li>
+<li><a href="#xtocid80528515"><u>Bias current</u></a></li>
+<li><a href="#xtocid80528516"><u>Drift</u></a></li>
+<li><a href="#xtocid80528517"><u>Frequency response</u></a></li>
+<li><a href="#xtocid80528518"><u>Input to output phase shift</u></a></li>
 </ul>
-<li><a href="#xtocid60360119"><u>Operational amplifier models</u></a></li>
-<li><a href="#xtocid60360120"><u>Data</u></a></li>
-<li><a href="#xtocid60360121"><u>Contributors</u></a></li></ul>
+<li><a href="#xtocid80528519"><u>Operational amplifier models</u></a></li>
+<li><a href="#xtocid80528520"><u>Data</u></a></li>
+<li><a href="#xtocid80528521"><u>Contributors</u></a></li></ul>
 
-<h2><u><a name="xtocid6036010">Introduction</a></u></h2>
+<h2><u><a name="xtocid8052850">Introduction</a></u></h2>
 
 <p>
 The operational amplifier is arguably the most useful single device in analog electronic circuitry.  With only a handful of external components, it can be made to perform a wide variety of analog signal processing tasks.  It is also quite affordable, most general-purpose amplifiers selling for under a dollar apiece.  Modern designs have been engineered with durability in mind as well: several "op-amps" are manufactured that can sustain direct short-circuits on their outputs without damage.
@@ -77,7 +77,7 @@ One key to the usefulness of these little circuits is in the engineering princip
 
 
 
-<h2><u><a name="xtocid6036011">Single-ended and differential amplifiers</a></u></h2>
+<h2><u><a name="xtocid8052851">Single-ended and differential amplifiers</a></u></h2>
 
 <p>
 For ease of drawing complex circuit diagrams, electronic amplifiers are often symbolized by a simple triangle shape, where the internal components are not individually represented.  This symbology is very handy for cases where an amplifier's construction is irrelevant to the greater function of the overall circuit, and it is worthy of familiarization:
@@ -183,7 +183,7 @@ If the input voltages to this amplifier represented mathematical quantities (as 
 
 
 
-<h2><u><a name="xtocid6036012">The "operational" amplifier</a></u></h2>
+<h2><u><a name="xtocid8052852">The "operational" amplifier</a></u></h2>
 
 <p>
 Long before the advent of digital electronic technology, computers were built to electronically perform calculations by employing voltages and currents to represent numerical quantities.  This was especially useful for the simulation of physical processes.  A variable voltage, for instance, might represent velocity or force in a physical system.  Through the use of resistive voltage dividers and voltage amplifiers, the mathematical operations of division and multiplication could be easily performed on these signals.  
@@ -312,7 +312,7 @@ This very same technology is used in some analog-to-digital signal converters, n
 
 
 
-<h2><u><a name="xtocid6036013">Negative feedback</a></u></h2>
+<h2><u><a name="xtocid8052853">Negative feedback</a></u></h2>
 
 <p>
 If we connect the output of an op-amp to its inverting input and apply a voltage signal to the noninverting input, we find that the output voltage of the op-amp closely follows that input voltage (I've neglected to draw in the power supply, +V/-V wires, and ground symbol for simplicity):
@@ -391,7 +391,7 @@ It should be mentioned that many op-amps cannot swing their output voltages exac
 
 
 
-<h2><u><a name="xtocid6036014">Divided feedback</a></u></h2>
+<h2><u><a name="xtocid8052854">Divided feedback</a></u></h2>
 
 <p>
 If we add a voltage divider to the negative feedback wiring so that only a <i>fraction</i> of the output voltage is fed back to the inverting input instead of the full amount, the output voltage will be a <i>multiple</i> of the input voltage (please bear in mind that the power supply connections to the op-amp have been omitted once again for simplicity's sake):
@@ -482,7 +482,7 @@ These two amplifier circuits we've just investigated serve the purpose of multip
 
 
 
-<h2><u><a name="xtocid6036015">An analogy for divided feedback</a></u></h2>
+<h2><u><a name="xtocid8052855">An analogy for divided feedback</a></u></h2>
 
 <p>
 A helpful analogy for understanding divided feedback amplifier circuits is that of a mechanical lever, with relative motion of the lever's ends representing change in input and output voltages, and the fulcrum (pivot point) representing the location of the ground point, real or virtual.
@@ -550,7 +550,7 @@ With the inverting amplifier configuration, though, gains of less than 1 are pos
 
 
 
-<h2><u><a name="xtocid6036016">Voltage-to-current signal conversion</a></u></h2>
+<h2><u><a name="xtocid8052856">Voltage-to-current signal conversion</a></u></h2>
 
 <p>
 In instrumentation circuitry, DC signals are often used as analog representations of physical measurements such as temperature, pressure, flow, weight, and motion.  Most commonly, <i>DC current</i> signals are used in preference to <i>DC voltage</i> signals, because current signals are exactly equal in magnitude throughout the series circuit loop carrying current from the source (measuring device) to the load (indicator, recorder, or controller), whereas voltage signals in a parallel circuit may vary from one end to the other due to resistive wire losses.  Furthermore, current-sensing instruments typically have low impedances (while voltage-sensing instruments have high impedances), which gives current-sensing instruments greater electrical noise immunity.  
@@ -596,7 +596,7 @@ Another name for this circuit is <i>transconductance amplifier</i>.  In electron
 
 
 
-<h2><u><a name="xtocid6036017">Averager and summer circuits</a></u></h2>
+<h2><u><a name="xtocid8052857">Averager and summer circuits</a></u></h2>
 
 <p>
 If we take three equal resistors and connect one end of each to a common point, then apply three input voltages (one to each of the resistors' free ends), the voltage seen at the common point will be the mathematical <i>average</i> of the three.
@@ -663,7 +663,7 @@ Summer (adder) circuits are quite useful in analog computer design, just as mult
 
 
 
-<h2><u><a name="xtocid6036018">Building a differential amplifier</a></u></h2>
+<h2><u><a name="xtocid8052858">Building a differential amplifier</a></u></h2>
 
 <p>
 An op-amp with no feedback is already a differential amplifier, amplifying the voltage difference between the two inputs.  However, its gain cannot be controlled, and it is generally too high to be of any practical use.  So far, our application of negative feedback to op-amps has resulting in the practical loss of one of the inputs, the resulting amplifier only good for amplifying a single voltage signal input.  With a little ingenuity, however, we can construct an op-amp circuit maintaining both voltage inputs, yet with a controlled gain set by external resistors. 
@@ -699,7 +699,7 @@ Now the V<sub>1</sub> and V<sub>2</sub> input lines are connected straight to th
 
 
 
-<h2><u><a name="xtocid6036019">The instrumentation amplifier</a></u></h2>
+<h2><u><a name="xtocid8052859">The instrumentation amplifier</a></u></h2>
 
 <p>
 As suggested before, it is beneficial to be able to adjust the gain of the amplifier circuit without having to change more than one resistor value, as is necessary with the previous design of differential amplifier.  The so-called <i>instrumentation</i> builds on the last version of differential amplifier to give us that capability:
@@ -736,7 +736,7 @@ Though it may not be obvious by looking at the schematic, we can change the diff
 
 
 
-<h2><u><a name="xtocid60360110">Differentiator and integrator circuits</a></u></h2>
+<h2><u><a name="xtocid80528510">Differentiator and integrator circuits</a></u></h2>
 
 <p>
 By introducing electrical reactance into the feedback loops of op-amp amplifier circuits, we can cause the output to respond to changes in the input voltage over <i>time</i>.  Drawing their names from their respective calculus functions, the <i>integrator</i> produces a voltage output proportional to the product (multiplication) of the input voltage and time; and the <i>differentiator</i> (not to be confused with <i>differential</i>) produces a voltage output proportional to the input voltage's rate of change.
@@ -832,7 +832,7 @@ Another application would be to integrate a signal representing water flow, prod
 
 
 
-<h2><u><a name="xtocid60360111">Positive feedback</a></u></h2>
+<h2><u><a name="xtocid80528511">Positive feedback</a></u></h2>
 
 <p>
 As we've seen, negative feedback is an incredibly useful principle when applied to operational amplifiers.  It is what allows us to create all these practical circuits, being able to precisely set gains, rates, and other significant parameters with just a few changes of resistor values.  Negative feedback makes all these circuits stable and self-correcting.
@@ -939,7 +939,7 @@ When the output is saturated positive, the V<sub>ref</sub> will be positive, and
 
 
 
-<h2><u><a name="xtocid60360112">Practical considerations</a></u></h2>
+<h2><u><a name="xtocid80528512">Practical considerations</a></u></h2>
 
 
 <p>
@@ -951,7 +951,7 @@ Real operational have some imperfections compared to an &ldquo;ideal&rdquo; mode
 
 
 
-<h3><u><a name="xtocid60360113">Common-mode gain</a></u></h3>
+<h3><u><a name="xtocid80528513">Common-mode gain</a></u></h3>
 
 <p>
 As stated before, an ideal differential amplifier only amplifies the voltage <i>difference</i> between its two inputs.  If the two inputs of a differential amplifier were to be shorted together (thus ensuring zero potential difference between them), there should be no change in output voltage for any amount of voltage applied between those two shorted inputs and ground:
@@ -1091,7 +1091,7 @@ While this problem may seem easy to avoid, its possibility is more likely than y
 
 
 
-<h3><u><a name="xtocid60360114">Offset voltage</a></u></h3>
+<h3><u><a name="xtocid80528514">Offset voltage</a></u></h3>
 
 <a name="Offset voltage, op-amp"></a>
 
@@ -1131,7 +1131,7 @@ On single op-amps such as the 741 and 3130, the offset null connection points ar
 
 
 
-<h3><u><a name="xtocid60360115">Bias current</a></u></h3>
+<h3><u><a name="xtocid80528515">Bias current</a></u></h3>
 
 <a name="Bias current, op-amp"></a>
 
@@ -1249,7 +1249,7 @@ Without a ground reference on the power supply, the bias currents will have no c
 
 
 
-<h3><u><a name="xtocid60360116">Drift</a></u></h3>
+<h3><u><a name="xtocid80528516">Drift</a></u></h3>
 
 <a name="Drift, op-amp"></a>
 
@@ -1273,7 +1273,7 @@ To minimize op-amp drift, we can select an op-amp made to have minimum drift, an
 
 
 
-<h3><u><a name="xtocid60360117">Frequency response</a></u></h3>
+<h3><u><a name="xtocid80528517">Frequency response</a></u></h3>
 
 <a name="Frequency response, op-amp"></a>
 
@@ -1311,7 +1311,7 @@ Op-amp manufacturers will publish the frequency response curves for their produc
 <a name="Phase shift, op-amp"></a>
 
 
-<h3><u><a name="xtocid60360118">Input to output phase shift</a></u></h3>
+<h3><u><a name="xtocid80528518">Input to output phase shift</a></u></h3>
 
 
 <!--Had trouble screen capturing PNGs, captured JPGs instead. Doesnt quite follow Tony's convention.-->
@@ -1396,7 +1396,7 @@ Finally,  Figure <a href="#53008.jpg">  below</a> is set for 220 MHz, and the ex
 
 
 
-<h2><u><a name="xtocid60360119">Operational amplifier models</a></u></h2>
+<h2><u><a name="xtocid80528519">Operational amplifier models</a></u></h2>
 
 <p>
 While mention of operational amplifiers typically provokes visions of semiconductor devices built as integrated circuits on a miniature silicon chip, the first op-amps were actually vacuum tube circuits.  The first commercial, general purpose operational amplifier was manufactured by the George A. Philbrick Researches, Incorporated, in 1952.  Designated the K2-W, it was built around two twin-triode tubes mounted in an assembly with an octal (8-pin) socket for easy installation and servicing in electronic equipment chassis of that era.  The assembly looked something like this:
@@ -1617,7 +1617,7 @@ Amplifier packages may also be purchased as complete application circuits as opp
 
 
 
-<h2><u><a name="xtocid60360120">Data</a></u></h2>
+<h2><u><a name="xtocid80528520">Data</a></u></h2>
 
 <p>
 Parametrical data for all semiconductor op-amp models <i>except</i> the CA3130 comes from National Semiconductor's online resources, available at this website: <a href="http://www.national.com">[*]</a>.  Data for the CA3130 comes from Harris Semiconductor's CA3130/CA3130A datasheet (file number 817.4).
@@ -1628,7 +1628,7 @@ Parametrical data for all semiconductor op-amp models <i>except</i> the CA3130 c
 
 
 
-<h2><u><a name="xtocid60360121">Contributors</a></u></h2>
+<h2><u><a name="xtocid80528521">Contributors</a></u></h2>
 
 
 

@@ -1,0 +1,41 @@
+ 
+\begin{cbunit} 
+
+\chapter{PERIODIC TABLE OF THE ELEMENTS} 
+\minitoc 
+\bigskip 
+
+\index{Periodic table}
+
+\section{ Table (landscape view)}
+ 
+
+See Figure~\ref{01064.eps}.
+ 
+
+ 
+\begin{figure}[hbtp!] 
+\centering 
+\includegraphics{01064.eps} 
+\caption{\sl Periodic table of chemical elements. } 
+\label{01064.eps} 
+\end{figure}
+
+
+
+\section{ Data}
+ 
+
+Atomic masses shown in parentheses indicate the \textit{most stable} isotope (longest half-life) known.
+ 
+
+ 
+
+Electron configuration data was taken from Douglas C. Giancoli's \underbar{Physics}, 3rd edition.  Average atomic masses were taken from Kenneth W. Whitten's, Kenneth D. Gailey's, and Raymond E. Davis' \underbar{General Chemistry}, 3rd edition.  In the latter book, the masses were specified as 1985 IUPAC values.
+ 
+
+
+ 
+\end{cbunit} 
+
+\vfil \eject 
