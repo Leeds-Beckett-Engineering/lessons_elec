@@ -1,0 +1,97 @@
+ 
+\begin{cbunit} 
+
+\chapter{TRIGONOMETRY REFERENCE} 
+\minitoc 
+\bigskip 
+
+
+\section{ Right triangle trigonometry}
+ 
+\medskip \centerline{\includegraphics{01001.eps}} 
+ 
+
+A \textit{right triangle} is defined as having one angle precisely equal to 90$^{o}$ (a \textit{right angle}).
+ 
+
+
+\subsection{ Trigonometric identities}
+\index{Trigonometric identities}
+ 
+\includegraphics{11034.eps} 
+\index{Hypotenuse}
+\index{Opposite}
+\index{Adjacent}
+ 
+
+H is the \textit{Hypotenuse}, always being opposite the right angle.  Relative to angle x, O is the \textit{Opposite} and A is the \textit{Adjacent}. 
+ 
+
+ 
+
+"Arc" functions such as "arcsin", "arccos", and "arctan" are the complements of normal trigonometric functions.  These functions return an angle for a ratio input.  For example, if the tangent of 45$^{o}$ is equal to 1, then the "arctangent" (arctan) of 1 is 45$^{o}$.  "Arc" functions are useful for finding angles in a right triangle if the side lengths are known.
+ 
+
+
+
+\subsection{ The Pythagorean theorem}
+\index{Pythagorean Theorem}
+ 
+\includegraphics{11035.eps} 
+
+
+
+\section{ Non-right triangle trigonometry}
+ 
+\medskip \centerline{\includegraphics{01002.eps}} 
+
+\subsection{ The Law of Sines (for \textit{any} triangle)}
+\index{Law of sines}
+\index{Sines, law of}
+ 
+\includegraphics{11036.eps} 
+
+
+\subsection{ The Law of Cosines (for \textit{any} triangle)}
+\index{Law of cosines}
+\index{Cosines, law of}
+ 
+\includegraphics{11037.eps} 
+
+
+
+\section{ Trigonometric equivalencies}
+\index{Trigonometric equivalencies}
+ 
+\includegraphics{11038.eps} 
+
+
+\section{ Hyperbolic functions}
+\index{Hyperbolic functions}
+\index{Radian}
+\index{Unit, radian}
+ 
+\includegraphics{11039.eps} 
+ 
+
+Note: all angles (x) must be expressed in units of \textit{radians} for these hyperbolic functions.  There are 2$\pi$ radians in a circle (360$^{o}$).
+ 
+
+
+
+\section{ Contributors}
+ 
+
+Contributors to this chapter are listed in chronological order of their contributions, from most recent to first.  See Appendix 2 (Contributor List) for dates and contact information.
+ 
+
+ 
+
+\textbf{Harvey Lew} (??? 2003): Corrected typographical error: "tangent" should have been "cotangent".
+ 
+
+
+ 
+\end{cbunit} 
+
+\vfil \eject 
