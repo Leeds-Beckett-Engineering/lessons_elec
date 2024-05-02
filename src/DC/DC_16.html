@@ -34,17 +34,17 @@
  
 
 <ul>
-<li><a href="#xtocid5285790"><u>Electrical transients</u></a></li>
-<li><a href="#xtocid5285791"><u>Capacitor transient response</u></a></li>
-<li><a href="#xtocid5285792"><u>Inductor transient response</u></a></li>
-<li><a href="#xtocid5285793"><u>Voltage and current calculations</u></a></li>
-<li><a href="#xtocid5285794"><u>Why L/R and not LR?</u></a></li>
-<li><a href="#xtocid5285795"><u>Complex voltage and current calculations</u></a></li>
-<li><a href="#xtocid5285796"><u>Complex circuits</u></a></li>
-<li><a href="#xtocid5285797"><u>Solving for unknown time</u></a></li>
-<li><a href="#xtocid5285798"><u>Contributors</u></a></li></ul>
+<li><a href="#xtocid15066550"><u>Electrical transients</u></a></li>
+<li><a href="#xtocid15066551"><u>Capacitor transient response</u></a></li>
+<li><a href="#xtocid15066552"><u>Inductor transient response</u></a></li>
+<li><a href="#xtocid15066553"><u>Voltage and current calculations</u></a></li>
+<li><a href="#xtocid15066554"><u>Why L/R and not LR?</u></a></li>
+<li><a href="#xtocid15066555"><u>Complex voltage and current calculations</u></a></li>
+<li><a href="#xtocid15066556"><u>Complex circuits</u></a></li>
+<li><a href="#xtocid15066557"><u>Solving for unknown time</u></a></li>
+<li><a href="#xtocid15066558"><u>Contributors</u></a></li></ul>
 
-<h2><u><a name="xtocid5285790">Electrical transients</a></u></h2>
+<h2><u><a name="xtocid15066550">Electrical transients</a></u></h2>
 
 <a name="Transient"></a>
 
@@ -59,7 +59,7 @@ This chapter explores the response of capacitors and inductors to sudden changes
 
 
 
-<h2><u><a name="xtocid5285791">Capacitor transient response</a></u></h2>
+<h2><u><a name="xtocid15066551">Capacitor transient response</a></u></h2>
 
 <p>
 Because capacitors store energy in the form of an electric field, they tend to act like small secondary-cell batteries, being able to store and release electrical energy.  A fully discharged capacitor maintains zero volts across its terminals, and a charged capacitor maintains a steady quantity of voltage across its terminals, just like a battery.  When capacitors are placed in a circuit with other sources of voltage, they will absorb energy from those sources, just as a secondary-cell battery will become charged as a result of being connected to a generator.  A fully discharged capacitor, having a terminal voltage of zero, will initially act as a short-circuit when attached to a source of voltage, drawing maximum current as it begins to build a charge.  Over time, the capacitor's terminal voltage rises to meet the applied voltage from the source, and the current through the capacitor decreases correspondingly.  Once the capacitor has reached the full voltage of the source, it will stop drawing current from it, and behave essentially as an open-circuit.
@@ -181,7 +181,7 @@ As you can see, I have used the <tt>.plot</tt> command in the netlist instead of
 
 
 
-<h2><u><a name="xtocid5285792">Inductor transient response</a></u></h2>
+<h2><u><a name="xtocid15066552">Inductor transient response</a></u></h2>
 
 <p>
 Inductors have the exact opposite characteristics of capacitors.  Whereas capacitors store energy in an <i>electric</i> field (produced by the voltage between two plates), inductors store energy in a <i>magnetic</i> field (produced by the current through wire).  Thus, while the stored energy in a capacitor tries to maintain a constant voltage across its terminals, the stored energy in an inductor tries to maintain a constant current through its windings.  Because of this, inductors oppose changes in current, and act precisely the opposite of capacitors, which oppose changes in voltage.  A fully discharged inductor (no magnetic field), having zero current through it, will initially act as an open-circuit when attached to a source of voltage (as it tries to maintain zero current), dropping maximum voltage across its leads.  Over time, the inductor's current rises to the maximum value allowed by the circuit, and the terminal voltage decreases correspondingly.  Once the inductor's terminal voltage has decreased to a minimum (zero for a "perfect" inductor), the current will stay at a maximum level, and it will behave essentially as a short-circuit.
@@ -303,7 +303,7 @@ Notice how the voltage decreases (to the left of the plot) very quickly at first
 
 
 
-<h2><u><a name="xtocid5285793">Voltage and current calculations</a></u></h2>
+<h2><u><a name="xtocid15066553">Voltage and current calculations</a></u></h2>
 
 <p>
 There's a sure way to calculate any of the values in a reactive DC circuit over time.  The first step is to identify the starting and final values for whatever quantity the capacitor or inductor opposes change in; that is, whatever quantity the reactive component is trying to hold constant.  For capacitors, this quantity is <i>voltage</i>; for inductors, this quantity is <i>current</i>.  When the switch in a circuit is closed (or opened), the reactive component will attempt to maintain that quantity at the same level as it was before the switch transition, so that value is to be used for the "starting" value.  The final value for this quantity is whatever that quantity will be after an infinite amount of time.  This can be determined by analyzing a capacitive circuit as though the capacitor was an open-circuit, and an inductive circuit as though the inductor was a short-circuit, because that is what these components behave as when they've reached "full charge," after an infinite amount of time.
@@ -472,7 +472,7 @@ Subtracted from our battery voltage of 15 volts, this leaves 0.453 volts across 
 
 
 
-<h2><u><a name="xtocid5285794">Why L/R and not LR?</a></u></h2>
+<h2><u><a name="xtocid15066554">Why L/R and not LR?</a></u></h2>
 
 <p>
 It is often perplexing to new students of electronics why the time-constant calculation for an inductive circuit is different from that of a capacitive circuit.  For a resistor-capacitor circuit, the time constant (in seconds) is calculated from the product (multiplication) of resistance in ohms and capacitance in farads: &#964;=RC.  However, for a resistor-inductor circuit, the time constant is calculated from the quotient (division) of inductance in henrys over the resistance in ohms: &#964;=L/R.
@@ -535,7 +535,7 @@ Hopefully this explanation sheds more light on the subject of time constants and
 
 
 
-<h2><u><a name="xtocid5285795">Complex voltage and current calculations</a></u></h2>
+<h2><u><a name="xtocid15066555">Complex voltage and current calculations</a></u></h2>
 
 <p>
 There are circumstances when you may need to analyze a DC reactive circuit when the starting values of voltage and current are not respective of a fully "discharged" state.  In other words, the capacitor might start at a partially-charged condition instead of starting at zero volts, and an inductor might start with some amount of current already through it, instead of zero as we have been assuming so far.  Take this circuit as an example, starting with the switch open and finishing with the switch in the closed position:
@@ -595,7 +595,7 @@ So, the inductor in this circuit has a starting current of 5 amps and an ending 
 
 
 
-<h2><u><a name="xtocid5285796">Complex circuits</a></u></h2>
+<h2><u><a name="xtocid15066556">Complex circuits</a></u></h2>
 
 <p>
 What do we do if we come across a circuit more complex than the simple series configurations we've seen so far?  Take this circuit as an example:
@@ -797,7 +797,7 @@ At every step along the way of the analysis, the capacitors in the two circuits 
 
 
 
-<h2><u><a name="xtocid5285797">Solving for unknown time</a></u></h2>
+<h2><u><a name="xtocid15066557">Solving for unknown time</a></u></h2>
 
 <p>
 Sometimes it is necessary to determine the length of time that a reactive circuit will take to reach a predetermined value.  This is especially true in cases where we're designing an RC or L/R circuit to perform a precise timing function.  To calculate this, we need to modify our "Universal time constant formula."  The original formula looks like this:
@@ -863,7 +863,7 @@ Indeed, we end up with a value of 2 seconds for the time it takes to go from 0 t
 
 
 
-<h2><u><a name="xtocid5285798">Contributors</a></u></h2>
+<h2><u><a name="xtocid15066558">Contributors</a></u></h2>
 
 <p>
 Contributors to this chapter are listed in chronological order of their contributions, from most recent to first.  See Appendix 2 (Contributor List) for dates and contact information.

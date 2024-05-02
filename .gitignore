@@ -1,0 +1,36 @@
+# Ignore anything in the Attic
+Attic/**
+
+# Ignore npm packages
+node_modules/**
+
+# Ignore temporary files
+
+# Ignore cruft
+*.bak
+*.backup
+*.kate-swp
+*.log
+*.new
+*.swp
+*.tuc
+
+# Ignore TeX files (these need to be regenerated on demand)
+*.aux
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.latex~
+*.maf
+*.mtc*
+*.out
+*.tex
+*.toc
+
+# Ignore upload packages
+*.ps
+*.ps.gz
+*.tar
+*.tar.gz
+upload.zip

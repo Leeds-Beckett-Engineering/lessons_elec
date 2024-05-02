@@ -34,16 +34,16 @@
  
 
 <ul>
-<li><a href="#xtocid8057400"><u>Digital logic with feedback</u></a></li>
-<li><a href="#xtocid8057401"><u>The S-R latch</u></a></li>
-<li><a href="#xtocid8057402"><u>The gated S-R latch</u></a></li>
-<li><a href="#xtocid8057403"><u>The D latch</u></a></li>
-<li><a href="#xtocid8057404"><u>Edge-triggered latches: Flip-Flops</u></a></li>
-<li><a href="#xtocid8057405"><u>The J-K flip-flop</u></a></li>
-<li><a href="#xtocid8057406"><u>Asynchronous flip-flop inputs</u></a></li>
-<li><a href="#xtocid8057407"><u>Monostable multivibrators</u></a></li></ul>
+<li><a href="#xtocid15775710"><u>Digital logic with feedback</u></a></li>
+<li><a href="#xtocid15775711"><u>The S-R latch</u></a></li>
+<li><a href="#xtocid15775712"><u>The gated S-R latch</u></a></li>
+<li><a href="#xtocid15775713"><u>The D latch</u></a></li>
+<li><a href="#xtocid15775714"><u>Edge-triggered latches: Flip-Flops</u></a></li>
+<li><a href="#xtocid15775715"><u>The J-K flip-flop</u></a></li>
+<li><a href="#xtocid15775716"><u>Asynchronous flip-flop inputs</u></a></li>
+<li><a href="#xtocid15775717"><u>Monostable multivibrators</u></a></li></ul>
 
-<h2><u><a name="xtocid8057400">Digital logic with feedback</a></u></h2>
+<h2><u><a name="xtocid15775710">Digital logic with feedback</a></u></h2>
 
 <p>
 With simple gate and combinational logic circuits, there is a definite output state for any given input state.  Take the truth table of an OR gate, for instance:
@@ -106,7 +106,7 @@ The most interesting and widely used multivibrators are of the bistable variety,
 
  
 
-<h2><u><a name="xtocid8057401">The S-R latch</a></u></h2>
+<h2><u><a name="xtocid15775711">The S-R latch</a></u></h2>
 
 <a name="Set, latch"></a>
 <a name="Reset, latch"></a>
@@ -198,7 +198,7 @@ In semiconductor form, S-R latches come in prepackaged units so that you don't h
 
 
 
-<h2><u><a name="xtocid8057402">The gated S-R latch</a></u></h2>
+<h2><u><a name="xtocid15775712">The gated S-R latch</a></u></h2>
 
 <a name="Gated S-R latch"></a>
 <a name="Latch, gated S-R"></a>
@@ -243,7 +243,7 @@ It is also common to see the enable input designated by the letters "EN" instead
 
 
 
-<h2><u><a name="xtocid8057403">The D latch</a></u></h2>
+<h2><u><a name="xtocid15775713">The D latch</a></u></h2>
 
 <a name="D latch"></a>
 <a name="Latch, D"></a>
@@ -293,7 +293,7 @@ An application for the D latch is a 1-bit memory circuit.  You can "write" (stor
 
 
 
-<h2><u><a name="xtocid8057404">Edge-triggered latches: Flip-Flops</a></u></h2>
+<h2><u><a name="xtocid15775714">Edge-triggered latches: Flip-Flops</a></u></h2>
 
 <a name="Edge triggering"></a>
 
@@ -414,7 +414,7 @@ Both of the above flip-flops will "clock" on the falling edge (high-to-low trans
 
 
 
-<h2><u><a name="xtocid8057405">The J-K flip-flop</a></u></h2>
+<h2><u><a name="xtocid15775715">The J-K flip-flop</a></u></h2>
 
 <a name="J-K flip-flop"></a>
 <a name="Flip-flop, J-K"></a>
@@ -467,7 +467,7 @@ The block symbol for a J-K flip-flop is a whole lot less frightening than its in
 
 
 
-<h2><u><a name="xtocid8057406">Asynchronous flip-flop inputs</a></u></h2>
+<h2><u><a name="xtocid15775716">Asynchronous flip-flop inputs</a></u></h2>
 
 <p>
 The normal data inputs to a flip flop (D, S and R, or J and K) are referred to as <i>synchronous</i> inputs because they have effect on the outputs (Q and not-Q) only in step, or in sync, with the clock signal transitions.  These extra inputs that I now bring to your attention are called <i>asynchronous</i> because they can set or reset the flip-flop regardless of the status of the clock signal.  Typically, they're called <i>preset</i> and <i>clear</i>:
@@ -507,7 +507,7 @@ Sometimes the designations "PRE" and "CLR" will be shown with inversion bars abo
 
 
 
-<h2><u><a name="xtocid8057407">Monostable multivibrators</a></u></h2>
+<h2><u><a name="xtocid15775717">Monostable multivibrators</a></u></h2>
 
 <p>
 We've already seen one example of a monostable multivibrator in use: the pulse detector used within the circuitry of flip-flops, to enable the latch portion for a brief time when the clock input signal transitions from either low to high or high to low.  The pulse detector is classified as a monostable multivibrator because it has only <i>one</i> stable state.  By <i>stable</i>, I mean a state of output where the device is able to latch or hold to forever, without external prodding.  A latch or flip-flop, being a bistable device, can hold in either the "set" or "reset" state for an indefinite period of time.  Once its set or reset, it will continue to latch in that state unless prompted to change by an external input.  A monostable device, on the other hand, is only able to hold in one particular state indefinitely.  Its other state can only be held momentarily when triggered by an external input.  
