@@ -1,0 +1,397 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Title: 05191.eps
+%%Creator: Xcircuit v2.0
+%%CreationDate: Mon Jan 28 14:25:06 2002
+%%Pages: 1
+%%BoundingBox: 68 68 412 253
+%%DocumentNeededResources: font Helvetica 
+%%EndComments
+%%BeginProlog
+%
+%  PostScript prolog for output from xcircuit
+%  Version: 2.0
+%
+%  Electrical circuit (and otherwise general) drawing program
+%
+%  Written by Tim Edwards 8/5/93--2/25/99  (tim@bach.ece.jhu.edu)
+%  The Johns Hopkins University
+%
+%%BeginResource: procset XCIRCproc 2.0 2
+% supporting definitions --- these are the primary xcircuit types.
+
+/XCIRCsave save def
+/topmat matrix currentmatrix def
+
+/fontslant { /slant exch def [1 0 slant 1 0 0] 
+    exch findfont exch makefont dup length dict /ndict exch def
+    { 1 index /FID ne { ndict 3 1 roll put } { pop pop } ifelse } forall
+    ndict definefont pop} def
+/cf { dup type /realtype eq {40 mul /fscale exch def} if dup /xfont exch def
+   findfont fscale scalefont setfont } def
+/Ss { gsave 0.67 dup scale gsave mty neg rmoveto
+   glevel 1 add /glevel exch def } def
+/ss { gsave 0.67 dup scale gsave mty 0.5 mul rmoveto
+   glevel 1 add /glevel exch def } def
+/ns { currentpoint transform   % preserve x position!
+   glevel {grestore} repeat /glevel 0 def
+   itransform pop currentpoint pop sub 0 rmoveto } def
+/ul { showflag 1 eq { gsave 
+   currentpoint topmat setmatrix 0 0 moveto 2 index stringwidth pop (_)
+   false charpath flattenpath pathbbox grestore exch pop 1 index
+   sub setlinewidth exch pop currentpoint 3 -1 roll add moveto 0
+   rlineto stroke moveto } if } def
+/ol { showflag 1 eq { gsave gsave
+   currentpoint topmat setmatrix 2 index stringwidth pop 3 index
+   true charpath flattenpath pathbbox grestore exch pop
+   exch pop topmat setmatrix (_) true charpath pathbbox grestore
+   exch pop 1 index sub setlinewidth exch pop currentpoint
+   exch 4 1 roll exch sub add moveto pop 0 rlineto stroke
+   moveto } if } def
+/stW { gsave true charpath flattenpath pathbbox pop exch pop sub
+   grestore } def
+/bs { stW 0 rmoveto } def
+/pspc 0 def
+/qS { (aa) stW (a a) stW sub 4 div 0 rmoveto } def
+/hS { qS qS } def
+/textx { dup 1 add copy 0 exch { exch dup type /stringtype eq
+	{stringwidth pop add}{exec} ifelse } repeat neg ns } def
+/mty { 0 topmat setmatrix (A) true charpath flattenpath pathbbox exch
+   pop exch sub exch pop neg grestore } def
+/texty { gsave 2 copy pop exec mty } def
+/tcenter { textx grestore 0.5 mul 0 rmoveto } def
+/tright  { textx grestore fspc sub 0 rmoveto } def
+/tmiddle { texty 0.5 mul rmoveto } def
+/ttop    { texty fspc sub rmoveto } def
+/tshow {{ dup type /stringtype eq {show}{exec} ifelse} repeat ns } def
+
+/label  { gsave translate 0 0 moveto rotate /just exch def just 16 and 0 gt
+	{0 1 dtransform gsave pagemat setmatrix idtransform exch grestore
+	1 0 dtransform gsave pagemat setmatrix idtransform exch grestore
+	dup 0 eq {pop mul 0 gt} {3 1 roll pop pop 0 lt} ifelse
+	{-1 /just just dup 3 and 1 ne {3 xor} if def} {1} ifelse exch 0 lt
+	{-1 /just just dup 12 and 4 ne {12 xor} if def} {1} ifelse scale } if
+	/glevel 0 def /showflag 0 def /fspc pspc def
+	just 1 and 0 gt {gsave just 2 and 0 gt {tright}{tcenter} ifelse}
+	{fspc 0 rmoveto} ifelse
+	just 4 and 0 gt {just 8 and 0 gt {ttop}{tmiddle} ifelse}
+	{0 fspc rmoveto} ifelse
+	/showflag 1 def tshow grestore } def
+/pinlabel { hlevel 0 eq { /pspc 20 def label /pspc 0 def }
+	{ pop pop pop pop {pop} repeat } ifelse } def
+/pinglobal { pinlabel } def
+/infolabel { pinlabel } def
+
+/begingate { /hlevel hlevel 1 add def gsave translate 0 0 moveto dup 0 lt
+	{neg 1 sub -1 1 scale} if rotate dup scale } bind def
+/makeparm  {3 string cvs dup length 1 add string /tstr exch def tstr exch
+	1 exch putinterval tstr 0 (v) putinterval tstr cvn} bind def
+/beginparm { -1 1 {makeparm exch def} for
+	dup type /arraytype eq { aload length -1 1 {makeparm exch def}
+	for } if begingate } bind def
+/endgate { /hlevel hlevel 1 sub def grestore } bind def
+
+/hlevel 0 def
+/tmpa [1 0 0 1 0 0] def
+/gar {8 8 true tmpa {<c0 c0 00 00 0c 0c 00 00>} imagemask} bind
+{8 8 true tmpa {<30 70 60 02 03 07 06 20>} imagemask} bind
+{8 8 true tmpa {<0c 1e 1e 0c c0 e1 e1 c0>} imagemask} bind
+{8 8 true tmpa {<0f 0f 0f 0f f0 f0 f0 f0>} imagemask} bind
+{8 8 true tmpa {<3f f3 e1 e1 f3 3f 1e 1e>} imagemask} bind
+{8 8 true tmpa {<df cf 8f 9f fd fc f8 f9>} imagemask} bind
+{8 8 true tmpa {<ff 3f 3f ff ff f3 f3 ff>} imagemask} bind 7 array astore def
+/ppaint { gsave clip tmpa dup setmatrix pathbbox neg exch neg 4 2 roll
+  neg 4 -1 roll 2 copy gt {exch} if 8 div ceiling 8 mul 4 2 roll neg 2 copy
+  gt {exch} if 8 div ceiling 8 mul 3 -1 roll -8 5 -1 roll
+  { 3 index exch 5 exch put dup -8 3 index { 3 index
+  exch 4 exch put 3 index exec } for } for pop pop pop pop grestore } bind def
+/setstyles {
+  currentlinewidth mul setlinewidth /style exch def
+  style 1 and 0 gt not {closepath} if
+  style 2 and 0 gt {currentlinewidth 4 mul dup 2 array astore 0 setdash} if 
+  style 4 and 0 gt {0.5 currentlinewidth 4 mul 2 array astore 0 setdash} if 
+  style dup 256 ge exch 480 lt and { gsave 1 setgray eofill grestore } if
+  style 16 and 0 gt { gsave style 224 and -5 bitshift dup 7 lt
+	{gar exch get ppaint} { pop eofill } ifelse grestore } if
+  style 8 and 0 gt { newpath } { stroke } ifelse grestore } def
+/scb { gsave setrgbcolor } bind def  /sce { grestore } bind def
+
+/polygon { gsave /num exch def moveto num 1 sub {lineto} repeat setstyles } def
+/xcarc   { gsave newpath arc setstyles } def
+/elb { matrix currentmatrix 7 -1 roll 7 -1 roll translate 5 1 roll 4 -1 roll
+	3 index div 1 scale } def
+/ele { 0 4 1 roll 0 4 1 roll } bind def
+/ellipse { gsave elb newpath ele arc setmatrix setstyles } def
+/pellip  { elb ele arc setmatrix } def
+/nellip  { elb ele arcn setmatrix } def
+/spline  { gsave moveto curveto setstyles } def
+/polyc   { {lineto} repeat } bind def
+/beginpath { gsave moveto } bind def
+/endpath { setstyles } bind def
+/bop	 { 1 setlinecap 0 setlinejoin 6 setmiterlimit 0 setgray } def
+/insertion {/PSobj save def /showpage {} def bop translate} def
+/end_insert {PSobj restore} def
+/setpagemat {/pagemat matrix currentmatrix def} def
+/inchscale  {setpagemat 0.375 mul dup scale} def
+/cmscale    {setpagemat 0.35433071 mul dup scale} def
+
+%%EndResource
+%%EndProlog
+
+% XCircuit output starts here.
+
+/binding_post_red {
+% -64 -32 112 64 bbox
+begingate
+240  1.00 -32 16 -32 -16 -48 -16 -48 16 4 polygon
+1  2.00 -32 16 -64 16 2 polygon
+1.000 0.000 0.000 scb
+240  1.00 -32 32 -32 -32 -16 -32 -16 32 4 polygon
+240  1.00 -16 16 -16 -16 48 -16 48 16 4 polygon
+sce
+0  1.00 -32 32 -32 -32 -16 -32 -16 32 4 polygon
+0  1.00 -16 16 -16 -16 48 -16 48 16 4 polygon
+1  1.00 -16 0 48 0 2 polygon
+1  1.00 -16 8 48 8 2 polygon
+1  1.00 -16 -8 48 -8 2 polygon
+endgate
+} def
+
+/dot {
+% -10 -10 20 20 bbox
+begingate
+248  1.00 0 0 6 0.00 360.00 xcarc
+endgate
+} def
+
+/capacitor2 {
+% -32 -80 64 160 bbox
+begingate
+0.647 0.165 0.165 scb
+240  1.00 -32 64 -32 -64 32 -64 32 64 4 polygon
+sce
+0  1.00 -32 64 -32 -64 32 -64 32 64 4 polygon
+1  2.00 0 -64 0 -80 2 polygon
+1  2.00 0 64 0 80 2 polygon
+(-) {/Helvetica 1.000 cf} 2 16 0 -10 -44 label
+1  1.00 0 -32 10 0.00 360.00 xcarc
+1  1.00 -12 -16 -12 -44 0 -56 12 -44 12 -16 -12 -16 6 polygon
+(-) {/Helvetica 1.000 cf} 2 16 0 -10 4 label
+1  1.00 0 16 10 0.00 360.00 xcarc
+1  1.00 -12 32 -12 4 0 -8 12 4 12 32 -12 32 6 polygon
+endgate
+} def
+
+/terminal_strip_2 {
+% -96 -64 208 128 bbox
+begingate
+0  1.00 -80 48 -80 -48 -48 -48 -48 48 4 polygon
+1  1.00 -64 32 8 0.00 360.00 xcarc
+1  1.00 -68 25 -58 37 2 polygon
+1  1.00 -61 39 -70 28 2 polygon
+1  1.00 -64 -32 8 0.00 360.00 xcarc
+1  1.00 -68 -39 -58 -27 2 polygon
+1  1.00 -61 -25 -70 -36 2 polygon
+0  1.00 -32 48 -32 -48 0 -48 0 48 4 polygon
+1  1.00 -16 32 8 0.00 360.00 xcarc
+1  1.00 -20 25 -10 37 2 polygon
+1  1.00 -13 39 -22 28 2 polygon
+1  1.00 -16 -32 8 0.00 360.00 xcarc
+1  1.00 -20 -39 -10 -27 2 polygon
+1  1.00 -13 -25 -22 -36 2 polygon
+0  1.00 16 48 16 -48 48 -48 48 48 4 polygon
+1  1.00 32 32 8 0.00 360.00 xcarc
+1  1.00 28 25 38 37 2 polygon
+1  1.00 35 39 26 28 2 polygon
+1  1.00 32 -32 8 0.00 360.00 xcarc
+1  1.00 28 -39 38 -27 2 polygon
+1  1.00 35 -25 26 -36 2 polygon
+0  1.00 64 48 64 -48 96 -48 96 48 4 polygon
+1  1.00 80 32 8 0.00 360.00 xcarc
+1  1.00 76 25 86 37 2 polygon
+1  1.00 83 39 74 28 2 polygon
+1  1.00 80 -32 8 0.00 360.00 xcarc
+1  1.00 76 -39 86 -27 2 polygon
+1  1.00 83 -25 74 -36 2 polygon
+0.600 0.600 0.600 scb
+0  2.00 -96 64 -96 -64 112 -64 112 64 4 polygon
+sce
+endgate
+} def
+
+/binding_post_black {
+% -64 -32 112 64 bbox
+begingate
+240  1.00 -32 16 -32 -16 -48 -16 -48 16 4 polygon
+1  2.00 -32 16 -64 16 2 polygon
+0.600 0.600 0.600 scb
+240  1.00 -32 32 -32 -32 -16 -32 -16 32 4 polygon
+240  1.00 -16 16 -16 -16 48 -16 48 16 4 polygon
+sce
+0  1.00 -32 32 -32 -32 -16 -32 -16 32 4 polygon
+0  1.00 -16 16 -16 -16 48 -16 48 16 4 polygon
+1  1.00 -16 0 48 0 2 polygon
+1  1.00 -16 8 48 8 2 polygon
+1  1.00 -16 -8 48 -8 2 polygon
+endgate
+} def
+
+/plug {
+% -64 -48 128 96 bbox
+begingate
+241  1.00 -32 48 -32 -48 2 polygon
+0.647 0.165 0.165 scb
+241  1.00 -16 48 64 48 64 16 -32 48 spline
+241  1.00 -16 -48 64 -48 64 -16 -32 -48 spline
+241  1.00 64 16 64 -16 2 polygon
+sce
+1  2.00 -32 32 -64 32 2 polygon
+1  2.00 -32 -32 -64 -32 2 polygon
+0.647 0.165 0.165 scb
+241  1.00 -32 48 64 16 64 -16 -32 -48 -32 48 5 polygon
+sce
+1  1.00 -32 48 -32 -48 2 polygon
+1  1.00 -16 48 64 48 64 16 -32 48 spline
+1  1.00 -16 -48 64 -48 64 -16 -32 -48 spline
+1  1.00 64 16 64 -16 2 polygon
+endgate
+} def
+
+/AC_supply {
+% -320 -144 640 288 bbox
+begingate
+1.00 0 -256 80 plug
+1  3.00 -96 80 -160 -48 -64 -48 -192 80 spline
+0.800 0.800 0.800 scb
+240  1.00 -64 144 -64 -144 320 -144 320 144 4 polygon
+sce
+0  2.00 -64 144 -64 -144 320 -144 320 144 4 polygon
+(Low-voltage ) {/Helvetica 1.000 cf} 2 16 0 16 96 label
+(AC power supply) {/Helvetica 1.000 cf} 2 16 0 -24 56 label
+1.00 0 0 -112 dot
+1.00 0 128 -112 dot
+1.00 0 256 -112 dot
+1.000 0.000 0.000 scb
+1  1.00 0 -112 16 0.00 360.00 xcarc
+sce
+1  1.00 128 -112 16 0.00 360.00 xcarc
+1.000 0.000 0.000 scb
+1  1.00 256 -112 16 0.00 360.00 xcarc
+sce
+(6) {/Helvetica 1.000 cf} 2 16 0 40 -128 label
+(6) {/Helvetica 1.000 cf} 2 16 0 184 -128 label
+1  1.00 16 -112 32 -112 2 polygon
+1  1.00 80 -112 112 -112 2 polygon
+1  1.00 240 -112 224 -112 2 polygon
+1  1.00 176 -112 144 -112 2 polygon
+(12) {/Helvetica 1.000 cf} 2 16 0 104 -72 label
+1  1.00 96 -56 0 -56 0 -96 3 polygon
+1  1.00 152 -56 256 -56 256 -96 3 polygon
+endgate
+} def
+
+/lamp3 {
+% -64 -93 128 193 bbox
+begingate
+1  1.00 0 36 64 0.00 360.00 xcarc
+1  1.00 -16 -24 -16 8 2 polygon
+1  1.00 16 -24 16 8 2 polygon
+1  0.25 80 88 -80 88 16 8 -16 8 spline
+1  1.00 -32 -24 -16 -40 -16 -56 -48 -8 spline
+1  1.00 32 -24 16 -40 16 -56 48 -8 spline
+0  1.00 -16 -56 -16 -88 16 -88 16 -56 4 polygon
+1  1.00 0 -96 0 -96 8 -88 -8 -88 spline
+1  1.00 -16 -64 16 -56 2 polygon
+1  1.00 -16 -72 16 -64 2 polygon
+1  1.00 -16 -80 16 -72 2 polygon
+1  1.00 -16 -88 16 -80 2 polygon
+1  1.00 -16 -32 16 -32 48 -8 -48 -8 spline
+1  1.00 -16 -56 16 -56 2 polygon
+endgate
+} def
+
+/lamp_socket {
+% -88 -29 176 61 bbox
+begingate
+0.824 0.706 0.549 scb
+241  1.00 -24 32 -24 8 -32 0 -88 -8 -88 -16 88 -16 88 -8 32 0 24 8 24 32 -24 32 
+11 polygon
+sce
+1  1.00 -88 -8 -88 -16 88 -16 88 -8 32 0 24 8 24 32 -24 32 -24 8 -32 0 -88 -8 
+11 polygon
+1  2.00 -48 -24 -32 -24 2 polygon
+1  2.00 -40 -24 -40 -16 2 polygon
+1  2.00 32 -24 48 -24 2 polygon
+1  2.00 40 -24 40 -16 2 polygon
+1  2.00 -40 -32 -40 -32 -32 -24 -48 -24 spline
+1  2.00 40 -32 40 -32 48 -24 32 -24 spline
+endgate
+} def
+
+%%Page: 05129.eps 1
+%%PageOrientation: Portrait
+/pgsave save def bop
+% 1280 592 offsets
+0.5000 inchscale
+2.6000 setlinewidth
+
+0.824 0.706 0.549 scb
+240  1.00 1184 688 1184 496 1376 496 1376 688 4 polygon
+sce
+1  2.00 1344 656 1344 624 2 polygon
+1  2.00 1344 528 1312 528 2 polygon
+1  2.00 1248 528 1216 528 2 polygon
+1  2.00 1216 656 1248 656 2 polygon
+(+) {/Helvetica 1.000 cf} 2 16 0 1316 628 label
+(-) {/Helvetica 1.000 cf} 2 16 0 1224 532 label
+(AC) {/Helvetica 0.750 cf} 2 16 0 1212 624 label
+(AC) {/Helvetica 0.750 cf} 2 16 0 1308 544 label
+0  1.00 1184 688 1184 496 1376 496 1376 688 4 polygon
+1.00 -1 1040 736 binding_post_red
+1.00 -1 1040 448 binding_post_red
+1.00 0 1232 656 dot
+1.00 0 1328 528 dot
+1.00 0 1696 608 capacitor2
+1.00 0 1344 640 dot
+1.00 270 1552 608 terminal_strip_2
+1  2.00 1696 528 1600 528 2 polygon
+1  2.00 1696 688 1648 688 1600 672 3 polygon
+1  1.00 1392 656 1424 672 1504 672 1344 640 spline
+1.00 0 1232 528 dot
+1  1.00 1248 384 1344 480 1504 528 1232 528 spline
+1.00 0 1888 736 binding_post_red
+1.00 0 1888 448 binding_post_black
+1  1.00 1648 464 1728 496 1600 528 1824 464 spline
+1  1.00 1680 720 1648 752 1824 752 1600 672 spline
+1  1.00 1200 752 1232 736 1232 656 1104 752 spline
+1  1.00 1296 464 1296 464 1104 464 1328 528 spline
+0.600 0.600 0.600 scb
+0  2.00 1072 1072 1072 384 1856 384 1856 1072 4 polygon
+sce
+(AC) {/Helvetica 1.000 cf} 2 16 0 992 600 label
+(in) {/Helvetica 1.000 cf} 2 16 0 1008 568 label
+(DC) {/Helvetica 1.000 cf} 2 16 0 1880 600 label
+(out) {/Helvetica 1.000 cf} 2 16 0 1880 568 label
+(Rectifier) {/Helvetica 1.000 cf} 2 16 0 1240 704 label
+(Capacitor) {/Helvetica 1.000 cf} 2 16 270 1744 696 label
+1.00 0 704 1184 AC_supply
+1  1.00 912 848 1040 864 1056 752 960 1072 spline
+1  1.00 816 512 1056 560 1056 464 832 1072 spline
+1.00 0 2032 1088 lamp3
+1.00 0 2032 992 lamp_socket
+1  1.00 1896 928 1880 904 1872 752 1992 976 spline
+1  1.00 1888 568 2320 744 2072 976 1872 464 spline
+1.000 1.000 0.000 scb
+1  1.00 2032 1136 1920 1232 2 polygon
+1  1.00 2032 1136 1888 1136 2 polygon
+1  1.00 1920 1040 2032 1136 2 polygon
+1  1.00 2032 1136 1984 1296 2 polygon
+1  1.00 2032 1136 2080 1296 2 polygon
+1  1.00 2032 1136 2144 1232 2 polygon
+1  1.00 2032 1136 2176 1136 2 polygon
+1  1.00 2144 1040 2032 1136 2 polygon
+sce
+pgsave restore showpage
+
+%%Trailer
+XCIRCsave restore
+%%EOF

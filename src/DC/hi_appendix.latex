@@ -1,0 +1,17 @@
+%Added 02/08/2006 new file ahead of about.latex
+% begin file hi_appendix.latex
+% appendix numbering instead of chapter numbering
+\appendix 
+
+% tocvsec2.sty special non-standard package to change depth of TOC
+% see heater hi.latex for usepackage{tovsec2}
+% only Print Chapter titles in TOC
+\settocdepth{chapter}
+
+% redefine the command that creates the chapter number.
+\renewcommand{\thechapter}{A-\arabic{chapter}}
+
+% start numbering at 1, A-1, that is
+\setcounter{chapter}{0}  % reset counter 
+
+% end file hi_appendix.latex

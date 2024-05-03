@@ -1,0 +1,52 @@
+%!PS
+%
+%  dojpeg2eps.ps 1.06, 17th July 2003
+%  (c) Andrew Kiss 2003 <andy@rses.anu.edu.au>
+%  For the latest version & usage instructions see
+%  http://rses.anu.edu.au/~andy/jpeg2eps/
+%
+% This is an example of how to use jpeg2eps.ps, a utility for converting JPEG
+% files to EPS, without decompressing the JPEG data.
+%
+% This program is free software; you can redistribute it and/or
+% modify it under the terms of the GNU General Public License
+% as published by the Free Software Foundation; either version 2
+% of the License, or any later version. In particular, any 
+% distribution or modification must include this notice.
+% 
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% 
+% You should have received a copy of the GNU General Public License along 
+% with this program; if not, write to the Free Software Foundation, Inc., 
+% 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA, 
+% or refer to the online version at
+% http://www.gnu.org/copyleft/gpl.html
+
+(jpeg2eps.ps) (r) file run begin
+
+/showoutput true def % whether to check and display output EPS file
+/verbose true def % whether to prattle on...
+
+% Change the following line if viewjpeg.ps is in another directory
+% (eg. make it point to viewjpeg.ps in your GhostScript library).
+/viewjpegpath (viewjpeg.ps) def
+
+[ 
+% Put the filenames of the JPEG files you want to convert in here, 
+% individually enclosed in parentheses (with no extra spaces).  
+% If a filename contains ( or ) they should be written \( and \), as in the 
+% second example.
+%
+% WARNING: The EPS output filename is the same as the input filename, except 
+% any trailing .jpg or .jpeg is removed and .eps is appended.  If this file 
+% already exists it will be OVERWRITTEN, no questions asked.
+%
+(YourFileName.jpg)
+(YourFileName\(2\).jpg)
+]
+
+convertjpegs
+end

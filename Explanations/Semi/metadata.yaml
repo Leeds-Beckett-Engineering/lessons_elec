@@ -1,0 +1,13 @@
+---
+title:  'Lessons in Electronic Circuits: Semiconductors'
+author:
+- Tony Kuphaldt
+- (c) July 2001
+keywords: [MicroPython, Pico]
+highlight-colour: signal-violet
+abstract: |
+  This third volume of the book series _Lessons In Electric Circuits_ makes a departure from the former two in that 
+  the transition between _electric_ circuits and _electronic_ circuits is formally crossed. Electric circuits are 
+  connections of conductive wires and other devices whereby the uniform flow of electrons occurs. Electronic 
+  circuits add a new dimension to electric circuits in that some means of _control_ is exerted over the flow of 
+  electrons by another electrical signal, either a voltage or a current.

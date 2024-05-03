@@ -1,0 +1,7 @@
+dojpeg2eps.ps
+jpeg2eps*
+jpeg2eps.ps
+png2eps*
+pngcheck*
+t1
+viewjpeg.ps

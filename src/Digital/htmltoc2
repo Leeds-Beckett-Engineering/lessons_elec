@@ -1,0 +1,495 @@
+#! /usr/bin/perl
+##! /usr/local/bin/perl ## (DEC) Jan 2005
+##---------------------------------------------------------------------------##
+##  File:
+##      htmltoc
+##  Author:
+##      Earl Hood       ehood@medusa.acs.uci.edu
+##  Description:
+##	htmltoc is a Perl program to generate a table of contents for
+##	HTML documents.
+##---------------------------------------------------------------------------##
+##  Copyright (C) 1994-1997  Earl Hood, ehood@medusa.acs.uci.edu
+##
+##  This program is free software; you can redistribute it and/or modify
+##  it under the terms of the GNU General Public License as published by
+##  the Free Software Foundation; either version 2 of the License, or
+##  (at your option) any later version.
+##  
+##  This program is distributed in the hope that it will be useful,
+##  but WITHOUT ANY WARRANTY; without even the implied warranty of
+##  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+##  GNU General Public License for more details.
+##  
+##  You should have received a copy of the GNU General Public License
+##  along with this program; if not, write to the Free Software
+##  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+##---------------------------------------------------------------------------##
+##
+##  Modified Jan 2006 for "Lessons in Electric Circuits"
+##  Was: ToC placed after <body> tag
+##  Modified: -minitoc "tag_string"  commandline parameter allows  ToC to 
+##  be  placed after arbitrary  tag_string in html. May be comment added to
+##  to html.  Allows arbitrary placement of ToC, not fixed at top. This
+##  tag_string is specified as a command line parameter:
+##   -minitoc "tag_string" , else defaults to <body>.
+##  Modfied May 2007 for /n before <LI>; s/<LI>/<li>  s/</A>/</a> s/<UL/<ul>
+##  make output XHTML lower case
+##---------------------------------------------------------------------------##
+
+
+package main;
+
+unshift(@INC, '.');
+require "newgetopt.pl" || die "Error: Unable to require newgetopt.pl\n";
+
+##---------------------------------------------------------------------------##
+## Store name of program ##
+($PROG = $0) =~ s/.*\///;
+
+## 01/01/2006 (DC) rolled version number form 1.2.1 to 1.2.2
+$VERSION = "1.2.2";
+
+%TOC = (		# Default ToC entry elements
+    'H1', 1,
+    'H2', 2,
+);
+%TOCend = (		# Default ToC entry element terminators
+    'H1', '/H1',
+    'H2', '/H2',
+);
+%TOCbefore = ();	# Before text for ToC entries
+%TOCafter = ();		# After text for ToC entries
+
+$file = '';		# Current file being processed
+$_id = 0;		# Link counter
+$prevlevel = 0;		# Previous ToC entry level
+
+@Comments = ();
+$ComMark = "$;$;$;";
+
+##---------------------------------------------------------------------------##
+##------------##
+## Begin MAIN ##
+##------------##
+{
+&get_cli_opts();
+&read_tocmap()  if $TOCMAP;
+
+local(@html,@newhtml,@toc,$i);
+
+## Remove filename arguments in @ARGV that are part of the options
+@ARGV = grep(!/^($HEADER|$FOOTER|$TOCFILE|$TOCMAP)$/, @ARGV);
+die "Error: -inline valid for only a single file\n" if ($INLINE && $#ARGV > 0);
+
+if (!$QUIET) {
+    if ($USEORG) {
+	print STDERR qq|Using ".org" file(s) as source.\n|;
+    } elsif (!$NOORG) {
+	print STDERR qq|Original file(s) will be renamed with a ".org" |,
+		     qq|extension.\n|;
+    }
+}
+
+## Read files and create ToC
+print STDERR qq|Processing file(s) ...\n|  unless $QUIET;
+$i = 0;
+foreach $file (@ARGV) {
+    &cp($file, "$file.org")			# Backup original
+	unless $USEORG && -e "$file.org";
+    open(FILE, "$file.org") ||			# Use backup as source
+	die "Error: Unable to open $file\n";
+    open(FILEOUT, "> $file") ||			# Overwrite original to filename
+	die "Error: Unable to open $file\n";
+    @html = ();  @newhtml = ();
+    &read_sgml(FILE, *html);			# Read HTML into @html
+    &generate_toc(*html, *toc, *newhtml);	# Add to ToC
+    &put_back_comments(*newhtml);
+    close(FILE);
+    if (!$INLINE) {			# Close FILEOUT only if no in-lining
+	print FILEOUT @newhtml;
+	close(FILEOUT);
+    }
+    $i++;
+}
+print STDERR "$i files processed.\n"  unless $QUIET || $INLINE;
+
+## Close up open elements in ToC
+for ($i=$prevlevel; $i > 0; $i--) {
+    if ($OL && $i == 1) { push(@toc, "</OL>\n"); }
+    else { push(@toc, "</ul>\n"); }
+}
+
+## Write ToC
+print STDERR "Writing Toc ...\n"  unless $QUIET;
+if ($INLINE) {
+    if ($HEADER) {
+	if (open(HEADER, $HEADER)) {
+	    print FILEOUT <HEADER>;  close(HEADER);
+	} else {
+	    warn "Warning: Unable to open $HEADER\n"; }
+    } else {
+##	while ((($i = shift @newhtml) !~ /<body.*>/i) &&
+	while ((($i = shift @newhtml) !~/$MINITOC/i) &&
+	       ($#newhtml >= 0)) { print FILEOUT $i; }
+	if ($#newhtml < 0) {
+	    warn "Warning: No open BODY tag found\n"; }
+	print FILEOUT $i, "\n";
+	print FILEOUT "$TOCHEADER\n"  if $TOCHEADER;
+    }
+    print FILEOUT @toc, "\n";
+    print FILEOUT @newhtml;
+    close(FILEOUT);
+} else {
+    if ($HEADER) {
+	if (open(HEADER, $HEADER)) {
+	    print $TOCHANDLE <HEADER>;
+	    close(HEADER);
+	} else {
+	    warn "Warning: Unable to open $HEADER\n";
+	}
+    } else {
+	print $TOCHANDLE qq|<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML//EN">\n|,
+			 "<HTML>\n",
+			 "<HEAD>\n";
+	print $TOCHANDLE "<TITLE>$TITLE</TITLE>\n"  if $TITLE;
+	print $TOCHANDLE "</HEAD>\n",
+			 "<BODY>\n";
+	print $TOCHANDLE "$TOCHEADER\n"  if $TOCHEADER;
+    }
+    print $TOCHANDLE @toc;
+    if ($FOOTER) {
+	if (open(FOOTER, $FOOTER)) {
+	    print $TOCHANDLE <FOOTER>;
+	    close(FOOTER);
+	} else {
+	    warn "Warning: Unable to open $FOOTER\n";
+	}
+    } else {
+	print $TOCHANDLE "</BODY>\n",
+			 "</HTML>\n";
+    }
+}
+
+# Delete originals if specified
+if ($NOORG) {
+    print STDERR "Cleaning up ...\n"  unless $QUIET;
+    foreach $file (@ARGV) {
+	unlink ("$file.org");
+    }
+}
+exit 0;
+
+}
+##----------##
+## End MAIN ##
+##----------##
+##---------------------------------------------------------------------------##
+##	get_cli_opts() retrieves all command-line options and intializes
+##	global variables.
+##
+sub get_cli_opts {
+    &Usage unless
+    &NGetOpt(
+
+	"entrysep=s",	# Separator string for non-list items entries
+	"footer=s",	# File containing footer text for ToC
+	"header=s",	# File containing header text for ToC
+	"inline",	# Put ToC in document
+	"noorg",	# Delete backup original ".org" files on completion
+	"ol",		# Use an order list for level 1 ToC entries
+	"prefix=s",	# Prefix for ToC IDs for linking  (def: "xtocid")
+	"quiet",	# Suppress informative messages
+	"textonly",	# Use only text content in significant elements
+	"title=s",	# Title for ToC  (def: "Table of Contents")
+	"minitoc=s",	# Insert ToC at this tag_string (def: "<body.*>")
+	"toc=s",	# Output ToC file  (def: STDOUT)
+	"toclabel=s",	# HTML text that labels the ToC  (def: nil)
+	"tocmap=s",	# ToC map file defining significant elements
+	"useorg",	# Use pre-existing ".org" files
+
+	"help"		# Print usage message
+    );
+    &Usage() if defined $opt_help;
+
+    $tocprefix = ($opt_prefix ? $opt_prefix : 'xtocid');
+	$tocprefix .= $$;	# Append pid to prefix
+    $TOCMAP = ($opt_tocmap ? $opt_tocmap : '');
+    $TITLE = ($opt_title ? $opt_title : 'Table of Contents');
+    $MINITOC = ($opt_minitoc ? $opt_minitoc : '<body.*>');
+    $TOCHEADER = ($opt_toclabel ? $opt_toclabel : '<H1>Table of Contents</H1>');
+    $TOCFILE = ($opt_toc ? $opt_toc : '');
+    $HEADER = ($opt_header ? $opt_header : '');
+    $FOOTER = ($opt_footer ? $opt_footer : '');
+    $ENTRYSEP = $opt_entrysep || ", ";
+    $INLINE = (defined($opt_inline) ? 1 : 0);
+    $OL = (defined($opt_ol) ? 1 : 0);
+    $NOORG = (defined($opt_noorg) ? 1 : 0);
+    $USEORG = (defined($opt_useorg) ? 1 : 0);
+    $TEXTONLY = (defined($opt_textonly) ? 1 : 0);
+    $QUIET = (defined($opt_quiet) ? 1 : 0);
+
+    if ($TOCFILE && !$INLINE) {
+	open(TOCFILE, "> $TOCFILE") || die "Error: Unable to create $TOCFILE\n";
+	$TOCHANDLE = 'TOCFILE';
+    } else {
+	$TOCHANDLE = 'STDOUT';
+    }
+}
+##---------------------------------------------------------------------------##
+##	read_tocmap() reads the ToC mapfile.
+##
+sub read_tocmap {
+    local(@array, @befaft);
+    
+    open(TOCMAP, $TOCMAP) || die "Error: Unable to open $TOCMAP\n";
+
+    undef %TOC;  undef %TOCend;		## Clear defaults
+    while (<TOCMAP>) {
+	next if /^\s*#/ || /^\s*$/;	# Skip comment/blank lines
+	s/#.*$//;  s/\s//g;		# Remove eol comments and whitespaces
+	@array = split(/:/, $_);	# Split line into fields
+	if ($#array < 1) {		# Error checking
+	    die "Error: ToC mapfile: less than 2 fields: line $.\n";
+	} elsif ($array[1] !~ /^[-]?\d+$/ || $array[1] == 0) {
+	    die "Error: ToC mapfile: ",
+		"2nd field must be a non-zero number: line $.\n";
+	}
+	$TOC{$array[0]} = $array[1];	# Store ToC tag and level
+	if ($array[2]) {		# Store end delimiter
+	    $TOCend{$array[0]} = $array[2];
+	} else {
+	    $TOCend{$array[0]} = '/'.$array[0];
+	}
+	if ($array[3]) {		# Store before/after text
+	    @befaft = split(/,/, $array[3]);
+	    $TOCbefore{$array[0]} = $befaft[0];
+	    $TOCafter{$array[0]} = $befaft[1];
+	}
+    }
+    close(TOCMAP);
+}
+##---------------------------------------------------------------------------##
+##	generate_toc() reads the HTML specified by *html and adds to the
+##	ToC specified by *toc.  The new modified HTML is in *newhtml.
+##
+sub generate_toc {
+    local(*html, *toc, *newhtml) = @_;
+    local($content,$adone,$name,$level,$i,$title,$before,$after,$q,$noli,
+	  $levelopen,$tmp);
+
+    while ($#html >= 0) {
+	$item = shift @html;
+	next if $item eq '';
+	if ($item !~ /^</) { push(@newhtml,$item); next; }
+
+	$level = 0;  $title = 0;
+	## Check if tag included in TOC
+	##
+	foreach (keys %TOC) {
+	    if ($item =~ /^<$_/i) {
+		$tag = $_;
+		$level = &abs($TOC{$_});	# Level of signicant element
+		$noli = $TOC{$_} < 0;		# No <LI> used in ToC listing
+		$endtag = $TOCend{$_};		# End tag of signicant element
+		$before = $TOCbefore{$_};	# Before text in ToC entry
+		$after = $TOCafter{$_};		# After text in ToC entry
+		last;
+	    }
+	}
+	if (!$level) { push(@newhtml,$item); next; }
+
+	## Insert A element into document
+	##
+	$content = '';  $adone = 0;  $name = $tocprefix . $_id;
+	if ($tag =~ /title/i) {		# TITLE tag is a special case
+	    $title = 1;  $adone = 1;
+	}
+	push(@newhtml,$item);
+	while ($#html >= 0) {
+	    $item = shift @html;
+	    next if $item eq '';
+	    if ($item !~ /^</) {			# Text data
+		$content .= $item;
+		if (!$adone && $item !~ /^\s*$/) {
+		    push(@newhtml,qq|<a name="$name">$item</a>|);
+		    $adone = 1;
+		} else {
+		    push(@newhtml,$item);
+		}
+	    } elsif (!$adone && $item =~ /^<a/i) {	# Anchor
+		if ($item =~ m/name\s*=\s*(['"])/i) {
+		    $q = $1;
+		    ($name) = $item =~ m/name\s*=\s*$q([^$q]*)$q/i;
+		} else {
+		    $item =~ s/^(<a)(.*)$/$1 name="$name" $2/i;
+		}
+		push(@newhtml,$item);
+		$adone = 1;
+	    } else {					# Tag
+		push(@newhtml,$item);
+		last if $item =~ m|<$endtag>|i;
+		$content .= $item
+		    unless $TEXTONLY || $item =~ m%</?(hr>|p>|a|img)%i;
+	    }
+	}
+	$content =~ s/$ComMark//go;
+	if ($content =~ /^\s*$/) {	# Check for empty content
+	    warn "Warning: A $tag in $file has not content;  $tag skipped\n";
+	    next;
+	} else {
+	    $content =~ s/^\s+//;	# Strip beginning whitespace
+	    $content =~ s/\s+$//;	# Strip end whitespace
+	    $content = $before . $content . $after;
+	}
+
+	## Update TOC
+	##
+	if ($level < $prevlevel) {
+	    for ($i=$level; $i < $prevlevel; $i++) {
+		if ($OL && $i == 1) { push(@toc, "\n</OL>"); }
+		else { push(@toc, "\n</ul>"); }
+	    }
+	} elsif ($level > $prevlevel) {
+	    for ($i=$level; $i > $prevlevel; $i--) {
+		if ($OL && $i == 1) { push(@toc, "\n<OL>"); }
+		else { push(@toc, "\n<ul>"); }
+	    }
+	    $levelopen = 1;	# Flag for use with $noli
+	} else {
+	    $levelopen = 0;	# Flag for use with $noli
+	}
+
+	# Set anchor string
+	$tmp  = '';
+	$tmp .= $ENTRYSEP  if $noli && !$levelopen;
+	$tmp .= "\n<li>"  unless $noli && !$levelopen;
+	$tmp .= join('',
+		     qq|<a href="|,
+		     !$INLINE ? qq|$file| : '',
+		     !$title ? qq|#$name| : '',
+		     qq|">$content</a></li>|);
+	push(@toc, $tmp);
+
+	$prevlevel = $level;
+	$prevnoli = $noli;
+	$_id++;
+    }
+}
+##---------------------------------------------------------------------------##
+sub put_back_comments {
+    local(*array) = shift;
+
+    if (@Comments) {
+	foreach (@array) {
+	    s/$ComMark/shift @Comments/geo;
+	}
+    }
+    @Comments = ();
+}
+##---------------------------------------------------------------------------##
+##	cp() copies file $src to $dst;
+##
+sub cp {
+    local($src, $dst) = @_;
+    open(SRC, $src) || die "Error: Unable to open $src\n";
+    open(DST, "> $dst") || die "Error: Unable to create $dst\n";
+    print DST <SRC>;
+    close(SRC);
+    close(DST);
+}
+##---------------------------------------------------------------------------##
+sub abs {
+    local($val) = $_[0];
+    $val < 0 ? -1 * $val : $val;
+}
+##---------------------------------------------------------------------------##
+sub Usage {
+    select STDOUT;
+    print <<EndOfUsage;
+Usage: $PROG [<options>] file ...
+Options:
+  -entrysep <string>    : Separator string for non-<LI> item entries
+                              (def: ", ")
+  -footer <file>	: File containing footer text for ToC
+  -header <file>	: File containing header text for ToC
+  -help			: This message
+  -inline		: Put ToC in document
+  -noorg		: Delete backup original ".org" files on completion
+  -ol			: Use an ordered list for level 1 ToC entries
+  -prefix <string>	: Prefix for ToC IDs for linking
+			      (def: "xtocid")
+  -quiet		: Suppress informative messages
+  -textonly		: Use only text content in significant elements
+  -title <string>	: Title for ToC
+			      (def: "Table of Contents")
+  -minitoc <string>	: Put ToC after this string in html
+			      (def: "<body.*>")
+  -toc <file>		: Output ToC file
+			      (def: STDOUT)
+  -toclabel <string>,	: HTML text that labels the ToC
+			      (def: "<H1>Table of Contents</H1>")
+  -tocmap <file>	: ToC map file defining significant elements
+  -useorg		: Use pre-existing ".org" files
+
+Description:
+  $PROG generates a Table of Contents (ToC) for all HTML files
+  specified.  By default, the generated ToC goes to standard output
+  (STDOUT).  If the -toc option is given, the ToC goes to the named
+  file.  If the -inline option is specified, the ToC is inserted at the
+  beginning of the processed document, or at point specified by
+  -minitoc "tag_string"  command line option. Read documentation for
+   more information on all options.
+
+Version:
+  $VERSION
+  Copyright (C) 1994-2006  Earl Hood, ehood\@medusa.acs.uci.edu
+  htmltoc comes with ABSOLUTELY NO WARRANTY and htmltoc may be copied only
+  under the terms of the GNU General Public License (version 2, or later),
+  which may be found in the distribution.
+
+EndOfUsage
+    exit 0;
+}
+##---------------------------------------------------------------------------##
+##	read_sgml() reads SGML markup.  The *array_r is the returned
+##	array that contains tags separated from text.  I.e. read_sgml()
+##	splits the markup tags from text.  Each array item is either a
+##	markup tag or a text.  The order of tag/text items are the
+##	order they appear in the text.
+##
+##	Argument descriptions:
+##	    $handle :	Filehandle containing the SGML instance.
+##	    *array_r :	Pointer to array variable to put splitted tag/text.
+##
+sub read_sgml {
+    local($handle, *array_r) = @_;
+    local($d) = $/;
+    local($txt, $save, $tmp, $c);
+
+    undef $/;		# Slurps entire file
+    $tmp = <$handle>;
+
+    ## Delete comment declarations ##
+    while ($tmp =~ s/^([^<]*<)//) {
+	$txt .= $1;
+	if ($tmp =~ s/^(!--)//) {
+	    $c = chop $txt;
+	    $save = $c . $1;
+	    $txt .= $ComMark;
+	    while (1) {
+		$tmp =~ s/^([^>]*>)//;
+		$save .= $1;
+		last if $1 =~ /--\s*>$/ || !$tmp;
+	    }
+	    push(@Comments, $save);
+	} else {
+	    $tmp =~ s/^([^>]*>)//;  $txt .= $1;
+	}
+    }
+
+    $txt .= $tmp;
+    @array_r = split(/(<[^>]*>)/, $txt);
+    $/ = $d;
+}
+1;

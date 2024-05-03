@@ -1,0 +1,160 @@
+% This begins the document
+% modified (DC) jan 2006 - Added minitoc 2-plcs for chapter TOC
+% modified (DC) feb 2006 - Added tocvsec2 to supress TOC levels in appendix
+% modified (DC) feb 2006 - Added hyperref forlinks in pdf
+% modified (DC) may 2007 - Added breaklinks=true added, no difference may remove
+% modified (DC) may 2007 - Added \usepackage[sectionbib]{chapterbib}
+% modified (DC) mar 2008 - Added \usepackage{newcent} heavier on screen font
+% modified (DC) feb 2020 - Added \usepackage{float}
+
+%%\include{hi_common}  %%withful thinking
+\documentclass{book}
+\usepackage{newcent}  %%heavier font in .pdf
+\usepackage{makeidx}
+\usepackage[dvips]{graphicx}
+\usepackage[sectionbib]{chapterbib}
+%package for chapter table of contents
+\usepackage{minitoc}
+%02/15/2020 DC% \usepackage{../bin/minitoc}
+\usepackage{float}
+%02/15/2020 DC% \usepackage{../bin/tocvsec2}
+\usepackage{tocvsec2}
+\usepackage{color}
+\usepackage{verbatim}
+
+\usepackage[
+    pdftitle = "{Lessons In Electric Circuits, Volume I -- DC}",
+    pdfauthor = "{Tony R. Kuphaldt}",
+    dvips = true,
+    ps2pdf = true,
+    colorlinks = true,
+    breaklinks= true,
+    linkcolor = webred,
+    hyperindex = true
+]{hyperref}
+
+%bookmark-- to put TOC and  INDEX entries
+% postscript/pdf
+
+\newcount\marknumber	\marknumber=1
+\newcount\countdp \newcount\countwd \newcount\countht 
+
+%
+% for ordinary tex
+%
+% 01/30/2007 had to comment out next line for new LaTeX
+%%\ifx\pdfoutput\undefined
+\def\rgboo#1{\special{color rgb #1}}
+\input epsf
+\def\fig#1{\epsfbox{#1.eps}}
+\def\figscale#1#2{\epsfxsize=#2\epsfbox{#1.eps}}
+%\def\postscript#1{\special{postscript #1}}		% for Textures
+\def\postscript#1{\special{" #1}}		% for dvips
+\postscript{
+	/bd {bind def} bind def
+	/fsd {findfont exch scalefont def} bd
+	/sms {setfont moveto show} bd
+	/ms {moveto show} bd
+	/pdfmark where		% printers ignore pdfmarks
+	{pop} {userdict /pdfmark /cleartomark load put} ifelse
+	[ /PageMode /UseOutlines		% bookmark window open
+	/DOCVIEW pdfmark}
+\def\bookmark#1#2{\postscript{		% #1=subheadings (if not 0)
+%	[ /Title (#2) /Count #1 /OUT pdfmark}}
+	[ /Dest /MyDest\the\marknumber /View [ /XYZ null null null ] /DEST pdfmark
+	[ /Title (#2) /Count #1 /Dest /MyDest\the\marknumber /OUT pdfmark}%
+	\advance\marknumber by1}
+
+
+\definecolor{webgreen}{rgb}{0, 0.75,0} %less intense green
+\definecolor{webred}{rgb}{0, 0, 0.75}  %less intense blue
+\definecolor{webred}{rgb}{0.75, 0, 0}  %less intense red
+
+\setlength{\textwidth}{6in}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0.5in}
+
+\makeindex
+%Modified 02/08/2006 (DC) depth of TOC 1 level below chapter
+\setcounter{tocdepth}{1}
+
+
+\begin{document}
+
+
+%% Cover photograph %%
+
+\thispagestyle{empty}
+
+\centerline {\includegraphics[ scale =1.2 ]{40000.eps}}
+\bigskip
+
+\centerline{\bf Fifth Edition, last update  November 06, 2021}
+
+\newpage
+
+\vfil \eject
+
+
+
+%% Title page %%
+
+\title{Lessons In Electric Circuits, Volume I -- DC}
+
+\author{By Tony R. Kuphaldt}
+
+\date{Fifth Edition, last update  November 06, 2021}
+
+\maketitle
+
+\vfil \eject
+
+
+
+%% Copyright page %%
+
+\pagenumbering{roman}
+
+\copyright{}2000-2023, Tony R. Kuphaldt
+
+\medskip
+
+This book is published under the terms and conditions of the Creative Commons License.  These terms and conditions allow for free copying, distribution, and/or modification of this document by the general public.  The full Creative Commons License text is included in the last chapter.
+
+As an open and collaboratively developed text, this book is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Creative Commons License for more details. 
+
+Available in its entirety as part of the Open Book Project collection at:
+
+\begin{flushleft}
+\href{https://www.ibiblio.org/kuphaldt/electricCircuits}{\tt{https://www.ibiblio.org/kuphaldt/electricCircuits}}
+\end{flushleft}
+
+
+\vskip 50pt
+
+{\bf PRINTING HISTORY}
+\begin{itemize}
+\item First Edition: Printed in June of 2000.  Plain-ASCII illustrations for universal computer readability.
+\item Second Edition: Printed in September of 2000.  Illustrations reworked in standard graphic (eps and jpeg) format.  Source files translated to {\it Texinfo} format for easy online and printed publication.
+\item Third Edition: Equations and tables reworked as graphic images rather than plain-ASCII text. 
+\item Fourth Edition: Printed in August 2001.  Source files translated to {\it SubML} format.  SubML is a simple markup language designed to easily convert to other markups like \LaTeX{}, HTML, or DocBook using nothing but search-and-replace substitutions.
+\item Fifth Edition: Printed in August 2002.  New sections added, and error corrections made, since the fourth edition.
+\end{itemize}
+
+
+\vfil \eject
+
+% mini table of contents for each chapter
+\dominitoc
+
+
+%% Table of contents %%
+
+\bookmark{0}{TABLE OF CONTENTS}
+
+\tableofcontents  
+
+\newpage
+
+\pagenumbering{arabic}
+

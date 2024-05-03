@@ -1,0 +1,496 @@
+% modified 10/29/2005 (DC) added torque conversions 
+ 
+\begin{cbunit} 
+
+\chapter{USEFUL EQUATIONS AND CONVERSION FACTORS} 
+\minitoc 
+\bigskip 
+
+
+\section{ DC circuit equations and laws}
+
+\subsection{ Ohm's and Joule's Laws}
+\index{Ohm's Law}
+\index{Joule's Law}
+\index{E, symbol for voltage}
+\index{I, symbol for current}
+\index{R, symbol for resistance}
+\index{P, symbol for power}
+ 
+\includegraphics{11001.eps}
+ 
+
+NOTE: the symbol "V" ("U" in Europe) is sometimes used to represent voltage instead of "E".  In some cases, an author or circuit designer may choose to exclusively use "V" for voltage, never using the symbol "E."  Other times the two symbols are used interchangeably, or "E" is used to represent voltage from a power source while "V" is used to represent voltage across a load (voltage "drop").  
+ 
+
+                     
+\bigskip 
+
+
+\subsection{ Kirchhoff's Laws}
+                            
+\begin{quotation}
+ 
+
+\textit{"The algebraic sum of all voltages in a loop must equal zero."}
+ 
+
+ 
+
+\textbf{Kirchhoff's Voltage Law (KVL)}
+ 
+
+\end{quotation}
+\bigskip 
+                            
+\begin{quotation}
+ 
+
+\textit{"The algebraic sum of all currents entering and exiting a node must equal zero."}
+ 
+
+ 
+
+\textbf{Kirchhoff's Current Law (KCL)}
+ 
+
+\end{quotation}
+                                                               
+
+
+                                                                  
+
+\section{ Series circuit rules}
+\begin{itemize}
+\item Components in a series circuit share the same current.  I$_{total}$ = I$_{1}$ = I$_{2}$ = . . . I$_{n}$
+\item Total resistance in a series circuit is equal to the sum of the individual resistances, making it \textit{greater} than any of the individual resistances.  R$_{total}$ = R$_{1}$ + R$_{2}$ + . . . R$_{n}$
+\item Total voltage in a series circuit is equal to the sum of the individual voltage drops.  E$_{total}$ = E$_{1}$ + E$_{2}$ + . . . E$_{n}$
+\end{itemize}
+
+
+\section{ Parallel circuit rules}
+\begin{itemize}
+\item Components in a parallel circuit share the same voltage.  E$_{total}$ = E$_{1}$ = E$_{2}$ = . . . E$_{n}$
+\item Total resistance in a parallel circuit is \textit{less} than any of the individual resistances.  R$_{total}$ = 1 / (1/R$_{1}$ + 1/R$_{2}$ + . . . 1/R$_{n}$)
+\item Total current in a parallel circuit is equal to the sum of the individual branch currents.  I$_{total}$ = I$_{1}$ + I$_{2}$ + . . . I$_{n}$
+\end{itemize}
+
+ 
+
+\section{ Series and parallel component equivalent values}
+\index{Series circuits}
+\index{Parallel circuits}
+
+\subsection{ Series and parallel resistances}
+ 
+\includegraphics{11002.eps}
+\bigskip 
+
+                                                                  
+ 
+
+\subsection{ Series and parallel inductances}
+ 
+ 
+\includegraphics{11003.eps}
+\bigskip 
+
+ 
+ 
+                                                                   
+
+\subsection{ Series and Parallel Capacitances}
+ 
+\includegraphics{11004.eps}
+
+
+
+\section{ Capacitor sizing equation}
+\index{Capacitance equation}
+ 
+\includegraphics{10230.eps}
+ 
+
+ 
+\includegraphics{11095.eps}
+ 
+
+ 
+
+ 
+\includegraphics{11096.eps}
+ 
+
+ 
+
+A formula for capacitance in picofarads using practical dimensions:
+ 
+
+ 
+\includegraphics{10277.eps}
+
+ 
+                                                                     
+
+\section{ Inductor sizing equation}
+\index{Inductance equation}
+ 
+\includegraphics{11102.eps}
+ 
+ 
+
+Wheeler's formulas for inductance of air core coils which follow are useful for radio frequency inductors. The following formula for the inductance of a single layer air core solenoid coil is accurate to approximately 1\% for 2r/l $<$ 3. The thick coil formula is 1\% accurate when the denominator terms are approximately equal. Wheeler's spiral formula is 1\% accurate for c$>$0.2r. While this is a "round wire" formula, it may still be applicable to printed circuit spiral inductors at reduced accuracy.
+ 
+
+ 
+\includegraphics{11098.eps}
+ 
+
+The inductance in henries of a square printed circuit inductor is given by two formulas where p=q, and p$\neq$q.
+ 
+
+ 
+\includegraphics{11100.eps}
+
+\subsubsection{ Wire sizing for inductors }
+ 
+\hypertarget{AWGcm}{}
+ 
+
+The wire table provides "turns per inch" for enamel magnet wire for use with the inductance formulas for coils.  The circular-mil cross-section area determines current carrying capacity of wires.
+ 
+
+ 
+\includegraphics{11099.eps}
+
+
+ 
+
+\section{ Time constant equations}
+\index{Time constant equations}
+ 
+
+\subsection{ Value of time constant in series RC and RL circuits}
+ 
+
+Time constant in seconds = RC
+ 
+
+ 
+ 
+
+Time constant in seconds = L/R
+ 
+
+ 
+\bigskip 
+
+
+\subsection{ Calculating voltage or current at specified time}
+ 
+\includegraphics{10245.eps}
+ 
+\bigskip 
+
+
+\subsection{ Calculating time at specified voltage or current}
+ 
+\includegraphics{10264.eps}
+ 
+
+ 
+
+
+\section{ AC circuit equations}
+\index{Reactance}
+\index{Impedance}
+\index{Resonance}
+\index{Power factor}
+   
+
+\subsection{ Inductive reactance}
+ 
+\includegraphics{11005.eps}
+ 
+\bigskip 
+
+                                                                 
+ 
+
+\subsection{ Capacitive reactance}
+ 
+\includegraphics{11006.eps}
+ 
+\bigskip 
+
+ 
+
+\subsection{ Impedance in relation to R and X}
+\begin{quotation}
+Z$_{L}$ = R + jX$_{L}$
+\end{quotation}
+\begin{quotation}
+Z$_{C}$ = R - jX$_{C}$
+\end{quotation}
+\bigskip 
+
+ 
+
+\subsection{ Ohm's Law for AC}
+\index{Ohm's Law, AC}
+ 
+\includegraphics{11009.eps}
+ 
+\bigskip 
+
+ 
+
+\subsection{ Series and Parallel Impedances}
+ 
+\includegraphics{11008.eps}
+ 
+ 
+
+NOTE: All impedances must be calculated in \textit{complex} number form for these equations to work.
+ 
+
+                                                   
+\bigskip 
+
+                                                      
+ 
+                                       
+
+\subsection{ Resonance}
+ 
+\includegraphics{11010.eps}
+ 
+ 
+
+NOTE: This equation applies to a non-resistive LC circuit.  In circuits containing resistance as well as inductance and capacitance, this equation applies only to series configurations and to parallel configurations where R is very small. 
+ 
+
+\bigskip 
+
+                                                   
+ 
+                                             
+                                                        
+
+\subsection{ AC power}
+ 
+\includegraphics{12123.eps}
+ 
+
+ 
+
+\bigskip 
+ 
+\includegraphics{11011.eps}
+ 
+
+ 
+
+
+\section{ Decibels}
+ 
+\includegraphics{11063.eps}
+ 
+
+\vfil \eject 
+
+\section{ Metric prefixes and unit conversions}
+\index{Metric system}
+\index{Prefix, metric}
+\index{Conversion factor}
+\index{Factor, conversion}
+\begin{itemize}
+\item \textbf{Metric prefixes}
+\item Yotta = 10$^{24}$ Symbol: Y
+\item Zetta = 10$^{21}$ Symbol: Z
+\item Exa = 10$^{18}$ Symbol: E
+\item Peta = 10$^{15}$ Symbol: P
+\item Tera = 10$^{12}$ Symbol: T
+\item Giga = 10$^{9}$ Symbol: G
+\item Mega = 10$^{6}$ Symbol: M
+\item Kilo = 10$^{3}$ Symbol: k
+\item Hecto = 10$^{2}$ Symbol: h
+\item Deca = 10$^{1}$ Symbol: da
+\item Deci = 10$^{-1}$ Symbol: d
+\item Centi = 10$^{-2}$ Symbol: c
+\item Milli = 10$^{-3}$ Symbol: m
+\item Micro = 10$^{-6}$ Symbol: $\mu$
+\item Nano = 10$^{-9}$ Symbol: n
+\item Pico = 10$^{-12}$ Symbol: p
+\item Femto = 10$^{-15}$ Symbol: f
+\item Atto = 10$^{-18}$ Symbol: a
+\item Zepto = 10$^{-21}$ Symbol: z
+\item Yocto = 10$^{-24}$ Symbol: y
+\end{itemize}
+ 
+\medskip \centerline{\includegraphics{00356.eps}}
+\bigskip 
+\begin{itemize}
+\item \textbf{Conversion factors for temperature}
+\item $^{o}$F = ($^{o}$C)(9/5) + 32
+\item $^{o}$C = ($^{o}$F - 32)(5/9)
+\item $^{o}$R = $^{o}$F + 459.67
+\item $^{o}$K = $^{o}$C + 273.15
+\end{itemize}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for volume}
+ 
+
+\begin{quotation}
+1 US gallon (gal) = 231.0 cubic inches (in$^{3}$) = 4 quarts (qt) = 8 pints (pt) = 128 fluid ounces (fl. oz.) = 3.7854 liters (l)
+\end{quotation}
+\begin{quotation}
+1 Imperial gallon (gal) = 160 fluid ounces (fl. oz.) = 4.546 liters (l)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for distance}
+ 
+
+\begin{quotation}
+1 inch (in) = 2.540000 centimeter (cm)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for velocity}
+ 
+
+\begin{quotation}
+1 mile per hour (mi/h) = 88 feet per minute (ft/m) = 1.46667 feet per second (ft/s) = 1.60934 kilometer per hour (km/h) = 0.44704 meter per second (m/s) = 0.868976 knot (knot -- international)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for weight}
+ 
+
+\begin{quotation}
+1 pound (lb) = 16 ounces (oz) = 0.45359 kilogram (kg)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for force}
+ 
+
+\begin{quotation}
+1 pound-force (lbf) = 4.44822 newton (N)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Acceleration of gravity (free fall), Earth standard}
+ 
+
+\begin{quotation}
+9.806650 meters per second per second (m/s$^{2}$) = 32.1740 feet per second per second (ft/s$^{2}$)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for area}
+ 
+
+\begin{quotation}
+1 acre = 43560 square feet (ft$^{2}$) = 4840 square yards (yd$^{2}$) = 4046.86 square meters (m$^{2}$)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for pressure}
+ 
+
+\begin{quotation}
+1 pound per square inch (psi) = 2.03603 inches of mercury (in. Hg) = 27.6807 inches of water (in. W.C.) = 6894.757 pascals (Pa) = 0.0680460 atmospheres (Atm) = 0.0689476 bar (bar)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for energy or work}
+ 
+
+\begin{quotation}
+1 british thermal unit (BTU -- "International Table") = 251.996 calories (cal -- "International Table") = 1055.06 joules (J) = 1055.06 watt-seconds (W-s) = 0.293071 watt-hour (W-hr) = 1.05506 x 10$^{10}$ ergs (erg) = 778.169 foot-pound-force (ft-lbf) 
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for power}
+ 
+
+\begin{quotation}
+1 horsepower (hp -- 550 ft-lbf/s) = 745.7 watts (W) = 2544.43 british thermal units per hour (BTU/hr) = 0.0760181 boiler horsepower (hp -- boiler)
+\end{quotation}
+\bigskip 
+ 
+
+\textbf{Conversion equivalencies for motor torque}
+ 
+
+ 
+\includegraphics{11094.eps}
+ 
+
+Locate the row corresponding to known unit of torque along the left of the table. Multiply by the factor under the column for the desired units. For example, to convert 2 oz-in torque to n-m, locate oz-in row at table left. Locate 7.062 x 10$^{-3}$  at intersection of desired n-m units column. Multiply 2 oz-in x  (7.062 x 10$^{-3}$ ) =  14.12 x 10$^{-3}$ n-m. 
+ 
+
+\bigskip 
+ 
+
+Converting between units is easy if you have a set of equivalencies to work with.  Suppose we wanted to convert an energy quantity of 2500 calories into watt-hours.  What we would need to do is find a set of equivalent figures for those units.  In our reference here, we see that 251.996 calories is physically equal to 0.293071 watt hour.  To convert from calories into watt-hours, we must form a "unity fraction" with these physically equal figures (a fraction composed of different figures and different units, the numerator and denominator being \textit{physically} equal to one another), placing the desired unit in the numerator and the initial unit in the denominator, and then multiply our initial value of calories by that fraction.
+ 
+
+ 
+
+Since both terms of the "unity fraction" are physically equal to one another, the fraction as a whole has a \textit{physical} value of 1, and so does not change the true value of any figure when multiplied by it.  When units are canceled, however, there will be a change in units.  For example, 2500 calories multiplied by the unity fraction of (0.293071 w-hr / 251.996 cal) = 2.9075 watt-hours.
+ 
+
+ 
+\includegraphics{11064.eps}
+ 
+
+The "unity fraction" approach to unit conversion may be extended beyond single steps.  Suppose we wanted to convert a fluid flow measurement of 175 gallons per hour into liters per day.  We have two units to convert here: gallons into liters, and hours into days.  Remember that the word "per" in mathematics means "divided by," so our initial figure of 175 gallons \textit{per} hour means 175 gallons divided by hours.  Expressing our original figure as such a fraction, we multiply it by the necessary unity fractions to convert gallons to liters (3.7854 liters = 1 gallon), and hours to days (1 day = 24 hours).  The units must be arranged in the unity fraction in such a way that undesired units cancel each other out above and below fraction bars.  For this problem it means using a gallons-to-liters unity fraction of (3.7854 liters / 1 gallon) and a hours-to-days unity fraction of (24 hours / 1 day):
+ 
+
+ 
+\includegraphics{11065.eps}
+ 
+
+Our final (converted) answer is 15898.68 liters per day.
+ 
+
+
+
+\section{ Data}
+ 
+
+Conversion factors were found in the 78$^{th}$ edition of the \textit{CRC Handbook of Chemistry and Physics}, and the 3$^{rd}$ edition of Bela Liptak's \textit{Instrument Engineers' Handbook -- Process Measurement and Analysis}. 
+ 
+
+
+
+\section{ Contributors}
+ 
+
+Contributors to this chapter are listed in chronological order of their contributions, from most recent to first.  See Appendix 2 (Contributor List) for dates and contact information.
+ 
+
+ 
+
+\textbf{Gerald Gardner} (January 2003): Addition of Imperial gallons conversion.
+ 
+
+
+ 
+\end{cbunit} 
+
+\vfil \eject 

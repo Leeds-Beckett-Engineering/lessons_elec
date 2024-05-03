@@ -1,0 +1,103 @@
+\startproduct mod_handbook
+\project proj_handbook
+\environment env_workbook
+
+% Metadata
+\setupinteraction[
+  author=Tony Kuphaldt,
+  title=Semiconductors,
+  subtitle=Lessons in Electronic Circuits (3),
+  keywords={Explanation, Engineering Design, Systems Design, UML}
+]
+
+% Define the section highlight colour
+\definecolor[highlight][signal-violet]
+
+%%
+%% Cover
+%%
+
+\definecolor [Top] [signal-white]
+\definecolor [Bottom] [signal-black]
+\definecolor [Stripe] [highlight]
+\definecolor [BottomColor] [signal-grey]
+\definecolor [ModuleColor] [signal-white]
+\definecolor [TopColor] [signal-grey]
+
+\define[1]\titlefont{%
+  \setcharacterkerning[extrakerning]%
+  \cap
+  \definedfont[#1]%
+  \ignorespaces
+}
+
+\startTEXpage
+  \externalfigure
+    [media/CoverPage.pdf]
+    [width=\paperwidth, 
+     height=\paperheight]
+\stopTEXpage
+
+%%
+%% Body
+%%
+
+% Load the main chapters
+
+\startbodymatter
+
+  \component Chapter_1.tex
+  \component Chapter_2.tex
+  \component Chapter_3.tex
+  \component Chapter_4.tex
+  \component Chapter_5.tex
+  \component Chapter_6.tex
+  \component Chapter_7.tex
+  \component Chapter_8.tex
+  \component Chapter_9.tex
+  \component Chapter_10.tex
+  \component Chapter_11.tex
+  \component Chapter_12.tex
+  \component Chapter_13.tex
+
+\stopbodymatter
+
+\startappendices
+
+  \component Appendix_1.tex
+  \component Appendix_2.tex
+  \component Appendix_3.tex
+
+\stopappendices
+
+% Bibliography
+
+%% \component ../Bibliography/Bibliography.tex
+
+%%
+%% End Matter
+%%
+
+\page[right, blank]
+
+\definelayer[colophon]
+  \setlayer[colophon][x=-4cm,y=-5cm]{
+    \externalfigure
+    [media/Colophon.pdf]
+    [width=\paperwidth, 
+    height=\paperheight]
+  }
+\flushlayer[colophon]
+
+\page[left, blank]
+
+\definelayer[last]
+  \setlayer[last][x=-4cm,y=-5cm]{
+    \externalfigure
+    [media/EndPage.pdf]
+    [width=\paperwidth, 
+    height=\paperheight]
+  }
+\flushlayer[last]
+
+\stopproduct

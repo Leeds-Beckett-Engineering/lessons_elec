@@ -1,0 +1,31 @@
+%! PostScript set of library objects for XCircuit
+%  Version: 3.2
+%  Library name is: Library 5
+%  Author: dennis <dennis@localhost>
+%
+
+
+% XCircuitLib library objects
+/log_grid {
+begingate
+1 0.50 93 -192 93 192 2 polygon
+1 0.50 82 -192 82 192 2 polygon
+1 0.50 71 -192 71 192 2 polygon
+1 0.50 58 -192 58 192 2 polygon
+1 0.50 43 -192 43 192 2 polygon
+1 0.50 24 -192 24 192 2 polygon
+1 0.50 0 -192 0 192 2 polygon
+1 0.50 -33 -192 -33 192 2 polygon
+1 0.50 -91 -192 -91 192 2 polygon
+1 0.50 101 -192 101 192 2 polygon
+endgate
+} def
+
+/dot {
+begingate
+248 1.00 0 0 6 0.00 360.00 xcarc
+endgate
+} def
+
+
+% EndLib

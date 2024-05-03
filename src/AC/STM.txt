@@ -1,0 +1,195 @@
+Suggested Corrections for "Lessons in Electric Circuits, Volume II - AC", PDF version
+Date:  14 February 2020
+By: Stewart Todd Morgan (morgan_st@live.com)
+
+
+One general comment:  The capitalization of "Hall" in "Hall effect" seems to vary somewhat in the text.  Since the word "Hall" stems from Edwin Hall's name, it should probably be capitalized consistently.  Instances of lower case "hall" are on the following pages:
+
+417 (426) Figure 13.13
+417 (426) In the paragraph following Figure 13.14
+419 (428)
+
+
+4.3 Series resistor-capacitor circuits
+
+Example:
+Given: A 40 Ω resistor in series with a 88.42 microfarad capacitor. Find the impedance at
+60 hertz.
+
+    On page 92 (101) the formula Xc = 1/2 pi f C) has a closing parenthesis that should probably be on the following line:  Xc = 1/(2 pi 60 88.42 x 10-6) (i.e., both lines
+    have a parenthesis symbol without a match)
+
+    
+6.6.1 Series resonant circuits
+
+On page 146 (155) "Above resonance, the inductive rectance increases" should be "Above resonance, the inductive reactance increases" (missing "a" in "reactance")
+
+
+6.6.2 Parallel resonant circuits
+
+On page 149 (158) "The 70.7% level is 0707(500)=354 Ohms" should be "The 70.7% level is 0.707(500)=354 Ohms" (missing decimal point in "0707" value)
+
+
+7.1 Introduction
+
+On page 154 (163) "while the parallal proximity of the two conductors" should be "while the parallel proximity of the two conductors" ("a" instead of "e" in "parallel")
+
+On page 156 (165) "is used to describe the a harmonic frequency" (use "a" or "the" but not both)
+
+
+10.2 Three-phase power systems
+
+On page 295 (304) "powering a two series-connected loads." (the "a" appears to be extraneous)
+
+
+10.6 Three-phase transformer circuits
+
+On page 314 (323) in Figure 10.42, it appears that the references to the inputs and outputs as labeled in the diagram don't correspond to the text in the diagram.  The diagram labels refer to A1, B1 and C1 (or A2, B2 and C2), but the diagram text references A1, A2, and A3 (or B1, B2 and B3).  I found this confusing.
+
+
+11.3 Calculating power factor
+
+On page 360 (369) "It cannont be sold" should be "It cannot be sold" (extra "n" in "cannot")
+
+
+Chapter 12 Bibliography
+
+On page 406 (415) The author's (editor's) name should be Walt Kester rather than Walt Kestler
+Also the link given is now dead.  This appears to be the current link:
+https://www.analog.com/media/en/training-seminars/design-handbooks/Practical-Design-Techniques-Sensor-Signal/Section6.PDF
+
+
+13.2 Synchronous Motors
+
+On page 412 (421) "driven by a mechanical energy sources" either has an extra "a" or "sources" should not be plural.
+
+On page 417 (426) "The position sensor could be as simple as as" should be "The position sensor could be as simple as" (extra "as").
+
+On page 417 (426) It appears a period is missing following "timing to the drive electronics".
+
+On page 420 (429) "to launch aircraft from naval aricraft carriers" should be "to launch aircraft from naval aircraft carriers" (transposed "r" and "i" in aircraft).
+
+
+13.3 Synchronous condenser
+
+On page 420 (429) "This is often usefull" could be "This is often useful".  Might be a dialect thing.
+
+
+13.5.1 Characteristics
+
+On page 427 (436) In Figure 13.25 reference is made to (a) and (b), but these labels are missing in the figure.
+
+
+13.5.2 Variable reluctance stepper
+
+On page 429 (438) "Zero - no notation" should perhaps be "Zero - no rotation".
+
+On page 429 (438) "to the next CCW stator Tooth", "Tooth" need not be capitalized.
+
+
+13.5.3 Permanent magnet stepper
+
+On page 432 (441) In Figure 13.34 the left-most motor wiring diagram is labeled "2-wire bipolar", but appears to correspond to the 4-wire motor mentioned following the figure ("The 4-wire motor can only be driven by bipolar waveforms.").
+
+
+13.5.4 Hybrid stepper motor
+
+On page 437 (446) "Polarity of (Greek Phi)-1 and !phi-2? drive deter-" appears to have formatting text incorrectly specified since the (Greek Phi)-2 sequence has an inverted exclamation point and question mark.
+
+On page 437 (446) "Fields (Greek phi)1, (Greek phi)-2 are switchable:"  is missing a hyphen between the (Greek phi) and "1".
+
+
+13.7.2 Theory of operation
+
+On page 453 (462) "Efficiency for a lightly load or no-loaded induction motor is poor" should be "Efficiency for a lightly loaded or no-load induction motor is poor" (-ed suffix is on the wrong word).
+
+
+13.7.4 Induction motor alternator
+
+On page 455 (464) "Small remote (from the power grid) installation may be make self-exciting" should be "Small remote (from the power grid) installation may be made self-exciting" ("make" is used instead of "made")
+
+
+13.7.5 Motor starting and speed control
+
+On page 455 (464) "An intermittent duty autotarnsformer may reduce" should be "An intermittent duty autotransformer may reduce" ("a" and "r" transposed in "autotransformer").
+
+On page 459 (468) "The inverter <text in parentheses> approximates sinewaves" where the text in parentheses appears to be incorrect formatting.
+
+On page 460 (469) "A static phase converter is three phase motor running" should be "A static phase converter is a three phase motor running" (missing "a").
+
+
+13.8 Wound rotor induction motors
+
+On page 460 (469) "the starting torgue available with no rotor resistance (R0) Slip is proportional"  (A period appears to be missing before "Slip").
+
+On page 462 (471) "(peak) torque at 80% of its' synchronous speed" should be "(peak) torque at 80% of its synchronous speed" (unnecessary "'" after "its").
+
+
+13.9 Single-phase induction motors
+
+On page 465 (474) "a bit less than the synchronous speed, It will"  ("It" should not be capitalized).
+
+On page 465 (474) "a double freqency ripple is developed" should be "a double frequency ripple is developed" (missing "u" in "frequency").
+
+
+13.9.4 Resistance split-phase motor induction motor
+
+On page 467 (476) The title of the section seems to be missing a slash or it has too many "motors".
+
+
+13.9.5 Nola power factor corrrector
+
+On page 467 (475) The title has one "r" too many in "corrrector"
+
+On page 468 (477) The Figure 13.81 text seems to have an extra "motor"
+
+
+Summary:  Single-phase induction motors
+
+On page 468 (477) "A capacitor-start induction motoronly has a capacitor" should be "A capacitor-start induction motor only has a capacitor" (missing space between "motor" and "only").
+
+
+13.10.2 2-phase servo motor
+
+On page 469 (478) "To reduce acceleration robbing inertial" should be "To reduce acceleration robbing inertia" (unnecessary "l" in "inertia").
+
+
+13.11.1 Transmitter - receiver
+
+On page 472 (481) "Small instrumentation selsyns, also known as sychros" should be "Small instrumentation selsyns, also known as synchros" (missing "n" in "synchros").
+
+On page 472 (481) " a torque transmitter or receiver is brough out" should be "a torque transmitter or receiver is brought out" (missing "t" in "brought").
+
+
+13.11.2 Differential transmitter - receiver
+
+On page 474 (483) "using both TDX's (Torque Differential transmitter) and TDR's (Torque Differential Receiver)."  ("transmitter" should be captitalized to be consistent with "Receiver").
+
+
+13.11.3 Control transformer
+
+On page 476 (485) "The control transformer compares the shaft angle to the the" should be "The control transformer compares the shaft angle to the" (unnecessary "the").
+
+
+13.11.4 Resolver
+
+On page 478 (487) "A resolver (Figure 13.97) has two stator winding placed" should be "A resolver (Figure 13.97) has two stator windings placed" (missing "s" suffix on "winding").
+
+
+Summary:  Selsyn (synchro) motors
+
+On page 478 (487) "Thus, TX transmits a torque form an input shaft" should be "Thus, TX transmits a torque from an input shaft" ("o" and "r" transposed in "from").
+
+On page 479 (488) "A Resolver outputs a quadrature sin(Greek symbol for theta) and cosine(theta) representation" (probably best to have the arguments of sin() and cosine() match in form, i.e. both should use the Greek symbol for theta or use "theta" for both).
+
+
+13.12.1 Single phase series motor
+
+On page 480 (489) "sparking between commutator segments The lagging" should be "sparking between commutator segments.  The lagging" (missing period after "segments").
+
+
+13.12.2 Compensated series motor
+
+On page 480 (489)  "The arcing and sparking is mitgated by placing a compensating winding the stator in series with"  (one or more words (or parhaps parentheses around "the stator") seem to be missing here).
+
+

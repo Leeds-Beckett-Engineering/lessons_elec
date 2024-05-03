@@ -1,0 +1,92 @@
+% This begins the document
+% modified (DC) jan 2006 - Added minitoc 2-plcs for chapter TOC
+
+\documentclass{book}
+
+\usepackage{makeidx}
+\usepackage[dvips]{graphics}
+
+%package for chapter table of contents
+\usepackage{minitoc}
+
+\setlength{\textwidth}{6in}
+\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{0.5in}
+
+\makeindex
+
+\begin{document}
+
+
+%% Cover photograph %%
+
+\thispagestyle{empty}
+
+\includegraphics{40000.eps}
+
+\bigskip
+
+\centerline{\bf Fifth Edition, last update  January 18, 2006}
+
+\newpage
+
+\vfil \eject
+
+
+
+%% Title page %%
+
+\title{Lessons In Electric Circuits, Volume I -- DC}
+
+\author{By Tony R. Kuphaldt}
+
+\date{Fifth Edition, last update  January 18, 2006}
+
+\maketitle
+
+\vfil \eject
+
+
+
+%% Copyright page %%
+
+\pagenumbering{roman}
+
+\copyright{}2000-2006, Tony R. Kuphaldt
+
+\medskip
+
+This book is published under the terms and conditions of the Design Science License.  These terms and conditions allow for free copying, distribution, and/or modification of this document by the general public.  The full Design Science License text is included in the last chapter.
+
+As an open and collaboratively developed text, this book is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the Design Science License for more details. 
+
+Available in its entirety as part of the Open Book Project collection at {\tt http://www.ibiblio.org/obp}
+
+\vskip 50pt
+
+{\bf PRINTING HISTORY}
+\begin{itemize}
+\item First Edition: Printed in June of 2000.  Plain-ASCII illustrations for universal computer readability.
+\item Second Edition: Printed in September of 2000.  Illustrations reworked in standard graphic (eps and jpeg) format.  Source files translated to {\it Texinfo} format for easy online and printed publication.
+\item Third Edition: Equations and tables reworked as graphic images rather than plain-ASCII text. 
+\item Fourth Edition: Printed in August 2001.  Source files translated to {\it SubML} format.  SubML is a simple markup language designed to easily convert to other markups like \LaTeX{}, HTML, or DocBook using nothing but search-and-replace substitutions.
+\item Fifth Edition: Printed in August 2002.  New sections added, and error corrections made, since the fourth edition.
+\end{itemize}
+
+
+\vfil \eject
+
+% table of contents for each chapter
+\dominitoc
+
+
+%% Table of contents %%
+
+\tableofcontents  
+
+\newpage
+
+\pagenumbering{arabic}
+
+
+

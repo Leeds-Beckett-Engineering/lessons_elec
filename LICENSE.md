@@ -1,14 +1,12 @@
-DESIGN SCIENCE LICENSE
-======================
+# DESIGN SCIENCE LICENSE
 
 Copyright © 1999-2000 Michael Stutz stutz@dsl.org
 
 Verbatim copying of this document is permitted, in any medium.
 
-* * *
+---
 
-0\. Preamble
-------------
+## 0\. Preamble
 
 Copyright law gives certain exclusive rights to the author of a work, including the rights to copy, modify and distribute the work (the "reproductive," "adaptative," and "distribution" rights).
 
@@ -18,10 +16,9 @@ The intent of this license is to be a general "copyleft" that can be applied to 
 
 Whereas "design science" is a strategy for the development of artifacts as a way to reform the environment (not people) and subsequently improve the universal standard of living, this Design Science License was written and deployed as a strategy for promoting the progress of science and art through reform of the environment.
 
-* * *
+---
 
-1\. Definitions
----------------
+## 1\. Definitions
 
 "License" shall mean this Design Science License. The License applies to any work which contains a notice placed by the work's copyright holder stating that it is published under the terms of this Design Science License.
 
@@ -37,10 +34,9 @@ Whereas "design science" is a strategy for the development of artifacts as a way
 
 The individual licensees are referred to as "you."
 
-* * *
+---
 
-2\. Rights and copyright
-------------------------
+## 2\. Rights and copyright
 
 The Work is copyright the Author. All rights to the Work are reserved by the Author, except as specifically described below. This License describes the terms and conditions under which the Author permits you to copy, distribute and modify copies of the Work.
 
@@ -48,10 +44,9 @@ In addition, you may refer to the Work, talk about it, and (as dictated by "fair
 
 Your right to operate, perform, read or otherwise interpret and/or execute the Work is unrestricted; however, you do so at your own risk, because the Work comes WITHOUT ANY WARRANTY -- see Section 7 ("NO WARRANTY") below.
 
-* * *
+---
 
-3\. Copying and distribution
-----------------------------
+## 3\. Copying and distribution
 
 Permission is granted to distribute, publish or otherwise present verbatim copies of the entire Source Data of the Work, in any medium, provided that full copyright notice and disclaimer of warranty, where applicable, is conspicuously published on all copies, and a copy of this License is distributed along with the Work.
 
@@ -67,10 +62,9 @@ You may copy and distribute the Work either gratis or for a fee, and if desired,
 
 The aggregation of the Work with other works which are not based on the Work -- such as but not limited to inclusion in a publication, broadcast, compilation, or other media -- does not bring the other works in the scope of the License; nor does such aggregation void the terms of the License for the Work.
 
-* * *
+---
 
-4\. Modification
-----------------
+## 4\. Modification
 
 Permission is granted to modify or sample from a copy of the Work, producing a derivative work, and to distribute the derivative work under the terms described in the section for distribution above, provided that the following terms are met:
 
@@ -80,17 +74,15 @@ Permission is granted to modify or sample from a copy of the Work, producing a d
 
 (c) Appropriate authorship credit is given: for the differences between the Work and the new derivative work, authorship is attributed to you, while the material sampled or used from the Work remains attributed to the original Author; appropriate notice must be included with the new work indicating the nature and the dates of any modifications of the Work made by you.
 
-* * *
+---
 
-5\. No restrictions
--------------------
+## 5\. No restrictions
 
 You may not impose any further restrictions on the Work or any of its derivative works beyond those restrictions described in this License.
 
-* * *
+---
 
-6\. Acceptance
---------------
+## 6\. Acceptance
 
 Copying, distributing or modifying the Work (including but not limited to sampling from the Work in a new work) indicates acceptance of these terms. If you do not follow the terms of this License, any rights granted to you by the License are null and void. The copying, distribution or modification of the Work outside of the terms described in this License is expressly prohibited by law.
 
@@ -98,26 +90,16 @@ If for any reason, conditions are imposed on you that forbid you to fulfill the 
 
 If any part of this License is found to be in conflict with the law, that part shall be interpreted in its broadest meaning consistent with the law, and no other parts of the License shall be affected.
 
-* * *
+---
 
-7\. No warranty
----------------
+## 7\. No warranty
 
 THE WORK IS PROVIDED "AS IS," AND COMES WITH ABSOLUTELY NO WARRANTY, EXPRESS OR IMPLIED, TO THE EXTENT PERMITTED BY APPLICABLE LAW, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
 
-* * *
+---
 
-8\. Disclaimer of liability
----------------------------
+## 8\. Disclaimer of liability
 
 IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS WORK, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-  
-  
-
 END OF TERMS AND CONDITIONS
-
-  
-  
-
-
