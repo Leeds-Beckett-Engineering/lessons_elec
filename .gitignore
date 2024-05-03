@@ -5,6 +5,7 @@ Attic/**
 node_modules/**
 
 # Ignore temporary files
+Explanations/Semi/LEC3_Semi-export/**
 
 # Ignore cruft
 *.bak
