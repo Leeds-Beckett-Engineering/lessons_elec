@@ -6,7 +6,7 @@
 
 #   ABOUT THIS BOOK
 
-## [Purpose]{.underline}
+## [Purpose]
 
 They say that necessity is the mother of invention. At least in the case of this book, that adage is true. As an industrial electronics instructor, I was forced to use a sub-standard textbook during my first year of teaching. My students were daily frustrated with the many typographical errors and obscure explanations in this book, having spent much time at home struggling to comprehend the material within. Worse yet were the many incorrect answers in the back of the book to selected problems. Adding insult to injury was the \$100+ price.
 
@@ -24,7 +24,7 @@ In \"copylefting\" this text, I guaranteed that no instructor would be limited b
 
 It must be mentioned that although I strive to maintain technical accuracy in all of this book\'s content, the subject matter is broad and harbors many potential dangers. Electricity maims and kills without provocation, and deserves the utmost respect. I strongly encourage experimentation on the part of the reader, but only with circuits powered by small batteries where there is no risk of electric shock, fire, explosion, etc. High-power electric circuits should be left to the care of trained professionals! The CC BY License clearly states that neither I nor any contributors to this book bear any liability for what is done with its contents.
 
-## [The use of SPICE]{.underline}
+## [The use of SPICE]
 
 One of the best ways to learn how things work is to follow the inductive approach: to observe specific instances of things working and derive general conclusions from those observations. In science education, labwork is the traditionally accepted venue for this type of learning, although in many cases labs are designed by educators to reinforce principles previously learned through lecture or textbook reading, rather than to allow the student to learn on their own through a truly exploratory process.
 
@@ -36,7 +36,7 @@ Another advantage to including computer analyses in a textbook is the empirical 
 
 SPICE is introduced early in volume I (DC) of this book series, and hopefully in a gentle enough way that it doesn\'t create confusion. For those wishing to learn more, a chapter in the Reference volume (volume V) contains an overview of SPICE with many example circuits. There may be more flashy (graphic) circuit simulation programs in existence, but SPICE is free, a virtue complementing the charitable philosophy of this book very nicely.
 
-## [Acknowledgements]{.underline}
+## [Acknowledgements]
 
 First, I wish to thank my wife, whose patience during those many and long evenings (and weekends!) of typing has been extraordinary.
 

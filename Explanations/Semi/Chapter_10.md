@@ -8,23 +8,21 @@
 
 # ACTIVE FILTERS
 
-- [[Two pole active filters]{.underline}](#xtocid15706430)
+- [[Two pole active filters]](#xtocid15706430)
 
 **\*\*\* PENDING \*\*\***
 
-## [[Two pole active filters]{#xtocid15706430}]{.underline}
+## Two pole active filters{ #sec:xtocid15706430 }
 
-Figure [below](#03515.png)
+@fig:03515
 
-[]{#03515.png}
-
-![](03515.png)
+![](media/03515.png){ #fig:03515 width=75% }
 
 _(a) 10Khz Low-pass filter. (b) 100Hz cutoff high-pass filter_
 
 Test
 
-![](13105.png)
+![](media/13105.png){ #fig:13105 width=75% }
 
 \
 

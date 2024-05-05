@@ -6,7 +6,7 @@
 
 #   CONTRIBUTOR LIST
 
-## [How to contribute to this book]{.underline}
+## [How to contribute to this book]
 
 As a copylefted work, this book is open to revision and expansion by any interested parties. The only \"catch\" is that credit must be given where credit is due.
 
@@ -52,23 +52,23 @@ If you wish to modify this book in any way, you should document the nature of th
 
 Given the complexities and security issues surrounding the maintenance of files comprising this book, it is recommended that you submit any revisions or expansions to the original author (Tony R. Kuphaldt). You are, of course, welcome to modify this book directly by editing your own personal copy, but we would all stand to benefit from your contributions if your ideas were incorporated into the online \"master copy\" where all the world can see it.
 
-## [Credits]{.underline}
+## [Credits]
 
 All entries arranged in alphabetical order of surname. Major contributions are listed by individual name with some detail on the nature of the contribution(s), date, contact info, etc. Minor contributions (typo corrections, etc.) are listed by name only for reasons of brevity. Please understand that when I classify a contribution as \"minor,\" it is in no way inferior to the effort or value of a \"major\" contribution, just smaller in the sense of less text changed. Any and all contributions are gratefully accepted. I am indebted to all those who have given freely of their own knowledge, time, and resources to make this a better book!
 
-### [John Anhalt]{.underline}
+### [John Anhalt]
 
 - **Date(s) of contribution(s):** December 2008
 - **Nature of contribution:** Updated lead-acid cell chemistry, Ch 11
 - **Contact at:** `jpa@anhalt.org`
 
-### [Benjamin Crowell, Ph.D.]{.underline}
+### [Benjamin Crowell, Ph.D.]
 
 - **Date(s) of contribution(s):** January 2001
 - **Nature of contribution:** Suggestions on improving technical accuracy of electric field and charge explanations in the first two chapters.
 - **Contact at:** `crowell01@lightandmatter.com`
 
-### [Dennis Crunkilton]{.underline}
+### [Dennis Crunkilton]
 
 - **Date(s) of contribution(s):** January 2006 to present
 - **Nature of contribution:** Mini table of contents, all chapters except appedicies; html, latex, ps, pdf; See Devel/tutorial.html; 01/2006.
@@ -76,52 +76,52 @@ All entries arranged in alphabetical order of surname. Major contributions are l
 - Ch3, Added AFCI paragraphs after GFCI, 10/09/2007.
 - **Contact at:** `liecibiblio(at)gmail.com`
 
-### [Tony R. Kuphaldt]{.underline}
+### [Tony R. Kuphaldt]
 
 - **Date(s) of contribution(s):** 1996 to present
 - **Nature of contribution:** Original author.
 - **Contact at:** `liec0@lycos.com`
 
-### [Ron LaPlante]{.underline}
+### [Ron LaPlante]
 
 - **Date(s) of contribution(s):** October 1998
 - **Nature of contribution:** Helped create the \"table\" concept for use in analysis of series and parallel circuits.
 
-### [Davy Van Nieuwenborgh]{.underline}
+### [Davy Van Nieuwenborgh]
 
 - **Date(s) of contribution(s):** October 2006
 - **Nature of contribution:** DC network analysis ch, Mesh current section, supplied solution to mesh problem, pointed out error in text.
 - **Contact at:** `Theoretical Computer Science laboratory, Department of Computer Science, Vrije Universiteit Brussel.`
 
-### [Ray A. Rayburn]{.underline}
+### [Ray A. Rayburn]
 
 - **Date(s) of contribution(s):** September 2009
 - **Nature of contribution:** Nonapplicability of Maximum Power Transfer Theorem to Hi-Fi audio amplifier.
 - **Contact at:** `http://forum.allaboutcircuits.com/member.php?u=54720`
 
-### [Jason Starck]{.underline}
+### [Jason Starck]
 
 - **Date(s) of contribution(s):** June 2000
 - **Nature of contribution:** HTML formatting, some error corrections.
 - **Contact at:** `jstarck@yhslug.tux.org`
 
-### [Warren Young]{.underline}
+### [Warren Young]
 
 - **Date(s) of contribution(s):** August 2002
 - **Nature of contribution:** Provided capacitor photographs for chapter 13.
 
-### [someonesdad@allaboutcircuits.com]{.underline}
+### [someonesdad@allaboutcircuits.com]
 
 - **Date(s) of contribution(s):** November 2009
 - **Nature of contribution:** Chapter 8, troublehooting tip end of Kelvin section.
 
-### [Your name here]{.underline}
+### [Your name here]
 
 - **Date(s) of contribution(s):** Month and year of contribution
 - **Nature of contribution:** Insert text here, describing how you contributed to the book.
 - **Contact at:** `my_email@provider.net`
 
-### [Typo corrections and other \"minor\" contributions]{.underline}
+### [Typo corrections and other \"minor\" contributions]
 
 - _The students of Bellingham Technical College\'s Instrumentation program_.
 
