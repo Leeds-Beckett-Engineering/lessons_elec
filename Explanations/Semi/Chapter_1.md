@@ -90,9 +90,9 @@ In its simplest form, an amplifier\'s _gain_ is a ratio of output over input. Li
 
 As a unit, the bel was actually devised as a convenient way to represent power _loss_ in telephone system wiring rather than _gain_ in amplifiers. The unit\'s name is derived from Alexander Graham Bell, the famous Scottish inventor whose work was instrumental in developing telephone systems. Originally, the bel represented the amount of signal power loss due to resistance over a standard length of electrical cable. Now, it is defined in terms of the common (base 10) logarithm of a power ratio (output power divided by input power):
 
-$$A_{P(ratio)} = \frac{P_{output}}{P_{input}}$$
+$$A_{P(\text{ratio})} = \frac{P_{output}}{P_{input}}$$
 
-$$A_{P(bel)} = \log \frac{P_{output}}{P_{input}}$$
+$$A_{P(\text{bel})} = \log \frac{P_{output}}{P_{input}}$$
 
 Because the bel is a logarithmic unit, it is nonlinear. To give you an idea of how this works, consider the following table of figures, comparing power losses and gains in bels versus simple ratios:
 
@@ -120,7 +120,7 @@ Close inspection of these gain figures in the unit of "bel" yields a discovery: 
 
 Recalculating for decibels rather than bels, we notice the same phenomenon (@fig:03171).
 
-![_Gain of Amplifier Stages in decibels is Additive: 4.77 Db + 6.99 Db = 11.76 dB_](media/03171.png){ #fig:03171 width=80% }
+![_Gain of Amplifier Stages in decibels is Additive: 4.77 Db + 6.99 Db = 11.76 dB_](media/03171.png){ #fig:03171 width=100% }
 
 To those already familiar with the arithmetic properties of logarithms, this is no surprise. It is an elementary rule of algebra that the antilogarithm of the sum of two numbers\' logarithm values equals the product of the two original numbers. In other words, if we take two numbers and determine the logarithm of each, then add those two logarithm figures together, then determine the "antilogarithm" of that sum (elevate the base number of the logarithm \-- in this case, 10 \-- to the power of that sum), the result will be the same as if we had simply multiplied the two original numbers together. This algebraic rule forms the heart of a device called a _slide rule_, an analog computer which could, among other things, determine the products and quotients of numbers by addition (adding together physical lengths marked on sliding wood, metal, or plastic scales). Given a table of logarithm figures, the same mathematical trick could be used to perform otherwise complex multiplications and divisions by only having to do additions and subtractions, respectively. With the advent of high-speed, handheld, digital calculator devices, this elegant calculation technique virtually disappeared from popular use. However, it is still important to understand when working with measurement scales that are logarithmic in nature, such as the bel (decibel) and Richter scales.
 
@@ -128,35 +128,35 @@ When converting a power gain from units of bels or decibels to a unitless ratio,
 
 > If
 
-$$A_{P(bel)} = \log A_{P(ratio)}$$
+$$A_{P(\text{bel})} = \log A_{P(\text{ratio})}$$
 
 > Then
 
-$$A_{P(ratio)} = 10^{A_{P(bel)}}$$
+$$A_{P(\text{ratio})} = 10^{A_{P(\text{bel})}}$$
 
 Converting decibels into unitless ratios for power gain is much the same, only a division factor of 10 is included in the exponent term:
 
 > If
 
-$$A_{P(dB)} = 10\, \log \left(A_{P(ratio)} \right)$$
+$$A_{P(\text{dB})} = 10\, \log \left(A_{P(\text{ratio})} \right)$$
 
 > Then
 
-$$A_{P(ratio)} = 10^{\frac{A_{P(dB)}}{10}}$$
+$$A_{P(\text{ratio})} = 10^{\frac{A_{P(\text{dB})}}{10}}$$
 
 **Example:** Power into an amplifier is 1 Watt, the power out is 10 Watts. Find the power gain in dB.
 
-$$A_{P(dB)} = 10\, log_{10}\; \frac{P_{O}}{P_{I}} = 10\, log_{10}\; \frac{10}{1} = 10\, log_{10}\; (10) = 10\; (1) = 10\; dB$$
+$$A_{P(\text{dB})} = 10\, \log_{10}\; \frac{P_{O}}{P_{I}} = 10\, \log_{10}\; \frac{10}{1} = 10\, \log_{10}\; (10) = 10\; (1) = 10\; dB$$
 
-**Example:** Find the power gain ratio $A_{P(ratio)}$ = $\left( \frac{P_{O}}{P_{I}} \right)$ for a 20 dB Power gain.
+**Example:** Find the power gain ratio $A_{P(\text{ratio})}$ = $\left( \frac{P_{O}}{P_{I}} \right)$ for a 20 dB Power gain.
 
-$$A_{P(dB)} = 20 = 10\ log_{10}\  A_{P(ratio)}$$
+$$A_{P(\text{dB})} = 20 = 10\ \log_{10}\  A_{P(\text{ratio})}$$
 
-$$\frac{20}{10} = \log_{10}\, A_{P(ratio)}$$
+$$\frac{20}{10} = \log_{10}\, A_{P(\text{ratio})}$$
 
-$$10^{\frac{20}{10}} = 10^{\, log_{10}\, (A_{P(ratio)})}$$
+$$10^{\frac{20}{10}} = 10^{\, \log_{10}\, (A_{P(\text{ratio})})}$$
 
-$$100 = A_{P(ratio)} = \left(\frac{20}{10}\right)$$
+$$100 = A_{P(\text{ratio})} = \left(\frac{20}{10}\right)$$
 
 Because the bel is fundamentally a unit of _power_ gain or loss in a system, voltage or current gains and losses don\'t convert to bels or dB in quite the same way. When using bels or decibels to express a gain other than power, be it voltage or current, we must perform the calculation in terms of how much power gain there would be for that amount of voltage or current gain. For a constant load impedance, a voltage or current gain of 2 equates to a power gain of 4 (2^2^); a voltage or current gain of 3 equates to a power gain of 9 (3^2^). If we multiply either voltage or current by a given factor, then the power gain incurred by that multiplication will be the square of that factor. This relates back to the forms of Joule\'s Law where power was calculated from either voltage or current, and resistance:
 
@@ -190,35 +190,47 @@ For better or for worse, neither the neper nor its attenuated cousin, the _decin
 
 **Example:** The voltage into a 600 Ω audio line amplifier is 10 mV, the voltage across a 600 Ω load is 1 V. Find the power gain in dB.
 
-$$A_{(dB)} = 20\ log_{10}\; \left(\frac{V_{O}}{V_{I}}\right) = 20\ log_{10}\; \left(\frac{1}{0.01}\right) = 20\ log_{10}\, (100) = 20\, (2) = 40\;dB$$
+$$A_{(\text{dB})} = 20\ \log_{10}\; \left(\frac{V_{O}}{V_{I}}\right) = 20\ \log_{10}\; \left(\frac{1}{0.01}\right) = 20\ \log_{10}\, (100) = 20\, (2) = 40\;dB$$
 
-**Example:** Find the voltage gain ratio A~V(ratio)~ = (V~O~ / V~I~) for a 20 dB gain amplifier having a 50 Ω input and out impedance.
+**Example:** Find the voltage gain ratio $A_{V(\text{ratio})} = \left( \frac{V_O}{V_I} \right)$ for a 20 dB gain amplifier having a 50 Ω input and out impedance.
 
-$$A_{V(dB)} = 20\ log_{10}  A_{V(ratio)}$$
+$$A_{V(\text{dB})} = 20\ \log_{10}\,  A_{V(\text{ratio})}$$
 
-$$20 = 20\ log_{10}  A_{V(ratio)}$$
+$$20 = 20\ \log_{10}\,  A_{V(\text{ratio})}$$
 
-$$20/20 = log_{10} A_{P(ratio)}$$
+$$\frac{20}{20} = \log_{10}\, A_{V(\text{ratio})}$$
 
-$$10^{20/20} = 10^{log_{10} (A_{V(ratio)})}$$
+$$10^{\frac{20}{20}} = 10^{\log_{10}\, \left( A_{V(\text{ratio})} \right)}$$
 
-$$10 = A_{V(ratio)} = (V_{O} / V_{I})$$
+$$10 = A_{V(\text{ratio})} = \left( \frac{V_{O}}{V_{I}} \right)$$
 
 ### Review
 
-- Gains and losses may be expressed in terms of a unitless ratio, or in the unit of bels (B) or decibels (dB). A decibel is literally a _deci_-bel: one-tenth of a bel.
+- Gains and losses may be expressed in terms of a unitless ratio, or in the unit of bels (B) or decibels (\text{dB}). A decibel is literally a _deci_-bel: one-tenth of a bel.
 
 - The bel is fundamentally a unit for expressing _power_ gain or loss. To convert a power ratio to either bels or decibels, use one of these equations:
 
-- ![](media/13036.png){ #fig:13036 width=75% }
+  $$A_{P(\text{bel})} = \log\, A_{P(\text{ratio})}$$
+
+  $$A_{P(\text{dB})} = 10 \log\, A_{P(\text{ratio})}$$
 
 - When using the unit of the bel or decibel to express a _voltage_ or _current_ ratio, it must be cast in terms of an equivalent _power_ ratio. Practically, this means the use of different equations, with a multiplication factor of 2 for the logarithm value corresponding to an exponent of 2 for the voltage or current gain ratio:
 
-- ![](media/13037.png){ #fig:13037 width=75% }
+  $$A_{V(\text{bel})} = 2 \log\, A_{V(\text{ratio})}$$
+
+  $$A_{I(\text{bel})} = 2 \log\, A_{I(\text{ratio})}$$
+
+  $$A_{V(\text{dB})} = 20 \log\, A_{V(\text{ratio})}$$
+
+  $$A_{I(\text{dB})} = 20 \log\, A_{I(\text{ratio})}$$
 
 - To convert a decibel gain into a unitless ratio gain, use one of these equations:
 
-- ![](media/13046.png){ #fig:13046 width=75% }
+  $$A_{V(\text{ratio})} = 10^{\frac{A_{V(\text{dB})}}{20}}$$
+
+  $$A_{I(\text{ratio})} = 10^{\frac{A_{I(\text{dB})}}{20}}$$
+
+  $$A_{P(\text{ratio})} = 10^{\frac{A_{P(\text{dB})}}{20}}$$
 
 - A gain (amplification) is expressed as a positive bel or decibel figure. A loss (attenuation) is expressed as a negative bel or decibel figure. Unity gain (no gain or loss; ratio = 1) is expressed as zero bels or zero decibels.
 
@@ -232,19 +244,18 @@ A sound measuring 40 dB on the decibel sound scale would be 10^4^ times greater 
 
 Because the human ear is not equally sensitive to all frequencies of sound, variations of the decibel sound-power scale have been developed to represent physiologically equivalent sound intensities at different frequencies. Some sound intensity instruments were equipped with filter networks to give disproportionate indications across the frequency scale, the intent of which to better represent the effects of sound on the human body. Three filtered scales became commonly known as the "A," "B," and "C" weighted scales. Decibel sound intensity indications measured through these respective filtering networks were given in units of dBA, dBB, and dBC. Today, the "A-weighted scale" is most commonly used for expressing the equivalent physiological impact on the human body, and is especially useful for rating dangerously loud noise sources.
 
-Another standard-referenced system of power measurement in the unit of decibels has been established for use in telecommunications systems. This is called the _dBm_ scale. (@fig:13057) The reference point, 0 dBm, is defined as 1 milliwatt of electrical power dissipated by a 600 Ω load. According to this scale, 10 dBm is equal to 10 times the reference power, or 10 milliwatts; 20 dBm is equal to 100 times the reference power, or 100 milliwatts. Some AC voltmeters come equipped with a dBm range or scale (sometimes labeled "DB") intended for use in measuring AC signal power across a 600 Ω load. 0 dBm on this scale is, of course, elevated above zero because it represents something greater than 0 (actually, it represents 0.7746 volts across a 600 Ω load, voltage being equal to the square root of power times resistance; the square root of 0.001 multiplied by 600). When viewed on the face of an analog meter movement, this dBm scale appears compressed on the left side and expanded on the right in a manner not unlike a resistance scale, owing to its logarithmic nature.
+Another standard-referenced system of power measurement in the unit of decibels has been established for use in telecommunications systems. This is called the _dBm_ scale (@fig:13057). The reference point, 0 dBm, is defined as 1 milliwatt of electrical power dissipated by a 600 Ω load. According to this scale, 10 dBm is equal to 10 times the reference power, or 10 milliwatts; 20 dBm is equal to 100 times the reference power, or 100 milliwatts. Some AC voltmeters come equipped with a dBm range or scale (sometimes labeled "DB") intended for use in measuring AC signal power across a 600 Ω load. 0 dBm on this scale is, of course, elevated above zero because it represents something greater than 0 (actually, it represents 0.7746 volts across a 600 Ω load, voltage being equal to the square root of power times resistance; the square root of 0.001 multiplied by 600). When viewed on the face of an analog meter movement, this dBm scale appears compressed on the left side and expanded on the right in a manner not unlike a resistance scale, owing to its logarithmic nature.
 
 Radio frequency power measurements for low level signals encountered in radio receivers use dBm measurements referenced to a 50 Ω load. Signal generators for the evaluation of radio receivers may output an adjustable dBm rated signal. The signal level is selected by a device called an attenuator, described in the next section.
 
-![](media/13057.png){ #fig:13057 width=75% }
-
-_Absolute power levels in dBm (decibels referenced to 1 milliwatt)._
+![Absolute Power Levels in dBm (decibels referenced to 1 milliwatt)](media/13057.png){ #fig:13057 width=75% }
 
 An adaptation of the dBm scale for audio signal strength is used in studio recording and broadcast engineering for standardizing volume levels, and is called the _VU_ scale. VU meters are frequently seen on electronic recording instruments to indicate whether or not the recorded signal exceeds the maximum signal level limit of the device, where significant distortion will occur. This "volume indicator" scale is calibrated in according to the dBm scale, but does not directly indicate dBm for any signal other than steady sine-wave tones. The proper unit of measurement for a VU meter is _volume units_.
 
 When relatively large signals are dealt with, and an absolute dB scale would be useful for representing signal level, specialized decibel scales are sometimes used with reference points greater than the 1 mW used in dBm. Such is the case for the _dBW_ scale, with a reference point of 0 dBW established at 1 Watt. Another absolute measure of power called the _dBk_ scale references 0 dBk at 1 kW, or 1000 Watts.
 
-- **REVIEW:**
+### Review
+
 - The unit of the bel or decibel may also be used to represent an absolute measurement of power rather than just a relative gain or loss. For sound power measurements, 0 dB is defined as a standardized reference point of power equal to 1 picowatt per square meter. Another dB scale suited for sound intensity measurements is normalized to the same physiological effects as a 1000 Hz tone, and is called the _dBA_ scale. In this system, 0 dBA is defined as any frequency sound having the same physiological equivalence as a 1 picowatt-per-square-meter tone at 1000 Hz.
 - An electrical dB scale with an absolute reference point has been made for use in telecommunications systems. Called the _dBm_ scale, its reference point of 0 dBm is defined as 1 milliwatt of AC signal power dissipated by a 600 Ω load.
 - A _VU_ meter reads audio signal level according to the dBm for sine-wave signals. Because its response to signals other than steady sine waves is not the same as true dBm, its unit of measurement is _volume units_.
@@ -254,77 +265,77 @@ When relatively large signals are dealt with, and an absolute dB scale would be 
 
 Attenuators are passive devices. It is convenient to discuss them along with decibels. Attenuators weaken or _attenuate_ the high level output of a signal generator, for example, to provide a lower level signal for something like the antenna input of a sensitive radio receiver. (@fig:03376) The attenuator could be built into the signal generator, or be a stand-alone device. It could provide a fixed or adjustable amount of attenuation. An attenuator section can also provide isolation between a source and a troublesome load.
 
-![](media/03376.png){ #fig:03376 width=75% }
-
-_Constant impedance attenuator is matched to source impedance Z~I~ and load impedance Z~O~. For radio frequency equipment Z is 50 Ω._
+![Constant impedance attenuator is matched to source impedance Z~I~ and load impedance Z~O~. For radio frequency equipment Z is 50 Ω](media/03376.png){ #fig:03376 width=75% }
 
 In the case of a stand-alone attenuator, it must be placed in series between the signal source and the load by breaking open the signal path as shown in @fig:03376. In addition, it must match both the source impedance **Z~I~** and the load impedance **Z~O~**, while providing a specified amount of attenuation. In this section we will only consider the special, and most common, case where the source and load impedances are equal. Not considered in this section, unequal source and load impedances may be matched by an attenuator section. However, the formulation is more complex.
 
-![](media/03377.png){ #fig:03377 width=75% }
-
-_T section and Π section attenuators are common forms._
+![T section and Π section attenuators are common forms](media/03377.png){ #fig:03377 width=75% }
 
 Common configurations are the **T** and **Π** networks shown in @fig:03377 Multiple attenuator sections may be cascaded when even weaker signals are needed as in @fig:03385.
 
 ### Decibels{ #sec:xtocid15698977 }
 
-Voltage ratios, as used in the design of attenuators are often expressed in terms of decibels. The voltage ratio (K below) must be derived from the attenuation in decibels. Power ratios expressed as decibels are additive. For example, a 10 dB attenuator followed by a 6 dB attenuator provides 16dB of attenuation overall.
+Voltage ratios, as used in the design of attenuators are often expressed in terms of decibels. The voltage ratio (K below) must be derived from the attenuation in decibels. Power ratios expressed as decibels are additive. For example, a 10 dB attenuator followed by a 6 dB attenuator provides 16dB of attenuation overall
 
-> 10 dB + 6 db = 16 dB
+$$10\; \text{dB} + 6\; \text{dB} = 16\; \text{dB}$$
 
-Changing sound levels are perceptible roughly proportional to the logarithm of the power ratio (P~I~ / P~O~).
+Changing sound levels are perceptible roughly proportional to the logarithm of the power ratio $\left( \frac{P_I}{P_O} \right)$
 
-> sound level = log~10~(P~I~ / P~O~)
+$$\text{sound level} = \log_{10}\, \left( \frac{P_I}{P_O} \right)$$
 
 A change of 1 dB in sound level is barely perceptible to a listener, while 2 db is readily perceptible. An attenuation of 3 dB corresponds to cutting power in half, while a gain of 3 db corresponds to a doubling of the power level. A gain of -3 dB is the same as an attenuation of +3 dB, corresponding to half the original power level.
 
-The power change in decibels in terms of power ratio is:
+The power change in decibels in terms of power ratio is
 
-> dB = 10 log~10~(P~I~ / P~O~)
+$$\text{dB} = 10 \log_{10}\, \left( \frac{P_I}{P_O} \right)$$
 
-Assuming that the load R~I~ at P~I~ is the same as the load resistor R~O~ at P~O~ (R~I~ = R~O~), the decibels may be derived from the voltage ratio (V~I~ / V~O~) or current ratio (I~I~ / I~O~):
+Assuming that the load $R_I$ at $P_I$ is the same as the load resistor $R_O$ at $P_O$ (i.e.\ $R_I = R_O$), the decibels may be derived from the voltage ratio $\left( \frac{V_I}{V_O} \right)$ or current ratio $\left( \frac{I_I}{I_O} \right)$ as
 
-> P~O~ = V ~O~ I~O~ = V~O~^2^ / R = I~O~^2^ R
+$$P_O = V_O I_O = \frac{V_O^2}{R} = I_O^2 R$$
 
-> P~I~ = V ~I~ I~I~ = V~I~^2^ / R = I~I~^2^ R
+$$P_I = V_I I_I = \frac{V_I^2}{R} = I_I^2 R$$
 
-> dB = 10 log~10~(P~I~ / P~O~) = 10 log~10~(V~I~^2^ / V~O~^2^) = 20 log~10~(V~I~/V~O~)
+$$\text{dB} = 10 \log_{10}\, \left( \frac{P_I}{P_O} \right) = 10 \log_{10}\left( \frac{V_I^2}{V_O^2} \right) = 20 \log_{10} \left( \frac{V_I}{V_O} \right)$$
 
-> dB = 10 log~10~(P~I~ / P~O~) = 10 log~10~(I~I~^2^ / I~O~^2^) = 20 log~10~(I~I~/I~O~)
+$$\text{dB} = 10 \log_{10}\, \left( \frac{P_I}{P_O} \right) = 10 \log_{10}\left( \frac{I_I^2}{I_O^2} \right) = 20 \log_{10} \left( \frac{I_I}{I_O} \right)$$
 
-The two most often used forms of the decibel equation are:
+The two most often used forms of the decibel equation are
 
-> dB = 10 log~10~(P~I~ / P~O~)      or         dB = 20 log~10~(V~I~ / V~O~)
+$$\text{dB} = 10 \log_{10} \left( \frac{P_I}{P_O} \right)$$
+
+> or
+
+$$\text{dB} = 20 \log_{10} \left( \frac{V_I}{V_O} \right)$$
 
 We will use the latter form, since we need the voltage ratio. Once again, the voltage ratio form of equation is only applicable where the two corresponding resistors are equal. That is, the source and load resistance need to be equal.
 
 **Example:** Power into an attenuator is 10 Watts, the power out is 1 Watt. Find the attenuation in dB.
 
-> dB = 10 log~10~(P~I~ / P~O~) = 10 log~10~ (10 /1) = 10 log~10~ (10) = 10 (1) = 10 dB
+$$\text{dB} = 10 \log_{10} \left( \frac{P_I}{P_O} \right) = 10 \log_{10} \left( \frac{10}{1} \right) = 10\; (1) = 10\; \text{dB}$$
 
 **Example:** Find the voltage attenuation ratio (K= (V~I~ / V~O~)) for a 10 dB attenuator.
 
-> dB = 10= 20 log~10~(V~I~ / V~O~)
+$$\text{dB} = 10 = 20 \log_{10} \left( \frac{V_I}{V_O} \right)$$
 
-> 10/20 = log~10~(V~I~ / V~O~)
+$$\frac{10}{20} = \log_{10} \left( \frac{V_I}{V_O} \right)$$
 
-> 10^10/20^ = 10^log~10~(V~I~\ /\ V~O~)^
+$$10^{\frac{10}{20}} = 10^{\log_{10} \left( \frac{V_I}{V_O} \right)}$$
 
-> 3.16 = (V~I~ / V~O~) = A~P(ratio)~
+$$3.16 = \left( \frac{V_I}{V_O} \right) = A_{P(\text{ratio})}$$
 
 **Example:** Power into an attenuator is 100 milliwatts, the power out is 1 milliwatt. Find the attenuation in dB.
 
-> dB = 10 log~10~(P~I~ / P~O~) = 10 log~10~ (100 /1) = 10 log~10~ (100) = 10 (2) = 20 dB
+$$\text{dB} = 10 \log_{10} \left( \frac{P_I}{P_O} \right) = 10 \log_{10} \left( \frac{100}{1} \right) = 10 \log_{10}\; (100) = 10\; (2) = 20\; \text{dB}$$
 
-**Example:** Find the voltage attenuation ratio (K= (V~I~ / V~O~)) for a 20 dB attenuator.
+**Example:** Find the voltage attenuation ratio $K= \left( \frac{V_I}{V_O} \right)$ for a 20 dB attenuator.
 
-> dB = 20= 20 log~10~(V~I~ / V~O~ )
+$$\text{dB} = 20 = 20 \log_{10} \left( \frac{V_I}{V_O} \right)$$
 
-> 10^20/20^ = 10 ^log~10~(V~I~\ /\ V~O~\ )^
+$$10^{\frac{20}{20}} = 10^{\log_{10}\; \left( \frac{V_I}{V_O} \right)}$$
 
-> 10 = (V~I~ / V~O~ ) = K
+$$10 = \left( \frac{V_I}{V_O} \right) = K$$
 
-### [[T-section attenuator]{#xtocid15698978}]
+### T-section Attenuator {#sec:xtocid15698978}
 
 The T and Π attenuators must be connected to a **Z** source and **Z** load impedance. The **Z**-(arrows) pointing away from the attenuator in the figure below indicate this. The **Z**-(arrows) pointing toward the attenuator indicates that the impedance seen looking into the attenuator with a load Z on the opposite end is Z, Z=50 Ω for our case. This impedance is a constant (50 Ω) with respect to attenuation-- impedance does not change when attenuation is changed.
 
@@ -332,9 +343,7 @@ The table in @fig:03378 lists resistor values for the **T** and **Π** attenuato
 
 Telephone utility and other audio work often requires matching to 600 Ω. Multiply all **R** values by the ratio (600/50) to correct for 600 Ω matching. Multiplying by 75/50 would convert table values to match a 75 Ω source and load.
 
-![](media/03378.png){ #fig:03378 width=75% }
-
-_Formulas for T-section attenuator resistors, given K, the voltage attenuation ratio, and Z~I~ = Z~O~ = 50 Ω._
+![Formulas for T-section attenuator resistors, given K, the voltage attenuation ratio, and Z~I~ = Z~O~ = 50 Ω](media/03378.png){ #fig:03378 width=100% }
 
 The amount of attenuation is customarily specified in dB (decibels). Though, we need the voltage (or current) ratio **K** to find the resistor values from equations. See the **dB/20** term in the power of **10** term for computing the voltage ratio **K** from dB, above.
 
@@ -342,90 +351,88 @@ The **T** (and below **Π**) configurations are most commonly used as they provi
 
 Disconnecting the source and looking in to the right at **V~I~**, we need to see a series parallel combination of **R~1~**, **R~2~**, **R~1~**, and **Z** looking like an equivalent resistance of **Z~IN~**, the same as the source/load impedance Z: (a load of Z is connected to the output.)
 
-> Z~IN~ = R~1~ + (R~2~ \|\|(R~1~ + Z))
+$$Z_{\text{IN}} = R_1 + \left( R_2 \parallel \left( R_1 + Z \right) \right)$$
 
 For example, substitute the 10 dB values from the 50 Ω attenuator table for **R~1~** and **R~2~** as shown in @fig:03379.
 
-> Z~IN~ = 25.97 + (35.14 \|\|(25.97 + 50))
+$$Z_{\text{IN}} = 25.97 + \left( 35.14 \parallel \left( 25.97 + 50 \right) \right)$$
 
-> Z~IN~ = 25.97 + (35.14 \|\| 75.97 )
+$$Z_{\text{IN}} = 25.97 + \left( 35.14 \parallel 75.97 \right)$$
 
-> Z~IN~ = 25.97 + 24.03 = 50
+$$Z_{\text{IN}} = 25.97 + 24.03 = 50$$
 
 This shows us that we see 50 Ω looking right into the example attenuator (@fig:03379) with a 50 Ω load.
 
 Replacing the source generator, disconnecting load **Z** at **V~O~**, and looking in to the left, should give us the same equation as above for the impedance at **V~O~**, due to symmetry. Moreover, the three resistors must be values which supply the required attenuation from input to output. This is accomplished by the equations for **R~1~** and **R~2~** above as applied to the **T**-attenuator below.
 
-![](media/03379.png){ #fig:03379 width=75% }
+![10 dB T-Section Attenuator for Insertion Between a 50 Ω Source and Load](media/03379.png){ #fig:03379 width=75% }
 
-_10 dB T-section attenuator for insertion between a 50 Ω source and load._
-
-\
-
-### [[PI-section attenuator]{#xtocid15698979}]
+### Π-section Attenuator {#sec:xtocid15698979}
 
 The table in @fig:03380 lists resistor values for the **Π** attenuator matching a 50 Ω source/ load at some common attenuation levels. The resistors corresponding to other attenuation levels may be calculated from the equations.
 
-![](media/03380.png){ #fig:03380 width=75% }
-
-_Formulas for Π-section attenuator resistors, given K, the voltage attenuation ratio, and Z~I~ = Z~O~ = 50 Ω._
+![Formulas for Π-section Attenuator Resistors, given _K_, the Voltage Attenuation Ratio, and Z~I~ = Z~O~ = 50 Ω](media/03380.png){ #fig:03380 width=75% }
 
 The above apply to the π-attenuator below.
 
 What resistor values would be required for both the **Π** attenuators for 10 dB of attenuation matching a 50 Ω source and load?
 
-![](media/03381.png){ #fig:03381 width=75% }
-
-_10 dB Π-section attenuator example for matching a 50 Ω source and load._
+![10 dB Π-section Attenuator Example for Matching a 50 Ω Source and Load](media/03381.png){ #fig:03381 width=75% }
 
 The **10 dB** corresponds to a voltage attenuation ratio of **K=3.16** in the next to last line of the above table. Transfer the resistor values in that line to the resistors on the schematic diagram in @fig:03381.
 
-### [[L-section attenuator]{#xtocid156989710}]
+### L-Section Attenuator {#sec:xtocid156989710}
 
-The table in @fig:03382 lists resistor values for the **L** attenuators to match a 50 Ω source/ load. The table in @fig:03383 lists resistor values for an alternate form. Note that the resistor values are not the same.
+The table in @fig:03382 lists resistor values for the **L** attenuators to match a 50 Ω source / load. The table in @fig:03383 lists resistor values for an alternate form. Note that the resistor values are not the same.
 
-![_L-section attenuator table for 50 Ω source and load impedance._](media/03382.png){ #fig:03382 width=75% }
+![_L-Section Attenuator Table for 50 Ω Source and Load Impedance](media/03382.png){ #fig:03382 width=100% }
 
 The above apply to the **L** attenuator below.
 
-![_Alternate form L-section attenuator table for 50 Ω source and load impedance._](media/03383.png){ #fig:03383 width=75% }
+![_Alternate Form L-Section Attenuator Table for 50 Ω Source and Load Impedance](media/03383.png){ #fig:03383 width=100% }
 
-### Bridged T attenuator{ #sec:xtocid156989711 }
+### Bridged T Attenuator{ #sec:xtocid156989711 }
 
 The table in @fig:03384 lists resistor values for the bridged **T** attenuators to match a 50 Ω source and load. The bridged-T attenuator is not often used. Why not?
 
-![_Formulas and abbreviated table for bridged-T attenuator section, Z = 50 Ω._](media/03384.png){ #fig:03384 width=75% }
+![_Formulas and Abbreviated Table for Bridged-T Attenuator Section, Z = 50 Ω](media/03384.png){ #fig:03384 width=100% }
 
-### Cascaded sections{ #sec:xtocid156989712 }
+### Cascaded Sections{ #sec:xtocid156989712 }
 
 Attenuator sections can be cascaded as in @fig:03385 for more attenuation than may be available from a single section. For example two 10 db attenuators may be cascaded to provide 20 dB of attenuation, the dB values being additive. The voltage attenuation ratio **K** or **V~I~/V~O~** for a 10 dB attenuator section is 3.16. The voltage attenuation ratio for the two cascaded sections is the product of the two **K**s or 3.16x3.16=10 for the two cascaded sections.
 
-![_Cascaded attenuator sections: dB attenuation is additive._](media/03385.png){ #fig:03385 width=75% }
+![Cascaded Attenuator Sections: dB Attenuation is Additive](media/03385.png){ #fig:03385 width=50% }
 
 Variable attenuation can be provided in discrete steps by a switched attenuator. The example @fig:03386, shown in the 0 dB position, is capable of 0 through 7 dB of attenuation by additive switching of none, one or more sections.
 
-![_Switched attenuator: attenuation is variable in discrete steps._](media/03386.png){ #fig:03386 width=75% }
+![Switched Attenuator: Attenuation is Variable in Discrete Steps](media/03386.png){ #fig:03386 width=75% }
 
 The typical multi section attenuator has more sections than the above figure shows. The addition of a 3 or 8 dB section above enables the unit to cover to 10 dB and beyond. Lower signal levels are achieved by the addition of 10 dB and 20 dB sections, or a binary multiple 16 dB section.
 
-### RF attenuators{ #sec:xtocid156989713 }
+### RF Attenuators{ #sec:xtocid156989713 }
 
 For radio frequency (RF) work (\<1000 Mhz), the individual sections must be mounted in shielded compartments to thwart capacitive coupling if lower signal levels are to be achieved at the highest frequencies. The individual sections of the switched attenuators in the previous section are mounted in shielded sections. Additional measures may be taken to extend the frequency range to beyond 1000 Mhz. This involves construction from special shaped lead-less resistive elements.
 
-![_Coaxial T-attenuator for radio frequency work._](media/03387.png){ #fig:03387 width=75% }
+![Coaxial T-Attenuator for Radio Frequency Work](media/03387.png){ #fig:03387 width=75% }
 
 A coaxial T-section attenuator consisting of resistive rods and a resistive disk is shown in @fig:03387. This construction is usable to a few gigahertz. The coaxial Π version would have one resistive rod between two resistive disks in the coaxial line as in @fig:03388.
 
-![_Coaxial Π-attenuator for radio frequency work._](media/03388.png){ #fig:03388 width=75% }
+![Coaxial Π-Attenuator for Radio Frequency Work](media/03388.png){ #fig:03388 width=75% }
 
 RF connectors, not shown, are attached to the ends of the above T and Π attenuators. The connectors allow individual attenuators to be cascaded, in addition to connecting between a source and load. For example, a 10 dB attenuator may be placed between a troublesome signal source and an expensive spectrum analyzer input. Even though we may not need the attenuation, the expensive test equipment is protected from the source by attenuating any overvoltage.
 
-**Summary: Attenuators**
+### Summary: Attenuators
 
 - An _attenuator_ reduces an input signal to a lower level.
-- The amount of attenuation is specified in _decibels_ (dB). Decibel values are additive for cascaded attenuator sections.
-- dB from power ratio:      dB = 10 log~10~(P~I~ / P~O~)
-- dB from voltage ratio:    dB = 20 log~10~(V~I~ / V~O~)
+- The amount of attenuation is specified in _decibels_ (\text{dB}). Decibel values are additive for cascaded attenuator sections.
+- dB from power ratio
+
+  $$\text{dB} = 10 \log_{10}\; \left( \frac{P_I}{P_O} \right)$$
+
+- dB from voltage ratio
+
+  $$\text{dB} = 20 \log_{10}\; \left( \frac{V_I}{V_O} \right)$$
+
 - _T_ and _Π_ section attenuators are the most common circuit configurations.
 
 ## Contributors{ #sec:xtocid156989714 }
@@ -433,14 +440,3 @@ RF connectors, not shown, are attached to the ends of the above T and Π attenua
 Contributors to this chapter are listed in chronological order of their contributions, from most recent to first. See Appendix 2 (Contributor List) for dates and contact information.
 
 **Colin Barnard** (November 2003): Correction regarding Alexander Graham Bell\'s country of origin (Scotland, not the United States).
-
-$$
-
-
-$$
-
-$$
-$$
-
-$$
-$$
