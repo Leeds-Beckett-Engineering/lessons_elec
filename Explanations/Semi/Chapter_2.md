@@ -1,30 +1,4 @@
-[![Previous](previous.jpg)](SEMI_1.html) [![Contents](contents.jpg)](index.html) [![Next](next.jpg)](SEMI_3.html)
-
----
-
-# Lessons In Electric Circuits \-- Volume III
-
-# Chapter 2
-
-# SOLID-STATE DEVICE THEORY
-
-- [[Introduction]](#xtocid15702740)
-- [[Quantum physics]](#xtocid15702741)
-- [[Valence and Crystal structure]](#xtocid15702742)
-- [[Band theory of solids]](#xtocid15702743)
-- [[Electrons and "holes"]](#xtocid15702744)
-- [[The P-N junction]](#xtocid15702745)
-- [[Junction diodes]](#xtocid15702746)
-- [[Bipolar junction transistors]](#xtocid15702747)
-- [[Junction field-effect transistors]](#xtocid15702748)
-- [[Insulated-gate field-effect transistors (MOSFET)]](#xtocid15702749)
-- [[Thyristors]](#xtocid157027410)
-- [[Semiconductor manufacturing techniques]](#xtocid157027411)
-- [[Superconducting devices]](#xtocid157027412)
-- [[Quantum devices]](#xtocid157027413)
-- [[Semiconductor devices in SPICE]](#xtocid157027414)
-- [[Contributors]](#xtocid157027415)
-- [Bibliography](#xtocid157027416)
+# Chapter 2: Solid-State Device Theory
 
 ## Introduction{ #sec:xtocid15702740 }
 
@@ -869,59 +843,101 @@ It has also been shown that electron spin polarization occurs when circularly po
 
 ## Semiconductor devices in SPICE{ #sec:xtocid157027414 }
 
-The SPICE (**s**imulation **p**rogram, **i**ntegrated **c**ircuit **e**mphesis) electronic simulation program provides circuit elements and models for semiconductors. The SPICE element names begin with d, q, j, or m correspond to diode, BJT, JFET and MOSFET elements, respectively. These elements are accompanied by corresponding "models" These models have extensive lists of parameters describing the device. Though, we do not list them here. In this section we provide a very brief listing of simple spice models for semiconductors, just enough to get started. For more details on models and an extensive list of model parameters see Kuphaldt. [\[TRK\]](#TRK.bibitem) This reference also gives instructions on using SPICE.
+The SPICE (**s**imulation **p**rogram, **i**ntegrated **c**ircuit **e**mphesis) electronic simulation program provides circuit elements and models for semiconductors. The SPICE element names begin with `d`, `q`, `j`, or `m` correspond to diode, BJT, JFET and MOSFET elements, respectively. These elements are accompanied by corresponding "models" These models have extensive lists of parameters describing the device. Though, we do not list them here. In this section we provide a very brief listing of simple spice models for semiconductors, just enough to get started. For more details on models and an extensive list of model parameters see Kuphaldt. [\[TRK\]](#TRK.bibitem) This reference also gives instructions on using SPICE.
 
-**Diode:** The diode statement begins with a diode element name which must begin with "d" plus optional characters. Some example diode element names include: d1, d2, dtest, da, db, d101, etc. Two node numbers specify the connection of the anode and cathode, respectively, to other components. The node numbers are followed by a model name, referring to a ".model" statement.
+### Diode
 
-The model statement line begins with ".model", followed by the model name matching one or more diode statements. Next is a "d" indicating that a diode is being modeled. The remainder of the model statement is a list of optional diode parameters of the form ParameterName=ParameterValue. None are shown in the example below. For a list, see reference, "diodes". [\[TRK\]](#TRK.bibitem)
+The diode statement begins with a diode element name which must begin with "`d`" plus optional characters. Some example diode element names include: `d1`, `d2`, `dtest`, `da`, `db`, `d101`, etc. Two node numbers specify the connection of the anode and cathode, respectively, to other components. The node numbers are followed by a model name, referring to a ".model" statement.
 
-     General form:  d[name] [anode] [cathode] [model]
-                    .model  [modelname] d ( [parmtr1=x] [parmtr2=y] . . .)
+The model statement line begins with "`.model`", followed by the model name matching one or more diode statements. Next is a "`d`" indicating that a diode is being modeled. The remainder of the model statement is a list of optional diode parameters of the form `ParameterName = ParameterValue`. None are shown in the example below. For a list, see reference, "diodes". [\[TRK\]](#TRK.bibitem)
 
-     Example:       d1 1 2 mod1
-                     .model mod1 d
+**General Form**
+
+```
+d[name] [anode] [cathode] [model]
+    .model  [modelname] d ( [parmtr1=x] [parmtr2=y] . . .)
+```
+
+**Example**
+
+```
+d1 1 2 mod1
+.model mod1 d
+```
 
 Models for specific diode part numbers are often furnished by the semiconductor diode manufacturer. These models include parameters. Otherwise, the parameters default to so called "default values", as in the example.
 
-**BJT, bipolar junction transistor:** The BJT element statement begins with an element name which must begin with "q" with associated circuit symbol designator characters, example: q1, q2, qa, qgood. The BJT node numbers (connections) identify the wiring of the collector, base, emitter respectively. A model name following the node numbers is associated with a model statement.
+### BJT (Bipolar Junction Transistor)
 
-     General form:  q[name] [collector] [base] [emitter] [model]
-                    .model [modelname] [npn or pnp] ([parmtr1=x] . . .)
+The BJT element statement begins with an element name which must begin with "`q`" with associated circuit symbol designator characters, example: `q1`, `q2`, `qa`, `qgood`. The BJT node numbers (connections) identify the wiring of the collector, base, emitter respectively. A model name following the node numbers is associated with a model statement.
 
-     Example:       q1 2 3 0 mod1
-                   .model mod1 pnp
-     Example:       q2 7 8 9 q2n090
-                   .model q2n090  npn ( bf=75 )
+**General form**
 
-The model statement begins with ".model", followed by the model name, followed by one of "npn" or "pnp". The optional list of parameters follows, and may continue for a few lines beginning with line continuation symbol "+", plus. Shown above is the forward β parameter set to 75 for the hypothetical q2n090 model. Detailed transistor models are often available from semiconductor manufacturers.
+```
+q[name] [collector] [base] [emitter] [model]
+.model [modelname] [npn or pnp] ([parmtr1=x] . . .)
+```
 
-**FET, field effect transistor** The field effect transistor element statement begins with an element name beginning with "j" for JFET associated with some unique characters, example: j101, j2b, jalpha, etc. The node numbers follow for the drain, gate and source terminals, respectively. The node numbers define connectivity to other circuit components. Finally, a model name indicates the JFET model to use.
+**Examples**
 
-     General form:  j[name] [drain] [gate] [source] [model]
-                    .model [modelname] [njf or pjf] ( [parmtr1=x] . . .)
+```
+q1 2 3 0 mod1
+.model mod1 pnp
+```
 
-     Example:       j1 2 3 0 mod1
-                    .model mod1 pjf
-                    j3 4 5 0 mod2
-                    .model mod2 njf ( vto=-4.0 )
+```
+q2 7 8 9 q2n090
+.model q2n090  npn ( bf=75 )
+```
 
-The ".model" in the JFET model statement is followed by the model name to identify this model to the JFET element statement(s) using it. Following the model name is either pjf or njf for p-channel or n-channel JFET\'s respectively. A long list of JFET parameters may follow. We only show how to set V~p~, pinch off voltage, to -4.0 V for an n-channel JFET model. Otherwise, this vto parameter defaults to -2.5 V or 2.5V for n-channel or p-channel devices, respectively.
+The model statement begins with "`.model`", followed by the model name, followed by one of "`npn`" or "`pnp`". The optional list of parameters follows, and may continue for a few lines beginning with line continuation symbol "`+`", plus. Shown above is the forward β parameter set to 75 for the hypothetical `q2n090` model. Detailed transistor models are often available from semiconductor manufacturers.
 
-**MOSFET, metal oxide field effect transistor** The MOSFET element name must begin with "m", and is the first word in the element statement. Following are the four node numbers for the drain, gate, source, and substrate, respectively. Next is the model name. Note that the source and substrate are both connected to the same node "0" in the example. Discrete MOSFET\'s are packaged as three terminal devices, the source and substrate are the same physical terminal. Integrated MOSFET\'s are four terminal devices; the substrate is a fourth terminal. Integrated MOSFET\'s may have numerous devices sharing the same substrate, separate from the sources. Though, the sources might still be connected to the common substrate.
+### FET (Field Effect Transistor)
 
-     General form:  m[name] [drain] [gate] [source] [substrate] [model]
-                    .model [modelname] [nmos or pmos] ( [parmtr1=x] . . . )
+The field effect transistor element statement begins with an element name beginning with "`j`" for JFET associated with some unique characters, example: `j101`, `j2b`, `jalpha`, etc. The node numbers follow for the drain, gate and source terminals, respectively. The node numbers define connectivity to other circuit components. Finally, a model name indicates the JFET model to use.
 
-     Example:       m1 2 3 0 0 mod1
-                    m5 5 6 0 0 mod4
-                    .model mod1 pmos
-                    .model mod4 nmos ( vto=1 )
+**General Form**
 
-The MOSFET model statement begins with ".model" followed by the model name followed by either "pmos" or "nmos". Optional MOSFET model parameters follow. The list of possible parameters is long. See Volume 5, "MOSFET" for details. [\[TRK\]](#TRK.bibitem) MOSFET manufacturers provide detailed models. Otherwise, defaults are in effect.
+```
+j[name] [drain] [gate] [source] [model]
+        .model [modelname] [njf or pjf] ( [parmtr1=x] . . .)
+```
+
+**Example**
+
+```
+j1 2 3 0 mod1
+.model mod1 pjf
+j3 4 5 0 mod2
+.model mod2 njf ( vto=-4.0 )
+```
+
+The "`.model`" in the JFET model statement is followed by the model name to identify this model to the JFET element statement(s) using it. Following the model name is either `pjf` or `njf` for p-channel or n-channel JFET\'s respectively. A long list of JFET parameters may follow. We only show how to set V~p~, pinch off voltage, to -4.0 V for an n-channel JFET model. Otherwise, this `vto` parameter defaults to -2.5 V or 2.5V for n-channel or p-channel devices, respectively.
+
+### MOSFET (Metal Oxide Field Effect Transistor)
+
+The MOSFET element name must begin with "`m`", and is the first word in the element statement. Following are the four node numbers for the drain, gate, source, and substrate, respectively. Next is the model name. Note that the source and substrate are both connected to the same node "`0`" in the example. Discrete MOSFET\'s are packaged as three terminal devices, the source and substrate are the same physical terminal. Integrated MOSFET\'s are four terminal devices; the substrate is a fourth terminal. Integrated MOSFET\'s may have numerous devices sharing the same substrate, separate from the sources. Though, the sources might still be connected to the common substrate.
+
+**General form**
+
+```
+m[name] [drain] [gate] [source] [substrate] [model]
+.model [modelname] [nmos or pmos] ( [parmtr1=x] . . . )
+```
+
+**Example**
+
+```
+m1 2 3 0 0 mod1 m5 5 6 0 0 mod4
+.model mod1 pmos .model mod4 nmos ( vto=1 )
+```
+
+The MOSFET model statement begins with "`.model`" followed by the model name followed by either "`pmos`" or "`nmos`". Optional MOSFET model parameters follow. The list of possible parameters is long. See Volume 5, "MOSFET" for details. [\[TRK\]](#TRK.bibitem) MOSFET manufacturers provide detailed models. Otherwise, defaults are in effect.
 
 The bare minimum semiconductor SPICE information is provided in this section. The models shown here allow simulation of basic circuits. In particular, these models do not account for high speed or high frequency operation. Simulations are shown in the Volume 5 Chapter 7, "Using SPICE \...".
 
-- **REVIEW:**
+### Review
+
 - Semiconductors may be computer simulated with SPICE.
 - SPICE provides element statements and models for the diode, BJT, JFET, and MOSFET.
 
@@ -933,9 +949,7 @@ Contributors to this chapter are listed in chronological order of their contribu
 
 **Bill Heath** (September 2002): Pointed out error in illustration of carbon atom \-- the nucleus was shown with seven protons instead of six.
 
-## [Bibliography]{#xtocid157027416}
-
-\
+## Bibliography{#sec:xtocid157027416}
 
 1.  [\[DDA\]David D. Awschalom, Michael E. Flatte, Nitin Samarth, "Spintronics", Scientific American, June 2002 at]{#DDA.bibitem} [http://www.sciam.com](http://www.sciam.com/article.cfm?articleID=0007A735-759A-1CDD-B4A8809EC588EEDF&pageNumber=1&catID=2)
 2.  [\[JBa\]John Bland, "The Fluxoid" in "A Mossbauer Spectroscopy and Magnetometry Study of Magnetic Multilayers and Oxides", Oliver Lodge Laboratory, Department of Physics, University of Liverpool, 2002, at]{#JBa.bibitem} <http://www.cmp.liv.ac.uk/frink/thesis/thesis/node45.html>
@@ -962,12 +976,3 @@ Contributors to this chapter are listed in chronological order of their contribu
 23. [\[OXFD\]Oxford University, "Theory, Superconductor Synthesis", Oxford University, 1996, at]{#OXFD.bibitem} [http://www.chem.ox.ac.uk/vrchemistry/super/theory.htm](http://www.chem.ox.ac.uk/vrchemistry/super/theory.html)
 24. [\[JWA\]John Walko, "Graphene transistor to rival silicon, say researchers", EE Times Europe, 03/02/2007, at]{#JWA.bibitem} <http://www.eetimes.com/news/design/showArticle.jhtml?articleID=197700700>
 25. [\[YYT\]Ying-Yu Tzou,"Power Electronics: An Introduction", Institute of Control Engineering, National Chiao Tung University, at]{#YYT.bibitem} [http://pemclab.cn.nctu.edu.tw/peclub/w3cnotes](http://pemclab.cn.nctu.edu.tw/peclub/w3cnotes/cn06.%E9%9B%BB%E5%8A%9B%E9%9B%BB%E5%AD%90%E7%B0%A1%E4%BB%8B/html/cn06.htm)
-
-\
-\
-
----
-
-_Lessons In Electric Circuits_ copyright (C) 2000-2023 Tony R. Kuphaldt, under the terms and conditions of the [CC BY License](SEMI_A3.html).
-
-[![Previous](previous.jpg)](SEMI_1.html) [![Contents](contents.jpg)](index.html) [![Next](next.jpg)](SEMI_3.html)
