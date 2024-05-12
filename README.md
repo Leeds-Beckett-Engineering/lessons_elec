@@ -10,7 +10,7 @@ This repository hosts a copy of [_Lessons In Electric Circuits_](https://www.ibi
 
 > A copy of the Creative Commons License is included at the end of each book volume. For more information about the License, see Appendix A3
 
-> As an open and collaboratively developed text, this book is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Creative Commons License for more details. 
+> As an open and collaboratively developed text, this book is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the Creative Commons License for more details.
 
 ## Significant Changes
 
