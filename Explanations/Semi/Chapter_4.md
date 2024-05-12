@@ -786,7 +786,7 @@ _The cascode amplifier is combined common-emitter and common-base. This is an AC
 
 The key to understanding the wide bandwidth of the cascode configuration is the _Miller effect_. The [Miller effect](#MILLER) is the multiplication of the bandwidth robbing collector-base capacitance by voltage gain A~v~. This C-B capacitance is smaller than the E-B capacitance. Thus, one would think that the C-B capacitance would have little effect. However, in the C-E configuration, the collector output signal is out of phase with the input at the base. The collector signal capacitively coupled back opposes the base signal. Moreover, the collector feedback is (1-A~v~) times larger than the base signal. Keep in mind that A~v~ is a negative number for the inverting C-E amplifier. Thus, the small C-B capacitance appears (1+A\|~v~\|) times larger than its actual value. This capacitive gain reducing feedback increases with frequency, reducing the high frequency response of a C-E amplifier.
 
-The approximate voltage gain of the C-E amplifier in @fig:03502 is -R~L~/r~EE~. The emitter current is set to 1.0 mA by biasing. R~EE~= 26mV/I~E~ = 26mV/1.0ma = 26 Ω. Thus, A~v~ = -R~L~/R~EE~ = -4700/26 = -181. The pn2222 datasheet list C~cbo~ = 8 pF.[\[FAR\]](#FAR.bibitem) The miller capacitance is C~cbo~(1-A~v~). Gain A~v~ = -181, negative since it is inverting gain. C~miller~ = C~cbo~(1-A~v~) = 8pF(1-(-181)=1456pF
+The approximate voltage gain of the C-E amplifier in @fig:03502 is -R~L~/r~EE~. The emitter current is set to 1.0 mA by biasing. R~EE~= 26mV/I~E~ = 26mV/1.0ma = 26 Ω. Thus, A~v~ = -R~L~/R~EE~ = -4700/26 = -181. The pn2222 datasheet list C~cbo~ = 8 pF.@FAR The miller capacitance is C~cbo~(1-A~v~). Gain A~v~ = -181, negative since it is inverting gain. C~miller~ = C~cbo~(1-A~v~) = 8pF(1-(-181)=1456pF
 
 A common-base configuration is not subject to the Miller effect because the grounded base shields the collector signal from being fed back to the emitter input. Thus, a C-B amplifier has better high frequency response. To have a moderately high input impedance, the C-E stage is still desirable. The key is to reduce the gain (to about 1) of the C-E stage which reduces the Miller effect C-B feedback to 1·C~CBO~. The total C-B feedback is the feedback capacitance 1·C~CB~ plus the actual capacitance C~CB~ for a total of 2·C~CBO~. This is a considerable reduction from 181·C~CBO~. The miller capacitance for a gain of -2 C-E stage is C~miller~ = C~cbo~(1-A~v~)= C~miller~ = C~cbo~(1-(-1)) = C~cbo~·2.
 
@@ -1245,7 +1245,7 @@ Stable emitter bias requires a low voltage base bias supply, @fig:03494. The alt
 
 _Voltage Divider bias replaces base battery with voltage divider._
 
-The design technique is to first work out an emitter-bias design, Then convert it to the voltage divider bias configuration by using Thevenin\'s Theorem. [\[TK1\]](#TK1.bibitem) The steps are shown graphically in @fig:03495. Draw the voltage divider without assigning values. Break the divider loose from the base. (The base of the transistor is the load.) Apply Thevenin\'s Theorem to yield a single Thevenin equivalent resistance Rth and voltage source Vth.
+The design technique is to first work out an emitter-bias design, Then convert it to the voltage divider bias configuration by using Thevenin\'s Theorem. @TK1 The steps are shown graphically in @fig:03495. Draw the voltage divider without assigning values. Break the divider loose from the base. (The base of the transistor is the load.) Apply Thevenin\'s Theorem to yield a single Thevenin equivalent resistance Rth and voltage source Vth.
 
 ![](media/03495.png){ #fig:03495 width=75% }
 
@@ -1540,11 +1540,11 @@ Input impedance for the common-base configuration is Rin = r~EE~.
 
 The high input impedance of the common-collector configuration matches high impedance sources. A crystal or ceramic microphone is one such high impedance source. The common-base arrangement is sometimes used in RF (radio frequency) circuits to match a low impedance source, for example, a 50 Ω coaxial cable feed. For moderate impedance sources, the common-emitter is a good match. An example is a dynamic microphone.
 
-The output impedances of the three basic configurations are listed in @fig:03486. The moderate output impedance of the common-emitter configuration helps make it a popular choice for general use. The Low output impedance of the common-collector is put to good use in impedance matching, for example, tranformerless matching to a 4 Ohm speaker. There do not appear to be any simple formulas for the output impedances. However, R. Victor Jones develops expressions for output resistance. [\[RVJ\]](#RVJ.bibitem)
+The output impedances of the three basic configurations are listed in @fig:03486. The moderate output impedance of the common-emitter configuration helps make it a popular choice for general use. The Low output impedance of the common-collector is put to good use in impedance matching, for example, tranformerless matching to a 4 Ohm speaker. There do not appear to be any simple formulas for the output impedances. However, R. Victor Jones develops expressions for output resistance. @RVJ
 
 ![](media/03486.png){ #fig:03486 width=75% }
 
-_Amplifier characteristics, adapted from GE Transistor Manual, Figure 1.21.[\[GET\]](#GET.bibitem)_
+_Amplifier characteristics, adapted from GE Transistor Manual, Figure 1.21.@GET_
 
 - **REVIEW:**
 - See @fig:03486.
@@ -1717,7 +1717,7 @@ The noise figure F for RF (radio frequency) transistors is usually listed on tra
 
 ![](media/03482.png){ #fig:03482 width=75% }
 
-_Small signal transistor noise figure vs Frequency. After Thiele, Figure 11.147 [\[AGT\]](#AGT.bibitem)_
+_Small signal transistor noise figure vs Frequency. After Thiele, Figure 11.147 @AGT_
 
 @fig:03482 also shows that noise at low frequencies increases at 10 dB per decade with decreasing frequency. This noise is known as _1/f noise_.
 
@@ -1751,7 +1751,7 @@ Some RF silicon bipolar transistors are usable as amplifers up to a few GHz. Sil
 
 []{#MILLER <="" a=""}
 
-**Miller effect:** The high frequency limit for a transistor is related to the junction capacitances. For example a PN2222A has an input capacitance C~obo~=9pF and an output capacitance C~ibo~=25pF from C-B and E-B respectively. [\[FAR\]](#FAR.bibitem) Although the C-E capacitance of 25 pF seems large, it is less of a factor than the C-B (9pF) capacitance. because of the _Miller effect_, the C-B capacitance has an effect on the base equivalent to beta times the capacitance in the common-emitter amplifier. Why might this be? A common-emitter amplifier inverts the signal from base to collector. The inverted collector signal fed back to the base opposes the input on the base. The collector signal is beta times larger than the input. For the PN2222A, β=50--300. Thus, the 9pF C-E capacitance looks like 9·50=450pF to 9·300=2700pF.
+**Miller effect:** The high frequency limit for a transistor is related to the junction capacitances. For example a PN2222A has an input capacitance C~obo~=9pF and an output capacitance C~ibo~=25pF from C-B and E-B respectively. @FAR Although the C-E capacitance of 25 pF seems large, it is less of a factor than the C-B (9pF) capacitance. because of the _Miller effect_, the C-B capacitance has an effect on the base equivalent to beta times the capacitance in the common-emitter amplifier. Why might this be? A common-emitter amplifier inverts the signal from base to collector. The inverted collector signal fed back to the base opposes the input on the base. The collector signal is beta times larger than the input. For the PN2222A, β=50--300. Thus, the 9pF C-E capacitance looks like 9·50=450pF to 9·300=2700pF.
 
 The solution to the junction capacitance problem is to select a high frequency transistor for wide bandwidth applications--- RF (radio frequency) or microwave transistor. The bandwidth can be extended further by using the common-base instead of the common-emitter configuration. The grounded base shields the emitter input from capacitive collector feedback. A two-transistor cascode arrangement will yield the same bandwidth as the common-base, with the higher input impedance of the common-emitter.
 

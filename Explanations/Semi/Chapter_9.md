@@ -341,7 +341,7 @@ Note, Q~3~ and Q~4~ in @fig:03475 are complementary, NPN and PNP respectively. T
 
 ![](media/03475.png){ #fig:03475 width=75% }
 
-_Direct coupled complementary symmetry 3 w audio amplifier. After Mullard. [\[MUL\]](#MUL.bibitem)_
+_Direct coupled complementary symmetry 3 w audio amplifier. After Mullard. @MUL_
 
 ## [[Oscillator circuits \-- INCOMPLETE]{#xtocid15706349}]
 
@@ -381,19 +381,19 @@ The circuit in @fig:03492 produces a stronger output than the crystal detector. 
 
 ![](media/03492.png){ #fig:03492 width=75% }
 
-_TR One, one transistor radio. No-bias-resistor causes operation as a detector. After Stoner, Figure 4.4A. [\[DLS\]](#DLS.bibitem)_
+_TR One, one transistor radio. No-bias-resistor causes operation as a detector. After Stoner, Figure 4.4A. @DLS_
 
 The 2000Ω headphones are no longer a widely available item. However, the low impedance earbuds commonly used with portable audio equipment may be substituted when paired with a suitable audio transformer. See Volume 6 Experiments, AC Circuits, Sensitive audio detector for details.
 
 []{#TRtwo <="" a=""}
 
-The circuit in @fig:03493 adds an audio amplifier to the crystal detector for greater headphone volume. The original circuit used a germanium diode and transistor. [\[DLS\]](#DLS.bibitem) A schottky diode may be substituted for the germanium diode. A silicon transistor may be used if the base-bias resistor is changed according to the table.
+The circuit in @fig:03493 adds an audio amplifier to the crystal detector for greater headphone volume. The original circuit used a germanium diode and transistor. @DLS A schottky diode may be substituted for the germanium diode. A silicon transistor may be used if the base-bias resistor is changed according to the table.
 
 ![](media/03493.png){ #fig:03493 width=75% }
 
-_Crystal radio with one transistor audio amplifer, base-bias. After Stoner, Figure 4.3A. [\[DLS\]](#DLS.bibitem)_
+_Crystal radio with one transistor audio amplifer, base-bias. After Stoner, Figure 4.3A. @DLS_
 
-For more crystal radio circuits, simple one-transistor radios, and more advanced low transistor count radios, see Wenzel [\[CW1\]](#CW1.bibitem)
+For more crystal radio circuits, simple one-transistor radios, and more advanced low transistor count radios, see Wenzel @CW1
 
 []{#RegencyTr1 <="" a=""}
 
@@ -405,25 +405,25 @@ The circuit in @fig:03476 is an integrated circuit AM radio containing all the a
 
 ![](media/03476.png){ #fig:03476 width=75% }
 
-_IC radio, After Signetics [\[SIG\]](#SIG.bibitem)_
+_IC radio, After Signetics @SIG_
 
 @fig:03477 shows conventional mecahnical tuning (a) of the RF input tuner and the local oscillator with varactor diode tuning (b). The meshed plates of a dual variable capacitor make for a bulky component. It is ecconomic to replace it with varicap tuning diodes. Increasing the reverse bias V~tune~ decreases capacitance which increases frequency. V~tune~ could be produced by a potentiometer.
 
 ![](media/03477.png){ #fig:03477 width=75% }
 
-_IC radio comparison of (a) mechanical tuning to (b) electronic varicap diode tuning.[\[SIG\]](#SIG.bibitem)_
+_IC radio comparison of (a) mechanical tuning to (b) electronic varicap diode tuning.@SIG_
 
 @fig:03480 shows an even lower parts count AM radio. Sony engineers have included the intermediate frequency (IF) bandpass filter within the 8-pin IC. This eliminates external IF transformers and an IF ceramic filter. L-C tuning components are still required for the radio frequency (RF) input and the local oscillator. Though, the variable capacitors could be replaced by varicap tuning diodes.
 
 ![](media/03480.png){ #fig:03480 width=75% }
 
-_Compact IC radio eliminates external IF filters. After Sony [\[SNE\]](#SNE.bibitem)_
+_Compact IC radio eliminates external IF filters. After Sony @SNE_
 
-@fig:03491 shows a low-parts-count FM radio based on a TDA7021T integrated circuit by NXP Wireless. The bulky external IF filter transformers have been replaced by R-C filters. The resistors are integrated, the capacitors external. This circuit has been simplified from Figure 5 in the NXP Datasheet. See Figure 5 or 8 of the datasheet for the omitted signal strength circuit. The simple tuning circuit is from the Figure 5 Test Circuit. Figure 8 has a more elaborate tuner. Datasheet Figure 8 shows a stereo FM radio with an audio amplifier for driving a speaker. [\[NXP\]](#NXP.bibitem)
+@fig:03491 shows a low-parts-count FM radio based on a TDA7021T integrated circuit by NXP Wireless. The bulky external IF filter transformers have been replaced by R-C filters. The resistors are integrated, the capacitors external. This circuit has been simplified from Figure 5 in the NXP Datasheet. See Figure 5 or 8 of the datasheet for the omitted signal strength circuit. The simple tuning circuit is from the Figure 5 Test Circuit. Figure 8 has a more elaborate tuner. Datasheet Figure 8 shows a stereo FM radio with an audio amplifier for driving a speaker. @NXP
 
 ![](media/03491.png){ #fig:03491 width=75% }
 
-_IC FM radio, signal strength circuit not shown. After NXP Wireless Figure 5. [\[NXP\]](#NXP.bibitem)_
+_IC FM radio, signal strength circuit not shown. After NXP Wireless Figure 5. @NXP_
 
 For a construction project, the simplified FM Radio in @fig:03491 is recommended. For the 56nH inductor, wind 8 turns of #22 AWG bare wire or magnet wire on a 0.125 inch drill bit or other mandrel. Remove the mandrel and strech to 0.6 inch length. The tuning capacitor may be a miniature trimmer capacitor.
 
@@ -431,13 +431,13 @@ For a construction project, the simplified FM Radio in @fig:03491 is recommended
 
 ![](media/03478.png){ #fig:03478 width=75% }
 
-_Class C common-base 750 mW RF power amplifier. L1 = #10 Cu wire 1/2 turn, 5/8 in. ID by 3/4 in. high. L2 = #14 tinned Cu wire 1 1/2 turns, 1/2 in. ID by 1/3 in. spacing. After Texas Instruments [\[TX1\]](#TX1.bibitem)_
+_Class C common-base 750 mW RF power amplifier. L1 = #10 Cu wire 1/2 turn, 5/8 in. ID by 3/4 in. high. L2 = #14 tinned Cu wire 1 1/2 turns, 1/2 in. ID by 1/3 in. spacing. After Texas Instruments @TX1_
 
 An example of a high gain common-base RF amplifier is shown in @fig:03479. The common-base circuit can be pushed to a higher frequency than other configurations. This is a common base configuration because the transistor bases are grounded for AC by 1000 pF capacitors. The capacitors are necessary (unlike the class C, Figure [previous](#03478.png){ #fig:03478 width=75% }) to allow the 1KΩ-4KΩ voltage divider to bias the transistor base for class A operation. The 500Ω resistors are emitter bias resistors. They stablize the collector current. The 850Ω resistors are collector DC loads. The three stage amplifier provides an overall gain of 38 dB at 100 MHz with a 9 MHz bandwidth.
 
 ![](media/03479.png){ #fig:03479 width=75% }
 
-_Class A common-base small-signal high gain amplifier. After Texas Instruments [\[TX2\]](#TX2.bibitem)_
+_Class A common-base small-signal high gain amplifier. After Texas Instruments @TX2_
 
 []{#CASCODEA <="" a=""}
 
@@ -465,9 +465,9 @@ _PIN diode antenna switch for direction finder receiver._
 
 ![](media/03466.png){ #fig:03466 width=75% }
 
-_PIN diode attenuator: PIN diodes function as voltage variable resistors. After Lin [\[LCC\]](#LCC.bibitem)._
+_PIN diode attenuator: PIN diodes function as voltage variable resistors. After Lin @LCC._
 
-The PIN diodes are arranged in a π-attenuator network. The anti-series diodes cancel some harmonic distortion compared with a single series diode. The fixed 1.25 V supply forward biases the parallel diodes, which not only conducting DC current from ground via the resistors, but also, conduct RF to ground through the diodes\' capacitors. The control voltage V~control~, increases current through the parallel diodes as it increases. This decreases the resistance and attenuation, passing more RF from input to output. Attenuation is about 3 dB at V~control~= 5 V. Attenuation is 40 dB at V~control~= 1 V with flat frequency response to 2 gHz. At V~control~= 0.5 V, attenuation is 80 dB at 10 MHz. However, the frequency response varies too much to use. [\[LCC\]](#LCC.bibitem)
+The PIN diodes are arranged in a π-attenuator network. The anti-series diodes cancel some harmonic distortion compared with a single series diode. The fixed 1.25 V supply forward biases the parallel diodes, which not only conducting DC current from ground via the resistors, but also, conduct RF to ground through the diodes\' capacitors. The control voltage V~control~, increases current through the parallel diodes as it increases. This decreases the resistance and attenuation, passing more RF from input to output. Attenuation is about 3 dB at V~control~= 5 V. Attenuation is 40 dB at V~control~= 1 V with flat frequency response to 2 gHz. At V~control~= 0.5 V, attenuation is 80 dB at 10 MHz. However, the frequency response varies too much to use. @LCC
 
 ## Computational circuits{ #sec:xtocid157063413 }
 

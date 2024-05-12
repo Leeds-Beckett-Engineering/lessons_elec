@@ -419,7 +419,7 @@ The most general realization of the clamper is shown in @fig:03443 (c) with the 
 
 Describe the waveform if the DC clamp reference is changed from 5 V to 10 V. The clamped waveform will shift up. The negative peak will be clamped to 10 V (9.3). Suppose that the amplitude of the sine wave source is increased from 5 V to 7 V? The negative peak clamp level will remain unchanged. Though, the amplitude of the sinewave output will increase.
 
-An application of the clamper circuit is as a "DC restorer" in "composite video" circuitry in both television transmitters and receivers. An NTSC (US video standard) video signal "white level" corresponds to minimum (12.5%) transmitted power. The video "black level" corresponds to a high level (75% of transmitter power. There is a "blacker than black level" corresponding to 100% transmitted power assigned to synchronization signals. The NTSC signal contains both video and synchronization pulses. The problem with the composite video is that its average DC level varies with the scene, dark vs light. The video itself is supposed to vary. However, the sync must always peak at 100%. To prevent the sync signals from drifting with changing scenes, a "DC restorer" clamps the top of the sync pulses to a voltage corresponding to 100% transmitter modulation. [\[ATCO\]](#ATCO.bibitem)
+An application of the clamper circuit is as a "DC restorer" in "composite video" circuitry in both television transmitters and receivers. An NTSC (US video standard) video signal "white level" corresponds to minimum (12.5%) transmitted power. The video "black level" corresponds to a high level (75% of transmitter power. There is a "blacker than black level" corresponding to 100% transmitted power assigned to synchronization signals. The NTSC signal contains both video and synchronization pulses. The problem with the composite video is that its average DC level varies with the scene, dark vs light. The video itself is supposed to vary. However, the sync must always peak at 100%. To prevent the sync signals from drifting with changing scenes, a "DC restorer" clamps the top of the sync pulses to a voltage corresponding to 100% transmitter modulation. @ATCO
 
 - REVIEW:
 - A capacitively coupled signal alternates about its average DC level (0 V).
@@ -514,9 +514,9 @@ The pair of diodes and capacitors to the left of nodes 1 and 2 in @fig:03288 con
 
 _Cockcroft-Walton (x8) waveforms. Output is v(8)._
 
-Without diode drops, each doubler yields 2Vin or 10 V, considering two diode drops (10-1.4)=8.6 V is realistic. For a total of 4 doublers one expects 4·8.6=34.4 V out of 40 V. Consulting @fig:23033, v(2) is about right;however, v(8) is \<30 V instead of the anticipated 34.4 V. The bane of the Cockcroft-Walton multiplier is that each additional stage adds less than the previous stage. Thus, a practical limit to the number of stages exist. It is possible to overcome this limitation with a modification to the basic circuit. [\[ABR\]](#ABR.bibitem) Also note the time scale of 40 msec compared with 5 ms for previous circuits. It required 40 msec for the voltages to rise to a terminal value for this circuit. The netlist in @fig:23033 has a ".tran 0.010m 50m" command to extend the simulation time to 50 msec; though, only 40 msec is plotted.
+Without diode drops, each doubler yields 2Vin or 10 V, considering two diode drops (10-1.4)=8.6 V is realistic. For a total of 4 doublers one expects 4·8.6=34.4 V out of 40 V. Consulting @fig:23033, v(2) is about right;however, v(8) is \<30 V instead of the anticipated 34.4 V. The bane of the Cockcroft-Walton multiplier is that each additional stage adds less than the previous stage. Thus, a practical limit to the number of stages exist. It is possible to overcome this limitation with a modification to the basic circuit. @ABR Also note the time scale of 40 msec compared with 5 ms for previous circuits. It required 40 msec for the voltages to rise to a terminal value for this circuit. The netlist in @fig:23033 has a ".tran 0.010m 50m" command to extend the simulation time to 50 msec; though, only 40 msec is plotted.
 
-The Cockcroft-Walton multiplier serves as a more efficient high voltage source for photomultiplier tubes requiring up to 2000 V. [\[ABR\]](#ABR.bibitem) Moreover, the tube has numerous _dynodes_, terminals requiring connection to the lower voltage "even numbered" nodes. The series string of multiplier taps replaces a heat generating resistive voltage divider of previous designs.
+The Cockcroft-Walton multiplier serves as a more efficient high voltage source for photomultiplier tubes requiring up to 2000 V. @ABR Moreover, the tube has numerous _dynodes_, terminals requiring connection to the lower voltage "even numbered" nodes. The series string of multiplier taps replaces a heat generating resistive voltage divider of previous designs.
 
 An AC line operated Cockcroft-Walton multiplier provides high voltage to "ion generators" for neutralizing electrostatic charge and for air purifiers.
 
@@ -786,7 +786,7 @@ Tunnel diodes, also known as _Esaki diodes_ in honor of their Japanese inventor 
 
 ![](media/03469.png){ #fig:03469 width=75% }
 
-_Reverse breakdown voltage versus doping level. After Sze [\[SGG\]](#SGG.bibitem)_
+_Reverse breakdown voltage versus doping level. After Sze @SGG_
 
 Tunnel diodes are heavily doped in both the P and N regions, 1000 times the level in a rectifier. This can be seen in @fig:03469. Standard diodes are to the far left, zener diodes near to the left, and tunnel diodes to the right of the dashed line. The heavy doping produces an unusually thin depletion region. This produces an unusually low reverse breakdown voltage with high leakage. The thin depletion region causes high capacitance. To overcome this, the tunnel diode junction area must be tiny. The forward diode characteristic consists of two regions: a normal forward diode characteristic with current rising exponentially beyond V~F~, 0.3 V for Ge, 0.7 V for Si. Between 0 V and V~F~ is an additional "negative resistance" characteristic peak. This is due to quantum mechanical tunneling involving the dual particle-wave nature of electrons. The depletion region is thin enough compared with the equivalent wavelength of the electron that they can tunnel through. They do not have to overcome the normal forward diode voltage V~F~. The energy level of the conduction band of the N-type material overlaps the level of the valence band in the P-type region. With increasing voltage, tunneling begins; the levels overlap; current increases, up to a point. As current increases further, the energy levels overlap less; current decreases with increasing voltage. This is the "negative resistance" portion of the curve.
 
@@ -796,7 +796,7 @@ Perhaps the most common application of a tunnel diode is in simple high-frequenc
 
 At one time the tunnel diode was the only solid-state microwave amplifier available. Tunnel diodes were popular starting in the 1960\'s. They were longer lived than traveling wave tube amplifiers, an important consideration in satellite transmitters. Tunnel diodes are also resistant to radiation because of the heavy doping. Today various transistors operate at microwave frequencies. Even small signal tunnel diodes are expensive and difficult to find today. There is one remaining manufacturer of germanium tunnel diodes, and none for silicon devices. They are sometimes used in military equipment because they are insensitive to radiation and large temperature changes.
 
-There has been some research involving possible integration of silicon tunnel diodes into CMOS integrated circuits. They are thought to be capable of switching at 100 GHz in digital circuits. The sole manufacturer of germanium devices produces them one at a time. A batch process for silicon tunnel diodes must be developed, then integrated with conventional CMOS processes. [\[SZL\]](#SZL.bibitem)
+There has been some research involving possible integration of silicon tunnel diodes into CMOS integrated circuits. They are thought to be capable of switching at 100 GHz in digital circuits. The sole manufacturer of germanium devices produces them one at a time. A batch process for silicon tunnel diodes must be developed, then integrated with conventional CMOS processes. @SZL
 
 The Esaki tunnel diode should not be confused with the _resonant tunneling diode_ [CH 2](SEMI_2.html#resonantTD), of more complex construction from compound semiconductors. The RTD is a more recent development capable of higher speed.
 
@@ -932,19 +932,19 @@ The cells are wired in series with metal ribbons. For charging 12 V batteries, 3
 
 _Silicon Solar cell_
 
-The ultimate commercial high efficiency (21.5%) single crystal silicon solar cells have all contacts on the back of the cell. The active area of the cell is increased by moving the top (-) contact conductors to the back of the cell. The top (-) contacts are normally made to the N-type silicon on top of the cell. In @fig:03452 the (-) contacts are made to N^+^ diffusions on the bottom interleaved with (+) contacts. The top surface is textured to aid in trapping light within the cell.. [\[VSW\]](#VSW.bibitem)
+The ultimate commercial high efficiency (21.5%) single crystal silicon solar cells have all contacts on the back of the cell. The active area of the cell is increased by moving the top (-) contact conductors to the back of the cell. The top (-) contacts are normally made to the N-type silicon on top of the cell. In @fig:03452 the (-) contacts are made to N^+^ diffusions on the bottom interleaved with (+) contacts. The top surface is textured to aid in trapping light within the cell.. @VSW
 
 ![](media/03452.png){ #fig:03452 width=75% }
 
-_High efficiency solar cell with all contacts on the back. Adapted from Figure 1 [\[VSW\]](#VSW.bibitem)_
+_High efficiency solar cell with all contacts on the back. Adapted from Figure 1 @VSW_
 
 **Multicyrstalline silicon cells** start out as molten silicon cast into a rectangular mold. As the silicon cools, it crystallizes into a few large (mm to cm sized) randomly oriented crystals instead of a single one. The remainder of the process is the same as for single crystal cells. The finished cells show lines dividing the individual crystals, as if the cells were cracked. The high efficiency is not quite as high as single crystal cells due to losses at crystal grain boundaries. The cell surface cannot be roughened by etching due to the random orientation of the crystals. However, an antireflectrive coating improves efficiency. These cells are competitive for all but space applications.
 
 **Three layer cell**: The highest efficiency solar cell is a stack of three cells tuned to absorb different portions of the solar spectrum. Though three cells can be stacked atop one another, a monolithic single crystal structure of 20 semiconductor layers is more compact. At 32 % efficiency, it is now (2007) favored over silicon for space application. The high cost prevents it from finding many earth bound applications other than concentrators based on lenses or mirrors.
 
-Intensive research has recently produced a version enhanced for terrestrial concentrators at 400 - 1000 suns and 40.7% efficiency. This requires either a big inexpensive Fresnel lens or reflector and a small area of the expensive semiconductor. This combination is thought to be competitive with inexpensive silicon cells for solar power plants. [\[RRK\]](#RRK.bibitem) [\[LZy\]](#LZy.bibitem)
+Intensive research has recently produced a version enhanced for terrestrial concentrators at 400 - 1000 suns and 40.7% efficiency. This requires either a big inexpensive Fresnel lens or reflector and a small area of the expensive semiconductor. This combination is thought to be competitive with inexpensive silicon cells for solar power plants. @RRK @LZy
 
-_Metal organic chemical vapor deposition (MOCVD)_ deposits the layers atop a P-type germanium substrate. The top layers of N and P-type gallium indium phosphide (GaInP) having a band gap of 1.85 eV, absorbs ultraviolet and visible light. These wavelengths have enough energy to exceed the band gap. Longer wavelengths (lower energy) do not have enough energy to create electron-hole pairs, and pass on through to the next layer. A gallium arsenide layers having a band gap of 1.42 eV, absorbs near infrared light. Finally the germanium layer and substrate absorb far infrared. The series of three cells produce a voltage which is the sum of the voltages of the three cells. The voltage developed by each material is 0.4 V less than the band gap energy listed in Table [below](#3layercell.tbl). For example, for GaInP: 1.8 eV/e - 0.4 V = 1.4 V. For all three the voltage is 1.4 V + 1.0 V + 0.3 V = 2.7 V. [\[BRB\]](#BRB.bibitem)
+_Metal organic chemical vapor deposition (MOCVD)_ deposits the layers atop a P-type germanium substrate. The top layers of N and P-type gallium indium phosphide (GaInP) having a band gap of 1.85 eV, absorbs ultraviolet and visible light. These wavelengths have enough energy to exceed the band gap. Longer wavelengths (lower energy) do not have enough energy to create electron-hole pairs, and pass on through to the next layer. A gallium arsenide layers having a band gap of 1.42 eV, absorbs near infrared light. Finally the germanium layer and substrate absorb far infrared. The series of three cells produce a voltage which is the sum of the voltages of the three cells. The voltage developed by each material is 0.4 V less than the band gap energy listed in Table [below](#3layercell.tbl). For example, for GaInP: 1.8 eV/e - 0.4 V = 1.4 V. For all three the voltage is 1.4 V + 1.0 V + 0.3 V = 2.7 V. @BRB
 
 []{#3layercell.tbl}
 
@@ -958,7 +958,7 @@ Gallium indium phosphide 1.8 eV UV, visible Gallium arsenide 1.4 eV near infrare
 
 Crystalline solar cell arrays have a long usable life. Many arrays are guaranteed for 25 years, and believed to be good for 40 years. They do not suffer initial degradation compared with amorphous silicon.
 
-Both single and multicrystalline solar cells are based on silicon wafers. The silicon is both the substrate and the active device layers. Much silicon is consumed. This kind of cell has been around for decades, and takes approximately 86% of the solar electric market. For further information about crystalline solar cells see Honsberg. [\[CHS\]](#CHS.bibitem)
+Both single and multicrystalline solar cells are based on silicon wafers. The silicon is both the substrate and the active device layers. Much silicon is consumed. This kind of cell has been around for decades, and takes approximately 86% of the solar electric market. For further information about crystalline solar cells see Honsberg. @CHS
 
 **Amorphous silicon** thin film solar cells use tiny amounts of the active raw material, silicon. Approximately half the cost of conventional crystalline solar cells is the solar cell grade silicon. The thin film deposition process reduces this cost. The downside is that efficiency is about half that of conventional crystalline cells. Moreover, efficiency degrades by 15-35% upon exposure to sunlight. A 7% efficient cell soon ages to 5% efficiency. Thin film amorphous silicon cells work better than crystalline cells in dim light. They are put to good use in solar powered calculators.
 
@@ -970,7 +970,7 @@ Non-silicon based solar cells make up about 7% of the market. These are thin-fil
 
 _Cadmium telluride solar cell on glass or metal._
 
-A process for depositing cadmium telluride on glass begins with the deposition of N-type transparent, electrically conducive, tin oxide on a glass substrate. The next layer is P-type cadmium telluride; though, N-type or intrinsic may be used. These two layers constitute the NP junction. A P^+^ (heavy P-type) layer of lead telluride aids in establishing a low resistance contact. A metal layer makes the final contact to the lead telluride. These layers may be laid down by vacuum deposition, chemical vapor deposition (CVD), screen printing, electrodeposition, or atmospheric pressure chemical vapor deposition (APCVD) in helium. [\[KWM\]](#KWM.bibitem)
+A process for depositing cadmium telluride on glass begins with the deposition of N-type transparent, electrically conducive, tin oxide on a glass substrate. The next layer is P-type cadmium telluride; though, N-type or intrinsic may be used. These two layers constitute the NP junction. A P^+^ (heavy P-type) layer of lead telluride aids in establishing a low resistance contact. A metal layer makes the final contact to the lead telluride. These layers may be laid down by vacuum deposition, chemical vapor deposition (CVD), screen printing, electrodeposition, or atmospheric pressure chemical vapor deposition (APCVD) in helium. @KWM
 
 A variation of cadmium telluride is mercury cadmium telluride. Having lower bulk resistance and lower contact resistance improves efficiency over cadmium telluride.
 
@@ -978,7 +978,7 @@ A variation of cadmium telluride is mercury cadmium telluride. Having lower bulk
 
 _Cadmium Indium Gallium diSelenide solar cell (CIGS)_
 
-**Cadmium Indium Gallium diSelenide**: A most promising thin film solar cell at this time (2007) is manufactured on a ten inch wide roll of flexible polyimide-- Cadmium Indium Gallium diSelenide (CIGS). It has a spectacular efficiency of 10%. Though, commercial grade crystalline silicon cells surpassed this decades ago, CIGS should be cost competitive. The deposition processes are at a low enough temperature to use a polyimide polymer as a substrate instead of metal or glass. (@fig:03450) The CIGS is manufactured in a roll to roll process, which should drive down costs. GIGS cells may also be produced by an inherently low cost electrochemical process. [\[EET\]](#EET.bibitem)
+**Cadmium Indium Gallium diSelenide**: A most promising thin film solar cell at this time (2007) is manufactured on a ten inch wide roll of flexible polyimide-- Cadmium Indium Gallium diSelenide (CIGS). It has a spectacular efficiency of 10%. Though, commercial grade crystalline silicon cells surpassed this decades ago, CIGS should be cost competitive. The deposition processes are at a low enough temperature to use a polyimide polymer as a substrate instead of metal or glass. (@fig:03450) The CIGS is manufactured in a roll to roll process, which should drive down costs. GIGS cells may also be produced by an inherently low cost electrochemical process. @EET
 
 - **REVIEW**:
 - Most solar cells are silicon single crystal or multicrystal because of their good efficiency and moderate cost.
@@ -993,7 +993,7 @@ Solar cell type Maximum efficiency Practical efficiency Notes
 
 ---
 
-Selenium, polycrystalline 0.7% \- 1883, Charles Fritts Silicon, single crystal \- 4% 1950\'s, first silicon solar cell Silicon, single crystal PERL, terrestrial, space 25% \- solar cars, cost=100x commercial Silicon, single crystal, commercial terrestrial 24% 14-17% \$5-\$10/peak watt Cypress Semiconductor, Sunpower, silicon single crystal 21.5% 19% all contacts on cell back Gallium Indium Phosphide/ Gallium Arsenide/ Germanium, single crystal, multilayer \- 32% Preferred for space. Advanced terrestrial version of above. \- 40.7% Uses optical concentrator. Silicon, multicrystalline 18.5% 15.5% \- Thin films, \- \- \- Silicon, amorphous 13% 5-7% Degrades in sun light. Good indoors for calculators or cloudy outdoors. Cadmium telluride, polycrystalline 16% \- glass or metal substrate Copper indium arsenide diselenide, polycrystalline 18% 10% 10 inch flexible polymer web. [\[NTH\]](#NTH.bibitem) Organic polymer, 100% plastic 4.5% \- R&D project
+Selenium, polycrystalline 0.7% \- 1883, Charles Fritts Silicon, single crystal \- 4% 1950\'s, first silicon solar cell Silicon, single crystal PERL, terrestrial, space 25% \- solar cars, cost=100x commercial Silicon, single crystal, commercial terrestrial 24% 14-17% \$5-\$10/peak watt Cypress Semiconductor, Sunpower, silicon single crystal 21.5% 19% all contacts on cell back Gallium Indium Phosphide/ Gallium Arsenide/ Germanium, single crystal, multilayer \- 32% Preferred for space. Advanced terrestrial version of above. \- 40.7% Uses optical concentrator. Silicon, multicrystalline 18.5% 15.5% \- Thin films, \- \- \- Silicon, amorphous 13% 5-7% Degrades in sun light. Good indoors for calculators or cloudy outdoors. Cadmium telluride, polycrystalline 16% \- glass or metal substrate Copper indium arsenide diselenide, polycrystalline 18% 10% 10 inch flexible polymer web. @NTH Organic polymer, 100% plastic 4.5% \- R&D project
 
 ### Varicap or varactor diodes{ #sec:xtocid157056520 }
 
@@ -1035,7 +1035,7 @@ An IMPATT diode is reverse biased above the breakdown voltage. The high doping l
 
 _IMPATT diode: Oscillator circuit and heavily doped P and N layers._
 
-The resonant circuit in the schematic diagram of @fig:03458 is the lumped circuit equivalent of a waveguide section, where the IMPATT diode is mounted. DC reverse bias is applied through a choke which keeps RF from being lost in the bias supply. This may be a section of waveguide known as a bias Tee. Low power RADAR transmitters may use an IMPATT diode as a power source. They are too noisy for use in the receiver. [\[YMCW\]](#YMCW.bibitem)
+The resonant circuit in the schematic diagram of @fig:03458 is the lumped circuit equivalent of a waveguide section, where the IMPATT diode is mounted. DC reverse bias is applied through a choke which keeps RF from being lost in the bias supply. This may be a section of waveguide known as a bias Tee. Low power RADAR transmitters may use an IMPATT diode as a power source. They are too noisy for use in the receiver. @YMCW
 
 ### Gunn diode{ #sec:xtocid157056524 }
 
@@ -1049,7 +1049,7 @@ _Gunn diode: Oscillator circuit and cross section of only N-type semiconductor d
 
 As voltage is increased, conduction increases due to electrons in a low energy conduction band. As voltage is increased beyond the threshold of approximately 1 V, electrons move from the lower conduction band to the higher energy conduction band where they no longer contribute to conduction. In other words, as voltage increases, current decreases, a negative resistance condition. The oscillation frequency is determined by the transit time of the conduction electrons, which is inversely related to the thickness of the N^-^ layer.
 
-The frequency may be controlled to some extent by embedding the gunn diode into a resonant circuit. The lumped circuit equivalent shown in @fig:03459 is actually a coaxial transmission line or waveguide. Gallium arsenide gunn diodes are available for operation from 10 to 200 gHz at 5 to 65 mw power. Gunn diodes may also serve as amplifiers. [\[CHW\]](#CHW.bibitem) [\[IAP\]](#IAP.bibitem)
+The frequency may be controlled to some extent by embedding the gunn diode into a resonant circuit. The lumped circuit equivalent shown in @fig:03459 is actually a coaxial transmission line or waveguide. Gallium arsenide gunn diodes are available for operation from 10 to 200 gHz at 5 to 65 mw power. Gunn diodes may also serve as amplifiers. @CHW @IAP
 
 ### Shockley diode{ #sec:xtocid157056525 }
 
@@ -1089,7 +1089,7 @@ The SPICE circuit simulation program provides for modeling diodes in circuit sim
 
 ![](media/03467.png){ #fig:03467 width=75% }
 
-_Data sheet 1N4004 excerpt, after [\[DI4\]](#DI4.bibitem)._
+_Data sheet 1N4004 excerpt, after @DI4._
 
 The diode statement begins with a diode element name which must begin with "d" plus optional characters. Example diode element names include: d1, d2, dtest, da, db, d101. Two node numbers specify the connection of the anode and cathode, respectively, to other components. The node numbers are followed by a model name, referring to a subsequent ".model" statement.
 
@@ -1116,7 +1116,7 @@ Symbol Name Parameter Units Default
 
 I~S~ IS Saturation current (diode equation) A 1E-14 R~S~ RS Parsitic resistance (series resistance) Ω 0 n N Emission coefficient, 1 to 2 \- 1 τ~D~ TT Transit time s 0 C~D~(0) CJO Zero-bias junction capacitance F 0 φ~0~ VJ Junction potential V 1 m M Junction grading coefficient \- 0.5 \- \-     0.33 for linearly graded junction \- \- \- \-     0.5 for abrupt junction \- \- E~g~ EG Activation energy: eV 1.11 \- \-     Si: 1.11 \- \- \- \-     Ge: 0.67 \- \- \- \-     Schottky: 0.69 \- \- p~i~ XTI IS temperature exponent \- 3.0 \- \-     pn junction: 3.0 \- \- \- \-     Schottky: 2.0 \- \- k~f~ KF Flicker noise coefficient \- 0 a~f~ AF Flicker noise exponent \- 1 FC FC Forward bias depletion capacitance coefficient \- 0.5 BV BV Reverse breakdown voltage V ∞ IBV IBV Reverse breakdown current A 1E-3
 
-If diode parameters are not specified as in "Example" model above, the parameters take on the default values listed in Table [above](#diodespice.tbl) and Table [below](#diodespice2.tbl). These defaults model integrated circuit diodes. These are certainly adequate for preliminary work with discrete devices For more critical work, use SPICE models supplied by the manufacturer [\[DIn\]](#DIn.bibitem), SPICE vendors, and other sources. [\[smi\]](#smi.bibitem)
+If diode parameters are not specified as in "Example" model above, the parameters take on the default values listed in Table [above](#diodespice.tbl) and Table [below](#diodespice2.tbl). These defaults model integrated circuit diodes. These are certainly adequate for preliminary work with discrete devices For more critical work, use SPICE models supplied by the manufacturer @DIn, SPICE vendors, and other sources. @smi
 
 []{#diodespice2.tbl}
 
@@ -1128,7 +1128,7 @@ Part IS RS N TT CJO M VJ EG XTI BV IBV
 
 Default 1E-14 0 1 0 0 0.5 1 1.11 3 ∞ 1m 1N5711 sk 315n 2.8 2.03 1.44n 2.00p 0.333 \- 0.69 2 70 10u 1N5712 sk 680p 12 1.003 50p 1.0p 0.5 0.6 0.69 2 20 \- 1N34 Ge 200p 84m 2.19 144n 4.82p 0.333 0.75 0.67 \- 60 15u 1N4148 35p 64m 1.24 5.0n 4.0p 0.285 0.6 \- \- 75 \- 1N3891 63n 9.6m 2 110n 114p 0.255 0.6 \- \- 250 \- 10A04 10A 844n 2.06m 2.06 4.32u 277p 0.333 \- \- \- 400 10u 1N4004 1A 76.9n 42.2m 1.45 4.32u 39.8p 0.333 \- \- \- 400 5u 1N4004 data sheet 18.8n \- 2 \- 30p 0.333 \- \- \- 400 5u
 
-Otherwise, derive some of the parameters from the data sheet. First select a value for spice parameter N between 1 and 2. It is required for the diode equation (n). Massobrio [\[PAGM\]](#PAGM.bibitem) pp 9, recommends \".. n, the emission coefficient is usually about 2.\" In Table [above](#diodespice2.tbl), we see that power rectifiers 1N3891 (12 A), and 10A04 (10 A) both use about 2. The first four in the table are not relevant because they are schottky, schottky, germanium, and silicon small signal, respectively. The saturation current, IS, is derived from the diode equation, a value of (V~D~, I~D~) on the graph in @fig:03467, and N=2 (n in the diode equation).
+Otherwise, derive some of the parameters from the data sheet. First select a value for spice parameter N between 1 and 2. It is required for the diode equation (n). Massobrio @PAGM pp 9, recommends \".. n, the emission coefficient is usually about 2.\" In Table [above](#diodespice2.tbl), we see that power rectifiers 1N3891 (12 A), and 10A04 (10 A) both use about 2. The first four in the table are not relevant because they are schottky, schottky, germanium, and silicon small signal, respectively. The saturation current, IS, is derived from the diode equation, a value of (V~D~, I~D~) on the graph in @fig:03467, and N=2 (n in the diode equation).
 
 \
 
@@ -1142,7 +1142,7 @@ Otherwise, derive some of the parameters from the data sheet. First select a val
 
 The numerical values of IS=18.8n and N=2 are entered in last line of Table [above](#diodespice2.tbl) for comparison to the manufacturers model for 1N4004, which is considerably different. RS defaults to 0 for now. It will be estimated later. The important DC static parameters are N, IS, and RS.
 
-Rashid [\[MHR\]](#MHR.bibitem) suggests that TT, τ~D~, the transit time, be approximated from the reverse recovery stored charge Q~RR~, a data sheet parameter (not available on our data sheet) and I~F~, forward current.
+Rashid @MHR suggests that TT, τ~D~, the transit time, be approximated from the reverse recovery stored charge Q~RR~, a data sheet parameter (not available on our data sheet) and I~F~, forward current.
 
 \
 
@@ -1244,9 +1244,9 @@ The second approach models the zener with a subcircuit. Clamper D1 and VZ in @fi
 
 _Zener diode subcircuit uses clamper (D1 and VZ) to model zener._
 
-**Tunnel diode:** A tunnel diode may be modeled by a pair of field effect transistors (JFET) in a SPICE subcircuit. [\[KHM\]](#KHM.bibitem) An oscillator circuit is also shown in this reference.
+**Tunnel diode:** A tunnel diode may be modeled by a pair of field effect transistors (JFET) in a SPICE subcircuit. @KHM An oscillator circuit is also shown in this reference.
 
-**Gunn diode:** A Gunn diode may also be modeled by a pair of JFET\'s. [\[ISG\]](#ISG.bibitem) This reference shows a microwave relaxation oscillator.
+**Gunn diode:** A Gunn diode may also be modeled by a pair of JFET\'s. @ISG This reference shows a microwave relaxation oscillator.
 
 - **REVIEW:**
 - Diodes are described in SPICE by a diode component statement referring to .model statement. The .model statement contains parameters describing the diode. If parameters are not provided, the model takes on default values.

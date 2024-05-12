@@ -68,7 +68,7 @@ _Thyratron waveforms_
 
 As the AC supply voltage climbs from zero volts to its first peak, the load voltage remains at zero (no load current) until the threshold voltage is reached. At that point, the tube switches \"on\" and begins to conduct, the load voltage now following the AC voltage through the rest of the half cycle. Load voltage exists (and thus load current) even when the AC voltage waveform has dropped below the threshold value of the tube. This is hysteresis at work: the tube stays in its conductive mode past the point where it first turned on, continuing to conduct until there the supply voltage drops off to almost zero volts. Because thyratron tubes are one-way (diode) devices, no voltage develops across the load through the negative half-cycle of AC. In practical thyratron circuits, multiple tubes arranged in some form of full-wave rectifier circuit to facilitate full-wave DC power to the load.
 
-The thyratron tube has been applied to a relaxation oscillator circuit. [\[VTS\]](#VTS.bibitem) The frequency is controlled by a small DC voltage between grid and cathode. (See @fig:03191) This voltage-controlled oscillator is known as a _VCO_. Relaxation oscillators produce a very non-sinusoidal output, and they exist mostly as demonstration circuits (as is the case here) or in applications where the harmonic rich waveform is desirable. [\[MET\]](#MET.bibitem)
+The thyratron tube has been applied to a relaxation oscillator circuit. @VTS The frequency is controlled by a small DC voltage between grid and cathode. (See @fig:03191) This voltage-controlled oscillator is known as a _VCO_. Relaxation oscillators produce a very non-sinusoidal output, and they exist mostly as demonstration circuits (as is the case here) or in applications where the harmonic rich waveform is desirable. @MET
 
 ![](media/03191.png){ #fig:03191 width=75% }
 
@@ -440,7 +440,7 @@ _Unijunction transistor: (a) Construction, (b) Model, (c) Symbol_
 
 The Unijunction emitter current vs voltage characteristic curve (@fig:03508(a) ) shows that as V~E~ increases, current I~E~ increases up I~P~ at the peak point. Beyond the peak point, current increases as voltage decreases in the negative resistance region. The voltage reaches a minimum at the valley point. The resistance of R~B1~, the saturation resistance is lowest at the valley point.
 
-I~P~ and I~V~, are datasheet parameters; For a 2n2647, I~P~ and I~V~ are 2µA and 4mA, respectively. [\[AMS\]](#AMS.bibitem) V~P~ is the voltage drop across R~B1~ plus a 0.7V diode drop; see @fig:03508(b). V~V~ is estimated to be approximately 10% of V~BB~.
+I~P~ and I~V~, are datasheet parameters; For a 2n2647, I~P~ and I~V~ are 2µA and 4mA, respectively. @AMS V~P~ is the voltage drop across R~B1~ plus a 0.7V diode drop; see @fig:03508(b). V~V~ is estimated to be approximately 10% of V~BB~.
 
 ![](media/03508.png){ #fig:03508 width=75% }
 
@@ -454,7 +454,7 @@ _Unijunction transistor relaxation oscillator and waveforms. Oscillator drives S
 
 During capacitor discharge through the E-B1 saturation resistance, a pulse may be seen on the external B1 and B2 load resistors, @fig:03506. The load resistor at B1 needs to be low to not affect the discharge time. The external resistor at B2 is optional. It may be replaced by a short circuit. The approximate frequency is given by 1/f = T = RC. A more accurate expression for frequency is given in @fig:03506.
 
-The charging resistor R~E~ must fall within certain limits. It must be small enough to allow I~P~ to flow based on the V~BB~ supply less V~P~. It must be large enough to supply I~V~ based on the V~BB~ supply less V~V~. [\[MHW\]](#MHW.bibitem) The equations and an example for a 2n2647:
+The charging resistor R~E~ must fall within certain limits. It must be small enough to allow I~P~ to flow based on the V~BB~ supply less V~P~. It must be large enough to supply I~V~ based on the V~BB~ supply less V~V~. @MHW The equations and an example for a 2n2647:
 
 ![](media/13080.png){ #fig:13080 width=75% }
 
@@ -492,7 +492,7 @@ Choosing R \> 143k guarantees that the operating point can reset from the valley
 
 []{#put1.tbl}
 
-_Selected 2n6027 PUT parameters, adapted from 2n6027 datasheet. [\[ON1\]](#ON1.bibitem)_
+_Selected 2n6027 PUT parameters, adapted from 2n6027 datasheet. @ON1_
 
 Parameter Conditions min typical max units
 
@@ -530,7 +530,7 @@ _SCS: Motor start/stop circuit, equivalent circuit with two transistors._
 
 When the \"on\" pushbutton switch is actuated, the voltage applied between the cathode gate and the cathode, forward-biases the lower transistor\'s base-emitter junction, and turning it on. The top transistor of the SCS is ready to conduct, having been supplied with a current path from its emitter terminal (the SCS\'s anode terminal) through resistor R~2~ to the positive side of the power supply. As in the case of the SCR, both transistors turn on and maintain each other in the \"on\" mode. When the lower transistor turns on, it conducts the motor\'s load current, and the motor starts and runs.
 
-The motor may be stopped by interrupting the power supply, as with an SCR, and this is called _natural commutation_. However, the SCS provides us with another means of turning off: _forced commutation_ by shorting the anode terminal to the cathode. [\[GE1\]](#GE1.bibitem) If this is done (by actuating the \"off\" pushbutton switch), the upper transistor within the SCS will lose its emitter current, thus halting current through the base of the lower transistor. When the lower transistor turns off, it breaks the circuit for base current through the top transistor (securing its \"off\" state), and the motor (making it stop). The SCS will remain in the off condition until such time that the \"on\" pushbutton switch is re-actuated.
+The motor may be stopped by interrupting the power supply, as with an SCR, and this is called _natural commutation_. However, the SCS provides us with another means of turning off: _forced commutation_ by shorting the anode terminal to the cathode. @GE1 If this is done (by actuating the \"off\" pushbutton switch), the upper transistor within the SCS will lose its emitter current, thus halting current through the base of the lower transistor. When the lower transistor turns off, it breaks the circuit for base current through the top transistor (securing its \"off\" state), and the motor (making it stop). The SCS will remain in the off condition until such time that the \"on\" pushbutton switch is re-actuated.
 
 - **REVIEW:**
 - A _silicon-controlled switch_, or _SCS_, is essentially an SCR with an extra gate terminal.
