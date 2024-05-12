@@ -18,4 +18,4 @@ For convenience, the standard `Rakefile` can/will also build all of the content 
 
 The majority of files have been converted, and checked, using [Kate](https://apps.kde.org/en-gb/kate/): mostly for ease of project management and its excellent find/replace support. A full list of changes is given below
 
- - _Use BibTeX for citations_. `\[\\\[(\w+)\\]]\(\#(\w+)\.bibitem\)` -> `@\1`
+- _Use BibTeX for citations_. `\[\\\[(\w+)\\]]\(\#(\w+)\.bibitem\)` -> `@\1`

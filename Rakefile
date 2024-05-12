@@ -6,6 +6,8 @@ source_files = Rake::FileList.new("**/*.md") do |fl|
   fl.exclude(/^Attic\//)
   fl.exclude("LICENSE.md")
   fl.exclude("README.md")
+  fl.exclude("src_pandoc/README.md")
+  fl.exclude("Explanations/README.md")
 end
 
 image_files = Rake::FileList.new("**/*.png") do |fl|

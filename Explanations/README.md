@@ -16,3 +16,7 @@ This folder contains an edited version of the full [_Lessons In Electric Circuit
 
 ## Semiconductors
 
+- Move `about.md` (also `Appendix_1.md`) to the front matter
+- Split `Chapter_1.md` into the `Introduction.md` and `AmpAtten.md` ( _Amplifiers and Alternators_)
+- Rename `Appendix_2.md` to `Contributors.md`
+- Rename `Appendix_3.md` to `License.md`

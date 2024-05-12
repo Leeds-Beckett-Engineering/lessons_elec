@@ -42,18 +42,26 @@
 %% Body
 %%
 
+\starttext
+
 % Contents
 
-\starttext
+\completecontent
+
+% Acknowlegements
+
 \startfrontmatter
-\chapter{front}
+
+  \component About.tex
+
 \stopfrontmatter
 
 % Load the main chapters
 
 \startbodymatter
 
-%   \component Chapter_1.tex
+   \component Introduction.tex
+   \component AmpAtten.tex
 %   \component Chapter_2.tex
 %   \component Chapter_3.tex
 %   \component Chapter_4.tex
@@ -71,16 +79,17 @@
 
 \startappendices
 
-%   \component Appendix_1.tex
-%   \component Appendix_2.tex
-%   \component Appendix_3.tex
+  %\component Contributors.tex
 
 \stopappendices
 
 % Backmatter
 
 \startbackmatter
-\chapter{back}
+
+  \component Contributors.tex
+  \component License.tex
+
 \stopbackmatter
 
 % Bibliography
