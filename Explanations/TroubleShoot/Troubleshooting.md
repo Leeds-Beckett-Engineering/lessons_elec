@@ -1,4 +1,4 @@
-# Chapter 8: Troubleshooting -- Theory And Practice
+# Theory And Practice
 
 ## Troubleshooting
 
@@ -114,11 +114,11 @@ In a system with multiple sections or stages, carefully measure the variables go
 
 **What to do:** Divide the circuitry into stages: tuning stage, mixing stages, amplifier stage, all the way through to the speaker(s). Measure signals at test points between these stages and tell whether or not a stage is working properly.
 
-**Example 2:** _An analog summer circuit is not functioning properly._
+**Example 2:** _An analog summer circuit, shown in @fig:01034, is not functioning properly._
 
 ![Schematic Analog Summer Circuit](media/01034.png){ #fig:01034 width=50% }
 
-**What to do:** I would test the passive averager network (the three resistors at the lower-left corner of the schematic) to see that the proper (averaged) voltage was seen at the non-inverting input of the op-amp. I would then measure the voltage at the inverting input to see if it was the same as at the non-inverting input (or, alternatively, measure the voltage difference between the two inputs of the op-amp, as it should be zero). Continue testing sections of the circuit (or just test points within the circuit) to see if you measure the expected voltages and currents.
+**What to do:** I would test the passive averager network (the three resistors at the lower-left corner of the schematic of @fig:01034) to see that the proper (averaged) voltage was seen at the non-inverting input of the op-amp. I would then measure the voltage at the inverting input to see if it was the same as at the non-inverting input (or, alternatively, measure the voltage difference between the two inputs of the op-amp, as it should be zero). Continue testing sections of the circuit (or just test points within the circuit) to see if you measure the expected voltages and currents.
 
 ### Simplify And Rebuild { #sec:xtocid157909711 }
 
