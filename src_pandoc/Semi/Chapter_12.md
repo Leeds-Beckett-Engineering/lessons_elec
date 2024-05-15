@@ -2,7 +2,7 @@
 
 ---
 
-# Lessons In Electric Circuits \-- Volume III
+# Lessons In Electric Circuits --- Volume III
 
 # Chapter 12
 

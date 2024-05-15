@@ -2,7 +2,7 @@
 
 ---
 
-# Lessons In Electric Circuits \-- Volume III
+# Lessons In Electric Circuits --- Volume III
 
 # Chapter 3
 
@@ -60,7 +60,7 @@ When the polarity of the battery is such that electrons are allowed to flow thro
 
 []{#Flow, electron vs. conventional}
 
-Oddly enough, the direction of the diode symbol\'s "arrowhead" points _against_ the direction of electron flow. This is because the diode symbol was invented by engineers, who predominantly use _conventional flow_ notation in their schematics, showing current as a flow of charge from the positive (+) side of the voltage source to the negative (-). This convention holds true for all semiconductor symbols possessing "arrowheads:" the arrow points in the permitted direction of conventional flow, and against the permitted direction of electron flow.
+Oddly enough, the direction of the diode symbol's "arrowhead" points _against_ the direction of electron flow. This is because the diode symbol was invented by engineers, who predominantly use _conventional flow_ notation in their schematics, showing current as a flow of charge from the positive (+) side of the voltage source to the negative (-). This convention holds true for all semiconductor symbols possessing "arrowheads:" the arrow points in the permitted direction of conventional flow, and against the permitted direction of electron flow.
 
 []{#Valve, “check”}
 
@@ -72,13 +72,13 @@ _Hydraulic check valve analogy: (a) Electron current flow permitted. (b) Current
 
 Check valves are essentially pressure-operated devices: they open and allow flow if the pressure across them is of the correct "polarity" to open the gate (in the analogy shown, greater fluid pressure on the right than on the left). If the pressure is of the opposite "polarity," the pressure difference across the check valve will close and hold the gate so that no flow occurs.
 
-Like check valves, diodes are essentially "pressure-" operated (voltage-operated) devices. The essential difference between forward-bias and reverse-bias is the polarity of the voltage dropped across the diode. Let\'s take a closer look at the simple battery-diode-lamp circuit shown earlier, this time investigating voltage drops across the various components in @fig:03249.
+Like check valves, diodes are essentially "pressure-" operated (voltage-operated) devices. The essential difference between forward-bias and reverse-bias is the polarity of the voltage dropped across the diode. Let's take a closer look at the simple battery-diode-lamp circuit shown earlier, this time investigating voltage drops across the various components in @fig:03249.
 
 ![](media/03249.png){ #fig:03249 width=75% }
 
 _Diode circuit voltage measurements: (a) Forward biased. (b) Reverse biased._
 
-A forward-biased diode conducts current and drops a small voltage across it, leaving most of the battery voltage dropped across the lamp. If the battery\'s polarity is reversed, the diode becomes reverse-biased, and drops _all_ of the battery\'s voltage leaving none for the lamp. If we consider the diode to be a self-actuating switch (closed in the forward-bias mode and open in the reverse-bias mode), this behavior makes sense. The most substantial difference is that the diode drops a lot more voltage when conducting than the average mechanical switch (0.7 volts versus tens of millivolts).
+A forward-biased diode conducts current and drops a small voltage across it, leaving most of the battery voltage dropped across the lamp. If the battery's polarity is reversed, the diode becomes reverse-biased, and drops _all_ of the battery's voltage leaving none for the lamp. If we consider the diode to be a self-actuating switch (closed in the forward-bias mode and open in the reverse-bias mode), this behavior makes sense. The most substantial difference is that the diode drops a lot more voltage when conducting than the average mechanical switch (0.7 volts versus tens of millivolts).
 
 This forward-bias voltage drop exhibited by the diode is due to the action of the depletion region formed by the P-N junction under the influence of an applied voltage. If no voltage applied is across a semiconductor diode, a thin depletion region exists around the region of the P-N junction, preventing current flow. (@fig:03250 (a)) The depletion region is almost devoid of available charge carriers, and acts as an insulator:
 
@@ -112,9 +112,9 @@ The term kT/q describes the voltage produced within the P-N junction due to the 
 
 ![](media/13048.png){ #fig:13048 width=75% }
 
-You need not be familiar with the "diode equation" to analyze simple diode circuits. Just understand that the voltage dropped across a current-conducting diode _does_ change with the amount of current going through it, but that this change is fairly small over a wide range of currents. This is why many textbooks simply say the voltage drop across a conducting, semiconductor diode remains constant at 0.7 volts for silicon and 0.3 volts for germanium. However, some circuits intentionally make use of the P-N junction\'s inherent exponential current/voltage relationship and thus can only be understood in the context of this equation. Also, since temperature is a factor in the diode equation, a forward-biased P-N junction may also be used as a temperature-sensing device, and thus can only be understood if one has a conceptual grasp on this mathematical relationship.
+You need not be familiar with the "diode equation" to analyze simple diode circuits. Just understand that the voltage dropped across a current-conducting diode _does_ change with the amount of current going through it, but that this change is fairly small over a wide range of currents. This is why many textbooks simply say the voltage drop across a conducting, semiconductor diode remains constant at 0.7 volts for silicon and 0.3 volts for germanium. However, some circuits intentionally make use of the P-N junction's inherent exponential current/voltage relationship and thus can only be understood in the context of this equation. Also, since temperature is a factor in the diode equation, a forward-biased P-N junction may also be used as a temperature-sensing device, and thus can only be understood if one has a conceptual grasp on this mathematical relationship.
 
-A reverse-biased diode prevents current from going through it, due to the expanded depletion region. In actuality, a very small amount of current can and does go through a reverse-biased diode, called the _leakage current_, but it can be ignored for most purposes. The ability of a diode to withstand reverse-bias voltages is limited, as it is for any insulator. If the applied reverse-bias voltage becomes too great, the diode will experience a condition known as _breakdown_ (@fig:03253), which is usually destructive. A diode\'s maximum reverse-bias voltage rating is known as the _Peak Inverse Voltage_, or _PIV_, and may be obtained from the manufacturer. Like forward voltage, the PIV rating of a diode varies with temperature, except that PIV _increases_ with increased temperature and _decreases_ as the diode becomes cooler \-- exactly opposite that of forward voltage.
+A reverse-biased diode prevents current from going through it, due to the expanded depletion region. In actuality, a very small amount of current can and does go through a reverse-biased diode, called the _leakage current_, but it can be ignored for most purposes. The ability of a diode to withstand reverse-bias voltages is limited, as it is for any insulator. If the applied reverse-bias voltage becomes too great, the diode will experience a condition known as _breakdown_ (@fig:03253), which is usually destructive. A diode's maximum reverse-bias voltage rating is known as the _Peak Inverse Voltage_, or _PIV_, and may be obtained from the manufacturer. Like forward voltage, the PIV rating of a diode varies with temperature, except that PIV _increases_ with increased temperature and _decreases_ as the diode becomes cooler --- exactly opposite that of forward voltage.
 
 ![](media/03253.png){ #fig:03253 width=75% }
 
@@ -139,9 +139,9 @@ Being able to determine the polarity (cathode versus anode) and basic functional
 
 _Determination of diode polarity: (a) Low resistance indicates forward bias, black lead is cathode and red lead anode (for most meters) (b) Reversing leads shows high resistance indicating reverse bias._
 
-Of course, to determine which end of the diode is the cathode and which is the anode, you must know with certainty which test lead of the meter is positive (+) and which is negative (-) when set to the "resistance" or "Ω" function. With most digital multimeters I\'ve seen, the red lead becomes positive and the black lead negative when set to measure resistance, in accordance with standard electronics color-code convention. However, this is not guaranteed for all meters. Many analog multimeters, for example, actually make their black leads positive (+) and their red leads negative (-) when switched to the "resistance" function, because it is easier to manufacture it that way!
+Of course, to determine which end of the diode is the cathode and which is the anode, you must know with certainty which test lead of the meter is positive (+) and which is negative (-) when set to the "resistance" or "Ω" function. With most digital multimeters I've seen, the red lead becomes positive and the black lead negative when set to measure resistance, in accordance with standard electronics color-code convention. However, this is not guaranteed for all meters. Many analog multimeters, for example, actually make their black leads positive (+) and their red leads negative (-) when switched to the "resistance" function, because it is easier to manufacture it that way!
 
-One problem with using an ohmmeter to check a diode is that the readings obtained only have qualitative value, not quantitative. In other words, an ohmmeter only tells you which way the diode conducts; the low-value resistance indication obtained while conducting is useless. If an ohmmeter shows a value of "1.73 ohms" while forward-biasing a diode, that figure of 1.73 Ω doesn\'t represent any real-world quantity useful to us as technicians or circuit designers. It neither represents the forward voltage drop nor any "bulk" resistance in the semiconductor material of the diode itself, but rather is a figure dependent upon both quantities and will vary substantially with the particular ohmmeter used to take the reading.
+One problem with using an ohmmeter to check a diode is that the readings obtained only have qualitative value, not quantitative. In other words, an ohmmeter only tells you which way the diode conducts; the low-value resistance indication obtained while conducting is useless. If an ohmmeter shows a value of "1.73 ohms" while forward-biasing a diode, that figure of 1.73 Ω doesn't represent any real-world quantity useful to us as technicians or circuit designers. It neither represents the forward voltage drop nor any "bulk" resistance in the semiconductor material of the diode itself, but rather is a figure dependent upon both quantities and will vary substantially with the particular ohmmeter used to take the reading.
 
 For this reason, some digital multimeter manufacturers equip their meters with a special "diode check" function which displays the actual forward voltage drop of the diode in volts, rather than a "resistance" figure in ohms. These meters work by forcing a small current through the diode and measuring the voltage dropped between the two test leads. (@fig:03256)
 
@@ -149,7 +149,7 @@ For this reason, some digital multimeter manufacturers equip their meters with a
 
 _Meter with a "Diode check" function displays the forward voltage drop of 0.548 volts instead of a low resistance._
 
-The forward voltage reading obtained with such a meter will typically be less than the "normal" drop of 0.7 volts for silicon and 0.3 volts for germanium, because the current provided by the meter is of trivial proportions. If a multimeter with diode-check function isn\'t available, or you would like to measure a diode\'s forward voltage drop at some non-trivial current, the circuit of @fig:03257 may be constructed using a battery, resistor, and voltmeter
+The forward voltage reading obtained with such a meter will typically be less than the "normal" drop of 0.7 volts for silicon and 0.3 volts for germanium, because the current provided by the meter is of trivial proportions. If a multimeter with diode-check function isn't available, or you would like to measure a diode's forward voltage drop at some non-trivial current, the circuit of @fig:03257 may be constructed using a battery, resistor, and voltmeter
 
 ![](media/03257.png){ #fig:03257 width=75% }
 
@@ -161,7 +161,7 @@ If this circuit were designed to provide a constant or nearly constant current t
 
 Beware that some digital multimeters equipped with a "diode check" function may output a very low test voltage (less than 0.3 volts) when set to the regular "resistance" (Ω) function: too low to fully collapse the depletion region of a PN junction. The philosophy here is that the "diode check" function is to be used for testing semiconductor devices, and the "resistance" function for anything else. By using a very low test voltage to measure resistance, it is easier for a technician to measure the resistance of non-semiconductor components connected to semiconductor components, since the semiconductor component junctions will not become forward-biased with such low voltages.
 
-Consider the example of a resistor and diode connected in parallel, soldered in place on a printed circuit board (PCB). Normally, one would have to unsolder the resistor from the circuit (disconnect it from all other components) before measuring its resistance, otherwise any parallel-connected components would affect the reading obtained. When using a multimeter which outputs a very low test voltage to the probes in the "resistance" function mode, the diode\'s PN junction will not have enough voltage impressed across it to become forward-biased, and will only pass negligible current. Consequently, the meter "sees" the diode as an open (no continuity), and only registers the resistor\'s resistance. (@fig:03329)
+Consider the example of a resistor and diode connected in parallel, soldered in place on a printed circuit board (PCB). Normally, one would have to unsolder the resistor from the circuit (disconnect it from all other components) before measuring its resistance, otherwise any parallel-connected components would affect the reading obtained. When using a multimeter which outputs a very low test voltage to the probes in the "resistance" function mode, the diode's PN junction will not have enough voltage impressed across it to become forward-biased, and will only pass negligible current. Consequently, the meter "sees" the diode as an open (no continuity), and only registers the resistor's resistance. (@fig:03329)
 
 ![](media/03329.png){ #fig:03329 width=75% }
 
@@ -173,7 +173,7 @@ If such an ohmmeter were used to test a diode, it would indicate a very high res
 
 _Ohmmeter equipped with a low test voltage, too low to forward bias diodes, does not see diodes._
 
-Reverse voltage strength of a diode is not as easily tested, because exceeding a normal diode\'s PIV usually results in destruction of the diode. Special types of diodes, though, which are designed to "break down" in reverse-bias mode without damage (called _zener diodes_), which are tested with the same voltage source / resistor / voltmeter circuit, provided that the voltage source is of high enough value to force the diode into its breakdown region. More on this subject in a later section of this chapter.
+Reverse voltage strength of a diode is not as easily tested, because exceeding a normal diode's PIV usually results in destruction of the diode. Special types of diodes, though, which are designed to "break down" in reverse-bias mode without damage (called _zener diodes_), which are tested with the same voltage source / resistor / voltmeter circuit, provided that the voltage source is of high enough value to force the diode into its breakdown region. More on this subject in a later section of this chapter.
 
 - **REVIEW:**
 - An ohmmeter may be used to qualitatively check diode function. There should be low resistance measured one way and very high resistance measured the other way. When using an ohmmeter for this purpose, be sure you know which test lead is positive and which is negative! The actual polarity may not follow the colors of the leads as you might expect, depending on the particular design of meter.
@@ -181,7 +181,7 @@ Reverse voltage strength of a diode is not as easily tested, because exceeding a
 
 ## Diode ratings{ #sec:xtocid15705652 }
 
-In addition to forward voltage drop (V~f~) and peak inverse voltage (PIV), there are many other ratings of diodes important to circuit design and component selection. Semiconductor manufacturers provide detailed specifications on their products \-- diodes included \-- in publications known as _datasheets_. Datasheets for a wide variety of semiconductor components may be found in reference books and on the internet. I prefer the internet as a source of component specifications because all the data obtained from manufacturer websites are up-to-date.
+In addition to forward voltage drop (V~f~) and peak inverse voltage (PIV), there are many other ratings of diodes important to circuit design and component selection. Semiconductor manufacturers provide detailed specifications on their products --- diodes included --- in publications known as _datasheets_. Datasheets for a wide variety of semiconductor components may be found in reference books and on the internet. I prefer the internet as a source of component specifications because all the data obtained from manufacturer websites are up-to-date.
 
 A typical diode datasheet will contain figures for the following parameters:
 
@@ -189,15 +189,15 @@ A typical diode datasheet will contain figures for the following parameters:
 
 [Maximum DC reverse voltage] = V~R~ or V~DC~, the maximum amount of voltage the diode can withstand in reverse-bias mode on a continual basis. Ideally, this figure would be infinite.
 
-[Maximum forward voltage] = V~F~, usually specified at the diode\'s rated forward current. Ideally, this figure would be zero: the diode providing no opposition whatsoever to forward current. In reality, the forward voltage is described by the "diode equation."
+[Maximum forward voltage] = V~F~, usually specified at the diode's rated forward current. Ideally, this figure would be zero: the diode providing no opposition whatsoever to forward current. In reality, the forward voltage is described by the "diode equation."
 
 [Maximum (average) forward current] = I~F(AV)~, the maximum average amount of current the diode is able to conduct in forward bias mode. This is fundamentally a thermal limitation: how much heat can the PN junction handle, given that dissipation power is equal to current (I) multiplied by voltage (V or E) and forward voltage is dependent upon both current and junction temperature. Ideally, this figure would be infinite.
 
-[Maximum (peak or surge) forward current] = I~FSM~ or i~f(surge)~, the maximum peak amount of current the diode is able to conduct in forward bias mode. Again, this rating is limited by the diode junction\'s thermal capacity, and is usually much higher than the average current rating due to thermal inertia (the fact that it takes a finite amount of time for the diode to reach maximum temperature for a given current). Ideally, this figure would be infinite.
+[Maximum (peak or surge) forward current] = I~FSM~ or i~f(surge)~, the maximum peak amount of current the diode is able to conduct in forward bias mode. Again, this rating is limited by the diode junction's thermal capacity, and is usually much higher than the average current rating due to thermal inertia (the fact that it takes a finite amount of time for the diode to reach maximum temperature for a given current). Ideally, this figure would be infinite.
 
-[Maximum total dissipation] = P~D~, the amount of power (in watts) allowable for the diode to dissipate, given the dissipation (P=IE) of diode current multiplied by diode voltage drop, and also the dissipation (P=I^2^R) of diode current squared multiplied by bulk resistance. Fundamentally limited by the diode\'s thermal capacity (ability to tolerate high temperatures).
+[Maximum total dissipation] = P~D~, the amount of power (in watts) allowable for the diode to dissipate, given the dissipation (P=IE) of diode current multiplied by diode voltage drop, and also the dissipation (P=I^2^R) of diode current squared multiplied by bulk resistance. Fundamentally limited by the diode's thermal capacity (ability to tolerate high temperatures).
 
-[Operating junction temperature] = T~J~, the maximum allowable temperature for the diode\'s PN junction, usually given in degrees Celsius (^o^C). Heat is the "Achilles\' heel" of semiconductor devices: they _must_ be kept cool to function properly and give long service life.
+[Operating junction temperature] = T~J~, the maximum allowable temperature for the diode's PN junction, usually given in degrees Celsius (^o^C). Heat is the "Achilles' heel" of semiconductor devices: they _must_ be kept cool to function properly and give long service life.
 
 [Storage temperature range] = T~STG~, the range of allowable temperatures for storing a diode (unpowered). Sometimes given in conjunction with operating junction temperature (T~J~), because the maximum storage temperature and the maximum operating temperature ratings are often identical. If anything, though, maximum storage temperature rating will be greater than the maximum operating temperature rating.
 
@@ -219,7 +219,7 @@ Now we come to the most popular application of the diode: _rectification_. Simpl
 
 _Half-wave rectifier circuit._
 
-For most power applications, half-wave rectification is insufficient for the task. The harmonic content of the rectifier\'s output waveform is very large and consequently difficult to filter. Furthermore, the AC power source only supplies power to the load one half every full cycle, meaning that half of its capacity is unused. Half-wave rectification is, however, a very simple way to reduce power to a resistive load. Some two-position lamp dimmer switches apply full AC power to the lamp filament for "full" brightness and then half-wave rectify it for a lesser light output. (@fig:03259)
+For most power applications, half-wave rectification is insufficient for the task. The harmonic content of the rectifier's output waveform is very large and consequently difficult to filter. Furthermore, the AC power source only supplies power to the load one half every full cycle, meaning that half of its capacity is unused. Half-wave rectification is, however, a very simple way to reduce power to a resistive load. Some two-position lamp dimmer switches apply full AC power to the lamp filament for "full" brightness and then half-wave rectify it for a lesser light output. (@fig:03259)
 
 ![](media/03259.png){ #fig:03259 width=75% }
 
@@ -233,13 +233,13 @@ If we need to rectify AC power to obtain the full use of _both_ half-cycles of t
 
 _Full-wave rectifier, center-tapped design._
 
-This circuit\'s operation is easily understood one half-cycle at a time. Consider the first half-cycle, when the source voltage polarity is positive (+) on top and negative (-) on bottom. At this time, only the top diode is conducting; the bottom diode is blocking current, and the load "sees" the first half of the sine wave, positive on top and negative on bottom. Only the top half of the transformer\'s secondary winding carries current during this half-cycle as in @fig:03261.
+This circuit's operation is easily understood one half-cycle at a time. Consider the first half-cycle, when the source voltage polarity is positive (+) on top and negative (-) on bottom. At this time, only the top diode is conducting; the bottom diode is blocking current, and the load "sees" the first half of the sine wave, positive on top and negative on bottom. Only the top half of the transformer's secondary winding carries current during this half-cycle as in @fig:03261.
 
 ![](media/03261.png){ #fig:03261 width=75% }
 
 _Full-wave center-tap rectifier: Top half of secondary winding conducts during positive half-cycle of input, delivering positive half-cycle to load.._
 
-During the next half-cycle, the AC polarity reverses. Now, the other diode and the other half of the transformer\'s secondary winding carry current while the portions of the circuit formerly carrying current during the last half-cycle sit idle. The load still "sees" half of a sine wave, of the same polarity as before: positive on top and negative on bottom. (@fig:03262)
+During the next half-cycle, the AC polarity reverses. Now, the other diode and the other half of the transformer's secondary winding carry current while the portions of the circuit formerly carrying current during the last half-cycle sit idle. The load still "sees" half of a sine wave, of the same polarity as before: positive on top and negative on bottom. (@fig:03262)
 
 ![](media/03262.png){ #fig:03262 width=75% }
 
@@ -269,7 +269,7 @@ _Full-wave bridge rectifier: Electron flow for positive half-cycles._
 
 _Full-wave bridge rectifier: Electron flow for negative half=cycles._
 
-Remembering the proper layout of diodes in a full-wave bridge rectifier circuit can often be frustrating to the new student of electronics. I\'ve found that an alternative representation of this circuit is easier both to remember and to comprehend. It\'s the exact same circuit, except all diodes are drawn in a horizontal attitude, all "pointing" the same direction. (@fig:03266)
+Remembering the proper layout of diodes in a full-wave bridge rectifier circuit can often be frustrating to the new student of electronics. I've found that an alternative representation of this circuit is easier both to remember and to comprehend. It's the exact same circuit, except all diodes are drawn in a horizontal attitude, all "pointing" the same direction. (@fig:03266)
 
 ![](media/03266.png){ #fig:03266 width=75% }
 
@@ -293,13 +293,13 @@ When polyphase AC is rectified, the phase-shifted pulses overlap each other to p
 
 _Three-phase AC and 3-phase full-wave rectifier output._
 
-In any case of rectification \-- single-phase or polyphase \-- the amount of AC voltage mixed with the rectifier\'s DC output is called _ripple voltage_. In most cases, since "pure" DC is the desired goal, ripple voltage is undesirable. If the power levels are not too great, filtering networks may be employed to reduce the amount of ripple in the output voltage.
+In any case of rectification --- single-phase or polyphase --- the amount of AC voltage mixed with the rectifier's DC output is called _ripple voltage_. In most cases, since "pure" DC is the desired goal, ripple voltage is undesirable. If the power levels are not too great, filtering networks may be employed to reduce the amount of ripple in the output voltage.
 
-Sometimes, the method of rectification is referred to by counting the number of DC "pulses" output for every 360^o^ of electrical "rotation." A single-phase, half-wave rectifier circuit, then, would be called a _1-pulse_ rectifier, because it produces a single pulse during the time of one complete cycle (360^o^) of the AC waveform. A single-phase, full-wave rectifier (regardless of design, center-tap or bridge) would be called a _2-pulse_ rectifier, because it outputs two pulses of DC during one AC cycle\'s worth of time. A three-phase full-wave rectifier would be called a _6-pulse_ unit.
+Sometimes, the method of rectification is referred to by counting the number of DC "pulses" output for every 360^o^ of electrical "rotation." A single-phase, half-wave rectifier circuit, then, would be called a _1-pulse_ rectifier, because it produces a single pulse during the time of one complete cycle (360^o^) of the AC waveform. A single-phase, full-wave rectifier (regardless of design, center-tap or bridge) would be called a _2-pulse_ rectifier, because it outputs two pulses of DC during one AC cycle's worth of time. A three-phase full-wave rectifier would be called a _6-pulse_ unit.
 
 Modern electrical engineering convention further describes the function of a rectifier circuit by using a three-field notation of _phases_, _ways_, and number of _pulses_. A single-phase, half-wave rectifier circuit is given the somewhat cryptic designation of 1Ph1W1P (1 phase, 1 way, 1 pulse), meaning that the AC supply voltage is single-phase, that current on each phase of the AC supply lines moves in only one direction (way), and that there is a single pulse of DC produced for every 360^o^ of electrical rotation. A single-phase, full-wave, center-tap rectifier circuit would be designated as 1Ph1W2P in this notational system: 1 phase, 1 way or direction of current in each winding half, and 2 pulses or output voltage per cycle. A single-phase, full-wave, bridge rectifier would be designated as 1Ph2W2P: the same as for the center-tap design, except current can go _both_ ways through the AC lines instead of just one way. The three-phase bridge rectifier circuit shown earlier would be called a 3Ph2W6P rectifier.
 
-Is it possible to obtain more pulses than twice the number of phases in a rectifier circuit? The answer to this question is yes: especially in polyphase circuits. Through the creative use of transformers, sets of full-wave rectifiers may be paralleled in such a way that more than six pulses of DC are produced for three phases of AC. A 30^o^ phase shift is introduced from primary to secondary of a three-phase transformer when the winding configurations are not of the same type. In other words, a transformer connected either Y-Δ or Δ-Y will exhibit this 30^o^ phase shift, while a transformer connected Y-Y or Δ-Δ will not. This phenomenon may be exploited by having one transformer connected Y-Y feed a bridge rectifier, and have another transformer connected Y-Δ feed a second bridge rectifier, then parallel the DC outputs of both rectifiers. (@fig:03270) Since the ripple voltage waveforms of the two rectifiers\' outputs are phase-shifted 30^o^ from one another, their superposition results in less ripple than either rectifier output considered separately: 12 pulses per 360^o^ instead of just six:
+Is it possible to obtain more pulses than twice the number of phases in a rectifier circuit? The answer to this question is yes: especially in polyphase circuits. Through the creative use of transformers, sets of full-wave rectifiers may be paralleled in such a way that more than six pulses of DC are produced for three phases of AC. A 30^o^ phase shift is introduced from primary to secondary of a three-phase transformer when the winding configurations are not of the same type. In other words, a transformer connected either Y-Δ or Δ-Y will exhibit this 30^o^ phase shift, while a transformer connected Y-Y or Δ-Δ will not. This phenomenon may be exploited by having one transformer connected Y-Y feed a bridge rectifier, and have another transformer connected Y-Δ feed a second bridge rectifier, then parallel the DC outputs of both rectifiers. (@fig:03270) Since the ripple voltage waveforms of the two rectifiers' outputs are phase-shifted 30^o^ from one another, their superposition results in less ripple than either rectifier output considered separately: 12 pulses per 360^o^ instead of just six:
 
 ![](media/03270.png){ #fig:03270 width=75% }
 
@@ -308,7 +308,7 @@ _Polyphase rectifier circuit: 3-phase 2-way 12-pulse (3Ph2W12P)_
 - **REVIEW:**
 - _Rectification_ is the conversion of alternating current (AC) to direct current (DC).
 - A _half-wave_ rectifier is a circuit that allows only one half-cycle of the AC voltage waveform to be applied to the load, resulting in one non-alternating polarity across it. The resulting DC delivered to the load "pulsates" significantly.
-- A _full-wave_ rectifier is a circuit that converts both half-cycles of the AC voltage waveform to an unbroken series of voltage pulses of the same polarity. The resulting DC delivered to the load doesn\'t "pulsate" as much.
+- A _full-wave_ rectifier is a circuit that converts both half-cycles of the AC voltage waveform to an unbroken series of voltage pulses of the same polarity. The resulting DC delivered to the load doesn't "pulsate" as much.
 - Polyphase alternating current, when rectified, gives a much "smoother" DC waveform (less _ripple_ voltage) than rectified single-phase AC.
 
 ## Peak detector{ #sec:xtocid15705654 }
@@ -389,7 +389,7 @@ A practical application of a clipper is to prevent an amplified speech signal fr
 
 _Clipper prevents over driving radio transmitter by voice peaks._
 
-A sinewave may be squared up by overdriving a clipper. Another clipper application is the protection of exposed inputs of integrated circuits. The input of the IC is connected to a pair of diodes as at node "2" of @fig:03439. The voltage sources are replaced by the power supply rails of the IC. For example, CMOS IC\'s use 0V and +5 V. Analog amplifiers might use ±12V for the V1 and V2 sources.
+A sinewave may be squared up by overdriving a clipper. Another clipper application is the protection of exposed inputs of integrated circuits. The input of the IC is connected to a pair of diodes as at node "2" of @fig:03439. The voltage sources are replaced by the power supply rails of the IC. For example, CMOS IC's use 0V and +5 V. Analog amplifiers might use ±12V for the V1 and V2 sources.
 
 - **REVIEW**
 - A resistor and diode driven by an AC voltage source clips the signal observed across the diode.
@@ -432,7 +432,7 @@ A _voltage multiplier_ is a specialized rectifier circuit producing an output wh
 
 A voltage doubler application is a DC power supply capable of using either a 240 VAC or 120 VAC source. The supply uses a switch selected full-wave bridge to produce about 300 VDC from a 240 VAC source. The 120 V position of the switch rewires the bridge as a doubler producing about 300 VDC from the 120 VAC. In both cases, 300 VDC is produced. This is the input to a switching regulator producing lower voltages for powering, say, a personal computer.
 
-The half-wave voltage doubler in @fig:03255 (a) is composed of two circuits: a clamper at (b) and peak detector (half-wave rectifier) in Figure [prior](#03441.png){ #fig:03441 width=75% }, which is shown in modified form in @fig:03255 (c). C2 has been added to a peak detector (half-wave rectifier).
+The half-wave voltage doubler in @fig:03255 (a) is composed of two circuits: a clamper at (b) and peak detector (half-wave rectifier) in Figure [prior](@fig:03441){ #fig:03441 width=75% }, which is shown in modified form in @fig:03255 (c). C2 has been added to a peak detector (half-wave rectifier).
 
 ![](media/03255.png){ #fig:03255 width=75% }
 
@@ -506,7 +506,7 @@ A voltage multiplier of cascaded half-wave doublers of arbitrary length is known
 
 _Cockcroft-Walton x8 voltage multiplier; output at v(8)._
 
-The pair of diodes and capacitors to the left of nodes 1 and 2 in @fig:03288 constitute a half-wave doubler. Rotating the diodes by 45^o^ counterclockwise, and the bottom capacitor by 90^o^ makes it look like Figure [prior](#03255.png){ #fig:03255 width=75% } (a). Four of the doubler sections are cascaded to the right for a theoretical x8 multiplication factor. Node 1 has a clamper waveform (not shown), a sinewave shifted up by 1x (5 V). The other odd numbered nodes are sinewaves clamped to successively higher voltages. Node 2, the output of the first doubler, is a 2x DC voltage v(2) in @fig:23033. Successive even numbered nodes charge to successively higher voltages: v(4), v(6), v(8)
+The pair of diodes and capacitors to the left of nodes 1 and 2 in @fig:03288 constitute a half-wave doubler. Rotating the diodes by 45^o^ counterclockwise, and the bottom capacitor by 90^o^ makes it look like Figure [prior](@fig:03255){ #fig:03255 width=75% } (a). Four of the doubler sections are cascaded to the right for a theoretical x8 multiplication factor. Node 1 has a clamper waveform (not shown), a sinewave shifted up by 1x (5 V). The other odd numbered nodes are sinewaves clamped to successively higher voltages. Node 2, the output of the first doubler, is a 2x DC voltage v(2) in @fig:23033. Successive even numbered nodes charge to successively higher voltages: v(4), v(6), v(8)
 
 []{#23033.png <="" a=""}
 
@@ -538,7 +538,7 @@ _Inductive kickback: (a) Switch open. (b) Switch closed, electron current flows 
 
 []{#Faraday's Law}
 
-When the pushbutton switch is actuated, current goes through the inductor, producing a magnetic field around it. When the switch is de-actuated, its contacts open, interrupting current through the inductor, and causing the magnetic field to rapidly collapse. Because the voltage induced in a coil of wire is directly proportional to the _rate of change_ over time of magnetic flux (Faraday\'s Law: e = NdΦ/dt), this rapid collapse of magnetism around the coil produces a high voltage "spike".
+When the pushbutton switch is actuated, current goes through the inductor, producing a magnetic field around it. When the switch is de-actuated, its contacts open, interrupting current through the inductor, and causing the magnetic field to rapidly collapse. Because the voltage induced in a coil of wire is directly proportional to the _rate of change_ over time of magnetic flux (Faraday's Law: e = NdΦ/dt), this rapid collapse of magnetism around the coil produces a high voltage "spike".
 
 If the inductor in question is an electromagnet coil, such as in a solenoid or relay (constructed for the purpose of creating a physical force via its magnetic field when energized), the effect of inductive "kickback" serves no useful purpose at all. In fact, it is quite detrimental to the switch, as it causes excessive arcing at the contacts, greatly reducing their service life. Of the practical methods for mitigating the high voltage transient created when the switch is opened, none so simple as the so-called _commutating diode_ in @fig:03272.
 
@@ -548,7 +548,7 @@ _Inductive kickback with protection: (a) Switch open. (b)Switch closed, storing 
 
 In this circuit, the diode is placed in parallel with the coil, such that it will be reverse-biased when DC voltage is applied to the coil through the switch. Thus, when the coil is energized, the diode conducts no current in @fig:03272 (b).
 
-However, when the switch is opened, the coil\'s inductance responds to the decrease in current by inducing a voltage of reverse polarity, in an effort to maintain current at the same magnitude and in the same direction. This sudden reversal of voltage polarity across the coil forward-biases the diode, and the diode provides a current path for the inductor\'s current, so that its stored energy is dissipated slowly rather than suddenly in @fig:03272 (c).
+However, when the switch is opened, the coil's inductance responds to the decrease in current by inducing a voltage of reverse polarity, in an effort to maintain current at the same magnitude and in the same direction. This sudden reversal of voltage polarity across the coil forward-biases the diode, and the diode provides a current path for the inductor's current, so that its stored energy is dissipated slowly rather than suddenly in @fig:03272 (c).
 
 As a result, the voltage induced in the coil by its collapsing magnetic field is quite low: merely the forward voltage drop of the diode, rather than hundreds of volts as before. Thus, the switch contacts experience a voltage drop equal to the battery voltage plus about 0.7 volts (if the diode is silicon) during this discharge time.
 
@@ -556,17 +556,17 @@ In electronics parlance, _commutation_ refers to the reversal of voltage polarit
 
 []{#Faraday's Law}
 
-A noteworthy disadvantage of this method is the extra time it imparts to the coil\'s discharge. Because the induced voltage is clamped to a very low value, its rate of magnetic flux change over time is comparatively slow. Remember that Faraday\'s Law describes the magnetic flux rate-of-change (dΦ/dt) as being proportional to the induced, instantaneous voltage (_e_ or _v_). If the instantaneous voltage is limited to some low figure, then the rate of change of magnetic flux over time will likewise be limited to a low (slow) figure.
+A noteworthy disadvantage of this method is the extra time it imparts to the coil's discharge. Because the induced voltage is clamped to a very low value, its rate of magnetic flux change over time is comparatively slow. Remember that Faraday's Law describes the magnetic flux rate-of-change (dΦ/dt) as being proportional to the induced, instantaneous voltage (_e_ or _v_). If the instantaneous voltage is limited to some low figure, then the rate of change of magnetic flux over time will likewise be limited to a low (slow) figure.
 
 If an electromagnet coil is "snubbed" with a commutating diode, the magnetic field will dissipate at a relatively slow rate compared to the original scenario (no diode) where the field disappeared almost instantly upon switch release. The amount of time in question will most likely be less than one second, but it will be measurably slower than without a commutating diode in place. This may be an intolerable consequence if the coil is used to actuate an electromechanical relay, because the relay will possess a natural "time delay" upon coil de-energization, and an unwanted delay of even a fraction of a second may wreak havoc in some circuits.
 
-Unfortunately, one cannot eliminate the high-voltage transient of inductive kickback _and_ maintain fast de-magnetization of the coil: Faraday\'s Law will not be violated. However, if slow de-magnetization is unacceptable, a compromise may be struck between transient voltage and time by allowing the coil\'s voltage to rise to some higher level (but not so high as without a commutating diode in place). The schematic in @fig:03275 shows how this can be done.
+Unfortunately, one cannot eliminate the high-voltage transient of inductive kickback _and_ maintain fast de-magnetization of the coil: Faraday's Law will not be violated. However, if slow de-magnetization is unacceptable, a compromise may be struck between transient voltage and time by allowing the coil's voltage to rise to some higher level (but not so high as without a commutating diode in place). The schematic in @fig:03275 shows how this can be done.
 
 ![](media/03275.png){ #fig:03275 width=75% }
 
 _(a) Commutating diode with series resistor. (b) Voltage waveform. (c) Level with no diode. (d) Level with diode, no resistor. (e) Compromise level with diode and resistor._
 
-A resistor placed in series with the commutating diode allows the coil\'s induced voltage to rise to a level greater than the diode\'s forward voltage drop, thus hastening the process of de-magnetization. This, of course, will place the switch contacts under greater stress, and so the resistor must be sized to limit that transient voltage at an acceptable maximum level.
+A resistor placed in series with the commutating diode allows the coil's induced voltage to rise to a level greater than the diode's forward voltage drop, thus hastening the process of de-magnetization. This, of course, will place the switch contacts under greater stress, and so the resistor must be sized to limit that transient voltage at an acceptable maximum level.
 
 ## Diode switching circuits{ #sec:xtocid15705659 }
 
@@ -608,7 +608,7 @@ The reverse biased diode capacitance may be substantial compared with very high 
 
 If we connect a diode and resistor in series with a DC voltage source so that the diode is forward-biased, the voltage drop across the diode will remain fairly constant over a wide range of power supply voltages as in @fig:03284 (a).
 
-According to the "diode equation" [here](#DioEqu), the current through a forward-biased PN junction is proportional to _e_ raised to the power of the forward voltage drop. Because this is an exponential function, current rises quite rapidly for modest increases in voltage drop. Another way of considering this is to say that voltage dropped across a forward-biased diode changes little for large variations in diode current. In the circuit shown in @fig:03284 (a), diode current is limited by the voltage of the power supply, the series resistor, and the diode\'s voltage drop, which as we know doesn\'t vary much from 0.7 volts. If the power supply voltage were to be increased, the resistor\'s voltage drop would increase almost the same amount, and the diode\'s voltage drop just a little. Conversely, a decrease in power supply voltage would result in an almost equal decrease in resistor voltage drop, with just a little decrease in diode voltage drop. In a word, we could summarize this behavior by saying that the diode is _regulating_ the voltage drop at approximately 0.7 volts.
+According to the "diode equation" [here](#DioEqu), the current through a forward-biased PN junction is proportional to _e_ raised to the power of the forward voltage drop. Because this is an exponential function, current rises quite rapidly for modest increases in voltage drop. Another way of considering this is to say that voltage dropped across a forward-biased diode changes little for large variations in diode current. In the circuit shown in @fig:03284 (a), diode current is limited by the voltage of the power supply, the series resistor, and the diode's voltage drop, which as we know doesn't vary much from 0.7 volts. If the power supply voltage were to be increased, the resistor's voltage drop would increase almost the same amount, and the diode's voltage drop just a little. Conversely, a decrease in power supply voltage would result in an almost equal decrease in resistor voltage drop, with just a little decrease in diode voltage drop. In a word, we could summarize this behavior by saying that the diode is _regulating_ the voltage drop at approximately 0.7 volts.
 
 Voltage regulation is a useful diode property to exploit. Suppose we were building some kind of circuit which could not tolerate variations in power supply voltage, but needed to be powered by a chemical battery, whose voltage changes over its lifetime. We could form a circuit as shown and connect the circuit requiring steady voltage across the diode, where it would receive an unchanging 0.7 volts.
 
@@ -628,23 +628,23 @@ _(a) Reverse biased Si small-signal diode breaks down at about 100V. (b) Symbol 
 
 Unfortunately, when normal rectifying diodes "break down," they usually do so destructively. However, it is possible to build a special type of diode that can handle breakdown without failing completely. This type of diode is called a _zener diode_, and its symbol looks like @fig:03285 (b).
 
-When forward-biased, zener diodes behave much the same as standard rectifying diodes: they have a forward voltage drop which follows the "diode equation" and is about 0.7 volts. In reverse-bias mode, they do not conduct until the applied voltage reaches or exceeds the so-called _zener voltage_, at which point the diode is able to conduct substantial current, and in doing so will try to limit the voltage dropped across it to that zener voltage point. So long as the power dissipated by this reverse current does not exceed the diode\'s thermal limits, the diode will not be harmed.
+When forward-biased, zener diodes behave much the same as standard rectifying diodes: they have a forward voltage drop which follows the "diode equation" and is about 0.7 volts. In reverse-bias mode, they do not conduct until the applied voltage reaches or exceeds the so-called _zener voltage_, at which point the diode is able to conduct substantial current, and in doing so will try to limit the voltage dropped across it to that zener voltage point. So long as the power dissipated by this reverse current does not exceed the diode's thermal limits, the diode will not be harmed.
 
-Zener diodes are manufactured with zener voltages ranging anywhere from a few volts to hundreds of volts. This zener voltage changes slightly with temperature, and like common carbon-composition resistor values, may be anywhere from 5 percent to 10 percent in error from the manufacturer\'s specifications. However, this stability and accuracy is generally good enough for the zener diode to be used as a voltage regulator device in common power supply circuit in @fig:03287.
+Zener diodes are manufactured with zener voltages ranging anywhere from a few volts to hundreds of volts. This zener voltage changes slightly with temperature, and like common carbon-composition resistor values, may be anywhere from 5 percent to 10 percent in error from the manufacturer's specifications. However, this stability and accuracy is generally good enough for the zener diode to be used as a voltage regulator device in common power supply circuit in @fig:03287.
 
 ![](media/03287.png){ #fig:03287 width=75% }
 
 _Zener diode regulator circuit, Zener voltage = 12.6V)._
 
-Please take note of the zener diode\'s orientation in the above circuit: the diode is _reverse-biased_, and intentionally so. If we had oriented the diode in the "normal" way, so as to be forward-biased, it would only drop 0.7 volts, just like a regular rectifying diode. If we want to exploit this diode\'s reverse breakdown properties, we must operate it in its reverse-bias mode. So long as the power supply voltage remains above the zener voltage (12.6 volts, in this example), the voltage dropped across the zener diode will remain at approximately 12.6 volts.
+Please take note of the zener diode's orientation in the above circuit: the diode is _reverse-biased_, and intentionally so. If we had oriented the diode in the "normal" way, so as to be forward-biased, it would only drop 0.7 volts, just like a regular rectifying diode. If we want to exploit this diode's reverse breakdown properties, we must operate it in its reverse-bias mode. So long as the power supply voltage remains above the zener voltage (12.6 volts, in this example), the voltage dropped across the zener diode will remain at approximately 12.6 volts.
 
 []{#Joule's Law}
 
-Like any semiconductor device, the zener diode is sensitive to temperature. Excessive temperature will destroy a zener diode, and because it both drops voltage and conducts current, it produces its own heat in accordance with Joule\'s Law (P=IE). Therefore, one must be careful to design the regulator circuit in such a way that the diode\'s power dissipation rating is not exceeded. Interestingly enough, when zener diodes fail due to excessive power dissipation, they usually fail _shorted_ rather than open. A diode failed in this manner is readily detected: it drops almost zero voltage when biased either way, like a piece of wire.
+Like any semiconductor device, the zener diode is sensitive to temperature. Excessive temperature will destroy a zener diode, and because it both drops voltage and conducts current, it produces its own heat in accordance with Joule's Law (P=IE). Therefore, one must be careful to design the regulator circuit in such a way that the diode's power dissipation rating is not exceeded. Interestingly enough, when zener diodes fail due to excessive power dissipation, they usually fail _shorted_ rather than open. A diode failed in this manner is readily detected: it drops almost zero voltage when biased either way, like a piece of wire.
 
-Let\'s examine a zener diode regulating circuit mathematically, determining all voltages, currents, and power dissipations. Taking the same form of circuit shown earlier, we\'ll perform calculations assuming a zener voltage of 12.6 volts, a power supply voltage of 45 volts, and a series resistor value of 1000 Ω (we\'ll regard the zener voltage to be _exactly_ 12.6 volts so as to avoid having to qualify all figures as "approximate" in @fig:03289 (a)
+Let's examine a zener diode regulating circuit mathematically, determining all voltages, currents, and power dissipations. Taking the same form of circuit shown earlier, we'll perform calculations assuming a zener voltage of 12.6 volts, a power supply voltage of 45 volts, and a series resistor value of 1000 Ω (we'll regard the zener voltage to be _exactly_ 12.6 volts so as to avoid having to qualify all figures as "approximate" in @fig:03289 (a)
 
-If the zener diode\'s voltage is 12.6 volts and the power supply\'s voltage is 45 volts, there will be 32.4 volts dropped across the resistor (45 volts - 12.6 volts = 32.4 volts). 32.4 volts dropped across 1000 Ω gives 32.4 mA of current in the circuit. (@fig:03289 (b))
+If the zener diode's voltage is 12.6 volts and the power supply's voltage is 45 volts, there will be 32.4 volts dropped across the resistor (45 volts - 12.6 volts = 32.4 volts). 32.4 volts dropped across 1000 Ω gives 32.4 mA of current in the circuit. (@fig:03289 (b))
 
 ![](media/03289.png){ #fig:03289 width=75% }
 
@@ -656,7 +656,7 @@ Power is calculated by multiplying current by voltage (P=IE), so we can calculat
 
 A zener diode with a power rating of 0.5 watt would be adequate, as would a resistor rated for 1.5 or 2 watts of dissipation.
 
-If excessive power dissipation is detrimental, then why not design the circuit for the least amount of dissipation possible? Why not just size the resistor for a very high value of resistance, thus severely limiting current and keeping power dissipation figures very low? Take this circuit, for example, with a 100 kΩ resistor instead of a 1 kΩ resistor. Note that both the power supply voltage and the diode\'s zener voltage in @fig:03290 are identical to the last example:
+If excessive power dissipation is detrimental, then why not design the circuit for the least amount of dissipation possible? Why not just size the resistor for a very high value of resistance, thus severely limiting current and keeping power dissipation figures very low? Take this circuit, for example, with a 100 kΩ resistor instead of a 1 kΩ resistor. Note that both the power supply voltage and the diode's zener voltage in @fig:03290 are identical to the last example:
 
 ![](media/03290.png){ #fig:03290 width=75% }
 
@@ -666,13 +666,13 @@ With only 1/100 of the current we had before (324 µA instead of 32.4 mA), both 
 
 ![](media/13050.png){ #fig:13050 width=75% }
 
-Seems ideal, doesn\'t it? Less power dissipation means lower operating temperatures for both the diode and the resistor, and also less wasted energy in the system, right? A higher resistance value _does_ reduce power dissipation levels in the circuit, but it unfortunately introduces another problem. Remember that the purpose of a regulator circuit is to provide a stable voltage _for another circuit_. In other words, we\'re eventually going to power something with 12.6 volts, and this something will have a current draw of its own. Consider our first regulator circuit, this time with a 500 Ω load connected in parallel with the zener diode in @fig:03291.
+Seems ideal, doesn't it? Less power dissipation means lower operating temperatures for both the diode and the resistor, and also less wasted energy in the system, right? A higher resistance value _does_ reduce power dissipation levels in the circuit, but it unfortunately introduces another problem. Remember that the purpose of a regulator circuit is to provide a stable voltage _for another circuit_. In other words, we're eventually going to power something with 12.6 volts, and this something will have a current draw of its own. Consider our first regulator circuit, this time with a 500 Ω load connected in parallel with the zener diode in @fig:03291.
 
 ![](media/03291.png){ #fig:03291 width=75% }
 
 _Zener regulator with 1000 Ω series resistor and 500 Ω load._
 
-If 12.6 volts is maintained across a 500 Ω load, the load will draw 25.2 mA of current. In order for the 1 kΩ series "dropping" resistor to drop 32.4 volts (reducing the power supply\'s voltage of 45 volts down to 12.6 across the zener), it still must conduct 32.4 mA of current. This leaves 7.2 mA of current through the zener diode.
+If 12.6 volts is maintained across a 500 Ω load, the load will draw 25.2 mA of current. In order for the 1 kΩ series "dropping" resistor to drop 32.4 volts (reducing the power supply's voltage of 45 volts down to 12.6 across the zener), it still must conduct 32.4 mA of current. This leaves 7.2 mA of current through the zener diode.
 
 Now consider our "power-saving" regulator circuit with the 100 kΩ dropping resistor, delivering power to the same 500 Ω load. What it is supposed to do is maintain 12.6 volts across the load, just like the last circuit. However, as we will see, it _cannot_ accomplish this task. (@fig:03292)
 
@@ -680,7 +680,7 @@ Now consider our "power-saving" regulator circuit with the 100 kΩ dropping resi
 
 _Zener non-regulator with 100 KΩ series resistor with 500 Ω load.\>_
 
-With the larger value of dropping resistor in place, there will only be about 224 mV of voltage across the 500 Ω load, far less than the expected value of 12.6 volts! Why is this? If we actually had 12.6 volts across the load, it would draw 25.2 mA of current, as before. This load current would have to go through the series dropping resistor as it did before, but with a new (much larger!) dropping resistor in place, the voltage dropped across that resistor with 25.2 mA of current going through it would be 2,520 volts! Since we obviously don\'t have that much voltage supplied by the battery, this cannot happen.
+With the larger value of dropping resistor in place, there will only be about 224 mV of voltage across the 500 Ω load, far less than the expected value of 12.6 volts! Why is this? If we actually had 12.6 volts across the load, it would draw 25.2 mA of current, as before. This load current would have to go through the series dropping resistor as it did before, but with a new (much larger!) dropping resistor in place, the voltage dropped across that resistor with 25.2 mA of current going through it would be 2,520 volts! Since we obviously don't have that much voltage supplied by the battery, this cannot happen.
 
 The situation is easier to comprehend if we temporarily remove the zener diode from the circuit and analyze the behavior of the two resistors alone in @fig:03293.
 
@@ -688,11 +688,11 @@ The situation is easier to comprehend if we temporarily remove the zener diode f
 
 _Non-regulator with Zener removed._
 
-Both the 100 kΩ dropping resistor and the 500 Ω load resistance are in series with each other, giving a total circuit resistance of 100.5 kΩ. With a total voltage of 45 volts and a total resistance of 100.5 kΩ, Ohm\'s Law (I=E/R) tells us that the current will be 447.76 µA. Figuring voltage drops across both resistors (E=IR), we arrive at 44.776 volts and 224 mV, respectively. If we were to re-install the zener diode at this point, it would "see" 224 mV across it as well, being in parallel with the load resistance. This is far below the zener breakdown voltage of the diode and so it will not "break down" and conduct current. For that matter, at this low voltage the diode wouldn\'t conduct even if it were forward-biased! Thus, the diode ceases to regulate voltage. At least 12.6 volts must be dropped across to "activate" it.
+Both the 100 kΩ dropping resistor and the 500 Ω load resistance are in series with each other, giving a total circuit resistance of 100.5 kΩ. With a total voltage of 45 volts and a total resistance of 100.5 kΩ, Ohm's Law (I=E/R) tells us that the current will be 447.76 µA. Figuring voltage drops across both resistors (E=IR), we arrive at 44.776 volts and 224 mV, respectively. If we were to re-install the zener diode at this point, it would "see" 224 mV across it as well, being in parallel with the load resistance. This is far below the zener breakdown voltage of the diode and so it will not "break down" and conduct current. For that matter, at this low voltage the diode wouldn't conduct even if it were forward-biased! Thus, the diode ceases to regulate voltage. At least 12.6 volts must be dropped across to "activate" it.
 
-The analytical technique of removing a zener diode from a circuit and seeing whether or not enough voltage is present to make it conduct is a sound one. Just because a zener diode happens to be connected in a circuit doesn\'t guarantee that the full zener voltage will always be dropped across it! Remember that zener diodes work by _limiting_ voltage to some maximum level; they cannot _make up_ for a lack of voltage.
+The analytical technique of removing a zener diode from a circuit and seeing whether or not enough voltage is present to make it conduct is a sound one. Just because a zener diode happens to be connected in a circuit doesn't guarantee that the full zener voltage will always be dropped across it! Remember that zener diodes work by _limiting_ voltage to some maximum level; they cannot _make up_ for a lack of voltage.
 
-In summary, any zener diode regulating circuit will function so long as the load\'s resistance is equal to or greater than some minimum value. If the load resistance is too low, it will draw too much current, dropping too much voltage across the series dropping resistor, leaving insufficient voltage across the zener diode to make it conduct. When the zener diode stops conducting current, it can no longer regulate voltage, and the load voltage will fall below the regulation point.
+In summary, any zener diode regulating circuit will function so long as the load's resistance is equal to or greater than some minimum value. If the load resistance is too low, it will draw too much current, dropping too much voltage across the series dropping resistor, leaving insufficient voltage across the zener diode to make it conduct. When the zener diode stops conducting current, it can no longer regulate voltage, and the load voltage will fall below the regulation point.
 
 Our regulator circuit with the 100 kΩ dropping resistor must be good for some value of load resistance, though. To find this acceptable load resistance value, we can use a table to calculate resistance in the two-resistor series circuit (no diode), inserting the known values of total voltage and dropping resistor resistance, and calculating for an expected load voltage of 12.6 volts:
 
@@ -710,7 +710,7 @@ Being a series circuit, the current is equal through all components at any given
 
 ![](media/13054.png){ #fig:13054 width=75% }
 
-Calculating load resistance is now a simple matter of Ohm\'s Law (R = E/I), giving us 38.889 kΩ:
+Calculating load resistance is now a simple matter of Ohm's Law (R = E/I), giving us 38.889 kΩ:
 
 ![](media/13055.png){ #fig:13055 width=75% }
 
@@ -718,7 +718,7 @@ Thus, if the load resistance is exactly 38.889 kΩ, there will be 12.6 volts acr
 
 With the original value of 1 kΩ for the dropping resistor, our regulator circuit was able to adequately regulate voltage even for a load resistance as low as 500 Ω. What we see is a tradeoff between power dissipation and acceptable load resistance. The higher-value dropping resistor gave us less power dissipation, at the expense of raising the acceptable minimum load resistance value. If we wish to regulate voltage for low-value load resistances, the circuit must be prepared to handle higher power dissipation.
 
-Zener diodes regulate voltage by acting as complementary loads, drawing more or less current as necessary to ensure a constant voltage drop across the load. This is analogous to regulating the speed of an automobile by braking rather than by varying the throttle position: not only is it wasteful, but the brakes must be built to handle all the engine\'s power when the driving conditions don\'t demand it. Despite this fundamental inefficiency of design, zener diode regulator circuits are widely employed due to their sheer simplicity. In high-power applications where the inefficiencies would be unacceptable, other voltage-regulating techniques are applied. But even then, small zener-based circuits are often used to provide a "reference" voltage to drive a more efficient amplifier circuit controlling the main power.
+Zener diodes regulate voltage by acting as complementary loads, drawing more or less current as necessary to ensure a constant voltage drop across the load. This is analogous to regulating the speed of an automobile by braking rather than by varying the throttle position: not only is it wasteful, but the brakes must be built to handle all the engine's power when the driving conditions don't demand it. Despite this fundamental inefficiency of design, zener diode regulator circuits are widely employed due to their sheer simplicity. In high-power applications where the inefficiencies would be unacceptable, other voltage-regulating techniques are applied. But even then, small zener-based circuits are often used to provide a "reference" voltage to drive a more efficient amplifier circuit controlling the main power.
 
 Zener diodes are manufactured in standard voltage ratings listed in Table [below](#czdv.tbl). The table "Common zener diode voltages" lists common voltages for 0.3W and 1.3W parts. The wattage corresponds to die and package size, and is the power that the diode may dissipate without damage.
 
@@ -766,7 +766,7 @@ The forward voltage drop (V~F~), reverse-recovery time (t~rr~), and junction cap
 
 Schottky diode technology finds broad application in high-speed computer circuits, where the fast switching time equates to high speed capability, and the low forward voltage drop equates to less power dissipation when conducting.
 
-Switching regulator power supplies operating at 100\'s of kHz cannot use conventional silicon diodes as rectifiers because of their slow switching speed . When the signal applied to a diode changes from forward to reverse bias, conduction continues for a short time, while carriers are being swept out of the depletion region. Conduction only ceases after this t~r~ _reverse recovery time_ has expired. Schottky diodes have a shorter reverse recovery time.
+Switching regulator power supplies operating at 100's of kHz cannot use conventional silicon diodes as rectifiers because of their slow switching speed . When the signal applied to a diode changes from forward to reverse bias, conduction continues for a short time, while carriers are being swept out of the depletion region. Conduction only ceases after this t~r~ _reverse recovery time_ has expired. Schottky diodes have a shorter reverse recovery time.
 
 Regardless of switching speed, the 0.7 V forward voltage drop of silicon diodes causes poor efficiency in low voltage supplies. This is not a problem in, say, a 10 V supply. In a 1 V supply the 0.7 V drop is a substantial portion of the output. One solution is to use a schottky power diode which has a lower forward drop.
 
@@ -794,7 +794,7 @@ Tunnel diodes are not good rectifiers, as they have relatively high "leakage" cu
 
 Perhaps the most common application of a tunnel diode is in simple high-frequency oscillator circuits as in @fig:03278(c), where it allows a DC voltage source to contribute power to an LC "tank" circuit, the diode conducting when the voltage across it reaches the peak (tunnel) level and effectively insulating at all other voltages. The resistors bias the tunnel diode at a few tenths of a volt centered on the negative resistance portion of the characteristic curve. The L-C resonant circuit may be a section of waveguide for microwave operation. Oscillation to 5 GHz is possible.
 
-At one time the tunnel diode was the only solid-state microwave amplifier available. Tunnel diodes were popular starting in the 1960\'s. They were longer lived than traveling wave tube amplifiers, an important consideration in satellite transmitters. Tunnel diodes are also resistant to radiation because of the heavy doping. Today various transistors operate at microwave frequencies. Even small signal tunnel diodes are expensive and difficult to find today. There is one remaining manufacturer of germanium tunnel diodes, and none for silicon devices. They are sometimes used in military equipment because they are insensitive to radiation and large temperature changes.
+At one time the tunnel diode was the only solid-state microwave amplifier available. Tunnel diodes were popular starting in the 1960's. They were longer lived than traveling wave tube amplifiers, an important consideration in satellite transmitters. Tunnel diodes are also resistant to radiation because of the heavy doping. Today various transistors operate at microwave frequencies. Even small signal tunnel diodes are expensive and difficult to find today. There is one remaining manufacturer of germanium tunnel diodes, and none for silicon devices. They are sometimes used in military equipment because they are insensitive to radiation and large temperature changes.
 
 There has been some research involving possible integration of silicon tunnel diodes into CMOS integrated circuits. They are thought to be capable of switching at 100 GHz in digital circuits. The sole manufacturer of germanium devices produces them one at a time. A batch process for silicon tunnel diodes must be developed, then integrated with conventional CMOS processes. @SZL
 
@@ -802,13 +802,13 @@ The Esaki tunnel diode should not be confused with the _resonant tunneling diode
 
 ### [[Light-emitting diodes]{#xtocid157056516}]
 
-Diodes, like all semiconductor devices, are governed by the principles described in quantum physics. One of these principles is the emission of specific-frequency radiant energy whenever electrons fall from a higher energy level to a lower energy level. This is the same principle at work in a neon lamp, the characteristic pink-orange glow of ionized neon due to the specific energy transitions of its electrons in the midst of an electric current. The unique color of a neon lamp\'s glow is due to the fact that its _neon_ gas inside the tube, and not due to the particular amount of current through the tube or voltage between the two electrodes. Neon gas glows pinkish-orange over a wide range of ionizing voltages and currents. Each chemical element has its own "signature" emission of radiant energy when its electrons "jump" between different, quantized energy levels. Hydrogen gas, for example, glows red when ionized; mercury vapor glows blue. This is what makes spectrographic identification of elements possible.
+Diodes, like all semiconductor devices, are governed by the principles described in quantum physics. One of these principles is the emission of specific-frequency radiant energy whenever electrons fall from a higher energy level to a lower energy level. This is the same principle at work in a neon lamp, the characteristic pink-orange glow of ionized neon due to the specific energy transitions of its electrons in the midst of an electric current. The unique color of a neon lamp's glow is due to the fact that its _neon_ gas inside the tube, and not due to the particular amount of current through the tube or voltage between the two electrodes. Neon gas glows pinkish-orange over a wide range of ionizing voltages and currents. Each chemical element has its own "signature" emission of radiant energy when its electrons "jump" between different, quantized energy levels. Hydrogen gas, for example, glows red when ionized; mercury vapor glows blue. This is what makes spectrographic identification of elements possible.
 
 Electrons flowing through a PN junction experience similar transitions in energy level, and emit radiant energy as they do so. The frequency of this radiant energy is determined by the crystal structure of the semiconductor material, and the elements comprising it. Some semiconductor junctions, composed of special chemical combinations, emit radiant energy within the spectrum of visible light as the electrons change energy levels. Simply put, these junctions _glow_ when forward biased. A diode intentionally designed to glow like a lamp is called a _light-emitting diode_, or _LED_.
 
 Forward biased silicon diodes give off heat as electron and holes from the N-type and P-type regions, respectively, recombine at the junction. In a forward biased LED, the recombination of electrons and holes in the active region in @fig:03294 (c) yields photons. This process is known as _electroluminescence_. To give off photons, the potential barrier through which the electrons fall must be higher than for a silicon diode. The forward diode drop can range to a few volts for some color LEDs.
 
-Diodes made from a combination of the elements gallium, arsenic, and phosphorus (called _gallium-arsenide-phosphide_) glow bright red, and are some of the most common LEDs manufactured. By altering the chemical constituency of the PN junction, different colors may be obtained. Early generations of LEDs were red, green, yellow, orange, and infra-red, later generations included blue and ultraviolet, with violet being the latest color added to the selection. Other colors may be obtained by combining two or more primary-color (red, green, and blue) LEDs together in the same package, sharing the same optical lens. This allowed for multicolor LEDs, such as tricolor LEDs (commercially available in the 1980\'s) using red and green (which can create yellow) and later RGB LEDs (red, green, and blue), which cover the entire color spectrum.
+Diodes made from a combination of the elements gallium, arsenic, and phosphorus (called _gallium-arsenide-phosphide_) glow bright red, and are some of the most common LEDs manufactured. By altering the chemical constituency of the PN junction, different colors may be obtained. Early generations of LEDs were red, green, yellow, orange, and infra-red, later generations included blue and ultraviolet, with violet being the latest color added to the selection. Other colors may be obtained by combining two or more primary-color (red, green, and blue) LEDs together in the same package, sharing the same optical lens. This allowed for multicolor LEDs, such as tricolor LEDs (commercially available in the 1980's) using red and green (which can create yellow) and later RGB LEDs (red, green, and blue), which cover the entire color spectrum.
 
 The schematic symbol for an LED is a regular diode shape inside of a circle, with two small arrows pointing away (indicating emitted light), shown in @fig:03294.
 
@@ -818,13 +818,13 @@ _LED, Light Emitting Diode: (a) schematic symbol. (b) Flat side and short lead o
 
 This notation of having two small arrows pointing away from the device is common to the schematic symbols of all light-emitting semiconductor devices. Conversely, if a device is light-_activated_ (meaning that incoming light stimulates it), then the symbol will have two small arrows pointing _toward_ it. LEDs can sense light. They generate a small voltage when exposed to light, much like a solar cell on a small scale. This property can be gainfully applied in a variety of light-sensing circuits.
 
-Because LEDs are made of different chemical substances than silicon diodes, their forward voltage drops will be different. Typically, LEDs have much larger forward voltage drops than rectifying diodes, anywhere from about 1.6 volts to over 3 volts, depending on the color. Typical operating current for a standard-sized LED is around 20 mA. When operating an LED from a DC voltage source greater than the LED\'s forward voltage, a series-connected "dropping" resistor must be included to prevent full source voltage from damaging the LED. Consider the example circuit in @fig:03295 (a) using a 6 V source.
+Because LEDs are made of different chemical substances than silicon diodes, their forward voltage drops will be different. Typically, LEDs have much larger forward voltage drops than rectifying diodes, anywhere from about 1.6 volts to over 3 volts, depending on the color. Typical operating current for a standard-sized LED is around 20 mA. When operating an LED from a DC voltage source greater than the LED's forward voltage, a series-connected "dropping" resistor must be included to prevent full source voltage from damaging the LED. Consider the example circuit in @fig:03295 (a) using a 6 V source.
 
 ![](media/03295.png){ #fig:03295 width=75% }
 
 _Setting LED current at 20 ma. (a) for a 6 V source, (b) for a 24 V source._
 
-With the LED dropping 1.6 volts, there will be 4.4 volts dropped across the resistor. Sizing the resistor for an LED current of 20 mA is as simple as taking its voltage drop (4.4 volts) and dividing by circuit current (20 mA), in accordance with Ohm\'s Law (R=E/I). This gives us a figure of 220 Ω. Calculating power dissipation for this resistor, we take its voltage drop and multiply by its current (P=IE), and end up with 88 mW, well within the rating of a 1/8 watt resistor. Higher battery voltages will require larger-value dropping resistors, and possibly higher-power rating resistors as well. Consider the example in @fig:03295 (b) for a supply voltage of 24 volts:
+With the LED dropping 1.6 volts, there will be 4.4 volts dropped across the resistor. Sizing the resistor for an LED current of 20 mA is as simple as taking its voltage drop (4.4 volts) and dividing by circuit current (20 mA), in accordance with Ohm's Law (R=E/I). This gives us a figure of 220 Ω. Calculating power dissipation for this resistor, we take its voltage drop and multiply by its current (P=IE), and end up with 88 mW, well within the rating of a 1/8 watt resistor. Higher battery voltages will require larger-value dropping resistors, and possibly higher-power rating resistors as well. Consider the example in @fig:03295 (b) for a supply voltage of 24 volts:
 
 Here, the dropping resistor must be increased to a size of 1.12 kΩ to drop 22.4 volts at 20 mA so that the LED still receives only 1.6 volts. This also makes for a higher resistor power dissipation: 448 mW, nearly one-half a watt of power! Obviously, a resistor rated for 1/8 watt power dissipation or even 1/4 watt dissipation will overheat if used here.
 
@@ -844,13 +844,13 @@ Also because of their unique chemical makeup, LEDs have much, much lower peak-in
 
 _Driving an LED with AC_
 
-The anti-parallel diode in @fig:03298 can be replaced with an anti-parallel LED. The resulting pair of anti-parallel LED\'s illuminate on alternating half-cycles of the AC sinewave. This configuration draws 20 ma, splitting it equally between the LED\'s on alternating AC half cycles. Each LED only receives 10 mA due to this sharing. The same is true of the LED anti-parallel combination with a rectifier. The LED only receives 10 ma. If 20 mA was required for the LED(s), The resistor value could be halved.
+The anti-parallel diode in @fig:03298 can be replaced with an anti-parallel LED. The resulting pair of anti-parallel LED's illuminate on alternating half-cycles of the AC sinewave. This configuration draws 20 ma, splitting it equally between the LED's on alternating AC half cycles. Each LED only receives 10 mA due to this sharing. The same is true of the LED anti-parallel combination with a rectifier. The LED only receives 10 ma. If 20 mA was required for the LED(s), The resistor value could be halved.
 
-The forward voltage drop of LED\'s is inversely proportional to the wavelength (λ). As wavelength decreases going from infrared to visible colors to ultraviolet, V~f~ increases. While this trend is most obvious in the various devices from a single manufacturer, The voltage range for a particular color LED from various manufacturers varies. This range of voltages is shown in Table [below](#leds.tbl).
+The forward voltage drop of LED's is inversely proportional to the wavelength (λ). As wavelength decreases going from infrared to visible colors to ultraviolet, V~f~ increases. While this trend is most obvious in the various devices from a single manufacturer, The voltage range for a particular color LED from various manufacturers varies. This range of voltages is shown in Table [below](#leds.tbl).
 
 []{#leds.tbl}
 
-_Optical and electrical properties of LED\'s_
+_Optical and electrical properties of LED's_
 
 LED λ nm (= 10 ^-9^m) V~f~(from) V~f~ (to)
 
@@ -858,7 +858,7 @@ LED λ nm (= 10 ^-9^m) V~f~(from) V~f~ (to)
 
 infrared 940 1.2 1.7 red 660 1.5 2.4 orange 602-620 2.1 2.2 yellow, green 560-595 1.7 2.8 white, blue, violet \- 3 4 ultraviolet 370 4.2 4.8
 
-As lamps, LEDs are superior to incandescent bulbs in many ways. First and foremost is efficiency: LEDs output far more light power per watt of electrical input than an incandescent lamp. This is a significant advantage if the circuit in question is battery-powered, efficiency translating to longer battery life. Second is the fact that LEDs are far more reliable, having a much greater service life than incandescent lamps. This is because LEDs are "cold" devices: they operate at much cooler temperatures than an incandescent lamp with a white-hot metal filament, susceptible to breakage from mechanical and thermal shock. Third is the high speed at which LEDs may be turned on and off. This advantage is also due to the "cold" operation of LEDs: they don\'t have to overcome thermal inertia in transitioning from off to on or vice versa. For this reason, LEDs are used to transmit digital (on/off) information as pulses of light, conducted in empty space or through fiber-optic cable, at very high rates of speed (millions of pulses per second).
+As lamps, LEDs are superior to incandescent bulbs in many ways. First and foremost is efficiency: LEDs output far more light power per watt of electrical input than an incandescent lamp. This is a significant advantage if the circuit in question is battery-powered, efficiency translating to longer battery life. Second is the fact that LEDs are far more reliable, having a much greater service life than incandescent lamps. This is because LEDs are "cold" devices: they operate at much cooler temperatures than an incandescent lamp with a white-hot metal filament, susceptible to breakage from mechanical and thermal shock. Third is the high speed at which LEDs may be turned on and off. This advantage is also due to the "cold" operation of LEDs: they don't have to overcome thermal inertia in transitioning from off to on or vice versa. For this reason, LEDs are used to transmit digital (on/off) information as pulses of light, conducted in empty space or through fiber-optic cable, at very high rates of speed (millions of pulses per second).
 
 LEDs excel in monochromatic lighting applications like traffic signals and automotive tail lights. Incandescents are abysmal in this application since they require filtering, decreasing efficiency. LEDs do not require filtering.
 
@@ -876,7 +876,7 @@ White LED 35 100,000 costly White LED, future 100 100,000 R&D target Incandescen
 
 A white LED is a blue LED exciting a phosphor which emits yellow light. The blue plus yellow approximates white light. The nature of the phosphor determines the characteristics of the light. A red phosphor may be added to improve the quality of the yellow plus blue mixture at the expense of efficiency. Table [above](#lamps.tbl) compares white illumination LEDs to expected future devices and other conventional lamps. Efficiency is measured in lumens of light output per watt of input power. If the 50 lumens/watt device can be improved to 100 lumens/watt, white LEDs will be comparable to compact fluorescent lamps in efficiency.
 
-LEDs in general have been a major subject of R&D since the 1960\'s. Because of this it is impractical to cover all geometries, chemistries, and characteristics that have been created over the decades. The early devices were relatively dim and took moderate currents. The efficiencies have been improved in later generations to the point it is hazardous to look closely and directly into an illuminated LED. This can result in eye damage, and the LEDs only required a minor increase in dropping voltage (Vf) and current. Modern high intensity devices have reached 180 lumens using 0.7 Amps (82 lumens/watt, Luxeon Rebel series cool white), and even higher intensity models can use even higher currents with a corresponding increase in brightness. Other developments, such as quantum dots, are the subject of current research, so expect to see new things for these devices in the future
+LEDs in general have been a major subject of R&D since the 1960's. Because of this it is impractical to cover all geometries, chemistries, and characteristics that have been created over the decades. The early devices were relatively dim and took moderate currents. The efficiencies have been improved in later generations to the point it is hazardous to look closely and directly into an illuminated LED. This can result in eye damage, and the LEDs only required a minor increase in dropping voltage (Vf) and current. Modern high intensity devices have reached 180 lumens using 0.7 Amps (82 lumens/watt, Luxeon Rebel series cool white), and even higher intensity models can use even higher currents with a corresponding increase in brightness. Other developments, such as quantum dots, are the subject of current research, so expect to see new things for these devices in the future
 
 ### Laser diodes{ #sec:xtocid157056517 }
 
@@ -888,7 +888,7 @@ _(a) White light of many wavelengths. (b) Mono-chromatic LED light, a single wav
 
 Incandescent lamps produce "white" (mixed-frequency, or mixed-color) light as in @fig:03297 (a). Regular LEDs produce monochromatic light: same frequency (color), but different phases, resulting in similar beam dispersion in @fig:03297 (b). Laser LEDs produce _coherent light_: light that is both monochromatic (single-color) and monophasic (single-phase), resulting in precise beam confinement as in @fig:03297 (c).
 
-Laser light finds wide application in the modern world: everything from surveying, where a straight and nondispersing light beam is very useful for precise sighting of measurement markers, to the reading and writing of optical disks, where only the narrowness of a focused laser beam is able to resolve the microscopic "pits" in the disk\'s surface comprising the binary 1\'s and 0\'s of digital information.
+Laser light finds wide application in the modern world: everything from surveying, where a straight and nondispersing light beam is very useful for precise sighting of measurement markers, to the reading and writing of optical disks, where only the narrowness of a focused laser beam is able to resolve the microscopic "pits" in the disk's surface comprising the binary 1's and 0's of digital information.
 
 Some laser diodes require special high-power "pulsing" circuits to deliver large quantities of voltage and current in short bursts. Other laser diodes may be operated continuously at lower power. In the continuous laser, laser action occurs only within a certain range of diode current, necessitating some form of current-regulator circuit. As laser diodes age, their power requirements may change (more current required for less output power), but it should be remembered that low-power laser diodes, like LEDs, are fairly long-lived devices, with typical service lives in the tens of thousands of hours.
 
@@ -910,13 +910,13 @@ High speed operation is often required of photodiodes, as opposed to solar cells
 
 []{#PINphoto <="" a=""}
 
-**PIN diode** The _p-i-n diode_ or _PIN diode_ is a photodiode with an intrinsic layer between the P and N-regions as in @fig:03447. The **P**-**I**ntrinsic-**N** structure increases the distance between the P and N conductive layers, decreasing capacitance, increasing speed. The volume of the photo sensitive region also increases, enhancing conversion efficiency. The bandwidth can extend to 10\'s of gHz. PIN photodiodes are the preferred for high sensitivity, and high speed at moderate cost.
+**PIN diode** The _p-i-n diode_ or _PIN diode_ is a photodiode with an intrinsic layer between the P and N-regions as in @fig:03447. The **P**-**I**ntrinsic-**N** structure increases the distance between the P and N conductive layers, decreasing capacitance, increasing speed. The volume of the photo sensitive region also increases, enhancing conversion efficiency. The bandwidth can extend to 10's of gHz. PIN photodiodes are the preferred for high sensitivity, and high speed at moderate cost.
 
 ![](media/03447.png){ #fig:03447 width=75% }
 
 _PIN photodiode: The intrinsic region increases the thickness of the depletion region._
 
-**Avalanche photo diode:**An *avalanche photodiode (APD)*designed to operate at high reverse bias exhibits an electron multiplier effect analogous to a photomultiplier tube. The reverse bias can run from 10\'s of volts to nearly 2000 V. The high level of reverse bias accelerates photon created electron-hole pairs in the intrinsic region to a high enough velocity to free additional carriers from collisions with the crystal lattice. Thus, many electrons per photon result. The motivation for the APD is to achieve amplification within the photodiode to overcome noise in external amplifiers. This works to some extent. However, the APD creates noise of its own. At high speed the APD is superior to a PIN diode amplifier combination, though not for low speed applications. APD\'s are expensive, roughly the price of a photomultiplier tube. So, they are only competitive with PIN photodiodes for niche applications. One such application is single photon counting as applied to nuclear physics.
+**Avalanche photo diode:**An *avalanche photodiode (APD)*designed to operate at high reverse bias exhibits an electron multiplier effect analogous to a photomultiplier tube. The reverse bias can run from 10's of volts to nearly 2000 V. The high level of reverse bias accelerates photon created electron-hole pairs in the intrinsic region to a high enough velocity to free additional carriers from collisions with the crystal lattice. Thus, many electrons per photon result. The motivation for the APD is to achieve amplification within the photodiode to overcome noise in external amplifiers. This works to some extent. However, the APD creates noise of its own. At high speed the APD is superior to a PIN diode amplifier combination, though not for low speed applications. APD's are expensive, roughly the price of a photomultiplier tube. So, they are only competitive with PIN photodiodes for niche applications. One such application is single photon counting as applied to nuclear physics.
 
 ### Solar cells{ #sec:xtocid157056519 }
 
@@ -993,7 +993,7 @@ Solar cell type Maximum efficiency Practical efficiency Notes
 
 ---
 
-Selenium, polycrystalline 0.7% \- 1883, Charles Fritts Silicon, single crystal \- 4% 1950\'s, first silicon solar cell Silicon, single crystal PERL, terrestrial, space 25% \- solar cars, cost=100x commercial Silicon, single crystal, commercial terrestrial 24% 14-17% \$5-\$10/peak watt Cypress Semiconductor, Sunpower, silicon single crystal 21.5% 19% all contacts on cell back Gallium Indium Phosphide/ Gallium Arsenide/ Germanium, single crystal, multilayer \- 32% Preferred for space. Advanced terrestrial version of above. \- 40.7% Uses optical concentrator. Silicon, multicrystalline 18.5% 15.5% \- Thin films, \- \- \- Silicon, amorphous 13% 5-7% Degrades in sun light. Good indoors for calculators or cloudy outdoors. Cadmium telluride, polycrystalline 16% \- glass or metal substrate Copper indium arsenide diselenide, polycrystalline 18% 10% 10 inch flexible polymer web. @NTH Organic polymer, 100% plastic 4.5% \- R&D project
+Selenium, polycrystalline 0.7% \- 1883, Charles Fritts Silicon, single crystal \- 4% 1950's, first silicon solar cell Silicon, single crystal PERL, terrestrial, space 25% \- solar cars, cost=100x commercial Silicon, single crystal, commercial terrestrial 24% 14-17% \$5-\$10/peak watt Cypress Semiconductor, Sunpower, silicon single crystal 21.5% 19% all contacts on cell back Gallium Indium Phosphide/ Gallium Arsenide/ Germanium, single crystal, multilayer \- 32% Preferred for space. Advanced terrestrial version of above. \- 40.7% Uses optical concentrator. Silicon, multicrystalline 18.5% 15.5% \- Thin films, \- \- \- Silicon, amorphous 13% 5-7% Degrades in sun light. Good indoors for calculators or cloudy outdoors. Cadmium telluride, polycrystalline 16% \- glass or metal substrate Copper indium arsenide diselenide, polycrystalline 18% 10% 10 inch flexible polymer web. @NTH Organic polymer, 100% plastic 4.5% \- R&D project
 
 ### Varicap or varactor diodes{ #sec:xtocid157056520 }
 
@@ -1057,7 +1057,7 @@ The *Shockley diode*is a 4-layer thyristor used to trigger larger thyristors. It
 
 ### [[Constant-current diodes]{#xtocid157056526}]
 
-A _constant-current diode_, also known as a _current-limiting diode_, or _current-regulating diode_, does exactly what its name implies: it regulates current through it to some maximum level. The constant current diode is a two terminal version of a JFET. If we try to force more current through a constant-current diode than its current-regulation point, it simply "fights back" by dropping more voltage. If we were to build the circuit in @fig:03299(a) and plot diode current against diode voltage, we\'d get a graph that rises at first and then levels off at the current regulation point as in @fig:03299(b).
+A _constant-current diode_, also known as a _current-limiting diode_, or _current-regulating diode_, does exactly what its name implies: it regulates current through it to some maximum level. The constant current diode is a two terminal version of a JFET. If we try to force more current through a constant-current diode than its current-regulation point, it simply "fights back" by dropping more voltage. If we were to build the circuit in @fig:03299(a) and plot diode current against diode voltage, we'd get a graph that rises at first and then levels off at the current regulation point as in @fig:03299(b).
 
 ![](media/03299.png){ #fig:03299 width=75% }
 
@@ -1069,7 +1069,7 @@ One application for a constant-current diode is to automatically limit current t
 
 _Constant current diode application: driving laser diode._
 
-Of course, the constant-current diode\'s regulation point should be chosen to match the LED or laser diode\'s optimum forward current. This is especially important for the laser diode, not so much for the LED, as regular LEDs tend to be more tolerant of forward current variations.
+Of course, the constant-current diode's regulation point should be chosen to match the LED or laser diode's optimum forward current. This is especially important for the laser diode, not so much for the LED, as regular LEDs tend to be more tolerant of forward current variations.
 
 Another application is in the charging of small secondary-cell batteries, where a constant charging current leads to predictable charging times. Of course, large secondary-cell battery banks might also benefit from constant-current charging, but constant-current diodes tend to be very small devices, limited to regulating currents in the milliamp range.
 
@@ -1104,7 +1104,7 @@ The model statement line begins with ".model," followed by the model name matchi
      Example2:      D2 1 2 Da1N4004
                      .model Da1N4004 D (IS=18.8n RS=0 BV=400 IBV=5.00u CJO=30 M=0.333 N=2)
 
-The easiest approach to take for a SPICE model is the same as for a data sheet: consult the manufacturer\'s web site. Table [below](#diodespice2.tbl) lists the model parameters for some selected diodes. A fallback strategy is to build a SPICE model from those parameters listed on the data sheet. A third strategy, not considered here, is to take measurements of an actual device. Then, calculate, compare and adjust the SPICE parameters to the measurements.
+The easiest approach to take for a SPICE model is the same as for a data sheet: consult the manufacturer's web site. Table [below](#diodespice2.tbl) lists the model parameters for some selected diodes. A fallback strategy is to build a SPICE model from those parameters listed on the data sheet. A third strategy, not considered here, is to take measurements of an actual device. Then, calculate, compare and adjust the SPICE parameters to the measurements.
 
 []{#diodespice.tbl}
 
@@ -1156,9 +1156,9 @@ The junction grading coefficient M is related to the doping profile of the junct
 
 We take the default values for VJ and EG. Many more diodes use VJ=0.6 than shown in Table [above](#diodespice2.tbl). However the 10A04 rectifier uses the default, which we use for our 1N4004 model (Da1N4001 in Table [above](#diodespice.tbl)). Use the default EG=1.11 for silicon diodes and rectifiers. Table [above](#diodespice.tbl) lists values for schottky and germanium diodes. Take the XTI=3, the default IS temperature coefficient for silicon devices. See Table [above](#diodespice.tbl) for XTI for schottky diodes.
 
-The abbreviated data sheet, @fig:03467, lists I~R~ = 5 µA @ V~R~ = 400 V, corresponding to IBV=5u and BV=400 respectively. The 1n4004 SPICE parameters derived from the data sheet are listed in the last line of Table [above](#diodespice2.tbl) for comparison to the manufacturer\'s model listed above it. BV is only necessary if the simulation exceeds the reverse breakdown voltage of the diode, as is the case for zener diodes. IBV, reverse breakdown current, is frequently omitted, but may be entered if provided with BV.
+The abbreviated data sheet, @fig:03467, lists I~R~ = 5 µA @ V~R~ = 400 V, corresponding to IBV=5u and BV=400 respectively. The 1n4004 SPICE parameters derived from the data sheet are listed in the last line of Table [above](#diodespice2.tbl) for comparison to the manufacturer's model listed above it. BV is only necessary if the simulation exceeds the reverse breakdown voltage of the diode, as is the case for zener diodes. IBV, reverse breakdown current, is frequently omitted, but may be entered if provided with BV.
 
-@fig:03468 shows a circuit to compare the manufacturers model, the model derived from the datasheet, and the default model using default parameters. The three dummy 0 V sources are necessary for diode current measurement. The 1 V source is swept from 0 to 1.4 V in 0.2 mV steps. See .DC statement in the netlist in Table [below](#03468.tbl). DI1N4004 is the manufacturer\'s diode model, Da1N4004 is our derived diode model.
+@fig:03468 shows a circuit to compare the manufacturers model, the model derived from the datasheet, and the default model using default parameters. The three dummy 0 V sources are necessary for diode current measurement. The 1 V source is swept from 0 to 1.4 V in 0.2 mV steps. See .DC statement in the netlist in Table [below](#03468.tbl). DI1N4004 is the manufacturer's diode model, Da1N4004 is our derived diode model.
 
 ![](media/03468.png){ #fig:03468 width=75% }
 
@@ -1166,7 +1166,7 @@ _SPICE circuit for comparison of manufacturer model (D1), calculated datasheet m
 
 []{#03468.tbl}
 
-_SPICE netlist parameters: (D1) DI1N4004 manufacturer\'s model, (D2) Da1N40004 datasheet derived, (D3) default diode model._
+_SPICE netlist parameters: (D1) DI1N4004 manufacturer's model, (D2) Da1N40004 datasheet derived, (D3) default diode model._
 
     *SPICE circuit <03468.eps> from XCircuit v3.20
     D1 1 5 DI1N4004
@@ -1184,7 +1184,7 @@ _SPICE netlist parameters: (D1) DI1N4004 manufacturer\'s model, (D2) Da1N40004 d
     .MODEL Default D
     .end
 
-We compare the three models in @fig:23037. and to the datasheet graph data in Table [below](#diodespice3.tbl). VD is the diode voltage versus the diode currents for the manufacturer\'s model, our calculated datasheet model and the default diode model. The last column "1N4004 graph" is from the datasheet voltage versus current curve in @fig:03467 which we attempt to match. Comparison of the currents for the three model to the last column shows that the default model is good at low currents, the manufacturer\'s model is good at high currents, and our calculated datasheet model is best of all up to 1 A. Agreement is almost perfect at 1 A because the IS calculation is based on diode voltage at 1 A. Our model grossly over states current above 1 A.
+We compare the three models in @fig:23037. and to the datasheet graph data in Table [below](#diodespice3.tbl). VD is the diode voltage versus the diode currents for the manufacturer's model, our calculated datasheet model and the default diode model. The last column "1N4004 graph" is from the datasheet voltage versus current curve in @fig:03467 which we attempt to match. Comparison of the currents for the three model to the last column shows that the default model is good at low currents, the manufacturer's model is good at high currents, and our calculated datasheet model is best of all up to 1 A. Agreement is almost perfect at 1 A because the IS calculation is based on diode voltage at 1 A. Our model grossly over states current above 1 A.
 
 ![](media/23037.png){ #fig:23037 width=75% }
 
@@ -1206,7 +1206,7 @@ _Comparison of manufacturer model, calculated datasheet model, and default model
     6500  1.300000e+00  1.397087e+01  1.543591e+03  6.741379e+07  8.0
     7000  1.400000e+00  1.621861e+01  1.066840e+04  3.220203e+09 12.0
 
-The solution is to increase RS from the default RS=0. Changing RS from 0 to 8m in the datasheet model causes the curve to intersect 10 A (not shown) at the same voltage as the manufacturer\'s model. Increasing RS to 28.6m shifts the curve further to the right as shown in @fig:23038. This has the effect of more closely matching our datasheet model to the datasheet graph (@fig:03467). Table [below](#diodespice4.tbl) shows that the current 1.224470e+01 A at 1.4 V matches the graph at 12 A. However, the current at 0.925 V has degraded from 1.096870e+00 above to 7.318536e-01.
+The solution is to increase RS from the default RS=0. Changing RS from 0 to 8m in the datasheet model causes the curve to intersect 10 A (not shown) at the same voltage as the manufacturer's model. Increasing RS to 28.6m shifts the curve further to the right as shown in @fig:23038. This has the effect of more closely matching our datasheet model to the datasheet graph (@fig:03467). Table [below](#diodespice4.tbl) shows that the current 1.224470e+01 A at 1.4 V matches the graph at 12 A. However, the current at 0.925 V has degraded from 1.096870e+00 above to 7.318536e-01.
 
 ![](media/23038.png){ #fig:23038 width=75% }
 
@@ -1246,7 +1246,7 @@ _Zener diode subcircuit uses clamper (D1 and VZ) to model zener._
 
 **Tunnel diode:** A tunnel diode may be modeled by a pair of field effect transistors (JFET) in a SPICE subcircuit. @KHM An oscillator circuit is also shown in this reference.
 
-**Gunn diode:** A Gunn diode may also be modeled by a pair of JFET\'s. @ISG This reference shows a microwave relaxation oscillator.
+**Gunn diode:** A Gunn diode may also be modeled by a pair of JFET's. @ISG This reference shows a microwave relaxation oscillator.
 
 - **REVIEW:**
 - Diodes are described in SPICE by a diode component statement referring to .model statement. The .model statement contains parameters describing the diode. If parameters are not provided, the model takes on default values.
@@ -1258,7 +1258,7 @@ _Zener diode subcircuit uses clamper (D1 and VZ) to model zener._
 
 Contributors to this chapter are listed in chronological order of their contributions, from most recent to first. See Appendix 2 (Contributor List) for dates and contact information.
 
-**Jered Wierzbicki** (December 2002): Pointed out error in diode equation \-- Boltzmann\'s constant shown incorrectly.
+**Jered Wierzbicki** (December 2002): Pointed out error in diode equation --- Boltzmann's constant shown incorrectly.
 
 ## [Bibliography]{#xtocid157056532}
 
@@ -1276,7 +1276,7 @@ Contributors to this chapter are listed in chronological order of their contribu
 10. [\[KWM\]Kim W Mitchell, "Method of making a thin film cadmium telluride solar cell," United States Patent 4734381,]{#KWM.bibitem}<http://www.freepatentsonline.com/4734381.html>
 11. [\[KHM\] Karl H. Muller "RF/Microwave Analysis" Intusoft Newsletter #51, November 1997, at]{#KHM.bibitem} <http://www.intusoft.com/nlhtm/nl51.htm>
 12. [\[ISG\] "A Gunn Diode Relaxation Oscillator," Intusoft Newsletter #52, February 1998, at]{#ISG.bibitem} <http://www.intusoft.com/nlhtm/nl52.htm>
-13. [\[OAK\]OAK Solar., "Technical LED\'s LED color chart," at]{#OAK.bibitem} <http://www.oksolar.com/led/led_color_chart.htm>
+13. [\[OAK\]OAK Solar., "Technical LED's LED color chart," at]{#OAK.bibitem} <http://www.oksolar.com/led/led_color_chart.htm>
 14. [\[IAP\]Ian Poole, "Summary of the Gunn Diode," at]{#IAP.bibitem} [http://www.radio-electronics.com/nfo/data/semicond/gunndiode/gunndiode.php](,http://www.radio-electronics.com/info/data/semicond/gunndiode/gunndiode.php%20)
 15. [\[MHR\] Muhammad H. Rashid, "SPICE for Power Electronics and Electric Power," ISBN 0-13-030420-4, 1993]{#MHR.bibitem}
 16. [\[smi\] "SPICE model index," V2.16 30-Nov-05, at]{#smi.bibitem} <http://homepages.which.net/~paul.hills/Circuits/Spice/ModelIndex.html>

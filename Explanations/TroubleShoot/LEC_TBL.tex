@@ -1,0 +1,112 @@
+\startproduct mod_handbook
+\project proj_handbook
+\environment env_workbook
+
+% Metadata
+\setupinteraction[
+  author=Tony Kuphaldt,
+  title=Troubleshooting,
+  subtitle=Lessons in Electronic Circuits (5),
+  keywords={Troubleshooting, Engineering Design, Systems Design}
+]
+
+% Define the section highlight colour
+\definecolor[highlight][signal-violet]
+
+%%
+%% Cover
+%%
+
+\definecolor [Top] [signal-white]
+\definecolor [Bottom] [signal-black]
+\definecolor [Stripe] [highlight]
+\definecolor [BottomColor] [signal-grey]
+\definecolor [ModuleColor] [signal-white]
+\definecolor [TopColor] [signal-grey]
+
+\define[1]\titlefont{%
+  \setcharacterkerning[extrakerning]%
+  \cap
+  \definedfont[#1]%
+  \ignorespaces
+}
+
+\startTEXpage
+  \externalfigure
+    [media/CoverPage.pdf]
+    [width=\paperwidth,
+     height=\paperheight]
+\stopTEXpage
+
+%%
+%% Body
+%%
+
+\starttext
+
+% Contents
+
+\completecontent
+
+% Acknowlegements
+
+\startfrontmatter
+
+  \component About.tex
+
+\stopfrontmatter
+
+% Load the main chapters
+
+\startbodymatter
+
+   \component Troubleshooting.tex
+
+\stopbodymatter
+
+\startappendices
+
+  %\component Contributors.tex
+
+\stopappendices
+
+% Backmatter
+
+\startbackmatter
+
+%   \component Contributors.tex
+   \component License.tex
+
+\stopbackmatter
+
+% Bibliography
+
+%% \component ../Bibliography/Bibliography.tex
+
+%%
+%% End Matter
+%%
+
+\page[right, blank]
+
+\definelayer[colophon]
+  \setlayer[colophon][x=-4cm,y=-5cm]{
+    \externalfigure
+    [media/Colophon.pdf]
+    [width=\paperwidth,
+    height=\paperheight]
+  }
+\flushlayer[colophon]
+
+\page[left, blank]
+
+\definelayer[last]
+  \setlayer[last][x=-4cm,y=-5cm]{
+    \externalfigure
+    [media/EndPage.pdf]
+    [width=\paperwidth,
+    height=\paperheight]
+  }
+\flushlayer[last]
+
+\stopproduct

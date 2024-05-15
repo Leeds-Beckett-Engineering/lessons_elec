@@ -6,6 +6,8 @@ node_modules/**
 
 # Ignore temporary files
 Explanations/Semi/LEC3_Semi-export/**
+Explanations/TroubleShoot/LEC_TBL-export/**
+References/Reference/LEC_Reference-export/**
 
 # Ignore cruft
 *.bak
