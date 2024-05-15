@@ -285,7 +285,7 @@ It casts the transistor as a combination of diode and current source, the output
 
 At the beginning of this chapter we saw how transistors could be used as switches, operating in either their "saturation" or "cutoff" modes. In the last section we saw how transistors behave within their "active" modes, between the far limits of saturation and cutoff. Because transistors are able to control current in an analog (infinitely divisible) fashion, they find use as amplifiers for analog signals.
 
-One of the simpler transistor amplifier circuits to study previously illustrated the transistor\'s switching ability. (Figure [below](#03079a.png))
+One of the simpler transistor amplifier circuits to study previously illustrated the transistor\'s switching ability. (Figure [below](@fig:03079a))
 
 []{#03079a.png}
 
@@ -345,7 +345,7 @@ _Common emitter: collector voltage output vs base current input._
 
 At the beginning of the simulation in @fig:23003 where the current source (solar cell) is outputting zero current, the transistor is in cutoff mode and the full 15 volts from the battery is shown at the amplifier output (between nodes 2 and 0). As the solar cell\'s current begins to increase, the output voltage proportionally decreases, until the transistor reaches saturation at 30 µA of base current (3 mA of collector current). Notice how the output voltage trace on the graph is perfectly linear (1 volt steps from 15 volts to 1 volt) until the point of saturation, where it never quite reaches zero. This is the effect mentioned earlier, where a saturated transistor can never achieve exactly zero voltage drop between collector and emitter due to internal junction effects. What we do see is a sharp output voltage decrease from 1 volt to 0.2261 volts as the input current increases from 28 µA to 30 µA, and then a continuing decrease in output voltage from then on (albeit in progressively smaller steps). The lowest the output voltage ever gets in this simulation is 0.1299 volts, asymptotically approaching zero.
 
-So far, we\'ve seen the transistor used as an amplifier for DC signals. In the solar cell light meter example, we were interested in amplifying the DC output of the solar cell to drive a DC meter movement, or to produce a DC output voltage. However, this is not the only way in which a transistor may be employed as an amplifier. Often an _AC_ amplifier for amplifying _alternating_ current and voltage signals is desired. One common application of this is in audio electronics (radios, televisions, and public-address systems). Earlier, we saw an example of the audio output of a tuning fork activating a transistor switch. (Figure [below](#03081a.png)) Let\'s see if we can modify that circuit to send power to a speaker rather than to a lamp in @fig:03097.
+So far, we\'ve seen the transistor used as an amplifier for DC signals. In the solar cell light meter example, we were interested in amplifying the DC output of the solar cell to drive a DC meter movement, or to produce a DC output voltage. However, this is not the only way in which a transistor may be employed as an amplifier. Often an _AC_ amplifier for amplifying _alternating_ current and voltage signals is desired. One common application of this is in audio electronics (radios, televisions, and public-address systems). Earlier, we saw an example of the audio output of a tuning fork activating a transistor switch. (Figure [below](@fig:03081a)) Let\'s see if we can modify that circuit to send power to a speaker rather than to a lamp in @fig:03097.
 
 []{#03081a.png}
 
@@ -373,7 +373,7 @@ _Signal clipped at collector due to lack of DC base bias._
 
 The simulation plots (@fig:23004) both the input voltage (an AC signal of 1.5 volt peak amplitude and 2000 Hz frequency) and the current through the 15 volt battery, which is the same as the current through the speaker. What we see here is a full AC sine wave alternating in both positive and negative directions, and a half-wave output current waveform that only pulses in one direction. If we were actually driving a speaker with this waveform, the sound produced would be horribly distorted.
 
-What\'s wrong with the circuit? Why won\'t it faithfully reproduce the entire AC waveform from the microphone? The answer to this question is found by close inspection of the transistor diode current source model in Figure [below](#03091a.png).
+What\'s wrong with the circuit? Why won\'t it faithfully reproduce the entire AC waveform from the microphone? The answer to this question is found by close inspection of the transistor diode current source model in Figure [below](@fig:03091a).
 
 []{#03091a.png}
 
@@ -723,7 +723,7 @@ _Phase relationships and offsets for PNP common base amplifier._
 
 Predicting voltage gain for the common-base amplifier configuration is quite difficult, and involves approximations of transistor behavior that are difficult to measure directly. Unlike the other amplifier configurations, where voltage gain was either set by the ratio of two resistors (common-emitter), or fixed at an unchangeable value (common-collector), the voltage gain of the common-base amplifier depends largely on the amount of DC bias on the input signal. As it turns out, the internal transistor resistance between emitter and base plays a major role in determining voltage gain, and this resistance changes with different levels of current through the emitter.
 
-While this phenomenon is difficult to explain, it is rather easy to demonstrate through the use of computer simulation. What I\'m going to do here is run several SPICE simulations on a common-base amplifier circuit (Figure [previous](#03117.png){ #fig:03117 width=75% }), changing the DC bias voltage slightly (vbias in Figure [below](#bjt5.tbl) ) while keeping the AC signal amplitude and all other circuit parameters constant. As the voltage gain changes from one simulation to another, different output voltage amplitudes will be noted.
+While this phenomenon is difficult to explain, it is rather easy to demonstrate through the use of computer simulation. What I\'m going to do here is run several SPICE simulations on a common-base amplifier circuit (Figure [previous](@fig:03117){ #fig:03117 width=75% }), changing the DC bias voltage slightly (vbias in Figure [below](#bjt5.tbl) ) while keeping the AC signal amplitude and all other circuit parameters constant. As the voltage gain changes from one simulation to another, different output voltage amplitudes will be noted.
 
 Although these analyses will all be conducted in the "transfer function" mode, each was first "proofed" in the transient analysis mode (voltage plotted over time) to ensure that the entire wave was being faithfully reproduced and not "clipped" due to improper biasing. See \"\*.tran 0.02m 0.78m\" in Figure [below](#bjt5.tbl), the "commented out" transient analysis statement. Gain calculations cannot be based on waveforms that are distorted. SPICE can calculate the small signal DC gain for us with the ".tf v(4) vin" statement. The output is **v(4)** and the input as **vin**.
 
@@ -962,7 +962,7 @@ _New quiescent point avoids saturation region._
 
 Now that we know a little more about the consequences of different DC bias voltage levels, it is time to investigate practical biasing techniques. So far, I\'ve shown a small DC voltage source (battery) connected in series with the AC input signal to bias the amplifier for whatever desired class of operation. In real life, the connection of a precisely-calibrated battery to the input of an amplifier is simply not practical. Even if it were possible to customize a battery to produce just the right amount of voltage for any given bias requirement, that battery would not remain at its manufactured voltage indefinitely. Once it started to discharge and its output voltage drooped, the amplifier would begin to drift toward class B operation.
 
-Take this circuit, illustrated in the common-emitter section for a SPICE simulation, for instance, in Figure [below](#03099a.png).
+Take this circuit, illustrated in the common-emitter section for a SPICE simulation, for instance, in Figure [below](@fig:03099a).
 
 []{#03099a.png}
 
@@ -1204,7 +1204,7 @@ For reference the 26mV approximation is listed as equation r~EE~ in @fig:03489.
 
 _Emitter-bias equations with internal emitter resistance r~EE~ included.._
 
-The more accurate emitter-bias equations in @fig:03489 may be derived by writing a KVL equation. Alternatively, start with equations IE emitter-bias and R~B~ emitter-bias in Figure [previous](#03488.png){ #fig:03488 width=75% }, substituting R~E~ with r~EE~+R~E~. The result is equations IE EB and RB EB, respectively in @fig:03489.
+The more accurate emitter-bias equations in @fig:03489 may be derived by writing a KVL equation. Alternatively, start with equations IE emitter-bias and R~B~ emitter-bias in Figure [previous](@fig:03488){ #fig:03488 width=75% }, substituting R~E~ with r~EE~+R~E~. The result is equations IE EB and RB EB, respectively in @fig:03489.
 
 Redo the R~B~ calculation in the previous example [emitter-bias](#13067L) with the inclusion of r~EE~ and compare the results.
 
@@ -1661,7 +1661,7 @@ An ideal transistor would show 0% distortion in amplifying a signal. Its gain wo
 
 ### Nonlinearity{ #sec:xtocid157058920 }
 
-The class A common-emitter amplifier (similar to Figure [previous](#03110.png){ #fig:03110 width=75% })is driven almost to clipping in @fig:23039 . Note that the positive peak is flatter than the negative peaks. This distortion is unacceptable in many applications like high-fidelity audio.
+The class A common-emitter amplifier (similar to Figure [previous](@fig:03110){ #fig:03110 width=75% })is driven almost to clipping in @fig:23039 . Note that the positive peak is flatter than the negative peaks. This distortion is unacceptable in many applications like high-fidelity audio.
 
 ![](media/23039.png){ #fig:23039 width=75% }
 

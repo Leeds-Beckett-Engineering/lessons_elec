@@ -18,4 +18,8 @@ For convenience, the standard `Rakefile` can/will also build all of the content 
 
 The majority of files have been converted, and checked, using [Kate](https://apps.kde.org/en-gb/kate/): mostly for ease of project management and its excellent find/replace support. A full list of changes is given below
 
-- _Use BibTeX for citations_. `\[\\\[(\w+)\\]]\(\#(\w+)\.bibitem\)` -> `@\1`
+- _Organise image (source) files into a separate directory_ `!\[\]\((\w+).png\)` -> `![](media/\1.png){ #fig:\1 width=75% }`
+- _Patch image references_ `\(#(\w+).png\)` -> (@fig:\1)
+- _Use BibTeX for citations_. `\[\\\[(\w+)\\\]\]\(#(\w+).bibitem\)` -> `(@\1)`
+- _Replace major sections with titles and references_ `\[\[((\w|\s|\\|\#|\d)+)\]{#(\w+)\}]{.underline}` -> `\1 { #sec:\3 }`
+- _Convert underlines to italics_ `\[(\w+|\s)\]{.underline}` -> `_\1_`

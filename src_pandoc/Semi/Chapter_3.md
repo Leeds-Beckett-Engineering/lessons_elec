@@ -432,7 +432,7 @@ A _voltage multiplier_ is a specialized rectifier circuit producing an output wh
 
 A voltage doubler application is a DC power supply capable of using either a 240 VAC or 120 VAC source. The supply uses a switch selected full-wave bridge to produce about 300 VDC from a 240 VAC source. The 120 V position of the switch rewires the bridge as a doubler producing about 300 VDC from the 120 VAC. In both cases, 300 VDC is produced. This is the input to a switching regulator producing lower voltages for powering, say, a personal computer.
 
-The half-wave voltage doubler in @fig:03255 (a) is composed of two circuits: a clamper at (b) and peak detector (half-wave rectifier) in Figure [prior](#03441.png){ #fig:03441 width=75% }, which is shown in modified form in @fig:03255 (c). C2 has been added to a peak detector (half-wave rectifier).
+The half-wave voltage doubler in @fig:03255 (a) is composed of two circuits: a clamper at (b) and peak detector (half-wave rectifier) in Figure [prior](@fig:03441){ #fig:03441 width=75% }, which is shown in modified form in @fig:03255 (c). C2 has been added to a peak detector (half-wave rectifier).
 
 ![](media/03255.png){ #fig:03255 width=75% }
 
@@ -506,7 +506,7 @@ A voltage multiplier of cascaded half-wave doublers of arbitrary length is known
 
 _Cockcroft-Walton x8 voltage multiplier; output at v(8)._
 
-The pair of diodes and capacitors to the left of nodes 1 and 2 in @fig:03288 constitute a half-wave doubler. Rotating the diodes by 45^o^ counterclockwise, and the bottom capacitor by 90^o^ makes it look like Figure [prior](#03255.png){ #fig:03255 width=75% } (a). Four of the doubler sections are cascaded to the right for a theoretical x8 multiplication factor. Node 1 has a clamper waveform (not shown), a sinewave shifted up by 1x (5 V). The other odd numbered nodes are sinewaves clamped to successively higher voltages. Node 2, the output of the first doubler, is a 2x DC voltage v(2) in @fig:23033. Successive even numbered nodes charge to successively higher voltages: v(4), v(6), v(8)
+The pair of diodes and capacitors to the left of nodes 1 and 2 in @fig:03288 constitute a half-wave doubler. Rotating the diodes by 45^o^ counterclockwise, and the bottom capacitor by 90^o^ makes it look like Figure [prior](@fig:03255){ #fig:03255 width=75% } (a). Four of the doubler sections are cascaded to the right for a theoretical x8 multiplication factor. Node 1 has a clamper waveform (not shown), a sinewave shifted up by 1x (5 V). The other odd numbered nodes are sinewaves clamped to successively higher voltages. Node 2, the output of the first doubler, is a 2x DC voltage v(2) in @fig:23033. Successive even numbered nodes charge to successively higher voltages: v(4), v(6), v(8)
 
 []{#23033.png <="" a=""}
 

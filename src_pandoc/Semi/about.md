@@ -1,6 +1,4 @@
-::: cbunit
-
-#   ABOUT THIS BOOK
+#   About This Book
 
 ## Purpose
 
