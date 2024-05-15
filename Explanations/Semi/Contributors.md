@@ -117,7 +117,7 @@ All entries arranged in alphabetical order of surname. Major contributions are l
 
 ### Typo Corrections and other \"Minor\" Contributions
 
-- _The students of Bellingham Technical College\'s Instrumentation program_.
+- _The students of Bellingham Technical College's Instrumentation program_.
 
 - **anonymous** (July 2007) Ch 1, remove :registers. Ch 5, s/figures something/figures is something/. Ch 6 s/The current/The current. (September 2007) Ch 5, 8, 9, 10, 11, 12, 13, 15. Numerous typos, clarifications.
 
@@ -129,7 +129,7 @@ All entries arranged in alphabetical order of surname. Major contributions are l
 
 - **Sridhar Chitta**, Assoc. Professor, Dept. of Instrumentation and Control Engg., Vignan Institute of Technology and Science, Deshmukhi Village, Pochampally Mandal, Nalgonda Distt, Andhra Pradesh, India (December 2005) Chapter 13: CAPACITORS, Clarification: s/note the direction of current/note the direction of electron current/, 2-places
 
-- **Colin Creitz** (May 2007) Chapters: several, s/it\'s/its.
+- **Colin Creitz** (May 2007) Chapters: several, s/it's/its.
 
 - **Larry Cramblett** (September 2004) Typographical error correction in \"Nonlinear conduction\" section.
 
@@ -153,15 +153,15 @@ All entries arranged in alphabetical order of surname. Major contributions are l
 
 - **Bill Heath** (September-December 2002) Correction on illustration of atomic structure, and corrections of several typographical errors.
 
-- **Stefan Kluehspies** (June 2003): Corrected spelling error in Andrew Tannenbaum\'s name.
+- **Stefan Kluehspies** (June 2003): Corrected spelling error in Andrew Tannenbaum's name.
 
-- **David M. St. Pierre** (November 2007): Corrected spelling error in Andrew Tanenbaum\'s name (from the title page of his book).
+- **David M. St. Pierre** (November 2007): Corrected spelling error in Andrew Tanenbaum's name (from the title page of his book).
 
-- **Geoffrey Lessel**,Thompsons Station, TN (June 2005): Corrected typo error in Ch 1 \"If this charge (static electricity) is stationary, and you won\'t realize--remove If; Ch 2 \"Ohm\'s Law also make intuitive sense if you apply if to the water-and-pipe analogy.\" s/if/it; Chapter 2 \"Ohm\'s Law is not very useful for analyzing the behavior of components like these where resistance is varies with voltage and current.\" remove \"is\"; Ch 3 \"which halts fibrillation and and gives the heart a chance to recover.\" double \"and\"; Ch 3 \"To be safest, you should follow this procedure is checking, using, and then checking your meter\.... s/is/of.
+- **Geoffrey Lessel**,Thompsons Station, TN (June 2005): Corrected typo error in Ch 1 \"If this charge (static electricity) is stationary, and you won't realize--remove If; Ch 2 \"Ohm's Law also make intuitive sense if you apply if to the water-and-pipe analogy.\" s/if/it; Chapter 2 \"Ohm's Law is not very useful for analyzing the behavior of components like these where resistance is varies with voltage and current.\" remove \"is\"; Ch 3 \"which halts fibrillation and and gives the heart a chance to recover.\" double \"and\"; Ch 3 \"To be safest, you should follow this procedure is checking, using, and then checking your meter\.... s/is/of.
 
 - **LouTheBlueGuru**, allaboutcircuits.com, July 2005 Typographical errors, in Ch 6 \"the current through R1 is half:\" s/half/twice; \"current through R1 is still exactly twice that of R2\" s/R3/R2
 
-- **Norm Meyrowitz** , nkm, allaboutcircuits.com, July 2005 Typographical errors, in Ch 2.3 \"where we don\'t know both voltage and resistance:\" s/resistance/current
+- **Norm Meyrowitz** , nkm, allaboutcircuits.com, July 2005 Typographical errors, in Ch 2.3 \"where we don't know both voltage and resistance:\" s/resistance/current
 
 - **Don Stalkowski** (June 2002) Technical help with PostScript-to-PDF file format conversion.
 

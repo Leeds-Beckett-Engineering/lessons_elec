@@ -2,7 +2,7 @@
 
 ---
 
-# Lessons In Electric Circuits \-- Volume III
+# Lessons In Electric Circuits --- Volume III
 
 # Chapter 13
 
@@ -25,13 +25,13 @@
 
 An often neglected area of study in modern electronics is that of _tubes_, more precisely known as _vacuum tubes_ or _electron tubes_. Almost completely overshadowed by semiconductor, or \"solid-state\" components in most modern applications, tube technology once dominated electronic circuit design.
 
-In fact, the historical transition from \"electric\" to \"electronic\" circuits really began with tubes, for it was with tubes that we entered into a whole new realm of circuit function: a way of controlling the flow of electrons (current) in a circuit by means of another electric signal (in the case of most tubes, the controlling signal is a small voltage). The semiconductor counterpart to the tube, of course, is the transistor. Transistors perform much the same function as tubes: controlling the flow of electrons in a circuit by means of another flow of electrons in the case of the bipolar transistor, and controlling the flow of electrons by means of a voltage in the case of the field-effect transistor. In either case, a relatively small electric signal controls a relatively large electric current. This is the essence of the word \"electronic,\" so as to distinguish it from \"electric,\" which has more to do with how electron flow is regulated by Ohm\'s Law and the physical attributes of wire and components.
+In fact, the historical transition from \"electric\" to \"electronic\" circuits really began with tubes, for it was with tubes that we entered into a whole new realm of circuit function: a way of controlling the flow of electrons (current) in a circuit by means of another electric signal (in the case of most tubes, the controlling signal is a small voltage). The semiconductor counterpart to the tube, of course, is the transistor. Transistors perform much the same function as tubes: controlling the flow of electrons in a circuit by means of another flow of electrons in the case of the bipolar transistor, and controlling the flow of electrons by means of a voltage in the case of the field-effect transistor. In either case, a relatively small electric signal controls a relatively large electric current. This is the essence of the word \"electronic,\" so as to distinguish it from \"electric,\" which has more to do with how electron flow is regulated by Ohm's Law and the physical attributes of wire and components.
 
 Though tubes are now obsolete for all but a few specialized applications, they are still a worthy area of study. If nothing else, it is fascinating to explore \"the way things used to be done\" in order to better appreciate modern technology.
 
 ## Early tube history{ #sec:xtocid15706701 }
 
-Thomas Edison, that prolific American inventor, is often credited with the invention of the incandescent lamp. More accurately, it could be said that Edison was the man who _perfected_ the incandescent lamp. Edison\'s successful design of 1879 was actually preceded by 77 years by the British scientist Sir Humphry Davy, who first demonstrated the principle of using electric current to heat a thin strip of metal (called a \"filament\") to the point of incandescence (glowing white hot).
+Thomas Edison, that prolific American inventor, is often credited with the invention of the incandescent lamp. More accurately, it could be said that Edison was the man who _perfected_ the incandescent lamp. Edison's successful design of 1879 was actually preceded by 77 years by the British scientist Sir Humphry Davy, who first demonstrated the principle of using electric current to heat a thin strip of metal (called a \"filament\") to the point of incandescence (glowing white hot).
 
 Edison was able to achieve his success by placing his filament (made of carbonized sewing thread) inside of a clear glass bulb from which the air had been forcibly removed. In this vacuum, the filament could glow at white-hot temperatures without being consumed by combustion:
 
@@ -41,7 +41,7 @@ In the course of his experimentation (sometime around 1883), Edison placed a str
 
 ![](media/03002.png){ #fig:03002 width=75% }
 
-The white-hot filament in Edison\'s lamp was liberating free electrons into the vacuum of the lamp, those electrons finding their way to the metal strip, through the galvanometer, and back to the filament. His curiosity piqued, Edison then connected a fairly high-voltage battery in the galvanometer circuit to aid the small current:
+The white-hot filament in Edison's lamp was liberating free electrons into the vacuum of the lamp, those electrons finding their way to the metal strip, through the galvanometer, and back to the filament. His curiosity piqued, Edison then connected a fairly high-voltage battery in the galvanometer circuit to aid the small current:
 
 ![](media/03003.png){ #fig:03003 width=75% }
 
@@ -51,15 +51,15 @@ Sure enough, the presence of the battery created a much larger current from the 
 
 In effect, what Edison had stumbled upon was a diode! Unfortunately, he saw no practical use for such a device and proceeded with further refinements in his lamp design.
 
-The one-way electron flow of this device (known as the _Edison Effect_) remained a curiosity until J. A. Fleming experimented with its use in 1895. Fleming marketed his device as a \"valve,\" initiating a whole new area of study in electric circuits. Vacuum tube diodes \-- Fleming\'s \"valves\" being no exception \-- are not able to handle large amounts of current, and so Fleming\'s invention was impractical for any application in AC power, only for small electric signals.
+The one-way electron flow of this device (known as the _Edison Effect_) remained a curiosity until J. A. Fleming experimented with its use in 1895. Fleming marketed his device as a \"valve,\" initiating a whole new area of study in electric circuits. Vacuum tube diodes --- Fleming's \"valves\" being no exception --- are not able to handle large amounts of current, and so Fleming's invention was impractical for any application in AC power, only for small electric signals.
 
 Then in 1906, another inventor by the name of Lee De Forest started playing around with the \"Edison Effect,\" seeing what more could be gained from the phenomenon. In doing so, he made a startling discovery: by placing a metal screen between the glowing filament and the metal strip (which by now had taken the form of a plate for greater surface area), the stream of electrons flowing from filament to plate could be regulated by the application of a small voltage between the metal screen and the filament:
 
 ![](media/03005.png){ #fig:03005 width=75% }
 
-De Forest called this metal screen between filament and plate a _grid_. It wasn\'t just the amount of voltage between grid and filament that controlled current from filament to plate, it was the polarity as well. A negative voltage applied to the grid with respect to the filament would tend to choke off the natural flow of electrons, whereas a positive voltage would tend to enhance the flow. Although there was some amount of current through the grid, it was very small; much smaller than the current through the plate.
+De Forest called this metal screen between filament and plate a _grid_. It wasn't just the amount of voltage between grid and filament that controlled current from filament to plate, it was the polarity as well. A negative voltage applied to the grid with respect to the filament would tend to choke off the natural flow of electrons, whereas a positive voltage would tend to enhance the flow. Although there was some amount of current through the grid, it was very small; much smaller than the current through the plate.
 
-Perhaps most importantly was his discovery that the small amounts of grid voltage and grid current were having large effects on the amount of plate voltage (with respect to the filament) and plate current. In adding the grid to Fleming\'s \"valve,\" De Forest had made the valve adjustable: it now functioned as an _amplifying_ device, whereby a small electrical signal could take control over a larger electrical quantity.
+Perhaps most importantly was his discovery that the small amounts of grid voltage and grid current were having large effects on the amount of plate voltage (with respect to the filament) and plate current. In adding the grid to Fleming's \"valve,\" De Forest had made the valve adjustable: it now functioned as an _amplifying_ device, whereby a small electrical signal could take control over a larger electrical quantity.
 
 The closest semiconductor equivalent to the Audion tube, and to all of its more modern tube equivalents, is an n-channel D-type MOSFET. It is a voltage-controlled device with a large current gain.
 
@@ -69,9 +69,9 @@ Calling his invention the \"Audion,\" he vigorously applied it to the developmen
 
 ## The triode{ #sec:xtocid15706702 }
 
-De Forest\'s Audion tube came to be known as the _triode_ tube, because it had three elements: filament, grid, and plate (just as the \"di\" in the name _diode_ refers to two elements, filament and plate). Later developments in diode tube technology led to the refinement of the electron emitter: instead of using the filament directly as the emissive element, another metal strip called the _cathode_ could be heated by the filament.
+De Forest's Audion tube came to be known as the _triode_ tube, because it had three elements: filament, grid, and plate (just as the \"di\" in the name _diode_ refers to two elements, filament and plate). Later developments in diode tube technology led to the refinement of the electron emitter: instead of using the filament directly as the emissive element, another metal strip called the _cathode_ could be heated by the filament.
 
-This refinement was necessary in order to avoid some undesired effects of an incandescent filament as an electron emitter. First, a filament experiences a voltage drop along its length, as current overcomes the resistance of the filament material and dissipates heat energy. This meant that the voltage potential between different points along the length of the filament wire and other elements in the tube would not be constant. For this and similar reasons, alternating current used as a power source for heating the filament wire would tend to introduce unwanted AC \"noise\" in the rest of the tube circuit. Furthermore, the surface area of a thin filament was limited at best, and limited surface area on the electron emitting element tends to place a corresponding limit on the tube\'s current-carrying capacity.
+This refinement was necessary in order to avoid some undesired effects of an incandescent filament as an electron emitter. First, a filament experiences a voltage drop along its length, as current overcomes the resistance of the filament material and dissipates heat energy. This meant that the voltage potential between different points along the length of the filament wire and other elements in the tube would not be constant. For this and similar reasons, alternating current used as a power source for heating the filament wire would tend to introduce unwanted AC \"noise\" in the rest of the tube circuit. Furthermore, the surface area of a thin filament was limited at best, and limited surface area on the electron emitting element tends to place a corresponding limit on the tube's current-carrying capacity.
 
 The cathode was a thin metal cylinder fitting snugly over the twisted wire of the filament. The cathode cylinder would be heated by the filament wire enough to freely emit electrons, without the undesirable side effects of actually carrying the heating current as the filament wire had to. The tube symbol for a triode with an indirectly-heated cathode looks like this:
 
@@ -85,23 +85,23 @@ A simple triode circuit is shown to illustrate its basic operation as an amplifi
 
 ![](media/03008.png){ #fig:03008 width=75% }
 
-The low-voltage AC signal connected between the grid and cathode alternately suppresses, then enhances the electron flow between cathode and plate. This causes a change in voltage on the output of the circuit (between plate and cathode). The AC voltage and current magnitudes on the tube\'s grid are generally quite small compared with the variation of voltage and current in the plate circuit. Thus, the triode functions as an amplifier of the incoming AC signal (taking high-voltage, high-current DC power supplied from the large DC source on the right and \"throttling\" it by means of the tube\'s controlled conductivity).
+The low-voltage AC signal connected between the grid and cathode alternately suppresses, then enhances the electron flow between cathode and plate. This causes a change in voltage on the output of the circuit (between plate and cathode). The AC voltage and current magnitudes on the tube's grid are generally quite small compared with the variation of voltage and current in the plate circuit. Thus, the triode functions as an amplifier of the incoming AC signal (taking high-voltage, high-current DC power supplied from the large DC source on the right and \"throttling\" it by means of the tube's controlled conductivity).
 
 In the triode, the amount of current from cathode to plate (the \"controlled\" current is a function both of grid-to-cathode voltage (the controlling signal) and the plate-to-cathode voltage (the electromotive force available to push electrons through the vacuum). Unfortunately, neither of these independent variables have a purely linear effect on the amount of current through the device (often referred to simply as the \"plate current\"). That is, triode current does not necessarily respond in a direct, proportional manner to the voltages applied.
 
-In this particular amplifier circuit the nonlinearities are compounded, as plate voltage (with respect to cathode) changes along with the grid voltage (also with respect to cathode) as plate current is throttled by the tube. The result will be an output voltage waveform that doesn\'t precisely resemble the waveform of the input voltage. In other words, the quirkiness of the triode tube and the dynamics of this particular circuit will _distort_ the waveshape. If we really wanted to get complex about how we stated this, we could say that the tube introduces _harmonics_ by failing to exactly reproduce the input waveform.
+In this particular amplifier circuit the nonlinearities are compounded, as plate voltage (with respect to cathode) changes along with the grid voltage (also with respect to cathode) as plate current is throttled by the tube. The result will be an output voltage waveform that doesn't precisely resemble the waveform of the input voltage. In other words, the quirkiness of the triode tube and the dynamics of this particular circuit will _distort_ the waveshape. If we really wanted to get complex about how we stated this, we could say that the tube introduces _harmonics_ by failing to exactly reproduce the input waveform.
 
 Another problem with triode behavior is that of stray capacitance. Remember that any time we have two conductive surfaces separated by an insulating medium, a capacitor will be formed. Any voltage between those two conductive surfaces will generate an electric field within that insulating region, potentially storing energy and introducing reactance into a circuit. Such is the case with the triode, most problematically between the grid and the plate. It is as if there were tiny capacitors connected between the pairs of elements in the tube:
 
 ![](media/03009.png){ #fig:03009 width=75% }
 
-Now, this stray capacitance is quite small, and the reactive impedances usually high. Usually, that is, unless radio frequencies are being dealt with. As we saw with De Forest\'s Audion tube, radio was probably the prime application for this new technology, so these \"tiny\" capacitances became more than just a potential problem. Another refinement in tube technology was necessary to overcome the limitations of the triode.
+Now, this stray capacitance is quite small, and the reactive impedances usually high. Usually, that is, unless radio frequencies are being dealt with. As we saw with De Forest's Audion tube, radio was probably the prime application for this new technology, so these \"tiny\" capacitances became more than just a potential problem. Another refinement in tube technology was necessary to overcome the limitations of the triode.
 
 ## The tetrode{ #sec:xtocid15706703 }
 
 As the name suggests, the _tetrode_ tube contained four elements: cathode (with the implicit filament, or \"heater\"), grid, plate, and a new element called the _screen_. Similar in construction to the grid, the screen was a wire mesh or coil positioned between the grid and plate, connected to a source of positive DC potential (with respect to the cathode, as usual) equal to a fraction of the plate voltage. When connected to ground through an external capacitor, the screen had the effect of electrostatically shielding the grid from the plate. Without the screen, the capacitive linking between the plate and the grid could cause significant signal feedback at high frequencies, resulting in unwanted oscillations.
 
-The screen, being of less surface area and lower positive potential than the plate, didn\'t attract many of the electrons passing through the grid from the cathode, so the vast majority of electrons in the tube still flew by the screen to be collected by the plate:
+The screen, being of less surface area and lower positive potential than the plate, didn't attract many of the electrons passing through the grid from the cathode, so the vast majority of electrons in the tube still flew by the screen to be collected by the plate:
 
 ![](media/03010.png){ #fig:03010 width=75% }
 
@@ -133,7 +133,7 @@ The suppressor was another wire coil or mesh situated between the screen and the
 
 ![](media/03013.png){ #fig:03013 width=75% }
 
-The suppressor\'s job was to repel any secondarily emitted electrons back to the plate: a structural equivalent of the beam power tube\'s space charge. This, of course, increased plate current and decreased screen current, resulting in better gain and overall performance. In some instances it allowed for greater operating plate voltage as well.
+The suppressor's job was to repel any secondarily emitted electrons back to the plate: a structural equivalent of the beam power tube's space charge. This, of course, increased plate current and decreased screen current, resulting in better gain and overall performance. In some instances it allowed for greater operating plate voltage as well.
 
 ## Combination tubes{ #sec:xtocid15706706 }
 
@@ -141,7 +141,7 @@ Similar in thought to the idea of the integrated circuit, tube designers tried i
 
 Of course, it would have been quite impossible to combine thousands of tube elements into a single tube envelope the way that thousands of transistors can be etched onto a single piece of silicon, but engineers still did their best to push the limits of tube miniaturization and consolidation. Some of these tubes, whimsically called _compactrons_, held four or more complete tube elements within a single envelope.
 
-Sometimes the functions of two different tubes could be integrated into a single, combination tube in a way that simply worked more elegantly than two tubes ever could. An example of this was the _pentagrid converter_, more generally called a _heptode_, used in some superheterodyne radio designs. These tubes contained seven elements: 5 grids plus a cathode and a plate. Two of the grids were normally reserved for signal input, the other three relegated to screening and suppression (performance-enhancing) functions. Combining the superheterodyne functions of oscillator and signal mixer together in one tube, the signal coupling between these two stages was intrinsic. Rather than having separate oscillator and mixer circuits, the oscillator creating an AC voltage and the mixer \"mixing\" that voltage with another signal, the pentagrid converter\'s oscillator section created an electron stream that oscillated in intensity which then directly passed through another grid for \"mixing\" with another signal.
+Sometimes the functions of two different tubes could be integrated into a single, combination tube in a way that simply worked more elegantly than two tubes ever could. An example of this was the _pentagrid converter_, more generally called a _heptode_, used in some superheterodyne radio designs. These tubes contained seven elements: 5 grids plus a cathode and a plate. Two of the grids were normally reserved for signal input, the other three relegated to screening and suppression (performance-enhancing) functions. Combining the superheterodyne functions of oscillator and signal mixer together in one tube, the signal coupling between these two stages was intrinsic. Rather than having separate oscillator and mixer circuits, the oscillator creating an AC voltage and the mixer \"mixing\" that voltage with another signal, the pentagrid converter's oscillator section created an electron stream that oscillated in intensity which then directly passed through another grid for \"mixing\" with another signal.
 
 This same tube was sometimes used in a different way: by applying a DC voltage to one of the control grids, the gain of the tube could be changed for a signal impressed on the other control grid. This was known as _variable-mu_ operation, because the \"mu\" (µ) of the tube (its amplification factor, measured as a ratio of plate-to-cathode voltage change over grid-to-cathode voltage change with a constant plate current) could be altered at will by a DC control voltage signal.
 
@@ -153,7 +153,7 @@ If we substitute a tetrode for a triode in this circuit, we will see improvement
 
 ![](media/03326.png){ #fig:03326 width=75% }
 
-However, the tetrode\'s screen may be used for functions other than merely shielding the grid from the plate. It can also be used as another control element, like the grid itself. If a \"tap\" is made on the transformer\'s primary winding, and this tap connected to the screen, the screen will receive a voltage that varies with the signal being amplified (feedback). More specifically, the feedback signal is proportional to the rate-of-change of magnetic flux in the transformer core (dΦ/dt), thus improving the amplifier\'s ability to reproduce the input signal waveform at the speaker terminals and not just in the primary winding of the transformer:
+However, the tetrode's screen may be used for functions other than merely shielding the grid from the plate. It can also be used as another control element, like the grid itself. If a \"tap\" is made on the transformer's primary winding, and this tap connected to the screen, the screen will receive a voltage that varies with the signal being amplified (feedback). More specifically, the feedback signal is proportional to the rate-of-change of magnetic flux in the transformer core (dΦ/dt), thus improving the amplifier's ability to reproduce the input signal waveform at the speaker terminals and not just in the primary winding of the transformer:
 
 ![](media/03327.png){ #fig:03327 width=75% }
 
@@ -175,7 +175,7 @@ Before we can speak meaningfully on these characteristics, we must define severa
 
 ![](media/13038.png){ #fig:13038 width=75% }
 
-The two most basic measures of an amplifying tube\'s characteristics are its amplification factor (µ) and its mutual conductance (g~m~), also known as _transconductance_. Transconductance is defined here just the same as it is for field-effect transistors, another category of voltage-controlled devices. Here are the two equations defining each of these performance characteristics:
+The two most basic measures of an amplifying tube's characteristics are its amplification factor (µ) and its mutual conductance (g~m~), also known as _transconductance_. Transconductance is defined here just the same as it is for field-effect transistors, another category of voltage-controlled devices. Here are the two equations defining each of these performance characteristics:
 
 ![](media/13039.png){ #fig:13039 width=75% }
 
@@ -187,15 +187,15 @@ The astute reader will notice that plate resistance may be determined by dividin
 
 ![](media/13041.png){ #fig:13041 width=75% }
 
-These three performance measures of tubes are subject to change from tube to tube (just as β ratios between two \"identical\" bipolar transistors are never precisely the same) and between different operating conditions. This variability is due partly to the unavoidable nonlinearities of electron tubes and partly due to how they are defined. Even supposing the existence of a perfectly linear tube, it will be impossible for all three of these measures to be constant over the allowable ranges of operation. Consider a tube that _perfectly_ regulates current at any given amount of grid voltage (like a bipolar transistor with an absolutely constant β): that tube\'s plate resistance _must_ vary with plate voltage, because plate current will not change even though plate voltage does.
+These three performance measures of tubes are subject to change from tube to tube (just as β ratios between two \"identical\" bipolar transistors are never precisely the same) and between different operating conditions. This variability is due partly to the unavoidable nonlinearities of electron tubes and partly due to how they are defined. Even supposing the existence of a perfectly linear tube, it will be impossible for all three of these measures to be constant over the allowable ranges of operation. Consider a tube that _perfectly_ regulates current at any given amount of grid voltage (like a bipolar transistor with an absolutely constant β): that tube's plate resistance _must_ vary with plate voltage, because plate current will not change even though plate voltage does.
 
 Nevertheless, tubes were (and are) rated by these values at given operating conditions, and may have their characteristic curves published just like transistors.
 
 ## [[Ionization (gas-filled) tubes]{#xtocid15706708}]
 
-So far, we\'ve explored tubes which are totally \"evacuated\" of all gas and vapor inside their glass envelopes, properly known as _vacuum tubes_. With the addition of certain gases or vapors, however, tubes take on significantly different characteristics, and are able to fulfill certain special roles in electronic circuits.
+So far, we've explored tubes which are totally \"evacuated\" of all gas and vapor inside their glass envelopes, properly known as _vacuum tubes_. With the addition of certain gases or vapors, however, tubes take on significantly different characteristics, and are able to fulfill certain special roles in electronic circuits.
 
-When a high enough voltage is applied across a distance occupied by a gas or vapor, or when that gas or vapor is heated sufficiently, the electrons of those gas molecules will be stripped away from their respective nuclei, creating a condition of _ionization_. Having freed the electrons from their electrostatic bonds to the atoms\' nuclei, they are free to migrate in the form of a current, making the ionized gas a relatively good conductor of electricity. In this state, the gas is more properly referred to as a _plasma_.
+When a high enough voltage is applied across a distance occupied by a gas or vapor, or when that gas or vapor is heated sufficiently, the electrons of those gas molecules will be stripped away from their respective nuclei, creating a condition of _ionization_. Having freed the electrons from their electrostatic bonds to the atoms' nuclei, they are free to migrate in the form of a current, making the ionized gas a relatively good conductor of electricity. In this state, the gas is more properly referred to as a _plasma_.
 
 Ionized gas is not a perfect conductor. As such, the flow of electrons through ionized gas will tend to dissipate energy in the form of heat, thereby helping to keep the gas in a state of ionization. The result of this is a tube that will begin to conduct under certain conditions, then tend to stay in a state of conduction until the applied voltage across the gas and/or the heat-generating current drops to a minimum level.
 
@@ -207,7 +207,7 @@ The simplest type of ionization device is not necessarily a tube at all; rather,
 
 ![](media/03014.png){ #fig:03014 width=75% }
 
-A prime application for spark gaps is in overvoltage protection. Engineered not to ionize, or \"break down\" (begin conducting), with normal system voltage applied across the electrodes, the spark gap\'s function is to conduct in the event of a significant increase in voltage. Once conducting, it will act as a heavy load, holding the system voltage down through its large current draw and subsequent voltage drop along conductors and other series impedances. In a properly engineered system, the spark gap will stop conducting (\"extinguish\") when the system voltage decreases to a normal level, well below the voltage required to initiate conduction.
+A prime application for spark gaps is in overvoltage protection. Engineered not to ionize, or \"break down\" (begin conducting), with normal system voltage applied across the electrodes, the spark gap's function is to conduct in the event of a significant increase in voltage. Once conducting, it will act as a heavy load, holding the system voltage down through its large current draw and subsequent voltage drop along conductors and other series impedances. In a properly engineered system, the spark gap will stop conducting (\"extinguish\") when the system voltage decreases to a normal level, well below the voltage required to initiate conduction.
 
 One major caveat of spark gaps is their significantly finite life. The discharge generated by such a device can be quite violent, and as such will tend to deteriorate the surfaces of the electrodes through pitting and/or melting.
 
@@ -239,7 +239,7 @@ If a regular triode was filled with gas instead of a hard vacuum, it would manif
 
 It should be noted that the schematic shown above is greatly simplified for most purposes and thyratron tube designs. Some thyratrons, for instance, required that the grid voltage switch polarity between their \"on\" and \"off\" states in order to properly work. Also, some thyratrons had more than one grid!
 
-Thyratrons found use in much the same way as SCR\'s find use today: controlling rectified AC to large loads such as motors. Thyratron tubes have been manufactured with different types of gas fillings for different characteristics: inert (chemically non-reactive) gas, hydrogen gas, and mercury (vaporized into a gas form when activated). Deuterium, a rare isotope of hydrogen, was used in some special applications requiring the switching of high voltages.
+Thyratrons found use in much the same way as SCR's find use today: controlling rectified AC to large loads such as motors. Thyratron tubes have been manufactured with different types of gas fillings for different characteristics: inert (chemically non-reactive) gas, hydrogen gas, and mercury (vaporized into a gas form when activated). Deuterium, a rare isotope of hydrogen, was used in some special applications requiring the switching of high voltages.
 
 ## Display tubes{ #sec:xtocid15706709 }
 
@@ -271,7 +271,7 @@ The cathode, amplifier grid, and plate act as a triode to create large changes i
 
 ![](media/03029.png){ #fig:03029 width=75% }
 
-\"Cat-eye\" tubes were never accurate enough to be equipped with a graduated scale as is the case with CRT\'s and electromechanical meter movements, but they served well as null detectors in bridge circuits, and as signal strength indicators in radio tuning circuits. An unfortunate limitation to the \"cat-eye\" tube as a null detector was the fact that it was not directly capable of voltage indication in both polarities.
+\"Cat-eye\" tubes were never accurate enough to be equipped with a graduated scale as is the case with CRT's and electromechanical meter movements, but they served well as null detectors in bridge circuits, and as signal strength indicators in radio tuning circuits. An unfortunate limitation to the \"cat-eye\" tube as a null detector was the fact that it was not directly capable of voltage indication in both polarities.
 
 ## Microwave tubes{ #sec:xtocid157067010 }
 
@@ -311,13 +311,13 @@ Devoting a whole chapter in a modern electronics text to the design and function
 
 In some applications, electron tubes not only continue to see practical use, but perform their respective tasks better than any solid-state device yet invented. In some cases the performance and reliability of electron tube technology is _far_ superior.
 
-In the fields of high-power, high-speed circuit switching, specialized tubes such as hydrogen thyratrons and krytrons are able to switch far larger amounts of current, far faster than any semiconductor device designed to date. The thermal and temporal limits of semiconductor physics place limitations on switching ability that tubes \-- which do not operate on the same principles \-- are exempt from.
+In the fields of high-power, high-speed circuit switching, specialized tubes such as hydrogen thyratrons and krytrons are able to switch far larger amounts of current, far faster than any semiconductor device designed to date. The thermal and temporal limits of semiconductor physics place limitations on switching ability that tubes --- which do not operate on the same principles --- are exempt from.
 
 In high-power microwave transmitter applications, the excellent thermal tolerance of tubes alone secures their dominance over semiconductors. Electron conduction through semiconducting materials is greatly impacted by temperature. Electron conduction through a vacuum is not. As a consequence, the practical thermal limits of semiconductor devices are rather low compared to that of tubes. Being able to operate tubes at far greater temperatures than equivalent semiconductor devices allows tubes to dissipate more thermal energy for a given amount of dissipation area, which makes them smaller and lighter in continuous high power applications.
 
 Another decided advantage of tubes over semiconductor components in high-power applications is their rebuildability. When a large tube fails, it may be disassembled and repaired at far lower cost than the purchase price of a new tube. When a semiconductor component fails, large or small, there is generally no means of repair.
 
-The following photograph shows the front panel of a 1960\'s vintage 5 kW AM radio transmitter. One of two \"Eimac\" brand power tubes can be seen in a recessed area, behind the glass door. According to the station engineer who gave the facility tour, the rebuild cost for such a tube is only \$800: quite inexpensive compared to the cost of a new tube, and still quite reasonable in contrast to the price of a new, comparable semiconductor component!
+The following photograph shows the front panel of a 1960's vintage 5 kW AM radio transmitter. One of two \"Eimac\" brand power tubes can be seen in a recessed area, behind the glass door. According to the station engineer who gave the facility tour, the rebuild cost for such a tube is only \$800: quite inexpensive compared to the cost of a new tube, and still quite reasonable in contrast to the price of a new, comparable semiconductor component!
 
 ![](53002.jpg)
 
@@ -333,7 +333,7 @@ In the area of audio reproduction amplifiers (music studio amplifiers and home e
 
 Having said this, though, there is a wealth of technical literature contrasting tubes against semiconductors for audio power amplifier use, especially in the area of distortion analysis. More than a few competent electrical engineers prefer tube amplifier designs over transistors, and are able to produce experimental evidence in support of their choice. The primary difficulty in quantifying audio system performance is the uncertain response of human hearing. _All_ amplifiers distort their input signal to some degree, especially when overloaded, so the question is which type of amplifier design distorts the least. However, since human hearing is very nonlinear, people do not interpret all types of acoustic distortion equally, and so some amplifiers will sound \"better\" than others even if a quantitative distortion analysis with electronic instruments indicates similar distortion levels. To determine what type of audio amplifier will distort a musical signal \"the least,\" we must regard the human ear and brain as part of the whole acoustical system. Since no complete model yet exists for human auditory response, objective assessment is difficult at best. However, some research indicates that the characteristic distortion of tube amplifier circuits (especially when overloaded) is less objectionable than distortion produced by transistors.
 
-Tubes also possess the distinct advantage of low \"drift\" over a wide range of operating conditions. Unlike semiconductor components, whose barrier voltages, β ratios, bulk resistances, and junction capacitances may change substantially with changes in device temperature and/or other operating conditions, the fundamental characteristics of a vacuum tube remain nearly constant over a wide range in operating conditions, because those characteristics are determined primarily by the physical dimensions of the tube\'s structural elements (cathode, grid(s), and plate) rather than the interactions of subatomic particles in a crystalline lattice.
+Tubes also possess the distinct advantage of low \"drift\" over a wide range of operating conditions. Unlike semiconductor components, whose barrier voltages, β ratios, bulk resistances, and junction capacitances may change substantially with changes in device temperature and/or other operating conditions, the fundamental characteristics of a vacuum tube remain nearly constant over a wide range in operating conditions, because those characteristics are determined primarily by the physical dimensions of the tube's structural elements (cathode, grid(s), and plate) rather than the interactions of subatomic particles in a crystalline lattice.
 
 This is one of the major reasons solid-state amplifier designers typically engineer their circuits to maximize power-efficiency even when it compromises distortion performance, because a power-inefficient amplifier dissipates a lot of energy in the form of waste heat, and transistor characteristics tend to change substantially with temperature. Temperature-induced \"drift\" makes it difficult to stabilize \"Q\" points and other important performance-related measures in an amplifier circuit. Unfortunately, power efficiency and low distortion seem to be mutually exclusive design goals.
 

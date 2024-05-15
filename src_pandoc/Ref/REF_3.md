@@ -133,4 +133,4 @@ Vacuum 20 Air 20 to 75 Porcelain 40 to 200 Paraffin Wax 200 to 300 Transformer O
 
 ## Data { #sec:xtocid15780656 }
 
-Tables of specific resistance and temperature coefficient of resistance for elemental materials (not alloys) were derived from figures found in the 78th edition of the CRC Handbook of Chemistry and Physics. Superconductivity data from Collier\'s Encyclopedia (volume 21, 1968, page 640).
+Tables of specific resistance and temperature coefficient of resistance for elemental materials (not alloys) were derived from figures found in the 78th edition of the CRC Handbook of Chemistry and Physics. Superconductivity data from Collier's Encyclopedia (volume 21, 1968, page 640).

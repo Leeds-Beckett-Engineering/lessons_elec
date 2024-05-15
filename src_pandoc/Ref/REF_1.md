@@ -2,7 +2,7 @@
 
 ## DC circuit equations and laws { #sec:xtocid15777050 }
 
-### Ohm\'s and Joule\'s Laws { #sec:xtocid15777051 }
+### Ohm's and Joule's Laws { #sec:xtocid15777051 }
 
 []{#Ohm's Law} []{#Joule's Law} []{#E, symbol for voltage} []{#I, symbol for current} []{#R, symbol for resistance} []{#P, symbol for power}
 
@@ -12,17 +12,17 @@ NOTE: the symbol \"V\" (\"U\" in Europe) is sometimes used to represent voltage 
 
 \
 
-### Kirchhoff\'s Laws { #sec:xtocid15777052 }
+### Kirchhoff's Laws { #sec:xtocid15777052 }
 
 > _\"The algebraic sum of all voltages in a loop must equal zero.\"_
 >
-> **Kirchhoff\'s Voltage Law (KVL)**
+> **Kirchhoff's Voltage Law (KVL)**
 
 \
 
 > _\"The algebraic sum of all currents entering and exiting a node must equal zero.\"_
 >
-> **Kirchhoff\'s Current Law (KCL)**
+> **Kirchhoff's Current Law (KCL)**
 
 ## Series circuit rules { #sec:xtocid15777053 }
 
@@ -76,7 +76,7 @@ A formula for capacitance in picofarads using practical dimensions:
 
 ![](media/11102.png){ #fig:11102 width=75% }
 
-Wheeler\'s formulas for inductance of air core coils which follow are useful for radio frequency inductors. The following formula for the inductance of a single layer air core solenoid coil is accurate to approximately 1% for 2r/l \< 3. The thick coil formula is 1% accurate when the denominator terms are approximately equal. Wheeler\'s spiral formula is 1% accurate for c\>0.2r. While this is a \"round wire\" formula, it may still be applicable to printed circuit spiral inductors at reduced accuracy.
+Wheeler's formulas for inductance of air core coils which follow are useful for radio frequency inductors. The following formula for the inductance of a single layer air core solenoid coil is accurate to approximately 1% for 2r/l \< 3. The thick coil formula is 1% accurate when the denominator terms are approximately equal. Wheeler's spiral formula is 1% accurate for c\>0.2r. While this is a \"round wire\" formula, it may still be applicable to printed circuit spiral inductors at reduced accuracy.
 
 ![](media/11098.png){ #fig:11098 width=75% }
 
@@ -138,7 +138,7 @@ Time constant in seconds = L/R
 
 \
 
-### Ohm\'s Law for AC { #sec:xtocid157770520 }
+### Ohm's Law for AC { #sec:xtocid157770520 }
 
 []{#Ohm's Law, AC}
 
@@ -230,7 +230,7 @@ NOTE: This equation applies to a non-resistive LC circuit. In circuits containin
 
 **Conversion equivalencies for velocity**
 
-> 1 mile per hour (mi/h) = 88 feet per minute (ft/m) = 1.46667 feet per second (ft/s) = 1.60934 kilometer per hour (km/h) = 0.44704 meter per second (m/s) = 0.868976 knot (knot \-- international)
+> 1 mile per hour (mi/h) = 88 feet per minute (ft/m) = 1.46667 feet per second (ft/s) = 1.60934 kilometer per hour (km/h) = 0.44704 meter per second (m/s) = 0.868976 knot (knot --- international)
 
 \
 
@@ -266,13 +266,13 @@ NOTE: This equation applies to a non-resistive LC circuit. In circuits containin
 
 **Conversion equivalencies for energy or work**
 
-> 1 british thermal unit (BTU \-- \"International Table\") = 251.996 calories (cal \-- \"International Table\") = 1055.06 joules (J) = 1055.06 watt-seconds (W-s) = 0.293071 watt-hour (W-hr) = 1.05506 x 10^10^ ergs (erg) = 778.169 foot-pound-force (ft-lbf)
+> 1 british thermal unit (BTU --- \"International Table\") = 251.996 calories (cal --- \"International Table\") = 1055.06 joules (J) = 1055.06 watt-seconds (W-s) = 0.293071 watt-hour (W-hr) = 1.05506 x 10^10^ ergs (erg) = 778.169 foot-pound-force (ft-lbf)
 
 \
 
 **Conversion equivalencies for power**
 
-> 1 horsepower (hp \-- 550 ft-lbf/s) = 745.7 watts (W) = 2544.43 british thermal units per hour (BTU/hr) = 0.0760181 boiler horsepower (hp \-- boiler)
+> 1 horsepower (hp --- 550 ft-lbf/s) = 745.7 watts (W) = 2544.43 british thermal units per hour (BTU/hr) = 0.0760181 boiler horsepower (hp --- boiler)
 
 \
 
@@ -298,7 +298,7 @@ Our final (converted) answer is 15898.68 liters per day.
 
 ## Data { #sec:xtocid157770526 }
 
-Conversion factors were found in the 78^th^ edition of the _CRC Handbook of Chemistry and Physics_, and the 3^rd^ edition of Bela Liptak\'s _Instrument Engineers\' Handbook \-- Process Measurement and Analysis_.
+Conversion factors were found in the 78^th^ edition of the _CRC Handbook of Chemistry and Physics_, and the 3^rd^ edition of Bela Liptak's _Instrument Engineers' Handbook --- Process Measurement and Analysis_.
 
 ## Contributors { #sec:xtocid157770527 }
 

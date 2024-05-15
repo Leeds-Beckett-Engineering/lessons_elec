@@ -2,7 +2,7 @@
 
 ---
 
-# Lessons In Electric Circuits \-- Volume III
+# Lessons In Electric Circuits --- Volume III
 
 # Chapter 6
 
@@ -10,22 +10,22 @@
 
 - [[Introduction]](#xtocid15706070)
 - [[Depletion-type IGFETs]](#xtocid15706071)
-- [[Enhancement-type IGFETs \-- PENDING]](#xtocid15706072)
-- [[Active-mode operation \-- PENDING]](#xtocid15706073)
-- [[The common-source amplifier \-- PENDING]](#xtocid15706074)
-- [[The common-drain amplifier \-- PENDING]](#xtocid15706075)
-- [[The common-gate amplifier \-- PENDING]](#xtocid15706076)
-- [[Biasing techniques \-- PENDING]](#xtocid15706077)
-- [[Transistor ratings and packages \-- PENDING]](#xtocid15706078)
-- [[IGFET quirks \-- PENDING]](#xtocid15706079)
-- [[MESFETs \-- PENDING]](#xtocid157060710)
+- [[Enhancement-type IGFETs --- PENDING]](#xtocid15706072)
+- [[Active-mode operation --- PENDING]](#xtocid15706073)
+- [[The common-source amplifier --- PENDING]](#xtocid15706074)
+- [[The common-drain amplifier --- PENDING]](#xtocid15706075)
+- [[The common-gate amplifier --- PENDING]](#xtocid15706076)
+- [[Biasing techniques --- PENDING]](#xtocid15706077)
+- [[Transistor ratings and packages --- PENDING]](#xtocid15706078)
+- [[IGFET quirks --- PENDING]](#xtocid15706079)
+- [[MESFETs --- PENDING]](#xtocid157060710)
 - [[IGBTs]](#xtocid157060711)
 
 **\*\*\* INCOMPLETE \*\*\***
 
 ## Introduction{ #sec:xtocid15706070 }
 
-As was stated in the last chapter, there is more than one type of field-effect transistor. The junction field-effect transistor, or JFET, uses voltage applied across a reverse-biased PN junction to control the width of that junction\'s depletion region, which then controls the conductivity of a semiconductor channel through which the controlled current moves. Another type of field-effect device \-- the insulated gate field-effect transistor, or IGFET \-- exploits a similar principle of a depletion region controlling conductivity through a semiconductor channel, but it differs primarily from the JFET in that there is no _direct_ connection between the gate lead and the semiconductor material itself. Rather, the gate lead is insulated from the transistor body by a thin barrier, hence the term _insulated gate_. This insulating barrier acts like the dielectric layer of a capacitor, and allows gate-to-source voltage to influence the depletion region electrostatically rather than by direct connection.
+As was stated in the last chapter, there is more than one type of field-effect transistor. The junction field-effect transistor, or JFET, uses voltage applied across a reverse-biased PN junction to control the width of that junction's depletion region, which then controls the conductivity of a semiconductor channel through which the controlled current moves. Another type of field-effect device --- the insulated gate field-effect transistor, or IGFET --- exploits a similar principle of a depletion region controlling conductivity through a semiconductor channel, but it differs primarily from the JFET in that there is no _direct_ connection between the gate lead and the semiconductor material itself. Rather, the gate lead is insulated from the transistor body by a thin barrier, hence the term _insulated gate_. This insulating barrier acts like the dielectric layer of a capacitor, and allows gate-to-source voltage to influence the depletion region electrostatically rather than by direct connection.
 
 In addition to a choice of N-channel versus P-channel design, IGFETs come in two major types: _enhancement_ and _depletion_. The depletion type is more closely related to the JFET, so we will begin our study of IGFETs with it.
 
@@ -43,15 +43,15 @@ Notice also how there are four connections to the IGFET. In practice, the _subst
 
 ![](media/03179.png){ #fig:03179 width=75% }
 
-With source and substrate common to each other, the N and P layers of the IGFET end up being directly connected to each other through the outside wire. This connection prevents any voltage from being impressed across the PN junction. As a result, a depletion region exists between the two materials, but it can never be expanded or collapsed. JFET operation is based on the expansion of the PN junction\'s depletion region, but here in the IGFET that cannot happen, so IGFET operation must be based on a different effect.
+With source and substrate common to each other, the N and P layers of the IGFET end up being directly connected to each other through the outside wire. This connection prevents any voltage from being impressed across the PN junction. As a result, a depletion region exists between the two materials, but it can never be expanded or collapsed. JFET operation is based on the expansion of the PN junction's depletion region, but here in the IGFET that cannot happen, so IGFET operation must be based on a different effect.
 
-Indeed it is, for when a controlling voltage is applied between gate and source, the conductivity of the channel is changed as a result of the depletion region _moving_ closer to or further away from the gate. In other words, the channel\'s effective width changes just as with the JFET, but this change in channel width is due to depletion region _displacement_ rather than depletion region _expansion_.
+Indeed it is, for when a controlling voltage is applied between gate and source, the conductivity of the channel is changed as a result of the depletion region _moving_ closer to or further away from the gate. In other words, the channel's effective width changes just as with the JFET, but this change in channel width is due to depletion region _displacement_ rather than depletion region _expansion_.
 
-In an N-channel IGFET, a controlling voltage applied positive (+) to the gate and negative (-) to the source has the effect of repelling the PN junction\'s depletion region, expanding the N-type channel and increasing conductivity:
+In an N-channel IGFET, a controlling voltage applied positive (+) to the gate and negative (-) to the source has the effect of repelling the PN junction's depletion region, expanding the N-type channel and increasing conductivity:
 
 ![](media/03180.png){ #fig:03180 width=75% }
 
-Reversing the controlling voltage\'s polarity has the opposite effect, attracting the depletion region and narrowing the channel, consequently reducing channel conductivity:
+Reversing the controlling voltage's polarity has the opposite effect, attracting the depletion region and narrowing the channel, consequently reducing channel conductivity:
 
 ![](media/03181.png){ #fig:03181 width=75% }
 
@@ -97,7 +97,7 @@ A few SPICE analyses will demonstrate the current-regulating behavior of D-type 
 
 \
 
-As expected for any transistor, the controlled current holds steady at a regulated value over a wide range of power supply voltages. In this case, that regulated point is 10 µA (1.000E-05). Now let\'s see what happens when we apply a negative voltage to the gate (with reference to the source) and sweep the power supply over the same range of 0 to 50 volts:
+As expected for any transistor, the controlled current holds steady at a regulated value over a wide range of power supply voltages. In this case, that regulated point is 10 µA (1.000E-05). Now let's see what happens when we apply a negative voltage to the gate (with reference to the source) and sweep the power supply over the same range of 0 to 50 volts:
 
 ![](media/03186.png){ #fig:03186 width=75% }
 
@@ -119,7 +119,7 @@ As expected for any transistor, the controlled current holds steady at a regulat
 
 \
 
-Not surprisingly, the drain current is now regulated at a lower value of 2.5 µA (down from 10 µA with zero input voltage). Now let\'s apply an input voltage of the other polarity, to _enhance_ the IGFET:
+Not surprisingly, the drain current is now regulated at a lower value of 2.5 µA (down from 10 µA with zero input voltage). Now let's apply an input voltage of the other polarity, to _enhance_ the IGFET:
 
 ![](media/03187.png){ #fig:03187 width=75% }
 
@@ -172,63 +172,63 @@ Plotting a set of characteristic curves for the IGFET, we see a pattern not unli
 -
 -
 
-## [[Enhancement-type IGFETs \-- PENDING]{#xtocid15706072}]
+## [[Enhancement-type IGFETs --- PENDING]{#xtocid15706072}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[Active-mode operation \-- PENDING]{#xtocid15706073}]
+## [[Active-mode operation --- PENDING]{#xtocid15706073}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[The common-source amplifier \-- PENDING]{#xtocid15706074}]
+## [[The common-source amplifier --- PENDING]{#xtocid15706074}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[The common-drain amplifier \-- PENDING]{#xtocid15706075}]
+## [[The common-drain amplifier --- PENDING]{#xtocid15706075}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[The common-gate amplifier \-- PENDING]{#xtocid15706076}]
+## [[The common-gate amplifier --- PENDING]{#xtocid15706076}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[Biasing techniques \-- PENDING]{#xtocid15706077}]
+## [[Biasing techniques --- PENDING]{#xtocid15706077}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[Transistor ratings and packages \-- PENDING]{#xtocid15706078}]
+## [[Transistor ratings and packages --- PENDING]{#xtocid15706078}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[IGFET quirks \-- PENDING]{#xtocid15706079}]
+## [[IGFET quirks --- PENDING]{#xtocid15706079}]
 
 - **REVIEW:**
 -
 -
 -
 
-## [[MESFETs \-- PENDING]{#xtocid157060710}]
+## [[MESFETs --- PENDING]{#xtocid157060710}]
 
 - **REVIEW:**
 -

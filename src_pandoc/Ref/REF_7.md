@@ -4,27 +4,27 @@
 
 []{#<i>Electronics Workbench</i>} []{#SPICE}
 
-> _\"With Electronics Workbench, you can create circuit schematics that look just the same as those you\'re already familiar with on paper \-- plus you can flip the power switch so the schematic behaves like a real circuit. With other electronics simulators, you may have to type in SPICE node lists as text files \-- an abstract representation of a circuit beyond the capabilities of all but advanced electronics engineers.\"_
+> _\"With Electronics Workbench, you can create circuit schematics that look just the same as those you're already familiar with on paper --- plus you can flip the power switch so the schematic behaves like a real circuit. With other electronics simulators, you may have to type in SPICE node lists as text files --- an abstract representation of a circuit beyond the capabilities of all but advanced electronics engineers.\"_
 >
-> **(Electronics Workbench User\'s guide \-- version 4, page 7)**
+> **(Electronics Workbench User's guide --- version 4, page 7)**
 
 This introduction comes from the operating manual for a circuit simulation program called _Electronics Workbench_. Using a graphic interface, it allows the user to draw a circuit schematic and then have the computer analyze that circuit, displaying the results in graphic form. It is a very valuable analysis tool, but it has its shortcomings. For one, it and other graphic programs like it tend to be unreliable when analyzing complex circuits, as the translation from picture to computer code is not quite the exact science we would want it to be (yet). Secondly, due to its graphics requirements, it tends to need a significant amount of computational \"horsepower\" to run, and a computer operating system that supports graphics. Thirdly, these graphic programs can be costly.
 
-However, underneath the graphics skin of _Electronics Workbench_ lies a robust (and free!) program called SPICE, which analyzes a circuit based on a text-file description of the circuit\'s components and connections. What the user pays for with _Electronics Workbench_ and other graphic circuit analysis programs is the convenient \"point and click\" interface, while SPICE does the actual mathematical analysis.
+However, underneath the graphics skin of _Electronics Workbench_ lies a robust (and free!) program called SPICE, which analyzes a circuit based on a text-file description of the circuit's components and connections. What the user pays for with _Electronics Workbench_ and other graphic circuit analysis programs is the convenient \"point and click\" interface, while SPICE does the actual mathematical analysis.
 
-By itself, SPICE does not require a graphic interface and demands little in system resources. It is also very reliable. The makers of Electronic Workbench would like you to think that using SPICE in its native text mode is a task suited for rocket scientists, but I\'m writing this to prove them wrong. SPICE is fairly easy to use for simple circuits, and its non-graphic interface actually lends itself toward the analysis of circuits that can be difficult to draw. I think it was the programming expert Donald Knuth who quipped, \"What you see is all you get\" when it comes to computer applications. Graphics may look more attractive, but abstracted interfaces (text) are actually more efficient.
+By itself, SPICE does not require a graphic interface and demands little in system resources. It is also very reliable. The makers of Electronic Workbench would like you to think that using SPICE in its native text mode is a task suited for rocket scientists, but I'm writing this to prove them wrong. SPICE is fairly easy to use for simple circuits, and its non-graphic interface actually lends itself toward the analysis of circuits that can be difficult to draw. I think it was the programming expert Donald Knuth who quipped, \"What you see is all you get\" when it comes to computer applications. Graphics may look more attractive, but abstracted interfaces (text) are actually more efficient.
 
-This document is not intended to be an exhaustive tutorial on how to use SPICE. I\'m merely trying to show the interested user how to apply it to the analysis of simple circuits, as an alternative to proprietary (\$\$\$) and buggy programs. Once you learn the basics, there are other tutorials better suited to take you further. Using SPICE \-- a program originally intended to develop integrated circuits \-- to analyze some of the really simple circuits showcased here may seem a bit like cutting butter with a chain saw, but it works!
+This document is not intended to be an exhaustive tutorial on how to use SPICE. I'm merely trying to show the interested user how to apply it to the analysis of simple circuits, as an alternative to proprietary (\$\$\$) and buggy programs. Once you learn the basics, there are other tutorials better suited to take you further. Using SPICE --- a program originally intended to develop integrated circuits --- to analyze some of the really simple circuits showcased here may seem a bit like cutting butter with a chain saw, but it works!
 
 []{#SPICE2g6}
 
-All options and examples have been tested on SPICE version 2g6 on both MS-DOS and Linux operating systems. As far as I know, I\'m not using features specific to version 2g6, so these simple functions should work on most versions of SPICE.
+All options and examples have been tested on SPICE version 2g6 on both MS-DOS and Linux operating systems. As far as I know, I'm not using features specific to version 2g6, so these simple functions should work on most versions of SPICE.
 
 ## History of SPICE { #sec:xtocid15789291 }
 
 SPICE is a computer program designed to simulate analog electronic circuits. It original intent was for the development of integrated circuits, from which it derived its name: **S**imulation **P**rogram with **I**ntegrated **C**ircuit **E**mphasis.
 
-The origin of SPICE traces back to another circuit simulation program called CANCER. Developed by professor Ronald Rohrer of U.C. Berkeley along with some of his students in the late 1960\'s, CANCER continued to be improved through the early 1970\'s. When Rohrer left Berkeley, CANCER was re-written and re-named to SPICE, released as version 1 to the public domain in May of 1972. Version 2 of SPICE was released in 1975 (version 2g6 \-- the version used in this book \-- is a minor revision of this 1975 release). Instrumental in the decision to release SPICE as a public-domain computer program was professor Donald Pederson of Berkeley, who believed that all significant technical progress happens when information is freely shared. I for one thank him for his vision.
+The origin of SPICE traces back to another circuit simulation program called CANCER. Developed by professor Ronald Rohrer of U.C. Berkeley along with some of his students in the late 1960's, CANCER continued to be improved through the early 1970's. When Rohrer left Berkeley, CANCER was re-written and re-named to SPICE, released as version 1 to the public domain in May of 1972. Version 2 of SPICE was released in 1975 (version 2g6 --- the version used in this book --- is a minor revision of this 1975 release). Instrumental in the decision to release SPICE as a public-domain computer program was professor Donald Pederson of Berkeley, who believed that all significant technical progress happens when information is freely shared. I for one thank him for his vision.
 
 []{#FORTRAN, computer language} []{#C, computer language}
 
@@ -36,9 +36,9 @@ Despite the additional power of version 3, I have chosen to use version 2g6 thro
 
 []{#Programming, SPICE} []{#SPICE programming}
 
-Programming a circuit simulation with SPICE is much like programming in any other computer language: you must type the commands as text in a file, save that file to the computer\'s hard drive, and then process the contents of that file with a program (compiler or interpreter) that understands such commands.
+Programming a circuit simulation with SPICE is much like programming in any other computer language: you must type the commands as text in a file, save that file to the computer's hard drive, and then process the contents of that file with a program (compiler or interpreter) that understands such commands.
 
-In an interpreted computer language, the computer holds a special program called an _interpreter_ that translates the program you wrote (the so-called _source file_) into the computer\'s own language, on the fly, as its being executed:
+In an interpreted computer language, the computer holds a special program called an _interpreter_ that translates the program you wrote (the so-called _source file_) into the computer's own language, on the fly, as its being executed:
 
 []{#Interpreter}
 
@@ -47,7 +47,7 @@ In an interpreted computer language, the computer holds a special program called
 \
 []{#Compiler}
 
-In a compiled computer language, the program you wrote is translated all at once into the computer\'s own language by a special program called a _compiler_. After the program you\'ve written has been \"compiled,\" the resulting _executable_ file needs no further translation to be understood directly by the computer. It can now be \"run\" on a computer whether or not compiler software has been installed on that computer:
+In a compiled computer language, the program you wrote is translated all at once into the computer's own language by a special program called a _compiler_. After the program you've written has been \"compiled,\" the resulting _executable_ file needs no further translation to be understood directly by the computer. It can now be \"run\" on a computer whether or not compiler software has been installed on that computer:
 
 ![](media/01042.png){ #fig:01042 width=75% }
 
@@ -57,18 +57,18 @@ SPICE is an interpreted language. In order for a computer to be able to understa
 
 []{#FORTRAN, computer language} []{#BASIC, computer language} []{#PASCAL, computer language} []{#Netlist, SPICE}
 
-SPICE source files are commonly referred to as \"netlists,\" although they are sometimes known as \"decks\" with each line in the file being called a \"card.\" Cute, don\'t you think? Netlists are created by a person like yourself typing instructions line-by-line using a word processor or text editor. Text editors are much preferred over word processors for any type of computer programming, as they produce pure ASCII text with no special embedded codes for text highlighting (like _italic_ or **boldface** fonts), which are uninterpretable by interpreter and compiler software.
+SPICE source files are commonly referred to as \"netlists,\" although they are sometimes known as \"decks\" with each line in the file being called a \"card.\" Cute, don't you think? Netlists are created by a person like yourself typing instructions line-by-line using a word processor or text editor. Text editors are much preferred over word processors for any type of computer programming, as they produce pure ASCII text with no special embedded codes for text highlighting (like _italic_ or **boldface** fonts), which are uninterpretable by interpreter and compiler software.
 
 As in general programming, the source file you create for SPICE must follow certain conventions of programming. It is a computer language in itself, albeit a simple one. Having programmed in BASIC and C/C++, and having some experience reading PASCAL and FORTRAN programs, it is my opinion that the language of SPICE is much simpler than any of these. It is about the same complexity as a markup language such as HTML, perhaps less so.
 
-There is a cycle of steps to be followed in using SPICE to analyze a circuit. The cycle starts when you first invoke the text editing program and make your first draft of the netlist. The next step is to run SPICE on that new netlist and see what the results are. If you are a novice user of SPICE, your first attempts at creating a good netlist will be fraught with small errors of syntax. Don\'t worry \-- as every computer programmer knows, proficiency comes with lots of practice. If your trial run produces error messages or results that are obviously incorrect, you need to re-invoke the text editing program and modify the netlist. After modifying the netlist, you need to run SPICE again and check the results. The sequence, then, looks something like this:
+There is a cycle of steps to be followed in using SPICE to analyze a circuit. The cycle starts when you first invoke the text editing program and make your first draft of the netlist. The next step is to run SPICE on that new netlist and see what the results are. If you are a novice user of SPICE, your first attempts at creating a good netlist will be fraught with small errors of syntax. Don't worry --- as every computer programmer knows, proficiency comes with lots of practice. If your trial run produces error messages or results that are obviously incorrect, you need to re-invoke the text editing program and modify the netlist. After modifying the netlist, you need to run SPICE again and check the results. The sequence, then, looks something like this:
 
 - Compose a new netlist with a text editing program. Save that netlist to a file with a name of your choice.
 - Run SPICE on that netlist and observe the results.
 - If the results contain errors, start up the text editing program again and modify the netlist.
 - Run SPICE again and observe the new results.
 - If there are still errors in the output of SPICE, re-edit the netlist again with the text editing program. Repeat this cycle of edit/run as many times as necessary until you are getting the desired results.
-- Once you\'ve \"debugged\" your netlist and are getting good results, run SPICE again, only this time redirecting the output to a new file instead of just observing it on the computer screen.
+- Once you've \"debugged\" your netlist and are getting good results, run SPICE again, only this time redirecting the output to a new file instead of just observing it on the computer screen.
 - Start up a text editing program _or_ a word processor program and open the SPICE output file you just created. Modify that file to suit your formatting needs and either save those changes to disk and/or print them out on paper.
 
 To \"run\" a SPICE \"program,\" you need to type in a command at a terminal prompt interface, such as that found in MS-DOS, UNIX, or the MS-Windows DOS prompt option:
@@ -79,9 +79,9 @@ To \"run\" a SPICE \"program,\" you need to type in a command at a terminal prom
 
 \
 
-The word \"spice\" invokes the SPICE interpreting program (providing that the SPICE software has been installed on the computer!), the \"\<\" symbol redirects the contents of the source file to the SPICE interpreter, and `example.cir` is the name of the source file for this circuit example. The file extension \"`.cir`\" is not mandatory; I have seen \"`.inp`\" (for \"input\") and just plain \"`.txt`\" work well, too. It will even work when the netlist file has no extension. SPICE doesn\'t care what you name it, so long as it has a name compatible with the filesystem of your computer (for old MS-DOS machines, for example, the filename must be no more than 8 characters in length, with a 3 character extension, and no spaces or other non-alphanumerical characters).
+The word \"spice\" invokes the SPICE interpreting program (providing that the SPICE software has been installed on the computer!), the \"\<\" symbol redirects the contents of the source file to the SPICE interpreter, and `example.cir` is the name of the source file for this circuit example. The file extension \"`.cir`\" is not mandatory; I have seen \"`.inp`\" (for \"input\") and just plain \"`.txt`\" work well, too. It will even work when the netlist file has no extension. SPICE doesn't care what you name it, so long as it has a name compatible with the filesystem of your computer (for old MS-DOS machines, for example, the filename must be no more than 8 characters in length, with a 3 character extension, and no spaces or other non-alphanumerical characters).
 
-When this command is typed in, SPICE will read the contents of the `example.cir` file, analyze the circuit specified by that file, and send a text report to the computer terminal\'s standard output (usually the screen, where you can see it scroll by). A typical SPICE output is several screens worth of information, so you might want to look it over with a slight modification of the command:
+When this command is typed in, SPICE will read the contents of the `example.cir` file, analyze the circuit specified by that file, and send a text report to the computer terminal's standard output (usually the screen, where you can see it scroll by). A typical SPICE output is several screens worth of information, so you might want to look it over with a slight modification of the command:
 
 \
 
@@ -89,7 +89,7 @@ When this command is typed in, SPICE will read the contents of the `example.cir`
 
 \
 
-This alternative \"pipes\" the text output of SPICE to the \"more\" utility, which allows only one page to be displayed at a time. What this means (in English) is that the text output of SPICE is halted after one screen-full, and waits until the user presses a keyboard key to display the next screen-full of text. If you\'re just testing your example circuit file and want to check for any errors, this is a good way to do it.
+This alternative \"pipes\" the text output of SPICE to the \"more\" utility, which allows only one page to be displayed at a time. What this means (in English) is that the text output of SPICE is halted after one screen-full, and waits until the user presses a keyboard key to display the next screen-full of text. If you're just testing your example circuit file and want to check for any errors, this is a good way to do it.
 
 \
 
@@ -97,11 +97,11 @@ This alternative \"pipes\" the text output of SPICE to the \"more\" utility, whi
 
 \
 
-This second alternative (above) redirects the text output of SPICE to another file, called `example.txt`, where it can be viewed or printed. This option corresponds to the last step in the development cycle listed earlier. It is recommended by this author that you use this technique of \"redirection\" to a text file only after you\'ve proven your example circuit netlist to work well, so that you don\'t waste time invoking a text editor just to see the output during the stages of \"debugging.\"
+This second alternative (above) redirects the text output of SPICE to another file, called `example.txt`, where it can be viewed or printed. This option corresponds to the last step in the development cycle listed earlier. It is recommended by this author that you use this technique of \"redirection\" to a text file only after you've proven your example circuit netlist to work well, so that you don't waste time invoking a text editor just to see the output during the stages of \"debugging.\"
 
 Once you have a SPICE output stored in a `.txt` file, you can use a text editor or (better yet!) a word processor to edit the output, deleting any unnecessary banners and messages, even specifying alternative fonts to highlight the headings and/or data for a more polished appearance. Then, of course, you can print the output to paper if you so desire. Being that the direct SPICE output is plain ASCII text, such a file will be universally interpretable on any computer whether SPICE is installed on it or not. Also, the plain text format ensures that the file will be very small compared to the graphic screen-shot files generated by \"point-and-click\" simulators.
 
-The netlist file format required by SPICE is quite simple. A netlist file is nothing more than a plain ASCII text file containing multiple lines of text, each line describing either a circuit component or special SPICE command. Circuit architecture is specified by assigning numbers to each component\'s connection points in each line, connections between components designated by common numbers. Examine the following example circuit diagram and its corresponding SPICE file. Please bear in mind that the circuit diagram exists only to make the simulation easier for human beings to understand. SPICE only understands netlists:
+The netlist file format required by SPICE is quite simple. A netlist file is nothing more than a plain ASCII text file containing multiple lines of text, each line describing either a circuit component or special SPICE command. Circuit architecture is specified by assigning numbers to each component's connection points in each line, connections between components designated by common numbers. Examine the following example circuit diagram and its corresponding SPICE file. Please bear in mind that the circuit diagram exists only to make the simulation easier for human beings to understand. SPICE only understands netlists:
 
 ![](media/01004.png){ #fig:01004 width=75% }
 
@@ -127,7 +127,7 @@ Each line of the source file shown above is explained here:
 
 Electrically common points (or \"nodes\") in a SPICE circuit description share common numbers, much in the same way that wires connecting common points in a large circuit typically share common wire labels.
 
-To simulate this circuit, the user would type those six lines of text on a text editor and save them as a file with a unique name (such as `example.cir`). Once the netlist is composed and saved to a file, the user then processes that file with one of the command-line statements shown earlier (`spice < example.cir`), and will receive this text output on their computer\'s screen:
+To simulate this circuit, the user would type those six lines of text on a text editor and save them as a file with a unique name (such as `example.cir`). Once the netlist is composed and saved to a file, the user then processes that file with one of the command-line statements shown earlier (`spice < example.cir`), and will receive this text output on their computer's screen:
 
 \
 
@@ -171,11 +171,11 @@ To simulate this circuit, the user would type those six lines of text on a text 
 
 \
 
-SPICE begins by printing the time, date, and version used at the top of the output. It then lists the input parameters (the lines of the source file), followed by a display of DC voltage readings from each node (reference number) to ground (always reference number 0). This is followed by a list of current readings through each voltage source (in this case there\'s only one, v1). Finally, the total power dissipation and computation time in seconds is printed.
+SPICE begins by printing the time, date, and version used at the top of the output. It then lists the input parameters (the lines of the source file), followed by a display of DC voltage readings from each node (reference number) to ground (always reference number 0). This is followed by a list of current readings through each voltage source (in this case there's only one, v1). Finally, the total power dissipation and computation time in seconds is printed.
 
 All output values provided by SPICE are displayed in scientific notation.
 
-The SPICE output listing shown above is a little verbose for most peoples\' taste. For a final presentation, it might be nice to trim all the unnecessary text and leave only what matters. Here is a sample of that same output, redirected to a text file (`spice < example.cir > example.txt`), then trimmed down judiciously with a text editor for final presentation and printed:
+The SPICE output listing shown above is a little verbose for most peoples' taste. For a final presentation, it might be nice to trim all the unnecessary text and leave only what matters. Here is a sample of that same output, redirected to a text file (`spice < example.cir > example.txt`), then trimmed down judiciously with a text editor for final presentation and printed:
 
 \
 
@@ -207,13 +207,13 @@ One of the very nice things about SPICE is that both input and output formats ar
 
 ## [[The command-line interface]{#xtocid15789293}]{.underline}
 
-If you\'ve used DOS or UNIX operating systems before in a command-line shell environment, you may wonder why we have to use the \"\<\" symbol between the word \"spice\" and the name of the netlist file to be interpreted. Why not just enter the file name as the first argument to the command \"spice\" as we do when we invoke the text editor? The answer is that SPICE has the option of an _interactive_ mode, whereby each line of the netlist can be interpreted as it is entered through the computer\'s Standard Input (stdin). If you simple type \"spice\" at the prompt and press **\[Enter\]**, SPICE will begin to interpret anything you type in to it (live).
+If you've used DOS or UNIX operating systems before in a command-line shell environment, you may wonder why we have to use the \"\<\" symbol between the word \"spice\" and the name of the netlist file to be interpreted. Why not just enter the file name as the first argument to the command \"spice\" as we do when we invoke the text editor? The answer is that SPICE has the option of an _interactive_ mode, whereby each line of the netlist can be interpreted as it is entered through the computer's Standard Input (stdin). If you simple type \"spice\" at the prompt and press **\[Enter\]**, SPICE will begin to interpret anything you type in to it (live).
 
-For most applications, its nice to save your netlist work in a separate file and then let SPICE interpret that file when you\'re ready. This is the way I encourage SPICE to be used, and so this is the way its presented in this lesson. In order to use SPICE this way in a command-line environment, we need to use the \"\<\" redirection symbol to direct the contents of your netlist file to Standard Input (stdin), which SPICE can then process.
+For most applications, its nice to save your netlist work in a separate file and then let SPICE interpret that file when you're ready. This is the way I encourage SPICE to be used, and so this is the way its presented in this lesson. In order to use SPICE this way in a command-line environment, we need to use the \"\<\" redirection symbol to direct the contents of your netlist file to Standard Input (stdin), which SPICE can then process.
 
 ## Circuit components { #sec:xtocid15789294 }
 
-Remember that this tutorial is not exhaustive by any means, and that all descriptions for elements in the SPICE language are documented here in condensed form. SPICE is a very capable piece of software with lots of options, and I\'m only going to document a few of them.
+Remember that this tutorial is not exhaustive by any means, and that all descriptions for elements in the SPICE language are documented here in condensed form. SPICE is a very capable piece of software with lots of options, and I'm only going to document a few of them.
 
 _All_ components in a SPICE source file are primarily identified by the first letter in each respective line. Characters following the identifying letter are used to distinguish one component of a certain type from another of the same type (r1, r2, r3, rload, rpullup, etc.), and need not follow any particular naming convention, so long as no more than eight characters are used in both the component identifying letter and the distinguishing name.
 
@@ -272,7 +272,7 @@ The unit (ohms, volts, farads, henrys, etc.) is automatically determined by the 
     Example 1:     c1 12 33 10u
     Example 2:     c1 12 33 10u ic=3.5
 
-**Comments:** The \"initial condition\" (`ic=`) variable is the capacitor\'s voltage in units of _volts_ at the start of DC analysis. It is an optional value, with the starting voltage assumed to be zero if unspecified. Starting current values for capacitors are interpreted by SPICE only if the `.tran` analysis option is invoked (with the \"`uic`\" option).
+**Comments:** The \"initial condition\" (`ic=`) variable is the capacitor's voltage in units of _volts_ at the start of DC analysis. It is an optional value, with the starting voltage assumed to be zero if unspecified. Starting current values for capacitors are interpreted by SPICE only if the `.tran` analysis option is invoked (with the \"`uic`\" option).
 
 #### [INDUCTORS]{#xtocid15789297}
 
@@ -282,7 +282,7 @@ The unit (ohms, volts, farads, henrys, etc.) is automatically determined by the 
     Example 1:     l1 12 33 133m
     Example 2:     l1 12 33 133m ic=12.7m
 
-**Comments:** The \"initial condition\" (`ic=`) variable is the inductor\'s current in units of _amps_ at the start of DC analysis. It is an optional value, with the starting current assumed to be zero if unspecified. Starting current values for inductors are interpreted by SPICE only if the .tran analysis option is invoked.
+**Comments:** The \"initial condition\" (`ic=`) variable is the inductor's current in units of _amps_ at the start of DC analysis. It is an optional value, with the starting current assumed to be zero if unspecified. Starting current values for inductors are interpreted by SPICE only if the .tran analysis option is invoked.
 
 #### [INDUCTOR COUPLING (transformers)]{#xtocid15789298}
 
@@ -357,7 +357,7 @@ _Parameter definitions:_
 
 **Comments:** The model name _must_ begin with a letter, not a number. If you plan to specify a model for a 1N4003 rectifying diode, for instance, you cannot use \"1n4003\" for the model name. An alternative might be \"m1n4003\" instead.
 
-#### [TRANSISTORS, bipolar junction \-- BJT]{#xtocid157892912}
+#### [TRANSISTORS, bipolar junction --- BJT]{#xtocid157892912}
 
 []{#Transistors, bipolar, SPICE}
 
@@ -467,9 +467,9 @@ _Parameter definitions:_
 
 \
 
-**Comments:** Just as with diodes, the model name given for a particular transistor type _must_ begin with a letter, not a number. That\'s why the examples given above for the 2N2222 and 2N2907 types of BJTs are named \"m2n2222\" and \"q2n2907\" respectively.
+**Comments:** Just as with diodes, the model name given for a particular transistor type _must_ begin with a letter, not a number. That's why the examples given above for the 2N2222 and 2N2907 types of BJTs are named \"m2n2222\" and \"q2n2907\" respectively.
 
-As you can see, SPICE allows for very detailed specification of transistor properties. Many of the properties listed above are well beyond the scope and interest of the beginning electronics student, and aren\'t even useful apart from knowing the equations SPICE uses to model BJT transistors. For those interested in learning more about transistor modeling in SPICE, consult other books, such as Andrei Vladimirescu\'s _The Spice Book_ (ISBN 0-471-60926-9).
+As you can see, SPICE allows for very detailed specification of transistor properties. Many of the properties listed above are well beyond the scope and interest of the beginning electronics student, and aren't even useful apart from knowing the equations SPICE uses to model BJT transistors. For those interested in learning more about transistor modeling in SPICE, consult other books, such as Andrei Vladimirescu's _The Spice Book_ (ISBN 0-471-60926-9).
 
 #### [JFET, junction field-effect transistor]{#xtocid157892913}
 
@@ -541,7 +541,7 @@ Remember that enhancement mode transistors are normally-off devices, and must be
     Example 1:     v1 1 0 ac 12 sin
     Example 2:     v1 1 0 ac 12 240 sin   (12 V ∠ 240o)
 
-**Comments:** This method of specifying AC voltage sources works well if you\'re using multiple sources at different phase angles from each other, but all at the same frequency. If you need to specify sources at different frequencies in the same circuit, you must use the next method!
+**Comments:** This method of specifying AC voltage sources works well if you're using multiple sources at different phase angles from each other, but all at the same frequency. If you need to specify sources at different frequencies in the same circuit, you must use the next method!
 
 \
 
@@ -563,7 +563,7 @@ _Parameter definitions:_
 
 `damping factor` = a figure used to create waveforms of decaying amplitude.
 
-**Comments:** This method of specifying AC voltage sources works well if you\'re using multiple sources at different frequencies from each other. Representing phase shift is tricky, though, necessitating the use of the _delay_ factor.
+**Comments:** This method of specifying AC voltage sources works well if you're using multiple sources at different frequencies from each other. Representing phase shift is tricky, though, necessitating the use of the _delay_ factor.
 
 \
 []{#Voltage sources, DC, SPICE}
@@ -646,7 +646,7 @@ _Parameter definitions:_
     General form:  i[name] [+node] [-node] dc [current]
     Example 1:     i1 1 0 dc 12
 
-**Comments:** Even though the books all say that the first node given for the DC current source is the positive node, that\'s not what I\'ve found to be in practice. In actuality, a DC current source in SPICE pushes current in the same direction as a voltage source (battery) would with its _negative_ node specified first.
+**Comments:** Even though the books all say that the first node given for the DC current source is the positive node, that's not what I've found to be in practice. In actuality, a DC current source in SPICE pushes current in the same direction as a voltage source (battery) would with its _negative_ node specified first.
 
 \
 []{#Current sources, pulse, SPICE}
@@ -737,9 +737,9 @@ Default value for start time is zero. Transient analysis _always_ beings at time
     Example 2:     .plot ac v(3,4) vp(3,4) i(v1) ip(v1)
     Example 3:     .plot tran v(4,5) i(v2)
 
-**Comments:** SPICE can\'t handle more than eight data point requests on a single `.plot` or `.print` card. If requesting more than eight data points, use multiple cards!
+**Comments:** SPICE can't handle more than eight data point requests on a single `.plot` or `.print` card. If requesting more than eight data points, use multiple cards!
 
-Also, here\'s a major caveat when using SPICE version 3: if you\'re performing AC analysis and you ask SPICE to plot an AC voltage as in example #2, the `v(3,4)` command will only output the _real_ component of a rectangular-form complex number! SPICE version 2 outputs the _polar_ magnitude of a complex number: a much more meaningful quantity if only a single quantity is asked for. To coerce SPICE3 to give you polar magnitude, you will have to re-write the `.print` or `.plot` argument as such: `vm(3,4)`.
+Also, here's a major caveat when using SPICE version 3: if you're performing AC analysis and you ask SPICE to plot an AC voltage as in example #2, the `v(3,4)` command will only output the _real_ component of a rectangular-form complex number! SPICE version 2 outputs the _polar_ magnitude of a complex number: a much more meaningful quantity if only a single quantity is asked for. To coerce SPICE3 to give you polar magnitude, you will have to re-write the `.print` or `.plot` argument as such: `vm(3,4)`.
 
 \
 []{#Print output, SPICE}
@@ -751,7 +751,7 @@ Also, here\'s a major caveat when using SPICE version 3: if you\'re performing A
     Example 2:     .print ac v(2,4) i(vinput) vp(2,3)
     Example 3:     .print tran v(4,5) i(v2)
 
-**Comments:** SPICE can\'t handle more than eight data point requests on a single `.plot` or `.print` card. If requesting more than eight data points, use multiple cards!
+**Comments:** SPICE can't handle more than eight data point requests on a single `.plot` or `.print` card. If requesting more than eight data points, use multiple cards!
 
 \
 []{#Analysis, Fourier, SPICE}
@@ -761,7 +761,7 @@ Also, here\'s a major caveat when using SPICE version 3: if you\'re performing A
     General form:  .four [freq] [output1] [output2] . . . [output n]
     Example 1:     .four 60 v(1,2)
 
-**Comments:** The `.four` card relies on the `.tran` card being present somewhere in the deck, with the proper time periods for analysis of adequate cycles. Also, SPICE may \"crash\" if a `.plot` analysis isn\'t done along with the `.four` analysis, even if all `.tran` parameters are technically correct. Finally, the `.four` analysis option only works when the frequency of the AC source is specified in that source\'s card line, and _not_ in an `.ac` analysis option line.
+**Comments:** The `.four` card relies on the `.tran` card being present somewhere in the deck, with the proper time periods for analysis of adequate cycles. Also, SPICE may \"crash\" if a `.plot` analysis isn't done along with the `.four` analysis, even if all `.tran` parameters are technically correct. Finally, the `.four` analysis option only works when the frequency of the AC source is specified in that source's card line, and _not_ in an `.ac` analysis option line.
 
 It helps to include a computation interval variable in the `.tran` card for better analysis precision. A Fourier analysis of the voltage or current specified is performed up to the 9th harmonic, with the \[freq\] specification being the fundamental, or starting frequency of the analysis spectrum.
 
@@ -821,7 +821,7 @@ The \"`numdgt`\" option shown in example 6 specifies the number of significant d
 
 SPICE is a very reliable piece of software, but it does have its little quirks that take some getting used to. By \"quirk\" I mean a demand placed upon the user to write the source file in a particular way in order for it to work without giving error messages. I do _not_ mean any kind of fault with SPICE which would produce erroneous or misleading results: that would be more properly referred to as a \"bug.\" Speaking of bugs, SPICE has a few of them as well.
 
-Some (or all) of these quirks may be unique to SPICE version 2g6, which is the only version I\'ve used extensively. They may have been fixed in later versions.
+Some (or all) of these quirks may be unique to SPICE version 2g6, which is the only version I've used extensively. They may have been fixed in later versions.
 
 ### A good beginning { #sec:xtocid157892918 }
 
@@ -831,7 +831,7 @@ SPICE demands that the source file begin with something other than the first \"c
 
 []{#.end command, SPICE}
 
-SPICE demands that the `.end` line at the end of the source file not be terminated with a linefeed or carriage return character. In other words, when you finish typing \"`.end`\" you should not hit the **\[Enter\]** key on your keyboard. The cursor on your text editor should stop immediately to the right of the \"d\" after the \"`.end`\" and go no further. Failure to heed this quirk will result in a \"_missing .end card_\" error message at the end of the analysis output. The actual circuit analysis is not affected by this error, so I normally ignore the message. However, if you\'re looking to receive a \"perfect\" output, you must pay heed to this idiosyncrasy.
+SPICE demands that the `.end` line at the end of the source file not be terminated with a linefeed or carriage return character. In other words, when you finish typing \"`.end`\" you should not hit the **\[Enter\]** key on your keyboard. The cursor on your text editor should stop immediately to the right of the \"d\" after the \"`.end`\" and go no further. Failure to heed this quirk will result in a \"_missing .end card_\" error message at the end of the analysis output. The actual circuit analysis is not affected by this error, so I normally ignore the message. However, if you're looking to receive a \"perfect\" output, you must pay heed to this idiosyncrasy.
 
 ### Must have a node 0 { #sec:xtocid157892920 }
 
@@ -885,7 +885,7 @@ SPICE cannot handle certain uninterrupted loops of components in a circuit, name
 
 \
 
-The reason SPICE can\'t handle these conditions stems from the way it performs DC analysis: by treating all inductors as shorts and all capacitors as opens. Since short-circuits (0 Ω) and open circuits (infinite resistance) either contain or generate mathematical infinitudes, a computer simply cannot deal with them, and so SPICE will discontinue analysis if any of these conditions occur.
+The reason SPICE can't handle these conditions stems from the way it performs DC analysis: by treating all inductors as shorts and all capacitors as opens. Since short-circuits (0 Ω) and open circuits (infinite resistance) either contain or generate mathematical infinitudes, a computer simply cannot deal with them, and so SPICE will discontinue analysis if any of these conditions occur.
 
 In order to make these component configurations acceptable to SPICE, you must insert resistors of appropriate values into the appropriate places, eliminating the respective short-circuits and open-circuits. If a series resistor is required, choose a very low resistance value. Conversely, if a parallel resistor is required, choose a very high resistance value. For example:
 
@@ -947,7 +947,7 @@ To fix the series capacitor circuit, one of the capacitors must have a resistor 
 
 \
 
-The R~bogus~ value of 9 Tera-ohms provides a DC current path to C~1~ (and around C~2~) without substantially impacting the circuit\'s operation.
+The R~bogus~ value of 9 Tera-ohms provides a DC current path to C~1~ (and around C~2~) without substantially impacting the circuit's operation.
 
 ### Current measurement { #sec:xtocid157892923 }
 
@@ -962,7 +962,7 @@ Although printing or plotting of voltage is quite easy in SPICE, the output of c
 
 \
 
-However, if we wanted to have SPICE measure the _current_ through that capacitor, it wouldn\'t be quite so easy. Currents in SPICE must be specified in relation to a voltage source, not any arbitrary component. For example:
+However, if we wanted to have SPICE measure the _current_ through that capacitor, it wouldn't be quite so easy. Currents in SPICE must be specified in relation to a voltage source, not any arbitrary component. For example:
 
 ![](media/01012.png){ #fig:01012 width=75% }
 
@@ -992,7 +992,7 @@ However, the insertion of an extra resistance into our circuit large enough to d
 
 \
 
-Inserting a \"bogus\" DC voltage source of zero volts doesn\'t affect circuit operation at all, yet it provides a convenient place for SPICE to take a current measurement. Interestingly enough, it doesn\'t matter that V~bogus~ is a DC source when we\'re looking to measure AC current! The fact that SPICE will output an AC current reading is determined by the \"`ac`\" specification in the `.print` card and nothing more.
+Inserting a \"bogus\" DC voltage source of zero volts doesn't affect circuit operation at all, yet it provides a convenient place for SPICE to take a current measurement. Interestingly enough, it doesn't matter that V~bogus~ is a DC source when we're looking to measure AC current! The fact that SPICE will output an AC current reading is determined by the \"`ac`\" specification in the `.print` card and nothing more.
 
 It should also be noted that the way SPICE assigns a polarity to current measurements is a bit odd. Take the following circuit as an example:
 
@@ -1008,7 +1008,7 @@ It should also be noted that the way SPICE assigns a polarity to current measure
 
 \
 
-With 10 volts total voltage and 10 kΩ total resistance, you might expect SPICE to tell you there\'s going to be 1 mA (1e-03) of current through voltage source V~1~, but in actuality SPICE will output a figure of _negative_ 1 mA (-1e-03)! SPICE regards current out of the negative end of a DC voltage source (the normal direction) to be a negative value of current rather than a positive value of current. There are times I\'ll throw in a \"bogus\" voltage source in a DC circuit like this simply to get SPICE to output a _positive_ current value:
+With 10 volts total voltage and 10 kΩ total resistance, you might expect SPICE to tell you there's going to be 1 mA (1e-03) of current through voltage source V~1~, but in actuality SPICE will output a figure of _negative_ 1 mA (-1e-03)! SPICE regards current out of the negative end of a DC voltage source (the normal direction) to be a negative value of current rather than a positive value of current. There are times I'll throw in a \"bogus\" voltage source in a DC circuit like this simply to get SPICE to output a _positive_ current value:
 
 ![](media/01016.png){ #fig:01016 width=75% }
 
@@ -1029,15 +1029,15 @@ Notice how V~bogus~ is positioned so that the circuit current will enter its pos
 
 []{#Analysis, Fourier, SPICE}
 
-When performing a Fourier (frequency-domain) analysis on a waveform, I have found it necessary to either print or plot the waveform using the `.print` or `.plot` cards, respectively. If you don\'t print or plot it, SPICE will pause for a moment during analysis and then abort the job after outputting the \"initial transient solution.\"
+When performing a Fourier (frequency-domain) analysis on a waveform, I have found it necessary to either print or plot the waveform using the `.print` or `.plot` cards, respectively. If you don't print or plot it, SPICE will pause for a moment during analysis and then abort the job after outputting the \"initial transient solution.\"
 
-Also, when analyzing a square wave produced by the \"`pulse`\" source function, you must give the waveform some finite rise and fall time, or else the Fourier analysis results will be incorrect. For some reason, a perfect square wave with zero rise/fall time produces significant levels of _even_ harmonics according to SPICE\'s Fourier analysis option, which is not true for real square waves.
+Also, when analyzing a square wave produced by the \"`pulse`\" source function, you must give the waveform some finite rise and fall time, or else the Fourier analysis results will be incorrect. For some reason, a perfect square wave with zero rise/fall time produces significant levels of _even_ harmonics according to SPICE's Fourier analysis option, which is not true for real square waves.
 
 ## Example circuits and netlists { #sec:xtocid157892925 }
 
 The following circuits are pre-tested netlists for SPICE 2g6, complete with short descriptions when necessary. Feel free to \"copy\" and \"paste\" any of the netlists to your own SPICE source file for analysis and/or modification. My goal here is twofold: to give practical examples of SPICE netlist design to further understanding of SPICE netlist syntax, and to show how simple and compact SPICE netlists can be in analyzing simple circuits.
 
-All output listings for these examples have been \"trimmed\" of extraneous information, giving you the most succinct presentation of the SPICE output as possible. I do this primarily to save space on this document. Typical SPICE outputs contain lots of headers and summary information not necessarily germane to the task at hand. So don\'t be surprised when you run a simulation on your own and find that the output doesn\'t _exactly_ look like what I have shown here!
+All output listings for these examples have been \"trimmed\" of extraneous information, giving you the most succinct presentation of the SPICE output as possible. I do this primarily to save space on this document. Typical SPICE outputs contain lots of headers and summary information not necessarily germane to the task at hand. So don't be surprised when you run a simulation on your own and find that the output doesn't _exactly_ look like what I have shown here!
 
 ### [[Multiple-source DC resistor network, part 1]{#xtocid157892926}]{.underline}
 
@@ -1402,7 +1402,7 @@ The currents through each leg are indicated by the voltage drops across each res
 
 ![](media/01040.png){ #fig:01040 width=75% }
 
-SPICE understands transformers as a set of mutually coupled inductors. Thus, to simulate a transformer in SPICE, you must specify the primary and secondary windings as separate inductors, then instruct SPICE to link them together with a \"`k`\" card specifying the coupling constant. For ideal transformer simulation, the coupling constant would be unity (1). However, SPICE can\'t handle this value, so we use something like 0.999 as the coupling factor.
+SPICE understands transformers as a set of mutually coupled inductors. Thus, to simulate a transformer in SPICE, you must specify the primary and secondary windings as separate inductors, then instruct SPICE to link them together with a \"`k`\" card specifying the coupling constant. For ideal transformer simulation, the coupling constant would be unity (1). However, SPICE can't handle this value, so we use something like 0.999 as the coupling factor.
 
 Note that _all_ winding inductor pairs must be coupled with their own `k` cards in order for the simulation to work properly. For a two-winding transformer, a single `k` card will suffice. For a three-winding transformer, three `k` cards must be specified (to link L~1~ with L~2~, L~2~ with L~3~, and L~1~ with L~3~).
 
@@ -1442,7 +1442,7 @@ In this example, R~bogus0~ is a very low-value resistor, serving to break up the
 
 ![](media/01026.png){ #fig:01026 width=75% }
 
-Diodes, like all semiconductor components in SPICE, must be modeled so that SPICE knows all the nitty-gritty details of how they\'re supposed to work. Fortunately, SPICE comes with a few generic models, and the diode is the most basic. Notice the `.model` card which simply specifies \"`d`\" as the generic diode model for `mod1`. Again, since we\'re plotting the waveforms here, we need to specify all parameters of the AC source in a single card and print/plot all values using the `.tran` option.
+Diodes, like all semiconductor components in SPICE, must be modeled so that SPICE knows all the nitty-gritty details of how they're supposed to work. Fortunately, SPICE comes with a few generic models, and the diode is the most basic. Notice the `.model` card which simply specifies \"`d`\" as the generic diode model for `mod1`. Again, since we're plotting the waveforms here, we need to specify all parameters of the AC source in a single card and print/plot all values using the `.tran` option.
 
 \
 
@@ -1824,7 +1824,7 @@ To simulate an ideal operational amplifier in SPICE, we use a voltage-dependent 
 
 ![](media/01030.png){ #fig:01030 width=75% }
 
-Another example of a SPICE quirk: since the dependent voltage source \"`e`\" isn\'t considered a load to voltage source V~1~, SPICE interprets V~1~ to be open-circuited and will refuse to analyze it. The fix is to connect R~bogus~ in parallel with V~1~ to act as a DC load. Being directly connected across V~1~, the resistance of R~bogus~ is not crucial to the operation of the circuit, so 10 kΩ will work fine. I decided not to sweep the V~1~ input voltage at all in this circuit for the sake of keeping the netlist and output listing simple.
+Another example of a SPICE quirk: since the dependent voltage source \"`e`\" isn't considered a load to voltage source V~1~, SPICE interprets V~1~ to be open-circuited and will refuse to analyze it. The fix is to connect R~bogus~ in parallel with V~1~ to act as a DC load. Being directly connected across V~1~, the resistance of R~bogus~ is not crucial to the operation of the circuit, so 10 kΩ will work fine. I decided not to sweep the V~1~ input voltage at all in this circuit for the sake of keeping the netlist and output listing simple.
 
 \
 

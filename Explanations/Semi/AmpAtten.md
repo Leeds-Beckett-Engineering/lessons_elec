@@ -2,11 +2,11 @@
 
 ## Amplifiers{ #sec:xtocid15698972 }
 
-The practical benefit of active devices is their _amplifying_ ability. Whether the device in question be voltage-controlled or current-controlled, the amount of power required of the controlling signal is typically far less than the amount of power available in the controlled current. In other words, an active device doesn\'t just allow electricity to control electricity; it allows a _small_ amount of electricity to control a _large_ amount of electricity.
+The practical benefit of active devices is their _amplifying_ ability. Whether the device in question be voltage-controlled or current-controlled, the amount of power required of the controlling signal is typically far less than the amount of power available in the controlled current. In other words, an active device doesn't just allow electricity to control electricity; it allows a _small_ amount of electricity to control a _large_ amount of electricity.
 
 Because of this disparity between _controlling_ and _controlled_ powers, active devices may be employed to govern a large amount of power (controlled) by the application of a small amount of power (controlling). This behavior is known as _amplification_.
 
-It is a fundamental rule of physics that energy can neither be created nor destroyed. Stated formally, this rule is known as the Law of Conservation of Energy, and no exceptions to it have been discovered to date. If this Law is true \-- and an overwhelming mass of experimental data suggests that it is \-- then it is impossible to build a device capable of taking a small amount of energy and magically transforming it into a large amount of energy. All machines, electric and electronic circuits included, have an upper efficiency limit of 100 percent. At best, power out equals power in as in @fig:03165.
+It is a fundamental rule of physics that energy can neither be created nor destroyed. Stated formally, this rule is known as the Law of Conservation of Energy, and no exceptions to it have been discovered to date. If this Law is true --- and an overwhelming mass of experimental data suggests that it is --- then it is impossible to build a device capable of taking a small amount of energy and magically transforming it into a large amount of energy. All machines, electric and electronic circuits included, have an upper efficiency limit of 100 percent. At best, power out equals power in as in @fig:03165.
 
 ![_The Power Output of a Machine Can Approach, But Never Exceed, The Power Input For 100% Efficiency as an Upper Limit_](media/03165.png){ #fig:03165 width=75% }
 
@@ -30,11 +30,11 @@ In other words, the current-controlling behavior of active devices is employed t
 
 Amplifiers, like all machines, are limited in efficiency to a maximum of 100 percent. Usually, electronic amplifiers are far less efficient than that, dissipating considerable amounts of energy in the form of waste heat. Because the efficiency of an amplifier is always 100 percent or less, one can never be made to function as a "perpetual motion" device.
 
-The requirement of an external source of power is common to all types of amplifiers, electrical and non-electrical. A common example of a non-electrical amplification system would be power steering in an automobile, amplifying the power of the driver\'s arms in turning the steering wheel to move the front wheels of the car. The source of power necessary for the amplification comes from the engine. The active device controlling the driver\'s "input signal" is a hydraulic valve shuttling fluid power from a pump attached to the engine to a hydraulic piston assisting wheel motion. If the engine stops running, the amplification system fails to amplify the driver\'s arm power and the car becomes very difficult to turn.
+The requirement of an external source of power is common to all types of amplifiers, electrical and non-electrical. A common example of a non-electrical amplification system would be power steering in an automobile, amplifying the power of the driver's arms in turning the steering wheel to move the front wheels of the car. The source of power necessary for the amplification comes from the engine. The active device controlling the driver's "input signal" is a hydraulic valve shuttling fluid power from a pump attached to the engine to a hydraulic piston assisting wheel motion. If the engine stops running, the amplification system fails to amplify the driver's arm power and the car becomes very difficult to turn.
 
 ### Amplifier gain{ #sec:xtocid15698973 }
 
-Because amplifiers have the ability to increase the magnitude of an input signal, it is useful to be able to rate an amplifier\'s amplifying ability in terms of an output/input ratio. The technical term for an amplifier\'s output/input magnitude ratio is _gain_. As a ratio of equal units (power out / power in, voltage out / voltage in, or current out / current in), gain is naturally a unitless measurement. Mathematically, gain is symbolized by the capital letter "A".
+Because amplifiers have the ability to increase the magnitude of an input signal, it is useful to be able to rate an amplifier's amplifying ability in terms of an output/input ratio. The technical term for an amplifier's output/input magnitude ratio is _gain_. As a ratio of equal units (power out / power in, voltage out / voltage in, or current out / current in), gain is naturally a unitless measurement. Mathematically, gain is symbolized by the capital letter "A".
 
 For example, if an amplifier takes in an AC voltage signal measuring 2 volts RMS and outputs an AC voltage of 30 volts RMS, it has an AC voltage gain of 30 divided by 2, or 15:
 
@@ -64,9 +64,9 @@ If multiple amplifiers are staged, their respective gains form an overall gain e
 
 ### Decibels{ #sec:xtocid15698974 }
 
-In its simplest form, an amplifier\'s _gain_ is a ratio of output over input. Like all ratios, this form of gain is unitless. However, there is an actual unit intended to represent gain, and it is called the _bel_.
+In its simplest form, an amplifier's _gain_ is a ratio of output over input. Like all ratios, this form of gain is unitless. However, there is an actual unit intended to represent gain, and it is called the _bel_.
 
-As a unit, the bel was actually devised as a convenient way to represent power _loss_ in telephone system wiring rather than _gain_ in amplifiers. The unit\'s name is derived from Alexander Graham Bell, the famous Scottish inventor whose work was instrumental in developing telephone systems. Originally, the bel represented the amount of signal power loss due to resistance over a standard length of electrical cable. Now, it is defined in terms of the common (base 10) logarithm of a power ratio (output power divided by input power):
+As a unit, the bel was actually devised as a convenient way to represent power _loss_ in telephone system wiring rather than _gain_ in amplifiers. The unit's name is derived from Alexander Graham Bell, the famous Scottish inventor whose work was instrumental in developing telephone systems. Originally, the bel represented the amount of signal power loss due to resistance over a standard length of electrical cable. Now, it is defined in terms of the common (base 10) logarithm of a power ratio (output power divided by input power):
 
 $$A_{P(\text{ratio})} = \frac{P_{output}}{P_{input}}$$
 
@@ -94,13 +94,13 @@ If these figures represented _power_ gains, we could directly apply the unit of 
 
 ![_Power Gain In bels Is Additive: 0.477 B + 0.699 B = 1.176 B._](media/03170.png){ #fig:03170 width=80% }
 
-Close inspection of these gain figures in the unit of "bel" yields a discovery: they\'re additive. Ratio gain figures are multiplicative for staged amplifiers, but gains expressed in bels _add_ rather than _multiply_ to equal the overall system gain. The first amplifier with its power gain of 0.477 B adds to the second amplifier\'s power gain of 0.699 B to make a system with an overall power gain of 1.176 B.
+Close inspection of these gain figures in the unit of "bel" yields a discovery: they're additive. Ratio gain figures are multiplicative for staged amplifiers, but gains expressed in bels _add_ rather than _multiply_ to equal the overall system gain. The first amplifier with its power gain of 0.477 B adds to the second amplifier's power gain of 0.699 B to make a system with an overall power gain of 1.176 B.
 
 Recalculating for decibels rather than bels, we notice the same phenomenon (@fig:03171).
 
 ![_Gain of Amplifier Stages in decibels is Additive: 4.77 Db + 6.99 Db = 11.76 dB_](media/03171.png){ #fig:03171 width=100% }
 
-To those already familiar with the arithmetic properties of logarithms, this is no surprise. It is an elementary rule of algebra that the antilogarithm of the sum of two numbers\' logarithm values equals the product of the two original numbers. In other words, if we take two numbers and determine the logarithm of each, then add those two logarithm figures together, then determine the "antilogarithm" of that sum (elevate the base number of the logarithm \-- in this case, 10 \-- to the power of that sum), the result will be the same as if we had simply multiplied the two original numbers together. This algebraic rule forms the heart of a device called a _slide rule_, an analog computer which could, among other things, determine the products and quotients of numbers by addition (adding together physical lengths marked on sliding wood, metal, or plastic scales). Given a table of logarithm figures, the same mathematical trick could be used to perform otherwise complex multiplications and divisions by only having to do additions and subtractions, respectively. With the advent of high-speed, handheld, digital calculator devices, this elegant calculation technique virtually disappeared from popular use. However, it is still important to understand when working with measurement scales that are logarithmic in nature, such as the bel (decibel) and Richter scales.
+To those already familiar with the arithmetic properties of logarithms, this is no surprise. It is an elementary rule of algebra that the antilogarithm of the sum of two numbers' logarithm values equals the product of the two original numbers. In other words, if we take two numbers and determine the logarithm of each, then add those two logarithm figures together, then determine the "antilogarithm" of that sum (elevate the base number of the logarithm --- in this case, 10 --- to the power of that sum), the result will be the same as if we had simply multiplied the two original numbers together. This algebraic rule forms the heart of a device called a _slide rule_, an analog computer which could, among other things, determine the products and quotients of numbers by addition (adding together physical lengths marked on sliding wood, metal, or plastic scales). Given a table of logarithm figures, the same mathematical trick could be used to perform otherwise complex multiplications and divisions by only having to do additions and subtractions, respectively. With the advent of high-speed, handheld, digital calculator devices, this elegant calculation technique virtually disappeared from popular use. However, it is still important to understand when working with measurement scales that are logarithmic in nature, such as the bel (decibel) and Richter scales.
 
 When converting a power gain from units of bels or decibels to a unitless ratio, the mathematical inverse function of common logarithms is used: powers of 10, or the _antilog_.
 
@@ -136,7 +136,7 @@ $$10^{\frac{20}{10}} = 10^{\, \log_{10}\, (A_{P(\text{ratio})})}$$
 
 $$100 = A_{P(\text{ratio})} = \left(\frac{20}{10}\right)$$
 
-Because the bel is fundamentally a unit of _power_ gain or loss in a system, voltage or current gains and losses don\'t convert to bels or dB in quite the same way. When using bels or decibels to express a gain other than power, be it voltage or current, we must perform the calculation in terms of how much power gain there would be for that amount of voltage or current gain. For a constant load impedance, a voltage or current gain of 2 equates to a power gain of 4 (2^2^); a voltage or current gain of 3 equates to a power gain of 9 (3^2^). If we multiply either voltage or current by a given factor, then the power gain incurred by that multiplication will be the square of that factor. This relates back to the forms of Joule\'s Law where power was calculated from either voltage or current, and resistance:
+Because the bel is fundamentally a unit of _power_ gain or loss in a system, voltage or current gains and losses don't convert to bels or dB in quite the same way. When using bels or decibels to express a gain other than power, be it voltage or current, we must perform the calculation in terms of how much power gain there would be for that amount of voltage or current gain. For a constant load impedance, a voltage or current gain of 2 equates to a power gain of 4 (2^2^); a voltage or current gain of 3 equates to a power gain of 9 (3^2^). If we multiply either voltage or current by a given factor, then the power gain incurred by that multiplication will be the square of that factor. This relates back to the forms of Joule's Law where power was calculated from either voltage or current, and resistance:
 
 ![Joule's Law](media/13031.png){ #fig:13031 width=45%}
 
@@ -148,7 +148,7 @@ The same exponent requirement holds true when expressing voltage or current gain
 
 ![Logarithms and Ratios as decibels](media/13033.png){ #fig:13033 width=45% }
 
-However, thanks to another interesting property of logarithms, we can simplify these equations to eliminate the exponent by including the "2" as a _multiplying factor_ for the logarithm function. In other words, instead of taking the logarithm of the _square_ of the voltage or current gain, we just multiply the voltage or current gain\'s logarithm figure by 2 and the final result in bels or decibels will be the same:
+However, thanks to another interesting property of logarithms, we can simplify these equations to eliminate the exponent by including the "2" as a _multiplying factor_ for the logarithm function. In other words, instead of taking the logarithm of the _square_ of the voltage or current gain, we just multiply the voltage or current gain's logarithm figure by 2 and the final result in bels or decibels will be the same:
 
 ![Multiplication of Logarithms](media/13034.png){ #fig:13034 width=75% }
 
@@ -417,4 +417,4 @@ RF connectors, not shown, are attached to the ends of the above T and Π attenua
 
 Contributors to this chapter are listed in chronological order of their contributions, from most recent to first. See Appendix 2 (Contributor List) for dates and contact information.
 
-**Colin Barnard** (November 2003): Correction regarding Alexander Graham Bell\'s country of origin (Scotland, not the United States).
+**Colin Barnard** (November 2003): Correction regarding Alexander Graham Bell's country of origin (Scotland, not the United States).

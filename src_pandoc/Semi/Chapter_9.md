@@ -2,7 +2,7 @@
 
 ---
 
-# Lessons In Electric Circuits \-- Volume III
+# Lessons In Electric Circuits --- Volume III
 
 # Chapter 9
 
@@ -16,14 +16,14 @@
   - [[Power Supply types]](#xtocid15706345)
   - [[Power Supply Introduction]](#xtocid15706346)
   - [[Linear power supplies]](#xtocid15706347)
-- [[Amplifier circuits \-- PENDING]](#xtocid15706348)
-- [[Oscillator circuits \-- INCOMPLETE]](#xtocid15706349)
+- [[Amplifier circuits --- PENDING]](#xtocid15706348)
+- [[Oscillator circuits --- INCOMPLETE]](#xtocid15706349)
   - [[Varactor multiplier]](#xtocid157063410)
-- [[Phase-locked loops \-- PENDING]](#xtocid157063411)
-- [[Radio circuits \-- INCOMPLETE]](#xtocid157063412)
+- [[Phase-locked loops --- PENDING]](#xtocid157063411)
+- [[Radio circuits --- INCOMPLETE]](#xtocid157063412)
 - [[Computational circuits]](#xtocid157063413)
-- [[Measurement circuits \-- INCOMPLETE]](#xtocid157063414)
-- [[Control circuits \-- PENDING]](#xtocid157063415)
+- [[Measurement circuits --- INCOMPLETE]](#xtocid157063414)
+- [[Control circuits --- PENDING]](#xtocid157063415)
 - [[Contributors]](#xtocid157063416)
 - [Bibliography](#xtocid157063417)
 
@@ -47,7 +47,7 @@ Even components that are considered fairly rugged can be damaged by ESD. Bipolar
 
 ### ESD Damage Prevention{ #sec:xtocid15706341 }
 
-Before ESD can be prevented it is important to understand what causes it. Generally materials around the workbench can be broken up into 3 categories. These are ESD Generative, ESD Neutral, and ESD Dissipative (or ESD Conductive). ESD Generative materials are active static generators, such as most plastics, cat hair, and polyester clothing. ESD Neutral materials are generally insulative, but don\'t tend to generate or hold static charges very well. Examples of this include wood, paper, and cotton. This is not to say they can not be static generators or an ESD hazard, but the risk is somewhat minimized by other factors. Wood and wood products, for example, tend to hold moisture, which can make them slightly conductive. This is true of a lot of organic materials. A highly polished table would not fall under this category, because the gloss is usually plastic, or varnish, which are highly efficient insulators. ESD Conductive materials are pretty obvious, they are the metal tools laying around. Plastic handles can be a problem, but the metal will bleed a static charge away as fast as it is generated if it is on a grounded surface. There are a lot of other materials, such as some plastics, that are designed to be conductive. They would fall under the heading of ESD Dissipative. Dirt and concrete are also conductive, and fall under the ESD Dissipative heading.
+Before ESD can be prevented it is important to understand what causes it. Generally materials around the workbench can be broken up into 3 categories. These are ESD Generative, ESD Neutral, and ESD Dissipative (or ESD Conductive). ESD Generative materials are active static generators, such as most plastics, cat hair, and polyester clothing. ESD Neutral materials are generally insulative, but don't tend to generate or hold static charges very well. Examples of this include wood, paper, and cotton. This is not to say they can not be static generators or an ESD hazard, but the risk is somewhat minimized by other factors. Wood and wood products, for example, tend to hold moisture, which can make them slightly conductive. This is true of a lot of organic materials. A highly polished table would not fall under this category, because the gloss is usually plastic, or varnish, which are highly efficient insulators. ESD Conductive materials are pretty obvious, they are the metal tools laying around. Plastic handles can be a problem, but the metal will bleed a static charge away as fast as it is generated if it is on a grounded surface. There are a lot of other materials, such as some plastics, that are designed to be conductive. They would fall under the heading of ESD Dissipative. Dirt and concrete are also conductive, and fall under the ESD Dissipative heading.
 
 There are a lot of activities that generate static, which you need to be aware of as part of an ESD control regimen. The simple act of pulling tape off a dispenser can generate extreme voltage. Rolling around in a chair is another static generator, as is scratching. In fact, any activity that allows 2 or more surfaces to rub against each other is pretty certain to generate some static charge. This was mentioned in the beginning of this book, but real world examples can be subtle. This is why a method for continuously bleeding off this voltage is needed. Things that generate huge amounts of static should be avoided while working on components.
 
@@ -57,9 +57,9 @@ It is not all bad news for ESD protection. The human body is a pretty decent con
 
 To establish ESD protection there has to be a standard voltage level that everything is referenced to. Such a level exists in the form of ground. There are very good safety reasons that ground is used around the house in outlets. In some ways this relates to static, but not directly. It does give us a place to dump our excess electrons, or acquire some if we are short, to neutralize any charges our bodies and tools might acquire. If everything on a workbench is connected directly or indirectly to ground via a conductor then static will dissipate long before an ESD event has a chance to occur.
 
-A good grounding point can be made several different ways. In houses with modern wiring that is up to code the ground pin on the AC plug in can be used, or the screw that holds the outlets cover plate on. This is because house wiring actually has a wire or spike going into the earth somewhere where the power is tapped from the main power lines. For people whose house wiring isn\'t quite right a spike driven into the earth at least 3 feet or a simple electrical connection to metal plumbing (worst option) can be used. The main thing is to establish an electrical path to the earth outside the house.
+A good grounding point can be made several different ways. In houses with modern wiring that is up to code the ground pin on the AC plug in can be used, or the screw that holds the outlets cover plate on. This is because house wiring actually has a wire or spike going into the earth somewhere where the power is tapped from the main power lines. For people whose house wiring isn't quite right a spike driven into the earth at least 3 feet or a simple electrical connection to metal plumbing (worst option) can be used. The main thing is to establish an electrical path to the earth outside the house.
 
-Ten megohms is considered a conductor in the world of ESD control. Static electricity is voltage with no real current, and if a charge is bled off seconds after being generated it is nullified. Generally a 1 to 10 megohm resistor is used to connect any ESD protection for this reason. It has the benefit of slowing the discharge rate during an ESD event, which increases the likelihood of a component surviving undamaged. The faster the discharge, the higher the current spike going though the component. Another reason such a resistance is considered desirable is if the user is accidentally shorted to high voltage, such as household current, it won\'t be the ESD protections that kill them.
+Ten megohms is considered a conductor in the world of ESD control. Static electricity is voltage with no real current, and if a charge is bled off seconds after being generated it is nullified. Generally a 1 to 10 megohm resistor is used to connect any ESD protection for this reason. It has the benefit of slowing the discharge rate during an ESD event, which increases the likelihood of a component surviving undamaged. The faster the discharge, the higher the current spike going though the component. Another reason such a resistance is considered desirable is if the user is accidentally shorted to high voltage, such as household current, it won't be the ESD protections that kill them.
 
 A large industry has grown up around controlling ESD in the electronics industry. The staple of any electronics construction is the workbench with a static conductive or dissipative surface. This surface can be bought commercially, or home made in the form of a sheet of metal or foil. In the case of a metal surface it might be a good idea to lay thin paper on top, although it is not necessary if you are not doing any powered tests on the surface. The commercial version is usually some form of conductive plastic whose resistance is high enough not to be a problem, which is a better solution. If you are making your own surface for the workbench be sure to add the 10 megohm resistor to ground, otherwise you have no protection at all.
 
@@ -79,7 +79,7 @@ The user can also reduce the possibility of ESD damage by simply not removing th
 
 ### Storage and Transportation of ESD sensitive component and boards{ #sec:xtocid15706342 }
 
-It does no good to follow ESD protections on the workbench if the parts are being damaged while storing or carrying them. The most common method is to use a variation of a Faraday cage, an ESD bag. An ESD bag surrounds the component with a conductive shield, and usually has a non static generating insulative layer inside. In permanent Faraday cages this shield is grounded, as in the case of RFI rooms, but with portable containers this isn\'t practical. By putting a ESD bag on a grounded surface the same thing is accomplished. Faraday cages work by routing the electric charge around the contents and grounding them immediately. A car struck by lightning is an extreme example of a Faraday cage.
+It does no good to follow ESD protections on the workbench if the parts are being damaged while storing or carrying them. The most common method is to use a variation of a Faraday cage, an ESD bag. An ESD bag surrounds the component with a conductive shield, and usually has a non static generating insulative layer inside. In permanent Faraday cages this shield is grounded, as in the case of RFI rooms, but with portable containers this isn't practical. By putting a ESD bag on a grounded surface the same thing is accomplished. Faraday cages work by routing the electric charge around the contents and grounding them immediately. A car struck by lightning is an extreme example of a Faraday cage.
 
 Static bags are by far the most common method of storing components and boards. They are made using extremely thin layers of metal, so thin as to be almost transparent. A bag with a hole, even small ones, or one that is not folded on top to seal the content from outside charges is ineffective.
 
@@ -105,13 +105,13 @@ An unregulated power supply is the most rudimentary type, consisting of a transf
 
 See [Rectifier circuits](SEMI_3.html#half-W-R) in the Diodes chapter for the various configurations of the rectifiers used in unregulated power supplies. Note that those circuits are unfiltered, A low pass filter is normally added to the output of the rectifier circuit to remove some of the ripple.
 
-A linear regulated supply is simply a \"brute force\" (unregulated) power supply followed by a transistor circuit operating in its \"active,\" or \"linear\" mode, hence the name _linear_ regulator. (Obvious in retrospect, isn\'t it?) A typical linear regulator is designed to output a fixed voltage for a wide range of input voltages, and it simply drops any excess input voltage to allow a maximum output voltage to the load. This excess voltage drop results in significant power dissipation in the form of heat. If the input voltage gets too low, the transistor circuit will lose regulation, meaning that it will fail to keep the voltage steady. It can only drop excess voltage, not make up for a deficiency in voltage from the brute force section of the circuit. Therefore, you have to keep the input voltage at least 1 to 3 volts higher than the desired output, depending on the regulator type. This means the power equivalent of at _least_ 1 to 3 volts multiplied by the full load current will be dissipated by the regulator circuit, generating a lot of heat. This makes linear regulated power supplies rather inefficient. Also, to get rid of all that heat they have to use large heat sinks which makes them large, heavy, and expensive.
+A linear regulated supply is simply a \"brute force\" (unregulated) power supply followed by a transistor circuit operating in its \"active,\" or \"linear\" mode, hence the name _linear_ regulator. (Obvious in retrospect, isn't it?) A typical linear regulator is designed to output a fixed voltage for a wide range of input voltages, and it simply drops any excess input voltage to allow a maximum output voltage to the load. This excess voltage drop results in significant power dissipation in the form of heat. If the input voltage gets too low, the transistor circuit will lose regulation, meaning that it will fail to keep the voltage steady. It can only drop excess voltage, not make up for a deficiency in voltage from the brute force section of the circuit. Therefore, you have to keep the input voltage at least 1 to 3 volts higher than the desired output, depending on the regulator type. This means the power equivalent of at _least_ 1 to 3 volts multiplied by the full load current will be dissipated by the regulator circuit, generating a lot of heat. This makes linear regulated power supplies rather inefficient. Also, to get rid of all that heat they have to use large heat sinks which makes them large, heavy, and expensive.
 
 **Switching**
 
-A switching regulated power supply (\"switcher\") is an effort to realize the advantages of both brute force and linear regulated designs (small, efficient, and cheap, but also \"clean,\" stable output voltage). Switching power supplies work on the principle of rectifying the incoming AC power line voltage into DC, re-converting it into high-frequency square-wave AC through transistors operated as on/off switches, stepping that AC voltage up or down by using a lightweight transformer, then rectifying the transformer\'s AC output into DC and filtering for final output. Voltage regulation is achieved by altering the \"duty cycle\" of the DC-to-AC inversion on the transformer\'s primary side. In addition to lighter weight because of a smaller transformer core, switchers have another tremendous advantage over the prior two designs: this type of power supply can be made so totally independent of the input voltage that it can work on any electric power system in the world; these are called \"universal\" power supplies.
+A switching regulated power supply (\"switcher\") is an effort to realize the advantages of both brute force and linear regulated designs (small, efficient, and cheap, but also \"clean,\" stable output voltage). Switching power supplies work on the principle of rectifying the incoming AC power line voltage into DC, re-converting it into high-frequency square-wave AC through transistors operated as on/off switches, stepping that AC voltage up or down by using a lightweight transformer, then rectifying the transformer's AC output into DC and filtering for final output. Voltage regulation is achieved by altering the \"duty cycle\" of the DC-to-AC inversion on the transformer's primary side. In addition to lighter weight because of a smaller transformer core, switchers have another tremendous advantage over the prior two designs: this type of power supply can be made so totally independent of the input voltage that it can work on any electric power system in the world; these are called \"universal\" power supplies.
 
-The downside of switchers is that they are more complex, and due to their operation they tend to generate a lot of high-frequency AC \"noise\" on the power line. Most switchers also have significant ripple voltage on their outputs. With the cheaper types, this noise and ripple can be as bad as for an unregulated power supply; such low-end switchers aren\'t worthless, because they still provide a stable average output voltage, and there\'s the \"universal\" input capability.
+The downside of switchers is that they are more complex, and due to their operation they tend to generate a lot of high-frequency AC \"noise\" on the power line. Most switchers also have significant ripple voltage on their outputs. With the cheaper types, this noise and ripple can be as bad as for an unregulated power supply; such low-end switchers aren't worthless, because they still provide a stable average output voltage, and there's the \"universal\" input capability.
 
 Expensive switchers are ripple-free and have noise nearly as low as for some a linear types; these switchers tend to be as expensive as linear supplies. The reason to use an expensive switcher instead of a good linear is if you need universal power system compatibility or high efficiency. High efficiency, light weight, and small size are the reasons switching power supplies are almost universally used for powering digital computer circuitry.
 
@@ -143,7 +143,7 @@ Power loss is dissipated away from a power supply circuit as heat. Very small se
 
 In order to prevent component failures, high dissipation components are usually connected to heat sinks. Sometimes the only heat sink needed is a solid connection to a copper plane in a printed circuit board. But for anything beyond a few watts, components need to be connected to a separate, thermally conductive metal block. By putting long metal fins on these blocks, the surface area can be boosted to increase convective heat transfer. A fan can also be used to increase airflow. Some designs even use water or oil traveling through the block to more effectively remove waste heat.
 
-As a general rule, most semiconductors begin experiencing damage when the circuit\'s internal temperature reaches 150^o^C, though some devices are designed to withstand even higher temperatures. Other components such as inductors and capacitors are available in a wide range of operating temperatures and tolerances, with a premium charged for more extreme temperatures and tighter tolerances.
+As a general rule, most semiconductors begin experiencing damage when the circuit's internal temperature reaches 150^o^C, though some devices are designed to withstand even higher temperatures. Other components such as inductors and capacitors are available in a wide range of operating temperatures and tolerances, with a premium charged for more extreme temperatures and tighter tolerances.
 
 **Size**
 
@@ -207,7 +207,7 @@ _Resistor divider power supply_
 
 The humble resistor divider circuit of @fig:03513 is perhaps the simplest power supply circuit. While its behavior is entirely linear, it is hard to say whether such a supply should be considered a shunt or series regulator, since the output voltage is a function of both the shunt and series elements. For the purposes of this first example, the distinction is unimportant. The nonidealities of this circuit, especially when constrained by the specification above, make it useful to conceptualize the common terms used in power supply design.
 
-The resistor values must be small to simultaneously allow 500mA through the pass element without causing too much of a voltage drop, and maintain a nominal output voltage of 5V from a 15V supply. The values 15Ω and 7.5Ω are selected for R1 and R2, respectively. The behavior of the circuit can be described by a system of equations, first using ohm\'s law at the output, second by using the standard divider equation considering R2 and the load in parallel:
+The resistor values must be small to simultaneously allow 500mA through the pass element without causing too much of a voltage drop, and maintain a nominal output voltage of 5V from a 15V supply. The values 15Ω and 7.5Ω are selected for R1 and R2, respectively. The behavior of the circuit can be described by a system of equations, first using ohm's law at the output, second by using the standard divider equation considering R2 and the load in parallel:
 
 ![](media/13085.png){ #fig:13085 width=75% }
 
@@ -243,7 +243,7 @@ This is more than the maximum output by some margin, and is very wasteful compar
 
 ![](media/13091.png){ #fig:13091 width=75% }
 
-This is atrocious. Any improvement in load regulation is also practically infeasible; to make the parallel combination of R2 and the load negligibly different from the load, even at full load, the value of R1 and R2 would need to be further decreased by more than an order of magnitude, which would necessarily increase the quiescent current and decrease the efficiency by the same degree. It is unreasonable to require over 100W of power dissipation to maintain a reasonable load regulation from a resistor divider. Ideally, it shouldn\'t even take milliwatts.
+This is atrocious. Any improvement in load regulation is also practically infeasible; to make the parallel combination of R2 and the load negligibly different from the load, even at full load, the value of R1 and R2 would need to be further decreased by more than an order of magnitude, which would necessarily increase the quiescent current and decrease the efficiency by the same degree. It is unreasonable to require over 100W of power dissipation to maintain a reasonable load regulation from a resistor divider. Ideally, it shouldn't even take milliwatts.
 
 **Line regulation:** At 18V with no load, the output voltage is:
 
@@ -335,7 +335,7 @@ To keep a Zener diode at the lowest possible noise, there are only two requireme
 
 In general, shunt regulators are used in cases where the power dissipation is negligible, and the load current is small (tens of milliamps or fewer). More complex shunt regulators can incorporate compensation schemes which minimize the effects of line, load, and temperature variations. The exact mechanisms of these compensation schemes are beyond the scope of this discussion, but line and load regulation values of \<1% are achievable with shunt regulation schemes, over a very wide range of temperatures and input voltages.
 
-## [[Amplifier circuits \-- PENDING]{#xtocid15706348}]
+## [[Amplifier circuits --- PENDING]{#xtocid15706348}]
 
 Note, Q~3~ and Q~4~ in @fig:03475 are complementary, NPN and PNP respectively. This circuit works well for moderate power audio amplifiers. For an explanation of this circuit see "Direct coupled complementary-pair," [Ch 4](SEMI_4.html#03474.png){ #fig:03474 width=75% } .
 
@@ -343,7 +343,7 @@ Note, Q~3~ and Q~4~ in @fig:03475 are complementary, NPN and PNP respectively. T
 
 _Direct coupled complementary symmetry 3 w audio amplifier. After Mullard. @MUL_
 
-## [[Oscillator circuits \-- INCOMPLETE]{#xtocid15706349}]
+## [[Oscillator circuits --- INCOMPLETE]{#xtocid15706349}]
 
 ![](media/03473.png){ #fig:03473 width=75% }
 
@@ -363,9 +363,9 @@ The fundamental filter passes f1, blocking the harmonics from returning to the g
 
 The varicap multiplier is primarily used to generate microwave signals which cannot be directly produced by oscillators. The lumped circuit representation in @fig:03457 is actually stripline or waveguide sections. Frequenies up to hundreds of gHz may be produced by varactor multipliers.
 
-## [[Phase-locked loops \-- PENDING]{#xtocid157063411}]
+## [[Phase-locked loops --- PENDING]{#xtocid157063411}]
 
-## [[Radio circuits \-- INCOMPLETE]{#xtocid157063412}]
+## [[Radio circuits --- INCOMPLETE]{#xtocid157063412}]
 
 ![](media/03442.png){ #fig:03442 width=75% }
 
@@ -467,11 +467,11 @@ _PIN diode antenna switch for direction finder receiver._
 
 _PIN diode attenuator: PIN diodes function as voltage variable resistors. After Lin @LCC._
 
-The PIN diodes are arranged in a π-attenuator network. The anti-series diodes cancel some harmonic distortion compared with a single series diode. The fixed 1.25 V supply forward biases the parallel diodes, which not only conducting DC current from ground via the resistors, but also, conduct RF to ground through the diodes\' capacitors. The control voltage V~control~, increases current through the parallel diodes as it increases. This decreases the resistance and attenuation, passing more RF from input to output. Attenuation is about 3 dB at V~control~= 5 V. Attenuation is 40 dB at V~control~= 1 V with flat frequency response to 2 gHz. At V~control~= 0.5 V, attenuation is 80 dB at 10 MHz. However, the frequency response varies too much to use. @LCC
+The PIN diodes are arranged in a π-attenuator network. The anti-series diodes cancel some harmonic distortion compared with a single series diode. The fixed 1.25 V supply forward biases the parallel diodes, which not only conducting DC current from ground via the resistors, but also, conduct RF to ground through the diodes' capacitors. The control voltage V~control~, increases current through the parallel diodes as it increases. This decreases the resistance and attenuation, passing more RF from input to output. Attenuation is about 3 dB at V~control~= 5 V. Attenuation is 40 dB at V~control~= 1 V with flat frequency response to 2 gHz. At V~control~= 0.5 V, attenuation is 80 dB at 10 MHz. However, the frequency response varies too much to use. @LCC
 
 ## Computational circuits{ #sec:xtocid157063413 }
 
-When someone mentions the word \"computer,\" a digital device is what usually comes to mind. Digital circuits represent numerical quantities in _binary_ format: patterns of 1\'s and 0\'s represented by a multitude of transistor circuits operating in saturated or cutoff states. However, analog circuitry may also be used to represent numerical quantities and perform mathematical calculations, by using variable voltage signals instead of discrete on/off states.
+When someone mentions the word \"computer,\" a digital device is what usually comes to mind. Digital circuits represent numerical quantities in _binary_ format: patterns of 1's and 0's represented by a multitude of transistor circuits operating in saturated or cutoff states. However, analog circuitry may also be used to represent numerical quantities and perform mathematical calculations, by using variable voltage signals instead of discrete on/off states.
 
 Here is a simple example of binary (digital) representation versus analog representation of the number \"twenty-five:\"
 
@@ -517,21 +517,21 @@ Each of these circuits may be used in modular fashion to create a circuit capabl
 
 Devices called _analog computers_ used to be common in universities and engineering shops, where dozens of op-amp circuits could be \"patched\" together with removable jumper wires to model mathematical statements, usually for the purpose of simulating some physical process whose underlying equations were known. Digital computers have made analog computers all but obsolete, but analog computational circuitry cannot be beaten by digital in terms of sheer elegance and economy of necessary components.
 
-Analog computational circuitry excels at performing the calculus operations _integration_ and _differentiation_ with respect to time, by using capacitors in an op-amp feedback loop. To fully understand these circuits\' operation and applications, though, we must first grasp the meaning of these fundamental calculus concepts. Fortunately, the application of op-amp circuits to real-world problems involving calculus serves as an excellent means to teach basic calculus. In the words of John I. Smith, taken from his outstanding textbook, _Modern Operational Circuit Design_:
+Analog computational circuitry excels at performing the calculus operations _integration_ and _differentiation_ with respect to time, by using capacitors in an op-amp feedback loop. To fully understand these circuits' operation and applications, though, we must first grasp the meaning of these fundamental calculus concepts. Fortunately, the application of op-amp circuits to real-world problems involving calculus serves as an excellent means to teach basic calculus. In the words of John I. Smith, taken from his outstanding textbook, _Modern Operational Circuit Design_:
 
 > _\"A note of encouragement is offered to certain readers: integral calculus is one of the mathematical disciplines that operational \[amplifier\] circuitry exploits and, in the process, rather demolishes as a barrier to understanding.\"_ (pg. 4)
 
-Mr. Smith\'s sentiments on the pedagogical value of analog circuitry as a learning tool for mathematics are not unique. Consider the opinion of engineer George Fox Lang, in an article he wrote for the August 2000 issue of the journal _Sound and Vibration_, entitled, \"Analog was [not] a Computer Trademark!\":
+Mr. Smith's sentiments on the pedagogical value of analog circuitry as a learning tool for mathematics are not unique. Consider the opinion of engineer George Fox Lang, in an article he wrote for the August 2000 issue of the journal _Sound and Vibration_, entitled, \"Analog was [not] a Computer Trademark!\":
 
 > _\"Creating a real physical entity (a circuit) governed by a particular set of equations and interacting with it provides unique insight into those mathematical statements. There is no better way to develop a \"gut feel\" for the interplay between physics and mathematics than to experience such an interaction. The analog computer was a powerful interdisciplinary teaching tool; its obsolescence is mourned by many educators in a variety of fields.\"_ (pg. 23)
 
-Differentiation is the first operation typically learned by beginning calculus students. Simply put, differentiation is determining the instantaneous rate-of-change of one variable as it relates to another. In analog differentiator circuits, the independent variable is time, and so the rates of change we\'re dealing with are rates of change for an electronic signal (voltage or current) with respect to time.
+Differentiation is the first operation typically learned by beginning calculus students. Simply put, differentiation is determining the instantaneous rate-of-change of one variable as it relates to another. In analog differentiator circuits, the independent variable is time, and so the rates of change we're dealing with are rates of change for an electronic signal (voltage or current) with respect to time.
 
 Suppose we were to measure the position of a car, traveling in a direct path (no turns), from its starting point. Let us call this measurement, _x_. If the car moves at a rate such that its distance from \"start\" increases steadily over time, its position will plot on a graph as a _linear_ function (straight line):
 
 ![](media/03343.png){ #fig:03343 width=75% }
 
-If we were to calculate the _derivative_ of the car\'s position with respect to time (that is, determine the rate-of-change of the car\'s position with respect to time), we would arrive at a quantity representing the car\'s velocity. The differentiation function is represented by the fractional notation _d/d_, so when differentiating position (_x_) with respect to time (_t_), we denote the result (the derivative) as _dx/dt_:
+If we were to calculate the _derivative_ of the car's position with respect to time (that is, determine the rate-of-change of the car's position with respect to time), we would arrive at a quantity representing the car's velocity. The differentiation function is represented by the fractional notation _d/d_, so when differentiating position (_x_) with respect to time (_t_), we denote the result (the derivative) as _dx/dt_:
 
 ![](media/03344.png){ #fig:03344 width=75% }
 
@@ -545,11 +545,11 @@ The height of points on the velocity graph correspond to the rates-of-change, or
 
 ![](media/03346.png){ #fig:03346 width=75% }
 
-What does this have to do with analog electronic circuits? Well, if we were to have an analog voltage signal represent the car\'s position (think of a huge potentiometer whose wiper was attached to the car, generating a voltage proportional to the car\'s position), we could connect a differentiator circuit to this signal and have the circuit continuously _calculate_ the car\'s velocity, displaying the result via a voltmeter connected to the differentiator circuit\'s output:
+What does this have to do with analog electronic circuits? Well, if we were to have an analog voltage signal represent the car's position (think of a huge potentiometer whose wiper was attached to the car, generating a voltage proportional to the car's position), we could connect a differentiator circuit to this signal and have the circuit continuously _calculate_ the car's velocity, displaying the result via a voltmeter connected to the differentiator circuit's output:
 
 ![](media/03347.png){ #fig:03347 width=75% }
 
-Recall from the last chapter that a differentiator circuit outputs a voltage proportional to the input voltage\'s _rate-of-change over time_ (_d/dt_). Thus, if the input voltage is changing over time at a constant _rate_, the output voltage will be at a constant value. If the car moves in such a way that its elapsed distance over time builds up at a steady rate, then that means the car is traveling at a constant velocity, and the differentiator circuit will output a constant voltage proportional to that velocity. If the car\'s elapsed distance over time changes in a non-steady manner, the differentiator circuit\'s output will likewise be non-steady, but always at a level representative of the input\'s rate-of-change over time.
+Recall from the last chapter that a differentiator circuit outputs a voltage proportional to the input voltage's _rate-of-change over time_ (_d/dt_). Thus, if the input voltage is changing over time at a constant _rate_, the output voltage will be at a constant value. If the car moves in such a way that its elapsed distance over time builds up at a steady rate, then that means the car is traveling at a constant velocity, and the differentiator circuit will output a constant voltage proportional to that velocity. If the car's elapsed distance over time changes in a non-steady manner, the differentiator circuit's output will likewise be non-steady, but always at a level representative of the input's rate-of-change over time.
 
 Note that the voltmeter registering velocity (at the output of the differentiator circuit) is connected in \"reverse\" polarity to the output of the op-amp. This is because the differentiator circuit shown is _inverting_: outputting a negative voltage for a positive input voltage rate-of-change. If we wish to have the voltmeter register a positive value for velocity, it will have to be connected to the op-amp as shown. As impractical as it may be to connect a giant potentiometer to a moving object such as an automobile, the concept should be clear: by electronically performing the calculus function of differentiation on a signal representing position, we obtain a signal representing velocity.
 
@@ -561,9 +561,9 @@ Nonlinear functions such as _y = 3x^2^_ may also be differentiated by symbolic m
 
 ![](media/03354.png){ #fig:03354 width=75% }
 
-In real life, though, we often cannot describe the behavior of any physical event by a simple equation like _y = 3x_, and so symbolic differentiation of the type learned by calculus students may be impossible to apply to a physical measurement. If someone wished to determine the derivative of our hypothetical car\'s position (_dx/dt_ = velocity) by symbolic means, they would first have to obtain an equation describing the car\'s position over time, based on position measurements taken from a real experiment \-- a nearly impossible task unless the car is operated under carefully controlled conditions leading to a very simple position graph. However, an analog differentiator circuit, by exploiting the behavior of a capacitor with respect to voltage, current, and time _i = C(dv/dt)_, naturally differentiates any real signal in relation to time, and would be able to output a signal corresponding to instantaneous velocity (_dx/dt_) at any moment. By logging the car\'s position signal along with the differentiator\'s output signal using a chart recorder or other data acquisition device, both graphs would naturally present themselves for inspection and analysis.
+In real life, though, we often cannot describe the behavior of any physical event by a simple equation like _y = 3x_, and so symbolic differentiation of the type learned by calculus students may be impossible to apply to a physical measurement. If someone wished to determine the derivative of our hypothetical car's position (_dx/dt_ = velocity) by symbolic means, they would first have to obtain an equation describing the car's position over time, based on position measurements taken from a real experiment --- a nearly impossible task unless the car is operated under carefully controlled conditions leading to a very simple position graph. However, an analog differentiator circuit, by exploiting the behavior of a capacitor with respect to voltage, current, and time _i = C(dv/dt)_, naturally differentiates any real signal in relation to time, and would be able to output a signal corresponding to instantaneous velocity (_dx/dt_) at any moment. By logging the car's position signal along with the differentiator's output signal using a chart recorder or other data acquisition device, both graphs would naturally present themselves for inspection and analysis.
 
-We may take the principle of differentiation one step further by applying it to the velocity signal using another differentiator circuit. In other words, use it to calculate the rate-of-change of velocity, which we know is the rate-of-change of position. What practical measure would we arrive at if we did this? Think of this in terms of the units we use to measure position and velocity. If we were to measure the car\'s position from its starting point in miles, then we would probably express its velocity in units of miles _per hour_ (_dx/dt_). If we were to differentiate the velocity (measured in miles per hour) with respect to time, we would end up with a unit of miles per hour _per hour_. Introductory physics classes teach students about the behavior of falling objects, measuring position in _meters_, velocity in _meters per second_, and change in velocity over time in _meters per second, per second_. This final measure is called _acceleration_: the rate of change of velocity over time:
+We may take the principle of differentiation one step further by applying it to the velocity signal using another differentiator circuit. In other words, use it to calculate the rate-of-change of velocity, which we know is the rate-of-change of position. What practical measure would we arrive at if we did this? Think of this in terms of the units we use to measure position and velocity. If we were to measure the car's position from its starting point in miles, then we would probably express its velocity in units of miles _per hour_ (_dx/dt_). If we were to differentiate the velocity (measured in miles per hour) with respect to time, we would end up with a unit of miles per hour _per hour_. Introductory physics classes teach students about the behavior of falling objects, measuring position in _meters_, velocity in _meters per second_, and change in velocity over time in _meters per second, per second_. This final measure is called _acceleration_: the rate of change of velocity over time:
 
 ![](media/03348.png){ #fig:03348 width=75% }
 
@@ -575,21 +575,21 @@ Deriving velocity from position, and acceleration from velocity, we see the prin
 
 ![](media/03357.png){ #fig:03357 width=75% }
 
-A \"Level Transmitter\" device mounted on a water storage tank provides a signal directly proportional to water level in the tank, which \-- if the tank is of constant cross-sectional area throughout its height \-- directly equates water volume stored. If we were to take this volume signal and differentiate it with respect to time (_dv/dt_), we would obtain a signal proportional to the water _flow rate_ through the pipe carrying water to the tank. A differentiator circuit connected in such a way as to receive this volume signal would produce an output signal proportional to flow, possibly substituting for a flow-measurement device (\"Flow Transmitter\") installed in the pipe.
+A \"Level Transmitter\" device mounted on a water storage tank provides a signal directly proportional to water level in the tank, which --- if the tank is of constant cross-sectional area throughout its height --- directly equates water volume stored. If we were to take this volume signal and differentiate it with respect to time (_dv/dt_), we would obtain a signal proportional to the water _flow rate_ through the pipe carrying water to the tank. A differentiator circuit connected in such a way as to receive this volume signal would produce an output signal proportional to flow, possibly substituting for a flow-measurement device (\"Flow Transmitter\") installed in the pipe.
 
 Returning to the car experiment, suppose that our hypothetical car were equipped with a tachogenerator on one of the wheels, producing a voltage signal directly proportional to velocity. We could differentiate the signal to obtain acceleration with one circuit, like this:
 
 ![](media/03350.png){ #fig:03350 width=75% }
 
-By its very nature, the tachogenerator differentiates the car\'s position with respect to time, generating a voltage proportional to how rapidly the wheel\'s angular position changes over time. This provides us with a raw signal already representative of velocity, with only a single step of differentiation needed to obtain an acceleration signal. A tachogenerator measuring velocity, of course, is a far more practical example of automobile instrumentation than a giant potentiometer measuring its physical position, but what we gain in practicality we lose in position measurement. No matter how many times we differentiate, we can never infer the car\'s position from a velocity signal. If the process of differentiation brought us from position to velocity to acceleration, then somehow we need to perform the \"reverse\" process of differentiation to go from velocity to position. Such a mathematical process does exist, and it is called _integration_. The \"integrator\" circuit may be used to perform this function of integration with respect to time:
+By its very nature, the tachogenerator differentiates the car's position with respect to time, generating a voltage proportional to how rapidly the wheel's angular position changes over time. This provides us with a raw signal already representative of velocity, with only a single step of differentiation needed to obtain an acceleration signal. A tachogenerator measuring velocity, of course, is a far more practical example of automobile instrumentation than a giant potentiometer measuring its physical position, but what we gain in practicality we lose in position measurement. No matter how many times we differentiate, we can never infer the car's position from a velocity signal. If the process of differentiation brought us from position to velocity to acceleration, then somehow we need to perform the \"reverse\" process of differentiation to go from velocity to position. Such a mathematical process does exist, and it is called _integration_. The \"integrator\" circuit may be used to perform this function of integration with respect to time:
 
 ![](media/03351.png){ #fig:03351 width=75% }
 
-Recall from the last chapter that an integrator circuit outputs a voltage whose rate-of-change over time is proportional to the input voltage\'s magnitude. Thus, given a constant input voltage, the output voltage will _change_ at a constant _rate_. If the car travels at a constant velocity (constant voltage input to the integrator circuit from the tachogenerator), then its distance traveled will increase steadily as time progresses, and the integrator will output a steadily changing voltage proportional to that distance. If the car\'s velocity is not constant, then neither will the rate-of-change over time be of the integrator circuit\'s output, but the output voltage _will_ faithfully represent the amount of distance traveled by the car at any given point in time.
+Recall from the last chapter that an integrator circuit outputs a voltage whose rate-of-change over time is proportional to the input voltage's magnitude. Thus, given a constant input voltage, the output voltage will _change_ at a constant _rate_. If the car travels at a constant velocity (constant voltage input to the integrator circuit from the tachogenerator), then its distance traveled will increase steadily as time progresses, and the integrator will output a steadily changing voltage proportional to that distance. If the car's velocity is not constant, then neither will the rate-of-change over time be of the integrator circuit's output, but the output voltage _will_ faithfully represent the amount of distance traveled by the car at any given point in time.
 
 The symbol for integration looks something like a very narrow, cursive letter \"S\" (∫). The equation utilizing this symbol (∫*v dt = x*) tells us that we are integrating velocity (_v_) with respect to time (_dt_), and obtaining position (_x_) as a result.
 
-So, we may express three measures of the car\'s motion (position, velocity, and acceleration) in terms of velocity (_v_) just as easily as we could in terms of position (_x_):
+So, we may express three measures of the car's motion (position, velocity, and acceleration) in terms of velocity (_v_) just as easily as we could in terms of position (_x_):
 
 ![](media/03352.png){ #fig:03352 width=75% }
 
@@ -597,7 +597,7 @@ If we had an accelerometer attached to the car, generating a signal proportional
 
 ![](media/03355.png){ #fig:03355 width=75% }
 
-Thus, all three measures of the car\'s motion (position, velocity, and acceleration) may be expressed in terms of acceleration:
+Thus, all three measures of the car's motion (position, velocity, and acceleration) may be expressed in terms of acceleration:
 
 ![](media/03356.png){ #fig:03356 width=75% }
 
@@ -607,11 +607,11 @@ As you might have suspected, the process of integration may be illustrated in, a
 
 If we were to use a \"Flow Transmitter\" device to measure water flow, then by time-integration we could calculate the volume of water accumulated in the tank over time. Although it is theoretically possible to use a capacitive op-amp integrator circuit to derive a volume signal from a flow signal, mechanical and digital electronic \"integrator\" devices are more suitable for integration over long periods of time, and find frequent use in the water treatment and distribution industries.
 
-Just as there are symbolic techniques for differentiation, there are also symbolic techniques for integration, although they tend to be more complex and varied. Applying symbolic integration to a real-world problem like the acceleration of a car, though, is still contingent on the availability of an equation precisely describing the measured signal \-- often a difficult or impossible thing to derive from measured data. However, electronic integrator circuits perform this mathematical function continuously, in real time, and for _any_ input signal profile, thus providing a powerful tool for scientists and engineers.
+Just as there are symbolic techniques for differentiation, there are also symbolic techniques for integration, although they tend to be more complex and varied. Applying symbolic integration to a real-world problem like the acceleration of a car, though, is still contingent on the availability of an equation precisely describing the measured signal --- often a difficult or impossible thing to derive from measured data. However, electronic integrator circuits perform this mathematical function continuously, in real time, and for _any_ input signal profile, thus providing a powerful tool for scientists and engineers.
 
 Having said this, there are caveats to the using calculus techniques to derive one type of measurement from another. Differentiation has the undesirable tendency of amplifying \"noise\" found in the measured variable, since the noise will typically appear as frequencies much higher than the measured variable, and high frequencies by their very nature possess high rates-of-change over time.
 
-To illustrate this problem, suppose we were deriving a measurement of car acceleration from the velocity signal obtained from a tachogenerator with worn brushes or commutator bars. Points of poor contact between brush and commutator will produce momentary \"dips\" in the tachogenerator\'s output voltage, and the differentiator circuit connected to it will interpret these dips as very rapid changes in velocity. For a car moving at constant speed \-- neither accelerating nor decelerating \-- the acceleration signal should be 0 volts, but \"noise\" in the velocity signal caused by a faulty tachogenerator will cause the differentiated (acceleration) signal to contain \"spikes,\" falsely indicating brief periods of high acceleration and deceleration:
+To illustrate this problem, suppose we were deriving a measurement of car acceleration from the velocity signal obtained from a tachogenerator with worn brushes or commutator bars. Points of poor contact between brush and commutator will produce momentary \"dips\" in the tachogenerator's output voltage, and the differentiator circuit connected to it will interpret these dips as very rapid changes in velocity. For a car moving at constant speed --- neither accelerating nor decelerating --- the acceleration signal should be 0 volts, but \"noise\" in the velocity signal caused by a faulty tachogenerator will cause the differentiated (acceleration) signal to contain \"spikes,\" falsely indicating brief periods of high acceleration and deceleration:
 
 ![](media/03359.png){ #fig:03359 width=75% }
 
@@ -637,9 +637,9 @@ So far, the only integration errors discussed have been artificial in nature: or
 
 ![](media/03373.png){ #fig:03373 width=75% }
 
-Note how each of the parabolic curves (_y = 3x^2^ + C_) share the exact same shape, differing from each other in regard to their vertical offset. However, they all share the exact same derivative function: _y\' = (d/dx)( 3x^2^ + C) = 6x_, because they all share identical _rates of change_ (slopes) at corresponding points along the _x_ axis. While this seems quite natural and expected from the perspective of differentiation (different equations sharing a common derivative), it usually strikes beginning students as odd from the perspective of integration, because there are multiple correct answers for the integral of a function. Going from an equation to its derivative, there is only one answer, but going from that derivative back to the original equation leads us to a range of correct solutions. In honor of this uncertainty, the symbolic function of integration is called the _indefinite integral_.
+Note how each of the parabolic curves (_y = 3x^2^ + C_) share the exact same shape, differing from each other in regard to their vertical offset. However, they all share the exact same derivative function: _y' = (d/dx)( 3x^2^ + C) = 6x_, because they all share identical _rates of change_ (slopes) at corresponding points along the _x_ axis. While this seems quite natural and expected from the perspective of differentiation (different equations sharing a common derivative), it usually strikes beginning students as odd from the perspective of integration, because there are multiple correct answers for the integral of a function. Going from an equation to its derivative, there is only one answer, but going from that derivative back to the original equation leads us to a range of correct solutions. In honor of this uncertainty, the symbolic function of integration is called the _indefinite integral_.
 
-When an integrator performs live signal integration with respect to time, the output is the sum of the integrated input signal over time _and_ an initial value of arbitrary magnitude, representing the integrator\'s pre-existing output at the time integration began. For example, if I integrate the velocity of a car driving in a straight line away from a city, calculating that a constant velocity of 50 miles per hour over a time of 2 hours will produce a distance (∫*v dt*) of 100 miles, that does not necessarily mean the car will be 100 miles away from the city after 2 hours. All it tells us is that the car will be 100 miles _further_ away from the city after 2 hours of driving. The actual distance from the city after 2 hours of driving depends on how far the car was from the city when integration began. If we do not know this initial value for distance, we cannot determine the car\'s exact distance from the city after 2 hours of driving.
+When an integrator performs live signal integration with respect to time, the output is the sum of the integrated input signal over time _and_ an initial value of arbitrary magnitude, representing the integrator's pre-existing output at the time integration began. For example, if I integrate the velocity of a car driving in a straight line away from a city, calculating that a constant velocity of 50 miles per hour over a time of 2 hours will produce a distance (∫*v dt*) of 100 miles, that does not necessarily mean the car will be 100 miles away from the city after 2 hours. All it tells us is that the car will be 100 miles _further_ away from the city after 2 hours of driving. The actual distance from the city after 2 hours of driving depends on how far the car was from the city when integration began. If we do not know this initial value for distance, we cannot determine the car's exact distance from the city after 2 hours of driving.
 
 This same problem appears when we integrate acceleration with respect to time to obtain velocity:
 
@@ -649,7 +649,7 @@ In this integrator system, the calculated velocity of the car will only be valid
 
 In summary, if maximum accuracy is desired for any physical measurement, it is best to measure that variable directly rather than compute it from other measurements. This is not to say that computation is worthless. Quite to the contrary, often it is the only practical means of obtaining a desired measurement. However, the limits of computation must be understood and respected in order that precise measurements be obtained.
 
-## [[Measurement circuits \-- INCOMPLETE]{#xtocid157063414}]
+## [[Measurement circuits --- INCOMPLETE]{#xtocid157063414}]
 
 @fig:03455 shows a photodiode amplifier for measuring low levels of light. Best sensitivity and bandwidth are obtained with a _transimpedance amplifier_, a current to voltage amplifier, instead of a conventional operational amplifier. The photodiode remains reverse biased for lowest diode capacitance, hence wider bandwidth, and lower noise. The feedback resistor sets the "gain", the current to voltage amplification factor. Typical values are 1 to 10 Meg Ω. Higher values yield higher gain. A capacitor of a few pF may be required to compensate for photodiode capacitance, and prevents instability at the high gain. The wiring at the summing node must be as compact as possible. This point is sensitive to circuit board contaminants and must be thoroughly cleaned. The most sensitive amplifiers contain the photodiode and amplifier within a hybrid microcircuit package or single die.
 
@@ -657,7 +657,7 @@ In summary, if maximum accuracy is desired for any physical measurement, it is b
 
 _Photodiode amplifier._
 
-## [[Control circuits \-- PENDING]{#xtocid157063415}]
+## [[Control circuits --- PENDING]{#xtocid157063415}]
 
 ## Contributors{ #sec:xtocid157063416 }
 
@@ -671,7 +671,7 @@ Contributors to this chapter are listed in chronological order of their contribu
 
 \
 
-1.  [\[LCC\]Chin-Leong Lim, Lim Yeam Ch\'ng, Goh Swee Chye, "Diode Quad Is Foundation For PIN Diode Attenuator," Microwaves & RF, May 2006, at]{#LCC.bibitem} <http://www.mwrf.com/Articles/Index.cfm?Ad=1&ArticleID=12523>
+1.  [\[LCC\]Chin-Leong Lim, Lim Yeam Ch'ng, Goh Swee Chye, "Diode Quad Is Foundation For PIN Diode Attenuator," Microwaves & RF, May 2006, at]{#LCC.bibitem} <http://www.mwrf.com/Articles/Index.cfm?Ad=1&ArticleID=12523>
 2.  [\[MUL\]"Transistor Audio and Radio Circuits," TP1399, 2nd Ed., pp 39-40, Mullard, London, 1972.]{#MUL.bibitem}
 3.  [\[SIG\]"AM Receiver Circuit TCA440," Analog Data Manual, 2nd Ed., pp 14-20 to 14-26, Signetics, 1982.]{#SIG.bibitem}
 4.  [\[SNE\]Sony "8-pin Single-Chip AM Radio with Builot-in Power Amplifier," pp 5, at]{#SNE.bibitem} <http://www.datasheetcatalog.com/datasheets_pdf/C/X/A/1/CXA1600.shtml>
